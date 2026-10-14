@@ -390,8 +390,20 @@ aside hr.divisoria {
     align-items: start; /* OBRIGATÓRIO: impede que os cards estiquem até o final da tela */
 }
 
+/* Links envolventes dos cards */
+.grade-produtos a {
+    text-decoration: none !important;
+    color: inherit !important;
+    display: block !important;
+}
+
+.grade-produtos a:hover {
+    text-decoration: none !important;
+}
+
 /* CARD INDIVIDUAL */
 .jogo-produtos {
+    cursor: pointer;
     background-color: #2a2a30; /* Fundo do card */
     color: #000; /* Cor do texto */
     padding: 15px;

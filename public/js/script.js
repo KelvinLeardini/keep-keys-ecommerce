@@ -441,6 +441,50 @@ function configurarBotoesComprar() {
             }
         };
     });
+
+    // Suporte aos botões de compra nas páginas individuais de jogos (.comprar-btn)
+    document.querySelectorAll('.comprar-btn').forEach((botao) => {
+        botao.onclick = (evento) => {
+            evento.preventDefault();
+
+            const usuarioLogado = localStorage.getItem('usuarioLogado');
+
+            if (!usuarioLogado) {
+                alert('Você precisa estar logado para adicionar itens ao carrinho!');
+                const modal = document.getElementById('modal-login');
+                if (modal) modal.style.display = 'flex';
+                return;
+            }
+
+            const tituloEl = document.querySelector('.bloco-lateral h2');
+            const precoEl = document.querySelector('.preco-jogo');
+            const imagemEl = document.querySelector('.bloco-1 .jogo img') || document.querySelector('.jogo img');
+
+            if (tituloEl && precoEl && imagemEl) {
+                const produto = {
+                    titulo: tituloEl.innerText.trim(),
+                    preco: precoEl.innerText.trim(),
+                    imagem: imagemEl.getAttribute('src')
+                };
+
+                adicionarAoCarrinho(produto);
+
+                // Feedback visual de adicionado
+                botao.innerHTML = '<i data-lucide="check"></i> ADICIONADO!';
+                botao.style.backgroundColor = '#28a745';
+
+                setTimeout(() => {
+                    botao.innerHTML = '<i data-lucide="shopping-cart"></i> COMPRAR AGORA';
+                    botao.style.backgroundColor = '';
+                    if (typeof lucide !== 'undefined') lucide.createIcons();
+                }, 1500);
+
+                // Abre a gaveta do carrinho para visualização imediata
+                const btnAbrir = document.getElementById('btn-abrir-carrinho');
+                if (btnAbrir) btnAbrir.click();
+            }
+        };
+    });
 }
 
 function adicionarAoCarrinho(produto) {

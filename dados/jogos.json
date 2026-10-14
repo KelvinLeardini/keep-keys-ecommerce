@@ -207,7 +207,7 @@
     "imagem": "/imagens/forza.png",
     "categoria": "xbox",
     "plataforma": "xbox",
-    "link": ""
+    "link": "/jogos/xbox/forza-horizon-6.html"
   },
   {
     "id": "xbox-halo",
@@ -217,7 +217,7 @@
     "imagem": "/imagens/halo.jpg",
     "categoria": "xbox",
     "plataforma": "xbox",
-    "link": ""
+    "link": "/jogos/xbox/halo-infinite.html"
   },
   {
     "id": "xbox-forza5",
@@ -227,7 +227,7 @@
     "imagem": "/imagens/forza5.jpg",
     "categoria": "xbox",
     "plataforma": "xbox",
-    "link": ""
+    "link": "/jogos/xbox/forza-horizon-5.html"
   },
   {
     "id": "xbox-gears5",
@@ -237,7 +237,7 @@
     "imagem": "/imagens/gears5.jpg",
     "categoria": "xbox",
     "plataforma": "xbox",
-    "link": ""
+    "link": "/jogos/xbox/gears-5.html"
   },
   {
     "id": "xbox-seaof",
@@ -247,7 +247,7 @@
     "imagem": "/imagens/seaof.webp",
     "categoria": "xbox",
     "plataforma": "xbox",
-    "link": ""
+    "link": "/jogos/xbox/sea-of-thieves.html"
   },
   {
     "id": "xbox-starfield",
@@ -257,7 +257,7 @@
     "imagem": "/imagens/starfield.jpg",
     "categoria": "xbox",
     "plataforma": "xbox",
-    "link": ""
+    "link": "/jogos/xbox/starfield.html"
   },
   {
     "id": "xbox-senuas",
@@ -267,7 +267,7 @@
     "imagem": "/imagens/senuas.jpg",
     "categoria": "xbox",
     "plataforma": "xbox",
-    "link": ""
+    "link": "/jogos/xbox/senua-s-saga-hellblade-ii.html"
   },
   {
     "id": "xbox-flight",
@@ -277,7 +277,7 @@
     "imagem": "/imagens/flight.jpg",
     "categoria": "xbox",
     "plataforma": "xbox",
-    "link": ""
+    "link": "/jogos/xbox/microsoft-flight-simulator.html"
   },
   {
     "id": "xbox-state",
@@ -287,7 +287,7 @@
     "imagem": "/imagens/state.jpg",
     "categoria": "xbox",
     "plataforma": "xbox",
-    "link": ""
+    "link": "/jogos/xbox/state-of-decay-2.html"
   },
   {
     "id": "xbox-ori",
@@ -297,7 +297,7 @@
     "imagem": "/imagens/ori.avif",
     "categoria": "xbox",
     "plataforma": "xbox",
-    "link": ""
+    "link": "/jogos/xbox/ori-and-the-will-of-the-wisps.html"
   },
   {
     "id": "destaque-control",
@@ -307,7 +307,7 @@
     "imagem": "/imagens/control.jpg",
     "categoria": "destaque",
     "plataforma": "destaque",
-    "link": ""
+    "link": "/jogos/destaques/control-resonant.html"
   },
   {
     "id": "destaque-onimusha",
@@ -317,7 +317,7 @@
     "imagem": "/imagens/ONIMUSHA so.avif",
     "categoria": "destaque",
     "plataforma": "destaque",
-    "link": ""
+    "link": "/jogos/destaques/onimusha-way-of-the-sword.html"
   },
   {
     "id": "destaque-eldenring",
@@ -327,7 +327,7 @@
     "imagem": "/imagens/EldenRing.png",
     "categoria": "destaque",
     "plataforma": "destaque",
-    "link": ""
+    "link": "/jogos/destaques/elden-ring.html"
   },
   {
     "id": "destaque-wukong",
@@ -337,7 +337,7 @@
     "imagem": "/imagens/Black MythWukong.png",
     "categoria": "destaque",
     "plataforma": "destaque",
-    "link": ""
+    "link": "/jogos/destaques/black-myth-wukong.html"
   },
   {
     "id": "promo-control",
@@ -347,7 +347,7 @@
     "imagem": "/imagens/control.jpg",
     "categoria": "promocao",
     "plataforma": "promocao",
-    "link": ""
+    "link": "/jogos/destaques/control-resonant.html"
   },
   {
     "id": "promo-eldenring",
@@ -357,6 +357,6 @@
     "imagem": "/imagens/EldenRing.png",
     "categoria": "promocao",
     "plataforma": "promocao",
-    "link": ""
+    "link": "/jogos/destaques/elden-ring.html"
   }
 ]
