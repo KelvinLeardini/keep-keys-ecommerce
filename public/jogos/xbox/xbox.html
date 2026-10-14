@@ -116,16 +116,36 @@
                         <span id="contador-carrinho" class="contador-badge">0</span>
                     </button>
 
-                    <a href="/perfil.html" id="btn-perfil-header" class="btn-perfil" style="display: none;">
-                        <i data-lucide="user"></i> Perfil
-                    </a>
-
-                    <a href="/admin.html" id="btn-admin-header" class="btn-admin" style="display: none;">
-                    Painel Admin
-                    </a>
-
-                    <span>Olá, <strong>Gamer</strong>!</span>
-                    <button type="button" id="btn-sair-header" class="btn-sair">Sair</button>
+                    <div class="usuario-avatar-dropdown-container">
+                        <button type="button" id="btn-avatar-header" class="btn-avatar-header" aria-label="Menu do Usuário" title="Meu Perfil e Opções">
+                            <i data-lucide="user"></i>
+                        </button>
+                        <div id="dropdown-menu-avatar" class="dropdown-menu-avatar">
+                            <div class="dropdown-usuario-topo">
+                                <div class="dropdown-avatar-circulo">
+                                    <i data-lucide="user"></i>
+                                </div>
+                                <div class="dropdown-dados-usuario">
+                                    <strong id="dropdown-nome-usuario">Gamer</strong>
+                                    <span id="dropdown-role-usuario" class="tag-categoria tag-ps">Cliente VIP</span>
+                                </div>
+                            </div>
+                            <div class="dropdown-divisor"></div>
+                            <a href="/perfil.html" class="dropdown-item">
+                                <i data-lucide="user"></i>
+                                <span>Meu Perfil</span>
+                            </a>
+                            <a href="/admin.html" id="dropdown-btn-admin" class="dropdown-item item-admin" style="display: none;">
+                                <i data-lucide="shield"></i>
+                                <span>Painel Admin</span>
+                            </a>
+                            <div class="dropdown-divisor"></div>
+                            <button type="button" id="btn-sair-header" class="dropdown-item item-sair">
+                                <i data-lucide="log-out"></i>
+                                <span>Sair</span>
+                            </button>
+                        </div>
+                    </div>
                 </div>
             </div>
         </header>

@@ -228,17 +228,38 @@ function inicializarAutenticacao() {
         });
     }
 
+    function configurarDropdownAvatar() {
+        const btnAvatar = document.getElementById('btn-avatar-header');
+        const menuDropdown = document.getElementById('dropdown-menu-avatar');
+
+        if (!btnAvatar || !menuDropdown) return;
+
+        btnAvatar.onclick = (e) => {
+            e.stopPropagation();
+            const aberto = menuDropdown.classList.toggle('aberto');
+            btnAvatar.classList.toggle('ativo', aberto);
+        };
+
+        // Fecha ao clicar fora
+        window.addEventListener('click', (e) => {
+            if (!e.target.closest('.usuario-avatar-dropdown-container')) {
+                menuDropdown.classList.remove('aberto');
+                btnAvatar.classList.remove('ativo');
+            }
+        });
+    }
+
     function atualizarEstadoLogin() {
         const estaLogado = localStorage.getItem('usuarioLogado') === 'true';
         const role = localStorage.getItem('usuarioRole');
         const nome = localStorage.getItem('usuarioNome') || 'Gamer';
-        const btnAdmin = document.getElementById('btn-admin-header');
-        let btnPerfil = document.getElementById('btn-perfil-header');
-        let carteiraHeader = document.getElementById('carteira-saldo-header');
-        const saudacaoEl = painelUsuario ? painelUsuario.querySelector('span strong') : null;
+        const painelUsuario = document.getElementById('painel-usuario');
+
+        if (!painelUsuario) return;
 
         // Injeção dinâmica do Saldo da Carteira no Header (meramente visual, sem cliques ou links)
-        if (painelUsuario && !carteiraHeader) {
+        let carteiraHeader = document.getElementById('carteira-saldo-header');
+        if (!carteiraHeader) {
             carteiraHeader = document.createElement('div');
             carteiraHeader.id = 'carteira-saldo-header';
             carteiraHeader.className = 'carteira-saldo-header';
@@ -252,73 +273,118 @@ function inicializarAutenticacao() {
                 painelUsuario.prepend(carteiraHeader);
             }
             if (typeof lucide !== 'undefined') lucide.createIcons();
-        } else if (carteiraHeader && carteiraHeader.tagName.toLowerCase() === 'a') {
+        } else if (carteiraHeader.tagName.toLowerCase() === 'a') {
             // Remove qualquer link remanescente para ser puramente visual
             carteiraHeader.removeAttribute('href');
             carteiraHeader.removeAttribute('target');
         }
 
-        // Injeção dinâmica do Botão de Perfil no Header caso a página não tenha no HTML
-        if (painelUsuario && !btnPerfil) {
-            btnPerfil = document.createElement('a');
-            btnPerfil.href = '/perfil.html';
-            btnPerfil.id = 'btn-perfil-header';
-            btnPerfil.className = 'btn-perfil';
-            btnPerfil.innerHTML = '<i data-lucide="user"></i> Perfil';
-            
-            if (btnAdmin) {
-                painelUsuario.insertBefore(btnPerfil, btnAdmin);
-            } else {
-                painelUsuario.appendChild(btnPerfil);
-            }
-            if (typeof lucide !== 'undefined') lucide.createIcons();
+        // Esconde botões soltos legados para dar lugar ao dropdown de avatar limpo
+        const btnPerfilLegado = document.getElementById('btn-perfil-header');
+        const btnAdminLegado = document.getElementById('btn-admin-header');
+        const saudacaoLegada = painelUsuario.querySelector(':scope > span');
+        const btnSairLegado = painelUsuario.querySelector(':scope > #btn-sair-header');
+
+        if (btnPerfilLegado && !btnPerfilLegado.closest('.dropdown-menu-avatar')) {
+            btnPerfilLegado.style.display = 'none';
+        }
+        if (btnAdminLegado && !btnAdminLegado.closest('.dropdown-menu-avatar')) {
+            btnAdminLegado.style.display = 'none';
+        }
+        if (saudacaoLegada) {
+            saudacaoLegada.style.display = 'none';
+        }
+        if (btnSairLegado) {
+            btnSairLegado.style.display = 'none';
         }
 
-        if (saudacaoEl) {
-            saudacaoEl.innerText = nome;
+        // Injeção dinâmica do Avatar Circular com Dropdown
+        let containerAvatar = painelUsuario.querySelector('.usuario-avatar-dropdown-container');
+        if (!containerAvatar) {
+            containerAvatar = document.createElement('div');
+            containerAvatar.className = 'usuario-avatar-dropdown-container';
+            containerAvatar.innerHTML = `
+                <button type="button" id="btn-avatar-header" class="btn-avatar-header" aria-label="Menu do Usuário" title="Meu Perfil e Opções">
+                    <i data-lucide="user"></i>
+                </button>
+                <div id="dropdown-menu-avatar" class="dropdown-menu-avatar">
+                    <div class="dropdown-usuario-topo">
+                        <div class="dropdown-avatar-circulo">
+                            <i data-lucide="user"></i>
+                        </div>
+                        <div class="dropdown-dados-usuario">
+                            <strong id="dropdown-nome-usuario">${nome}</strong>
+                            <span id="dropdown-role-usuario" class="tag-categoria ${role === 'admin' ? 'tag-promocao' : 'tag-ps'}">
+                                ${role === 'admin' ? 'Administrador' : 'Cliente VIP'}
+                            </span>
+                        </div>
+                    </div>
+                    <div class="dropdown-divisor"></div>
+                    <a href="/perfil.html" class="dropdown-item">
+                        <i data-lucide="user"></i>
+                        <span>Meu Perfil</span>
+                    </a>
+                    <a href="/admin.html" id="dropdown-btn-admin" class="dropdown-item item-admin" style="display: ${role === 'admin' ? 'flex' : 'none'};">
+                        <i data-lucide="shield"></i>
+                        <span>Painel Admin</span>
+                    </a>
+                    <div class="dropdown-divisor"></div>
+                    <button type="button" id="btn-sair-dropdown" class="dropdown-item item-sair">
+                        <i data-lucide="log-out"></i>
+                        <span>Sair</span>
+                    </button>
+                </div>
+            `;
+            painelUsuario.appendChild(containerAvatar);
+            if (typeof lucide !== 'undefined') lucide.createIcons();
+            configurarDropdownAvatar();
+        } else {
+            configurarDropdownAvatar();
         }
+
+        // Atualiza os dados dentro do dropdown se ele já existir
+        const dropdownNome = document.getElementById('dropdown-nome-usuario');
+        const dropdownRole = document.getElementById('dropdown-role-usuario');
+        const dropdownAdmin = document.getElementById('dropdown-btn-admin');
+        if (dropdownNome) dropdownNome.innerText = nome;
+        if (dropdownRole) {
+            dropdownRole.innerText = role === 'admin' ? 'Administrador' : 'Cliente VIP';
+            dropdownRole.className = role === 'admin' ? 'tag-categoria tag-promocao' : 'tag-categoria tag-ps';
+        }
+        if (dropdownAdmin) {
+            dropdownAdmin.style.display = role === 'admin' ? 'flex' : 'none';
+        }
+
+        // Configuração do botão sair dentro do dropdown
+        const botoesSair = document.querySelectorAll('#btn-sair-dropdown, #btn-sair-header, .item-sair');
+        botoesSair.forEach(btn => {
+            btn.onclick = () => {
+                localStorage.removeItem('usuarioLogado');
+                localStorage.removeItem('usuarioRole');
+                localStorage.removeItem('usuarioNome');
+                atualizarEstadoLogin();
+                if (window.location.pathname.includes('perfil.html') || window.location.pathname.includes('admin.html') || window.location.pathname.includes('checkout.html')) {
+                    window.location.href = '/index.html';
+                }
+            };
+        });
 
         if (estaLogado) {
             if (btnEntrar) btnEntrar.style.setProperty('display', 'none', 'important');
-            if (painelUsuario) painelUsuario.style.setProperty('display', 'flex', 'important');
-            if (btnPerfil) btnPerfil.style.setProperty('display', 'inline-flex', 'important');
+            painelUsuario.style.setProperty('display', 'flex', 'important');
             if (carteiraHeader) carteiraHeader.style.setProperty('display', 'inline-flex', 'important');
+            if (containerAvatar) containerAvatar.style.setProperty('display', 'inline-flex', 'important');
 
             // Atualiza o saldo exibido no cabeçalho
             const { saldo } = obterSaldoCarteira();
             const valorHeader = document.getElementById('valor-saldo-header');
             if (valorHeader) valorHeader.innerText = `R$ ${saldo.toFixed(2).replace('.', ',')}`;
-
-            if (role === 'admin') {
-                if (btnAdmin) btnAdmin.style.setProperty('display', 'inline-block', 'important');
-            } else {
-                if (btnAdmin) btnAdmin.style.setProperty('display', 'none', 'important');
-            }
         } else {
             if (btnEntrar) btnEntrar.style.setProperty('display', 'inline-block', 'important');
-            if (painelUsuario) painelUsuario.style.setProperty('display', 'none', 'important');
-            if (btnPerfil) btnPerfil.style.setProperty('display', 'none', 'important');
+            painelUsuario.style.setProperty('display', 'none', 'important');
             if (carteiraHeader) carteiraHeader.style.setProperty('display', 'none', 'important');
-            if (btnAdmin) btnAdmin.style.setProperty('display', 'none', 'important');
+            if (containerAvatar) containerAvatar.style.setProperty('display', 'none', 'important');
         }
-    }
-
-    if (btnEntrar && modal) {
-        btnEntrar.addEventListener('click', () => {
-            modal.style.display = 'flex';
-        });
-    }
-
-    if (btnSair) {
-        btnSair.addEventListener('click', () => {
-            localStorage.removeItem('usuarioLogado');
-            localStorage.removeItem('usuarioRole');
-            localStorage.removeItem('usuarioNome');
-            atualizarEstadoLogin();
-            if (window.location.pathname.includes('perfil.html') || window.location.pathname.includes('admin.html')) {
-                window.location.href = '/index.html';
-            }
-        });
     }
 
     if (btnFechar && modal) {
