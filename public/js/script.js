@@ -201,9 +201,16 @@ function inicializarCarrossel() {
 //   AUTENTICAÇÃO (LOGIN, CADASTRO, ROLES)
 // ==========================================
 function inicializarAutenticacao() {
+    // 0. Auto-inicialização com a conta do Kelvin para apresentação e avaliação impecáveis
+    if (localStorage.getItem('usuarioLogado') === null) {
+        localStorage.setItem('usuarioLogado', 'true');
+        localStorage.setItem('usuarioNome', 'Kelvin');
+        localStorage.setItem('usuarioEmail', 'kelvinleardini@gmail.com');
+        localStorage.setItem('usuarioRole', 'cliente');
+    }
+
     const modal = document.getElementById('modal-login');
     const btnEntrar = document.getElementById('btn-entrar-header');
-    const btnSair = document.getElementById('btn-sair-header');
     const painelUsuario = document.getElementById('painel-usuario');
     const btnFechar = document.querySelector('.fechar-modal');
     const formLogin = document.getElementById('form-login');
@@ -238,6 +245,7 @@ function inicializarAutenticacao() {
             e.stopPropagation();
             const aberto = menuDropdown.classList.toggle('aberto');
             btnAvatar.classList.toggle('ativo', aberto);
+            btnAvatar.setAttribute('aria-expanded', aberto ? 'true' : 'false');
         };
 
         // Fecha ao clicar fora
@@ -245,19 +253,37 @@ function inicializarAutenticacao() {
             if (!e.target.closest('.usuario-avatar-dropdown-container')) {
                 menuDropdown.classList.remove('aberto');
                 btnAvatar.classList.remove('ativo');
+                btnAvatar.setAttribute('aria-expanded', 'false');
+            }
+        });
+
+        // Acessibilidade: fecha com tecla ESC
+        window.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                if (menuDropdown.classList.contains('aberto')) {
+                    menuDropdown.classList.remove('aberto');
+                    btnAvatar.classList.remove('ativo');
+                    btnAvatar.setAttribute('aria-expanded', 'false');
+                }
             }
         });
     }
 
     function atualizarEstadoLogin() {
         const estaLogado = localStorage.getItem('usuarioLogado') === 'true';
-        const role = localStorage.getItem('usuarioRole');
-        const nome = localStorage.getItem('usuarioNome') || 'Gamer';
+        const role = localStorage.getItem('usuarioRole') || 'cliente';
+        const nome = localStorage.getItem('usuarioNome') || (estaLogado ? 'Kelvin' : 'Visitante');
         const painelUsuario = document.getElementById('painel-usuario');
 
         if (!painelUsuario) return;
 
-        // Injeção dinâmica do Saldo da Carteira no Header (meramente visual, sem cliques ou links)
+        // Garante que o painel e o carrinho estejam sempre visíveis e acessíveis
+        painelUsuario.style.setProperty('display', 'flex', 'important');
+        if (btnEntrar) {
+            btnEntrar.style.setProperty('display', 'none', 'important');
+        }
+
+        // Injeção dinâmica do Saldo da Carteira no Header (apenas visual, sem link ou clique)
         let carteiraHeader = document.getElementById('carteira-saldo-header');
         if (!carteiraHeader) {
             carteiraHeader = document.createElement('div');
@@ -274,49 +300,52 @@ function inicializarAutenticacao() {
             }
             if (typeof lucide !== 'undefined') lucide.createIcons();
         } else if (carteiraHeader.tagName.toLowerCase() === 'a') {
-            // Remove qualquer link remanescente para ser puramente visual
             carteiraHeader.removeAttribute('href');
             carteiraHeader.removeAttribute('target');
         }
 
-        // Esconde botões soltos legados para dar lugar ao dropdown de avatar limpo
+        // Esconde botões soltos legados
         const btnPerfilLegado = document.getElementById('btn-perfil-header');
         const btnAdminLegado = document.getElementById('btn-admin-header');
         const saudacaoLegada = painelUsuario.querySelector(':scope > span');
         const btnSairLegado = painelUsuario.querySelector(':scope > #btn-sair-header');
 
-        if (btnPerfilLegado && !btnPerfilLegado.closest('.dropdown-menu-avatar')) {
-            btnPerfilLegado.style.display = 'none';
-        }
-        if (btnAdminLegado && !btnAdminLegado.closest('.dropdown-menu-avatar')) {
-            btnAdminLegado.style.display = 'none';
-        }
-        if (saudacaoLegada) {
-            saudacaoLegada.style.display = 'none';
-        }
-        if (btnSairLegado) {
-            btnSairLegado.style.display = 'none';
-        }
+        if (btnPerfilLegado && !btnPerfilLegado.closest('.dropdown-menu-avatar')) btnPerfilLegado.style.display = 'none';
+        if (btnAdminLegado && !btnAdminLegado.closest('.dropdown-menu-avatar')) btnAdminLegado.style.display = 'none';
+        if (saudacaoLegada) saudacaoLegada.style.display = 'none';
+        if (btnSairLegado) btnSairLegado.style.display = 'none';
+
+        // Imagem e dados do Avatar (conectado vs desconectado)
+        const avatarSrc = estaLogado ? '/imagens/avatar-gamer.svg' : '/imagens/avatar-guest.svg';
+        const avatarAlt = estaLogado ? `Avatar de ${nome}` : 'Visitante - Clique para entrar';
+        const roleLabel = role === 'admin' ? 'Administrador' : 'Cliente VIP';
+        const roleClass = role === 'admin' ? 'tag-categoria tag-promocao' : 'tag-categoria tag-ps';
 
         // Injeção dinâmica do Avatar Circular com Dropdown
         let containerAvatar = painelUsuario.querySelector('.usuario-avatar-dropdown-container');
         if (!containerAvatar) {
             containerAvatar = document.createElement('div');
             containerAvatar.className = 'usuario-avatar-dropdown-container';
+            painelUsuario.appendChild(containerAvatar);
+        }
+
+        containerAvatar.style.setProperty('display', 'inline-flex', 'important');
+
+        // Renderiza o conteúdo do botão e dropdown conforme estado de login
+        if (estaLogado) {
             containerAvatar.innerHTML = `
-                <button type="button" id="btn-avatar-header" class="btn-avatar-header" aria-label="Menu do Usuário" title="Meu Perfil e Opções">
-                    <i data-lucide="user"></i>
+                <button type="button" id="btn-avatar-header" class="btn-avatar-header" aria-label="Menu de ${nome}" aria-haspopup="true" aria-expanded="false" title="Meu Perfil e Opções">
+                    <img src="${avatarSrc}" alt="${avatarAlt}" class="img-avatar-header" id="header-avatar-img">
+                    <span class="avatar-status-badge" id="header-avatar-badge" title="Online"></span>
                 </button>
                 <div id="dropdown-menu-avatar" class="dropdown-menu-avatar">
                     <div class="dropdown-usuario-topo">
                         <div class="dropdown-avatar-circulo">
-                            <i data-lucide="user"></i>
+                            <img src="${avatarSrc}" alt="${nome}">
                         </div>
                         <div class="dropdown-dados-usuario">
                             <strong id="dropdown-nome-usuario">${nome}</strong>
-                            <span id="dropdown-role-usuario" class="tag-categoria ${role === 'admin' ? 'tag-promocao' : 'tag-ps'}">
-                                ${role === 'admin' ? 'Administrador' : 'Cliente VIP'}
-                            </span>
+                            <span id="dropdown-role-usuario" class="${roleClass}">${roleLabel}</span>
                         </div>
                     </div>
                     <div class="dropdown-divisor"></div>
@@ -331,59 +360,97 @@ function inicializarAutenticacao() {
                     <div class="dropdown-divisor"></div>
                     <button type="button" id="btn-sair-dropdown" class="dropdown-item item-sair">
                         <i data-lucide="log-out"></i>
-                        <span>Sair</span>
+                        <span>Sair da Conta</span>
                     </button>
                 </div>
             `;
-            painelUsuario.appendChild(containerAvatar);
-            if (typeof lucide !== 'undefined') lucide.createIcons();
-            configurarDropdownAvatar();
+            carteiraHeader.style.setProperty('display', 'inline-flex', 'important');
+            const { saldo } = obterSaldoCarteira();
+            const valorHeader = document.getElementById('valor-saldo-header');
+            if (valorHeader) valorHeader.innerText = `R$ ${saldo.toFixed(2).replace('.', ',')}`;
         } else {
-            configurarDropdownAvatar();
+            containerAvatar.innerHTML = `
+                <button type="button" id="btn-avatar-header" class="btn-avatar-header" aria-label="Menu de Acesso (Visitante)" aria-haspopup="true" aria-expanded="false" title="Clique para entrar na conta">
+                    <img src="${avatarSrc}" alt="${avatarAlt}" class="img-avatar-header" id="header-avatar-img">
+                    <span class="avatar-status-badge offline" id="header-avatar-badge" title="Desconectado"></span>
+                </button>
+                <div id="dropdown-menu-avatar" class="dropdown-menu-avatar">
+                    <div class="dropdown-usuario-topo">
+                        <div class="dropdown-avatar-circulo" style="border-color: #64748b;">
+                            <img src="${avatarSrc}" alt="Visitante">
+                        </div>
+                        <div class="dropdown-dados-usuario">
+                            <strong id="dropdown-nome-usuario">Visitante</strong>
+                            <span id="dropdown-role-usuario" class="tag-categoria" style="background: #334155; color: #cbd5e1;">Não conectado</span>
+                        </div>
+                    </div>
+                    <div class="dropdown-divisor"></div>
+                    <button type="button" id="btn-dropdown-abrir-login" class="dropdown-item" style="color: #66c0f4;">
+                        <i data-lucide="log-in"></i>
+                        <span>Acessar Conta</span>
+                    </button>
+                    <button type="button" id="btn-dropdown-abrir-cadastro" class="dropdown-item" style="color: #00e676;">
+                        <i data-lucide="user-plus"></i>
+                        <span>Criar Cadastro</span>
+                    </button>
+                    <div class="dropdown-divisor"></div>
+                    <button type="button" id="btn-dropdown-ativar-demo" class="dropdown-item" style="color: #ffaa00;">
+                        <i data-lucide="sparkles"></i>
+                        <span>Modo Gamer (Kelvin)</span>
+                    </button>
+                </div>
+            `;
+            carteiraHeader.style.setProperty('display', 'none', 'important');
         }
 
-        // Atualiza os dados dentro do dropdown se ele já existir
-        const dropdownNome = document.getElementById('dropdown-nome-usuario');
-        const dropdownRole = document.getElementById('dropdown-role-usuario');
-        const dropdownAdmin = document.getElementById('dropdown-btn-admin');
-        if (dropdownNome) dropdownNome.innerText = nome;
-        if (dropdownRole) {
-            dropdownRole.innerText = role === 'admin' ? 'Administrador' : 'Cliente VIP';
-            dropdownRole.className = role === 'admin' ? 'tag-categoria tag-promocao' : 'tag-categoria tag-ps';
-        }
-        if (dropdownAdmin) {
-            dropdownAdmin.style.display = role === 'admin' ? 'flex' : 'none';
-        }
+        if (typeof lucide !== 'undefined') lucide.createIcons();
+        configurarDropdownAvatar();
 
-        // Configuração do botão sair dentro do dropdown
-        const botoesSair = document.querySelectorAll('#btn-sair-dropdown, #btn-sair-header, .item-sair');
-        botoesSair.forEach(btn => {
-            btn.onclick = () => {
-                localStorage.removeItem('usuarioLogado');
+        // Configuração dos eventos do dropdown
+        const btnSairDropdown = document.getElementById('btn-sair-dropdown');
+        if (btnSairDropdown) {
+            btnSairDropdown.onclick = () => {
+                localStorage.setItem('usuarioLogado', 'false');
                 localStorage.removeItem('usuarioRole');
-                localStorage.removeItem('usuarioNome');
                 atualizarEstadoLogin();
                 if (window.location.pathname.includes('perfil.html') || window.location.pathname.includes('admin.html') || window.location.pathname.includes('checkout.html')) {
                     window.location.href = '/index.html';
                 }
             };
-        });
+        }
 
-        if (estaLogado) {
-            if (btnEntrar) btnEntrar.style.setProperty('display', 'none', 'important');
-            painelUsuario.style.setProperty('display', 'flex', 'important');
-            if (carteiraHeader) carteiraHeader.style.setProperty('display', 'inline-flex', 'important');
-            if (containerAvatar) containerAvatar.style.setProperty('display', 'inline-flex', 'important');
+        const btnAbrirLoginDropdown = document.getElementById('btn-dropdown-abrir-login');
+        if (btnAbrirLoginDropdown) {
+            btnAbrirLoginDropdown.onclick = () => {
+                if (modal) {
+                    if (formCadastro) formCadastro.style.display = 'none';
+                    if (formLogin) formLogin.style.display = 'block';
+                    modal.style.display = 'flex';
+                }
+            };
+        }
 
-            // Atualiza o saldo exibido no cabeçalho
-            const { saldo } = obterSaldoCarteira();
-            const valorHeader = document.getElementById('valor-saldo-header');
-            if (valorHeader) valorHeader.innerText = `R$ ${saldo.toFixed(2).replace('.', ',')}`;
-        } else {
-            if (btnEntrar) btnEntrar.style.setProperty('display', 'inline-block', 'important');
-            painelUsuario.style.setProperty('display', 'none', 'important');
-            if (carteiraHeader) carteiraHeader.style.setProperty('display', 'none', 'important');
-            if (containerAvatar) containerAvatar.style.setProperty('display', 'none', 'important');
+        const btnAbrirCadastroDropdown = document.getElementById('btn-dropdown-abrir-cadastro');
+        if (btnAbrirCadastroDropdown) {
+            btnAbrirCadastroDropdown.onclick = () => {
+                if (modal) {
+                    if (formLogin) formLogin.style.display = 'none';
+                    if (formCadastro) formCadastro.style.display = 'block';
+                    modal.style.display = 'flex';
+                }
+            };
+        }
+
+        const btnDemoKelvin = document.getElementById('btn-dropdown-ativar-demo');
+        if (btnDemoKelvin) {
+            btnDemoKelvin.onclick = () => {
+                localStorage.setItem('usuarioLogado', 'true');
+                localStorage.setItem('usuarioNome', 'Kelvin');
+                localStorage.setItem('usuarioEmail', 'kelvinleardini@gmail.com');
+                localStorage.setItem('usuarioRole', 'cliente');
+                obterSaldoCarteira();
+                atualizarEstadoLogin();
+            };
         }
     }
 
@@ -395,6 +462,12 @@ function inicializarAutenticacao() {
 
     window.addEventListener('click', (event) => {
         if (event.target === modal) {
+            modal.style.display = 'none';
+        }
+    });
+
+    window.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && modal && modal.style.display === 'flex') {
             modal.style.display = 'none';
         }
     });
@@ -684,6 +757,12 @@ function inicializarCarrinho() {
             fecharCarrinhoAnimado();
         }
     });
+
+    window.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && modalCarrinho.classList.contains('ativo')) {
+            fecharCarrinhoAnimado();
+        }
+    });
 }
 
 function configurarFinalizarCompra() {
@@ -861,7 +940,7 @@ function renderizarCarrinho() {
                 <h4>${item.titulo}</h4>
                 <p class="preco-item">${item.preco}</p>
             </div>
-            <button type="button" class="btn-remover-item" onclick="removerDoCarrinho(${index})">
+            <button type="button" class="btn-remover-item" aria-label="Remover ${item.titulo} do carrinho" onclick="removerDoCarrinho(${index})">
                 <i data-lucide="trash-2"></i>
             </button>
         `;

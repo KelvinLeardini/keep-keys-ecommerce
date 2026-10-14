@@ -203,20 +203,49 @@ function gerarHtmlPaginaJogo(jogo) {
             </form>
 
             <div class="area-usuario">
-                <button type="button" id="btn-entrar-header">Entrar</button>
+                <div id="painel-usuario" class="painel-usuario" style="display: flex;">
+                    <div id="carteira-saldo-header" class="carteira-saldo-header" title="Saldo disponível na Carteira Digital Keep Keys">
+                        <i data-lucide="wallet"></i>
+                        <span class="saldo-rotulo">Saldo:</span>
+                        <span class="saldo-valor" id="valor-saldo-header">R$ 1.000,00</span>
+                    </div>
 
-                <div id="painel-usuario" class="painel-usuario" style="display: none;">
-                    <button type="button" id="btn-abrir-carrinho" class="btn-carrinho-icone" aria-label="Abrir Carrinho">
+                    <button type="button" id="btn-abrir-carrinho" class="btn-carrinho-icone" aria-label="Abrir Carrinho de Compras">
                         <i data-lucide="shopping-cart"></i>
                         <span id="contador-carrinho" class="contador-badge">0</span>
                     </button>
 
-                    <a href="/admin.html" id="btn-admin-header" class="btn-admin" style="display: none;">
-                        Painel Admin
-                    </a>
-
-                    <span>Olá, <strong>Gamer</strong>!</span>
-                    <button type="button" id="btn-sair-header" class="btn-sair">Sair</button>
+                    <div class="usuario-avatar-dropdown-container">
+                        <button type="button" id="btn-avatar-header" class="btn-avatar-header" aria-label="Menu do Usuário" aria-haspopup="true" aria-expanded="false" title="Meu Perfil e Opções">
+                            <img src="/imagens/avatar-gamer.svg" alt="Avatar do Gamer" class="img-avatar-header" id="header-avatar-img">
+                            <span class="avatar-status-badge" id="header-avatar-badge" title="Online"></span>
+                        </button>
+                        <div id="dropdown-menu-avatar" class="dropdown-menu-avatar">
+                            <div class="dropdown-usuario-topo">
+                                <div class="dropdown-avatar-circulo">
+                                    <img src="/imagens/avatar-gamer.svg" alt="Kelvin" id="dropdown-avatar-img">
+                                </div>
+                                <div class="dropdown-dados-usuario">
+                                    <strong id="dropdown-nome-usuario">Kelvin</strong>
+                                    <span id="dropdown-role-usuario" class="tag-categoria tag-ps">Cliente VIP</span>
+                                </div>
+                            </div>
+                            <div class="dropdown-divisor"></div>
+                            <a href="/perfil.html" class="dropdown-item">
+                                <i data-lucide="user"></i>
+                                <span>Meu Perfil</span>
+                            </a>
+                            <a href="/admin.html" id="dropdown-btn-admin" class="dropdown-item item-admin" style="display: none;">
+                                <i data-lucide="shield"></i>
+                                <span>Painel Admin</span>
+                            </a>
+                            <div class="dropdown-divisor"></div>
+                            <button type="button" id="btn-sair-header" class="dropdown-item item-sair">
+                                <i data-lucide="log-out"></i>
+                                <span>Sair da Conta</span>
+                            </button>
+                        </div>
+                    </div>
                 </div>
             </div>
         </header>

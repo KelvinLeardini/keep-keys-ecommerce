@@ -47,34 +47,34 @@
     </aside>
 
     <!-- Modal de Login -->
-    <div id="modal-login" class="modal-login">
+    <div id="modal-login" class="modal-login" role="dialog" aria-modal="true" aria-labelledby="titulo-modal-login">
         <div class="conteudo-modal">
-            <span class="fechar-modal">&times;</span>
+            <button type="button" class="fechar-modal" aria-label="Fechar janela de login">&times;</button>
             
             <!-- Formulário de Login (Visível por padrão) -->
             <form id="form-login">
-                <h2>Acessar Conta</h2>
-                <input type="email" id="email" placeholder="Digite seu e-mail" required>
-                <input type="password" id="senha" placeholder="Senha" required>
+                <h2 id="titulo-modal-login">Acessar Conta</h2>
+                <input type="email" id="email" placeholder="Digite seu e-mail" aria-label="E-mail" required>
+                <input type="password" id="senha" placeholder="Senha" aria-label="Senha" required>
                 <button type="submit">ENTRAR</button>
                 
                 <!-- Link para alternar -->
                 <p style="text-align: center; margin-top: 15px; font-size: 0.9rem;">
-                    Não tem uma conta? <a href="#" id="link-ir-cadastro" style="color: #ff0000;">Cadastre-se</a>
+                    Não tem uma conta? <a href="#" id="link-ir-cadastro" style="color: #66c0f4;">Cadastre-se</a>
                 </p>
             </form>
 
             <!-- Formulário de Cadastro (Escondido por padrão com display: none) -->
             <form id="form-cadastro" style="display: none;">
                 <h2>Criar Nova Conta</h2>
-                <input type="text" id="nome-cadastro" placeholder="Seu Nome" required>
-                <input type="email" id="email-cadastro" placeholder="Seu E-mail" required>
-                <input type="password" id="senha-cadastro" placeholder="Sua Senha" required>
+                <input type="text" id="nome-cadastro" placeholder="Seu Nome" aria-label="Nome completo" required>
+                <input type="email" id="email-cadastro" placeholder="Seu E-mail" aria-label="E-mail de cadastro" required>
+                <input type="password" id="senha-cadastro" placeholder="Sua Senha" aria-label="Senha de cadastro" required>
                 <button type="submit">CADASTRAR</button>
                 
                 <!-- Link para voltar -->
                 <p style="text-align: center; margin-top: 15px; font-size: 0.9rem;">
-                    Já tem uma conta? <a href="#" id="link-ir-login" style="color: #ff0000;">Faça login</a>
+                    Já tem uma conta? <a href="#" id="link-ir-login" style="color: #66c0f4;">Faça login</a>
                 </p>
             </form>
         </div>
@@ -83,51 +83,50 @@
     <div class="site">
         <header>
 
-            <button type="button" class="btn-hamburguer" id="btn-hamburguer" aria-label="Abrir Menu">
+            <button type="button" class="btn-hamburguer" id="btn-hamburguer" aria-label="Abrir Menu Lateral">
                 <span></span>
                 <span></span>
                 <span></span>
             </button>
 
-            <form action="#">
+            <form action="#" role="search">
                 <div class="buscar">
                     
-                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#888888" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#888888" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                         <circle cx="11" cy="11" r="8"></circle>
                         <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
                     </svg>
-                    <input type="text" placeholder="Buscar jogos...">
+                    <input type="search" placeholder="Buscar jogos..." aria-label="Buscar jogos no catálogo">
                 </div>
             </form>
 
             <div class="area-usuario">
-                <button type="button" id="btn-entrar-header">Entrar</button>
+                <div id="painel-usuario" class="painel-usuario" style="display: flex;">
 
-                <div id="painel-usuario" class="painel-usuario" style="display: none;">
-
-                    <div id="carteira-saldo-header" class="carteira-saldo-header" style="display: none;" title="Saldo disponível na Carteira Digital">
+                    <div id="carteira-saldo-header" class="carteira-saldo-header" title="Saldo disponível na Carteira Digital Keep Keys">
                         <i data-lucide="wallet"></i>
                         <span class="saldo-rotulo">Saldo:</span>
                         <span class="saldo-valor" id="valor-saldo-header">R$ 1.000,00</span>
                     </div>
 
                     <!-- Botão do Carrinho minimalista (apenas ícone e badge) -->
-                    <button type="button" id="btn-abrir-carrinho" class="btn-carrinho-icone" aria-label="Abrir Carrinho">
+                    <button type="button" id="btn-abrir-carrinho" class="btn-carrinho-icone" aria-label="Abrir Carrinho de Compras">
                         <i data-lucide="shopping-cart"></i>
                         <span id="contador-carrinho" class="contador-badge">0</span>
                     </button>
 
                     <div class="usuario-avatar-dropdown-container">
-                        <button type="button" id="btn-avatar-header" class="btn-avatar-header" aria-label="Menu do Usuário" title="Meu Perfil e Opções">
-                            <i data-lucide="user"></i>
+                        <button type="button" id="btn-avatar-header" class="btn-avatar-header" aria-label="Menu do Usuário" aria-haspopup="true" aria-expanded="false" title="Meu Perfil e Opções">
+                            <img src="/imagens/avatar-gamer.svg" alt="Avatar do Gamer" class="img-avatar-header" id="header-avatar-img">
+                            <span class="avatar-status-badge" id="header-avatar-badge" title="Online"></span>
                         </button>
                         <div id="dropdown-menu-avatar" class="dropdown-menu-avatar">
                             <div class="dropdown-usuario-topo">
                                 <div class="dropdown-avatar-circulo">
-                                    <i data-lucide="user"></i>
+                                    <img src="/imagens/avatar-gamer.svg" alt="Kelvin" id="dropdown-avatar-img">
                                 </div>
                                 <div class="dropdown-dados-usuario">
-                                    <strong id="dropdown-nome-usuario">Gamer</strong>
+                                    <strong id="dropdown-nome-usuario">Kelvin</strong>
                                     <span id="dropdown-role-usuario" class="tag-categoria tag-ps">Cliente VIP</span>
                                 </div>
                             </div>
@@ -143,7 +142,7 @@
                             <div class="dropdown-divisor"></div>
                             <button type="button" id="btn-sair-header" class="dropdown-item item-sair">
                                 <i data-lucide="log-out"></i>
-                                <span>Sair</span>
+                                <span>Sair da Conta</span>
                             </button>
                         </div>
                     </div>
@@ -178,8 +177,8 @@
                 </div>
 
                 <!-- Botões de Navegação -->
-                 <button class="btn-carrocel anterior">&#10094;</button>
-                 <button class="btn-carrocel proximo">&#10095;</button>
+                 <button class="btn-carrocel anterior" aria-label="Slide anterior">&#10094;</button>
+                 <button class="btn-carrocel proximo" aria-label="Próximo slide">&#10095;</button>
 
             </section>
     
@@ -204,11 +203,11 @@
     </div>
 
     <!-- Modal / Gaveta do Carrinho de Compras -->
-    <div id="modal-carrinho" class="modal-carrinho">
+    <div id="modal-carrinho" class="modal-carrinho" role="dialog" aria-modal="true" aria-labelledby="titulo-carrinho">
         <div class="conteudo-carrinho">
             <div class="cabecalho-carrinho">
-                <h3><i data-lucide="shopping-bag"></i> Seu Carrinho</h3>
-                <span id="fechar-carrinho" class="fechar-carrinho">&times;</span>
+                <h3 id="titulo-carrinho"><i data-lucide="shopping-bag"></i> Seu Carrinho</h3>
+                <button type="button" id="fechar-carrinho" class="fechar-carrinho" aria-label="Fechar carrinho de compras">&times;</button>
             </div>
 
             <!-- Lista de itens adicionados -->
@@ -220,7 +219,7 @@
                         <h4>Control: Resonant</h4>
                         <p class="preco-item">R$ 149,90</p>
                     </div>
-                    <button type="button" class="btn-remover-item"><i data-lucide="trash-2"></i></button>
+                    <button type="button" class="btn-remover-item" aria-label="Remover item do carrinho"><i data-lucide="trash-2"></i></button>
                 </div>
             </div>
 

@@ -2408,16 +2408,27 @@ aside .footer-redes .icones-redes a .lucide {
 }
 
 .perfil-avatar {
-    width: 75px;
-    height: 75px;
+    width: 78px;
+    height: 78px;
     border-radius: 50%;
-    background: linear-gradient(135deg, #08469E, #ff0055);
+    background: #0f172a;
+    border: 2px solid #00f2fe;
+    box-shadow: 0 0 16px rgba(0, 242, 254, 0.45);
     display: flex;
     align-items: center;
     justify-content: center;
     color: #fff;
     flex-shrink: 0;
+    overflow: hidden;
 }
+
+.perfil-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
 .perfil-avatar .lucide {
     width: 38px;
     height: 38px;
@@ -2701,12 +2712,12 @@ aside .footer-redes .icones-redes a .lucide {
 }
 
 .btn-avatar-header {
-    width: 38px;
-    height: 38px;
-    min-width: 38px;
+    width: 42px;
+    height: 42px;
+    min-width: 42px;
     border-radius: 50%;
-    background: linear-gradient(135deg, #08469e, #132438);
-    border: 2px solid #08469e;
+    background: #0f172a;
+    border: 2px solid #00f2fe;
     color: #ffffff;
     display: inline-flex;
     align-items: center;
@@ -2714,8 +2725,9 @@ aside .footer-redes .icones-redes a .lucide {
     cursor: pointer;
     padding: 0;
     margin: 0;
+    position: relative;
     transition: all 0.25s ease;
-    box-shadow: 0 2px 8px rgba(8, 70, 158, 0.4);
+    box-shadow: 0 0 10px rgba(0, 242, 254, 0.35);
     outline: none;
 }
 
@@ -2723,12 +2735,38 @@ aside .footer-redes .icones-redes a .lucide {
 .btn-avatar-header.ativo {
     border-color: #66c0f4;
     transform: scale(1.08);
-    box-shadow: 0 0 12px rgba(102, 192, 244, 0.6);
+    box-shadow: 0 0 16px rgba(102, 192, 244, 0.75);
+}
+
+.img-avatar-header {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
+}
+
+.avatar-status-badge {
+    position: absolute;
+    bottom: -1px;
+    right: -1px;
+    width: 12px;
+    height: 12px;
+    background-color: #00e676;
+    border: 2px solid #132438;
+    border-radius: 50%;
+    box-shadow: 0 0 6px #00e676;
+    pointer-events: none;
+}
+
+.avatar-status-badge.offline {
+    background-color: #6b7280;
+    box-shadow: none;
 }
 
 .btn-avatar-header .lucide {
-    width: 18px;
-    height: 18px;
+    width: 20px;
+    height: 20px;
     color: #ffffff;
     display: block;
 }
@@ -2737,11 +2775,11 @@ aside .footer-redes .icones-redes a .lucide {
     position: absolute;
     top: calc(100% + 10px);
     right: 0;
-    width: 220px;
+    width: 230px;
     background: #1b1b24;
     border: 1px solid #353548;
     border-radius: 12px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.8);
     padding: 8px 0;
     display: none;
     flex-direction: column;
@@ -2756,25 +2794,34 @@ aside .footer-redes .icones-redes a .lucide {
 .dropdown-usuario-topo {
     display: flex;
     align-items: center;
-    gap: 10px;
-    padding: 8px 16px 10px 16px;
+    gap: 12px;
+    padding: 10px 16px 12px 16px;
 }
 
 .dropdown-avatar-circulo {
-    width: 34px;
-    height: 34px;
+    width: 42px;
+    height: 42px;
     border-radius: 50%;
     background: #08469e;
+    border: 2px solid #00f2fe;
     display: flex;
     align-items: center;
     justify-content: center;
     color: #fff;
     flex-shrink: 0;
+    overflow: hidden;
+}
+
+.dropdown-avatar-circulo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
 }
 
 .dropdown-avatar-circulo .lucide {
-    width: 18px;
-    height: 18px;
+    width: 20px;
+    height: 20px;
 }
 
 .dropdown-dados-usuario {
@@ -3549,4 +3596,49 @@ aside .footer-redes .icones-redes a .lucide {
     background: #363646;
     color: #fff;
 }
+
+/* ==========================================================================
+   ACESSIBILIDADE (A11Y) & FOCO VISÍVEL
+   ========================================================================== */
+:focus-visible {
+    outline: 2px solid #00f2fe !important;
+    outline-offset: 3px !important;
+}
+
+/* Classe utilitária para leitores de tela */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+/* Estilo padronizado e acessível para botões de fechar modal/gaveta */
+button.fechar-modal,
+button.fechar-carrinho {
+    background: transparent;
+    border: none;
+    color: #aaa;
+    font-size: 28px;
+    cursor: pointer;
+    line-height: 1;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4px 8px;
+    border-radius: 6px;
+    transition: color 0.2s, transform 0.2s;
+}
+
+button.fechar-modal:hover,
+button.fechar-carrinho:hover {
+    color: #ff4444;
+    transform: scale(1.1);
+}
+
 
