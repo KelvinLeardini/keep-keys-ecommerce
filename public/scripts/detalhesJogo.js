@@ -274,7 +274,7 @@ function gerarSecaoDetalhes(jogo) {
                     ${htmlDestaques}
                 </article>
 
-                <aside class="card-detalhe-jogo" aria-label="Como resgatar sua chave">
+                <div class="card-detalhe-jogo card-resgate-jogo" role="region" aria-label="Como resgatar sua chave">
                     <h3><i data-lucide="key"></i> Como Resgatar no ${esc(plat.nome)}</h3>
                     <div class="passos-ativacao">
                         <div class="passo-item">
@@ -304,7 +304,7 @@ function gerarSecaoDetalhes(jogo) {
                         <strong><i data-lucide="shield-alert"></i> Compra 100% Protegida</strong>
                         <p>Chaves autênticas adquiridas de distribuidoras autorizadas com garantia vitalícia contra revogações.</p>
                     </div>
-                </aside>
+                </div>
             </div>
         </section>
 `;

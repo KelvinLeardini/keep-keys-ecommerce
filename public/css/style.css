@@ -154,7 +154,7 @@ header button:active {
     transform: scale(0.95); /* Leve efeito de clique */
 }
 
-aside {
+body > aside {
     width: 280px; /* Largura fixa mais enxuta */
     min-width: 280px; /* Garante que a barra lateral não encolha */
     max-width: 280px; /* Garante que a barra lateral não cresça */
@@ -170,7 +170,7 @@ aside {
     box-sizing: border-box;
 }
 
-aside .logo img{
+body > aside .logo img{
     width: 220px;
     max-width: 100%;
     height: auto;
@@ -181,12 +181,12 @@ aside .logo img{
     display: block; /* Garante que a imagem seja tratada como bloco para centralização */
 }
 
-aside .logo img:hover {
+body > aside .logo img:hover {
     transform: scale(1.15); /* Leve zoom ao passar o mouse */
     transition: transform 0.5s ease; /* Animação suave para o zoom */
 }
 
-aside nav ul {
+body > aside nav ul {
     list-style: none;
     width: 100%;
     padding: 0; /* IMPORTANTE: Remove o padding padrão da ul */
@@ -194,12 +194,12 @@ aside nav ul {
     text-align: center; /* Garante que os itens fiquem alinhados com o centro */
 }
 
-aside nav ul li {
+body > aside nav ul li {
     margin-bottom: 15px;
     text-align: center; /* Centraliza o conteúdo do item da lista */;
 }
 
-aside nav ul li a {
+body > aside nav ul li a {
     color: #ffffff;
     text-decoration: none;
     font-weight: bold;
@@ -211,24 +211,24 @@ aside nav ul li a {
 }
 
 /* Espaçamento elegante para o ícone na navbar original */
-aside nav ul li a .lucide {
+body > aside nav ul li a .lucide {
     width: 18px !important;
     height: 18px !important;
     margin-right: 8px !important; /* Cria um respiro exato entre o ícone e o texto */
     vertical-align: middle !important; /* Alinha perfeitamente com a altura da fonte */
 }
 
-aside nav ul li a:hover {
+body > aside nav ul li a:hover {
     transform: scale(1.15); /* Leve zoom ao passar o mouse */
     background-color: #1a1a1a;
 }
 
-aside nav ul li a:active {
+body > aside nav ul li a:active {
     transform: scale(0.95); /* Leve efeito de clique */
 }
 
 /* Linha Divisória da Barra Lateral */
-aside hr.divisoria {
+body > aside hr.divisoria {
     border: 0;
     height: 1px;
     background-color: rgba(255, 255, 255, 0.2); /* Linha semi-transparente */
@@ -773,7 +773,7 @@ footer ul li a:hover {
     z-index: 100;
 }
 
-aside .footer-redes .icones-redes {
+body > aside .footer-redes .icones-redes {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -781,20 +781,20 @@ aside .footer-redes .icones-redes {
 }
 
 /* Estilo e cor base dos ícones */
-aside .footer-redes .icones-redes a {
+body > aside .footer-redes .icones-redes a {
     color: #ffffff; /* Garante que os ícones fiquem brancos para contrastar com o fundo */
     display: flex;
     transition: color 0.2s ease, transform 0.2s ease;
 }
 
 /* Efeito ao passar o mouse */
-aside .footer-redes .icones-redes a:hover {
+body > aside .footer-redes .icones-redes a:hover {
     color: #7a7979; /* Fica preto (ou pode mudar para #ff0000 se preferir vermelho) ao passar o mouse */
     transform: scale(1.15); /* Leve zoom */
 }
 
 /* Tamanho exato e padronizado */
-aside .footer-redes .icones-redes a .lucide {
+body > aside .footer-redes .icones-redes a .lucide {
     width: 26px;
     height: 26px;
     stroke-width: 1.5;
@@ -2278,8 +2278,8 @@ aside .footer-redes .icones-redes a .lucide {
     }
 
     /* Menu Lateral Gaveta (Drawer) */
-    aside,
-    #aplicativo aside {
+    body > aside,
+    #aplicativo > aside {
         position: fixed !important;
         top: 0 !important;
         left: -290px !important;
@@ -2290,8 +2290,8 @@ aside .footer-redes .icones-redes a .lucide {
         box-shadow: 4px 0 25px rgba(0, 0, 0, 0.8) !important;
     }
 
-    aside.ativo,
-    #aplicativo aside.ativo {
+    body > aside.ativo,
+    #aplicativo > aside.ativo {
         left: 0 !important; /* Puxa o menu de volta para a tela */
     }
 
@@ -4095,22 +4095,46 @@ button.fechar-carrinho:hover {
 
 .grid-detalhes-jogo {
     display: grid;
-    grid-template-columns: 1.6fr 1fr;
+    grid-template-columns: minmax(0, 1.7fr) minmax(340px, 1fr);
     gap: 30px;
+    align-items: start;
+    width: 100%;
+    box-sizing: border-box;
 }
 
-@media (max-width: 950px) {
+@media (max-width: 1024px) {
     .grid-detalhes-jogo {
         grid-template-columns: 1fr;
+        gap: 25px;
     }
 }
 
 .card-detalhe-jogo {
-    background: #1c1c24;
-    border: 1px solid #30303e;
-    border-radius: 14px;
-    padding: 28px;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+    background: #1c1c24 !important;
+    border: 1px solid #30303e !important;
+    border-radius: 14px !important;
+    padding: 28px !important;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4) !important;
+    box-sizing: border-box !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
+    min-height: auto !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: stretch !important;
+    text-align: left !important;
+}
+
+.card-resgate-jogo {
+    position: sticky;
+    top: 20px;
+    background: #1c1c24 !important;
+    border: 1px solid #30303e !important;
+    border-radius: 14px !important;
+    padding: 28px !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
 }
 
 .card-detalhe-jogo h3 {
