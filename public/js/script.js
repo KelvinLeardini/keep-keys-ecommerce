@@ -407,7 +407,7 @@ function inicializarAutenticacao() {
         configurarDropdownAvatar();
 
         // Configuração dos eventos do dropdown
-        const btnSairDropdown = document.getElementById('btn-sair-dropdown');
+        const btnSairDropdown = document.getElementById('btn-sair-dropdown') || document.getElementById('btn-sair-header');
         if (btnSairDropdown) {
             btnSairDropdown.onclick = () => {
                 localStorage.setItem('usuarioLogado', 'false');

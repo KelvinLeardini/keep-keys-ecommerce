@@ -10,6 +10,7 @@ createApp({
             buscaAdmin: '',
             listaJogos: [],
             jogoEmEdicaoId: null,
+            menuAvatarAberto: false,
             novoJogo: {
                 titulo: '',
                 preco: '',
@@ -202,6 +203,14 @@ createApp({
                 }
             }
         },
+        toggleMenuAvatar() {
+            this.menuAvatarAberto = !this.menuAvatarAberto;
+            if (this.menuAvatarAberto) {
+                this.$nextTick(() => {
+                    if (typeof lucide !== 'undefined') lucide.createIcons();
+                });
+            }
+        },
         sairDoPainel() {
             localStorage.removeItem('usuarioLogado');
             localStorage.removeItem('usuarioRole');
@@ -212,6 +221,11 @@ createApp({
     mounted() {
         this.verificarAcesso();
         this.carregarJogos();
+        document.addEventListener('click', (e) => {
+            if (!e.target.closest('.usuario-avatar-dropdown-container')) {
+                this.menuAvatarAberto = false;
+            }
+        });
     },
     updated() {
         if (typeof lucide !== 'undefined') lucide.createIcons();

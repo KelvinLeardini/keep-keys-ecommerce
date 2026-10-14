@@ -68,9 +68,37 @@
             </div>
             <div class="area-usuario">
                 <div class="painel-usuario">
-                    <a href="/perfil.html" class="btn-perfil" style="display: inline-flex;"><i data-lucide="user"></i> Perfil</a>
-                    <span><i data-lucide="shield-alert" style="margin-right: 5px; color: #ff9900;"></i> Administrador</span>
-                    <button type="button" @click="sairDoPainel" class="btn-sair">Sair</button>
+                    <div class="usuario-avatar-dropdown-container">
+                        <button type="button" id="btn-avatar-header" class="btn-avatar-header" @click.stop="toggleMenuAvatar" aria-label="Menu do Administrador Kelvin" aria-haspopup="true" :aria-expanded="menuAvatarAberto" title="Meu Perfil e Opções">
+                            <img src="/imagens/avatar-gamer.svg" alt="Admin Kelvin" class="img-avatar-header">
+                            <span class="avatar-status-badge" title="Online"></span>
+                        </button>
+                        <div id="dropdown-menu-avatar" class="dropdown-menu-avatar" :class="{ 'aberto': menuAvatarAberto }">
+                            <div class="dropdown-usuario-topo">
+                                <div class="dropdown-avatar-circulo">
+                                    <img src="/imagens/avatar-gamer.svg" alt="Admin Kelvin">
+                                </div>
+                                <div class="dropdown-dados-usuario">
+                                    <strong id="dropdown-nome-usuario">Kelvin</strong>
+                                    <span id="dropdown-role-usuario" class="tag-categoria tag-destaque" style="background: #e65100; color: #fff;">Administrador</span>
+                                </div>
+                            </div>
+                            <div class="dropdown-divisor"></div>
+                            <a href="/index.html" class="dropdown-item">
+                                <i data-lucide="store"></i>
+                                <span>Voltar à Loja</span>
+                            </a>
+                            <a href="/perfil.html" class="dropdown-item">
+                                <i data-lucide="user"></i>
+                                <span>Meu Perfil</span>
+                            </a>
+                            <div class="dropdown-divisor"></div>
+                            <button type="button" @click="sairDoPainel" class="dropdown-item item-sair">
+                                <i data-lucide="log-out"></i>
+                                <span>Sair da Conta</span>
+                            </button>
+                        </div>
+                    </div>
                 </div>
             </div>
         </header>
@@ -210,8 +238,8 @@
                                     <input v-model="novoJogo.preco" type="text" placeholder="Ex: 299,90" required>
                                 </div>
                                 <div>
-                                    <label class="admin-label">Preço Antigo (Opcional):</label>
-                                    <input v-model="novoJogo.precoAntigo" type="text" placeholder="Ex: 349,90">
+                                    <label class="admin-label">Preço Antigo:</label>
+                                    <input v-model="novoJogo.precoAntigo" type="text" placeholder="Ex: 349,90 (Opcional)">
                                 </div>
                             </div>
 

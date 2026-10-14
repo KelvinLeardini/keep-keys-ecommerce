@@ -73,20 +73,20 @@ header .buscar input::placeholder {
     color: #888888; /* Cor do placeholder */ 
 }
 
-/* BOTÃO LOGIN*/
-header button[type="button"] {
-    background-color: blue;
+/* BOTÃO LOGIN (Apenas quando não logado) */
+#btn-entrar-header {
+    background-color: #08469E;
     color: white;
-    border: none; /* Remove a borda padrão do botão */
+    border: none;
     border-radius: 6px;
     padding: 8px 20px;
     font-weight: bold;
-    transition: background-color 0.2s ease, transform 0.1s ease; /* Animação suave para hover */
+    transition: background-color 0.2s ease, transform 0.1s ease;
     cursor: pointer;
     margin: 0;
 }
 
-header button[type="button"]:hover {
+#btn-entrar-header:hover {
     background-color: #003380;
 }
 
@@ -237,14 +237,16 @@ aside hr.divisoria {
 }
 
 .site {
-    flex: 1; /* Faz o carrocel ocupar o espaço restante */
-    width: calc(100vw - 300px); /* Ajusta a largura do site para ocupar o espaço restante */
+    flex: 1;
+    min-width: 0;
+    width: 100%;
+    max-width: calc(100% - 280px);
     display: flex;
     flex-direction: column;
-    justify-content: flex-start; /* Empurra o footer para o final da área disponível */
-    min-height: 100vh; /* Garante que o site ocupe toda a altura da tela */
-    padding: 20px;
-    box-sizing: border-box; /* Inclui padding e border no cálculo da largura e altura */
+    justify-content: flex-start;
+    min-height: 100vh;
+    padding: 20px 30px;
+    box-sizing: border-box;
 }
 
 .banner {
@@ -1382,39 +1384,64 @@ aside .footer-redes .icones-redes a .lucide {
     margin-top: 10px;
 }
 
-.btn-card-editar {
-    background: #2a2a34;
-    color: #66c0f4;
-    border: 1px solid #404052;
-    padding: 8px;
-    border-radius: 6px;
-    cursor: pointer;
-    font-size: 0.8rem;
-    font-weight: bold;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 4px;
-    transition: 0.2s;
+.jogo-produtos .admin-card-acoes button.btn-card-editar,
+.admin-card-acoes .btn-card-editar {
+    width: 100% !important;
+    background: #08469e !important;
+    background-color: #08469e !important;
+    color: #ffffff !important;
+    border: 1px solid #00f2fe !important;
+    padding: 8px 10px !important;
+    border-radius: 6px !important;
+    cursor: pointer !important;
+    font-size: 0.82rem !important;
+    font-weight: 700 !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 6px !important;
+    transition: all 0.2s ease !important;
+    box-shadow: 0 2px 6px rgba(0, 242, 254, 0.25) !important;
 }
-.btn-card-editar:hover { background: #08469E; color: #fff; border-color: #08469E; }
 
-.btn-card-excluir {
-    background: #341f22;
-    color: #ff6666;
-    border: 1px solid #5a262a;
-    padding: 8px;
-    border-radius: 6px;
-    cursor: pointer;
-    font-size: 0.8rem;
-    font-weight: bold;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 4px;
-    transition: 0.2s;
+.jogo-produtos .admin-card-acoes button.btn-card-editar:hover,
+.admin-card-acoes .btn-card-editar:hover {
+    background: #00f2fe !important;
+    background-color: #00f2fe !important;
+    color: #050c1a !important;
+    border-color: #00f2fe !important;
+    transform: translateY(-2px) !important;
+    box-shadow: 0 4px 12px rgba(0, 242, 254, 0.45) !important;
 }
-.btn-card-excluir:hover { background: #cc0000; color: #fff; border-color: #cc0000; }
+
+.jogo-produtos .admin-card-acoes button.btn-card-excluir,
+.admin-card-acoes .btn-card-excluir {
+    width: 100% !important;
+    background: #341f22 !important;
+    background-color: #341f22 !important;
+    color: #ff7b7b !important;
+    border: 1px solid #6b262a !important;
+    padding: 8px 10px !important;
+    border-radius: 6px !important;
+    cursor: pointer !important;
+    font-size: 0.82rem !important;
+    font-weight: 700 !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 6px !important;
+    transition: all 0.2s ease !important;
+}
+
+.jogo-produtos .admin-card-acoes button.btn-card-excluir:hover,
+.admin-card-acoes .btn-card-excluir:hover {
+    background: #dc3545 !important;
+    background-color: #dc3545 !important;
+    color: #ffffff !important;
+    border-color: #dc3545 !important;
+    transform: translateY(-2px) !important;
+    box-shadow: 0 4px 12px rgba(220, 53, 69, 0.45) !important;
+}
 
 /* ==========================================
    AJUSTE PROFISSIONAL DA BARRA LATERAL (ADMIN)
@@ -2260,7 +2287,7 @@ aside .footer-redes .icones-redes a .lucide {
         margin: 0;
     }
     
-    header button[type="button"] {
+    #btn-entrar-header {
         padding: 6px 12px;
         font-size: 0.8rem;
         white-space: nowrap;
@@ -2711,39 +2738,55 @@ aside .footer-redes .icones-redes a .lucide {
     align-items: center;
 }
 
+header #btn-avatar-header,
+header .btn-avatar-header,
 .btn-avatar-header {
-    width: 42px;
-    height: 42px;
-    min-width: 42px;
-    border-radius: 50%;
-    background: #0f172a;
-    border: 2px solid #00f2fe;
-    color: #ffffff;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    padding: 0;
-    margin: 0;
-    position: relative;
-    transition: all 0.25s ease;
-    box-shadow: 0 0 10px rgba(0, 242, 254, 0.35);
-    outline: none;
+    width: 44px !important;
+    height: 44px !important;
+    min-width: 44px !important;
+    max-width: 44px !important;
+    min-height: 44px !important;
+    max-height: 44px !important;
+    border-radius: 50% !important;
+    background: #0f172a !important;
+    border: 2px solid #00f2fe !important;
+    color: #ffffff !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    cursor: pointer !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    position: relative !important;
+    box-sizing: border-box !important;
+    transition: all 0.25s ease !important;
+    box-shadow: 0 0 10px rgba(0, 242, 254, 0.35) !important;
+    outline: none !important;
+    overflow: visible !important;
+    flex-shrink: 0 !important;
 }
 
+header #btn-avatar-header:hover,
+header .btn-avatar-header:hover,
 .btn-avatar-header:hover,
 .btn-avatar-header.ativo {
-    border-color: #66c0f4;
-    transform: scale(1.08);
-    box-shadow: 0 0 16px rgba(102, 192, 244, 0.75);
+    background: #132038 !important;
+    border-color: #66c0f4 !important;
+    transform: scale(1.08) !important;
+    box-shadow: 0 0 16px rgba(102, 192, 244, 0.75) !important;
 }
 
-.img-avatar-header {
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
-    object-fit: cover;
-    display: block;
+.img-avatar-header,
+.btn-avatar-header .img-avatar-header {
+    width: 100% !important;
+    height: 100% !important;
+    border-radius: 50% !important;
+    object-fit: cover !important;
+    display: block !important;
+    pointer-events: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    box-sizing: border-box !important;
 }
 
 .avatar-status-badge {
@@ -3640,5 +3683,203 @@ button.fechar-carrinho:hover {
     color: #ff4444;
     transform: scale(1.1);
 }
+
+/* ==========================================================================
+   SEÇÕES COMPLEMENTARES DA PÁGINA DO JOGO (SINOPSE, REQUISITOS, ATIVAÇÃO)
+   ========================================================================== */
+.detalhes-produto-container {
+    max-width: 1300px;
+    width: 100%;
+    margin: 30px auto 50px auto;
+    padding: 0 30px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.secao-info-badges {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 16px;
+}
+
+.info-badge-card {
+    background: #23232c;
+    border: 1px solid #363645;
+    border-radius: 12px;
+    padding: 16px 20px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    transition: all 0.25s ease;
+}
+
+.info-badge-card:hover {
+    border-color: #00f2fe;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 242, 254, 0.15);
+}
+
+.info-badge-card .badge-icone {
+    width: 44px;
+    height: 44px;
+    border-radius: 10px;
+    background: rgba(8, 70, 158, 0.35);
+    border: 1px solid rgba(0, 242, 254, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    color: #00f2fe;
+}
+
+.info-badge-card .badge-icone .lucide {
+    width: 22px;
+    height: 22px;
+}
+
+.info-badge-card .badge-texto strong {
+    display: block;
+    font-size: 0.95rem;
+    color: #ffffff;
+    margin-bottom: 2px;
+}
+
+.info-badge-card .badge-texto span {
+    font-size: 0.8rem;
+    color: #a0a0b2;
+}
+
+.grid-detalhes-jogo {
+    display: grid;
+    grid-template-columns: 1.6fr 1fr;
+    gap: 30px;
+}
+
+@media (max-width: 950px) {
+    .grid-detalhes-jogo {
+        grid-template-columns: 1fr;
+    }
+}
+
+.card-detalhe-jogo {
+    background: #1c1c24;
+    border: 1px solid #30303e;
+    border-radius: 14px;
+    padding: 28px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+}
+
+.card-detalhe-jogo h3 {
+    margin: 0 0 18px 0;
+    font-size: 1.3rem;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    padding-bottom: 12px;
+}
+
+.card-detalhe-jogo h3 .lucide {
+    color: #00f2fe;
+    width: 22px;
+    height: 22px;
+}
+
+.card-detalhe-jogo p {
+    color: #cccccc;
+    line-height: 1.7;
+    font-size: 0.95rem;
+    margin-bottom: 16px;
+}
+
+.requisitos-tabela {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-top: 15px;
+}
+
+@media (max-width: 600px) {
+    .requisitos-tabela {
+        grid-template-columns: 1fr;
+    }
+}
+
+.coluna-requisito {
+    background: #23232c;
+    border-radius: 10px;
+    padding: 16px;
+    border: 1px solid #363645;
+}
+
+.coluna-requisito h4 {
+    margin: 0 0 12px 0;
+    font-size: 0.95rem;
+    color: #00f2fe;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.coluna-requisito ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.coluna-requisito ul li {
+    font-size: 0.82rem;
+    color: #bbb;
+    margin-bottom: 8px;
+    line-height: 1.4;
+}
+
+.coluna-requisito ul li strong {
+    color: #fff;
+}
+
+.passos-ativacao {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.passo-item {
+    display: flex;
+    gap: 14px;
+    align-items: flex-start;
+}
+
+.passo-numero {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background: #08469e;
+    color: #fff;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    font-size: 0.85rem;
+    border: 1px solid #00f2fe;
+}
+
+.passo-texto strong {
+    display: block;
+    font-size: 0.9rem;
+    color: #fff;
+    margin-bottom: 2px;
+}
+
+.passo-texto p {
+    font-size: 0.82rem;
+    color: #aaa;
+    margin: 0;
+    line-height: 1.4;
+}
+
 
 

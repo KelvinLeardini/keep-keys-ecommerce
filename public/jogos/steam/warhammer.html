@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Keep Keys - Sua loja gamer</title>
+    <title>Warhammer 40,000: Space Marine 2 - Keep Keys</title>
     <link rel="stylesheet" href="/css/style.css">
-    <link rel="favicon" href="/imagens/Logo-1.png" type="image/png">
+    <link rel="icon" href="/imagens/Logo-1.png" type="image/png">
 </head>
 <body>
     
@@ -16,15 +16,15 @@
 
         <nav>
             <ul>
-                <li><a href="/lancamentos.html">Lançamentos</a></li>
-                <li><a href="/promocoes.html">Promoções</a></li>
+                <li><a href="/lancamentos.html"><i data-lucide="rocket"></i> Lançamentos</a></li>
+                <li><a href="/promocoes.html"><i data-lucide="tag"></i> Promoções</a></li>
 
                 <!-- Linha Divisória -->
                 <hr class="divisoria">
 
-                <li><a href="/jogos/ps/ps.html">Playstation</a></li>
-                <li><a href="/jogos/xbox/xbox.html">Xbox</a></li>
-                <li><a href="/jogos/steam/Steam.html">Steam</a></li>
+                <li><a href="/jogos/ps/ps.html"><i data-lucide="gamepad-2"></i> Playstation</a></li>
+                <li><a href="/jogos/xbox/xbox.html"><i data-lucide="gamepad-2"></i> Xbox</a></li>
+                <li><a href="/jogos/steam/Steam.html"><i data-lucide="monitor-play"></i> Steam</a></li>
             </ul>
         </nav>
 
@@ -32,15 +32,15 @@
             <div class="icones-redes">
                 <a href="https://www.instagram.com/" aria-label="Instagram" target="_blank">
                     <svg class="lucide" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
-                    <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
-                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
-                    <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line>
-        </svg>
+                        <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+                        <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                        <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line>
+                    </svg>
                 </a>
                 <a href="https://www.facebook.com/" aria-label="Facebook" target="_blank">
                     <svg class="lucide" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
-        </svg>
+                        <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+                    </svg>
                 </a>
             </div>
         </div>
@@ -50,18 +50,30 @@
     <div id="modal-login" class="modal-login">
         <div class="conteudo-modal">
             <span class="fechar-modal">&times;</span>
-            <h2>Acessar Conta</h2>
             <form id="form-login">
-                <input type="email" id="email" placeholder="E-mail de teste" required>
+                <h2>Acessar Conta</h2>
+                <input type="email" id="email" placeholder="Digite seu e-mail" required>
                 <input type="password" id="senha" placeholder="Senha" required>
                 <button type="submit">ENTRAR</button>
+                <p style="text-align: center; margin-top: 15px; font-size: 0.9rem;">
+                    Não tem uma conta? <a href="#" id="link-ir-cadastro" style="color: #00f2fe;">Cadastre-se</a>
+                </p>
+            </form>
+            <form id="form-cadastro" style="display: none;">
+                <h2>Criar Nova Conta</h2>
+                <input type="text" id="nome-cadastro" placeholder="Seu Nome" required>
+                <input type="email" id="email-cadastro" placeholder="Seu E-mail" required>
+                <input type="password" id="senha-cadastro" placeholder="Sua Senha" required>
+                <button type="submit">CADASTRAR</button>
+                <p style="text-align: center; margin-top: 15px; font-size: 0.9rem;">
+                    Já tem uma conta? <a href="#" id="link-ir-login" style="color: #00f2fe;">Faça login</a>
+                </p>
             </form>
         </div>
     </div>
 
     <div class="site">
         <header>
-
             <button type="button" class="btn-hamburguer" id="btn-hamburguer" aria-label="Abrir Menu">
                 <span></span>
                 <span></span>
@@ -79,22 +91,49 @@
             </form>
 
             <div class="area-usuario">
-                <button type="button" id="btn-entrar-header">Entrar</button>
+                <div id="painel-usuario" class="painel-usuario" style="display: flex;">
+                    <div id="carteira-saldo-header" class="carteira-saldo-header" title="Saldo disponível na Carteira Digital Keep Keys">
+                        <i data-lucide="wallet"></i>
+                        <span class="saldo-rotulo">Saldo:</span>
+                        <span class="saldo-valor" id="valor-saldo-header">R$ 1.000,00</span>
+                    </div>
 
-                <div id="painel-usuario" class="painel-usuario" style="display: none;">
-
-                    <button type="button" id="btn-abrir-carrinho" class="btn-carrinho-icone" aria-label="Abrir Carrinho">
+                    <button type="button" id="btn-abrir-carrinho" class="btn-carrinho-icone" aria-label="Abrir Carrinho de Compras">
                         <i data-lucide="shopping-cart"></i>
                         <span id="contador-carrinho" class="contador-badge">0</span>
                     </button>
 
-                    <!-- Adicione isso no seu header, próximo aos botões de usuário -->
-                    <a href="/admin.html" id="btn-admin-header" class="btn-admin" style="display: none;">
-                    Painel Admin
-                    </a>
-
-                    <span>Olá, <strong>Gamer</strong>!</span>
-                    <button type="button" id="btn-sair-header" class="btn-sair">Sair</button>
+                    <div class="usuario-avatar-dropdown-container">
+                        <button type="button" id="btn-avatar-header" class="btn-avatar-header" aria-label="Menu do Usuário" aria-haspopup="true" aria-expanded="false" title="Meu Perfil e Opções">
+                            <img src="/imagens/avatar-gamer.svg" alt="Avatar Gamer" class="img-avatar-header" id="header-avatar-img">
+                            <span class="avatar-status-badge" id="header-avatar-badge" title="Online"></span>
+                        </button>
+                        <div id="dropdown-menu-avatar" class="dropdown-menu-avatar">
+                            <div class="dropdown-usuario-topo">
+                                <div class="dropdown-avatar-circulo">
+                                    <img src="/imagens/avatar-gamer.svg" alt="Kelvin" id="dropdown-avatar-img">
+                                </div>
+                                <div class="dropdown-dados-usuario">
+                                    <strong id="dropdown-nome-usuario">Kelvin</strong>
+                                    <span id="dropdown-role-usuario" class="tag-categoria tag-ps">Cliente VIP</span>
+                                </div>
+                            </div>
+                            <div class="dropdown-divisor"></div>
+                            <a href="/perfil.html" class="dropdown-item">
+                                <i data-lucide="user"></i>
+                                <span>Meu Perfil</span>
+                            </a>
+                            <a href="/admin.html" id="dropdown-btn-admin" class="dropdown-item item-admin" style="display: none;">
+                                <i data-lucide="shield"></i>
+                                <span>Painel Admin</span>
+                            </a>
+                            <div class="dropdown-divisor"></div>
+                            <button type="button" id="btn-sair-header" class="dropdown-item item-sair">
+                                <i data-lucide="log-out"></i>
+                                <span>Sair da Conta</span>
+                            </button>
+                        </div>
+                    </div>
                 </div>
             </div>
 
@@ -103,36 +142,136 @@
         <main class="blocos">
 
             <section class="bloco-1">
-
                 <div class="jogo">
-                    <img src="/imagens/space-marine.avif">
+                    <img src="/imagens/space-marine.avif" alt="Warhammer 40,000: Space Marine 2">
                 </div>
             </section>
 
             <div class="coluna-direita">
                 <div class="bloco-lateral">
                     <h2>Warhammer 40,000: Space Marine 2</h2>
-                    <span class="tag-plataforma">PS4 · Mídia Digital</span>
+                    <span class="tag-plataforma">Steam · PC Mídia Digital</span>
                     <h3 class="preco-jogo">R$ 49,97</h3>
 
                     <div class="btns-jogo">
-                        <button class="comprar-btn"><i data-lucide="shopping-cart"></i>COMPRAR AGORA</button>
-                        <button type="button" type="button" class="desejo-btn" aria-label="Adicionar aos Favoritos"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-heart preview-icon"><path d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5"/></svg></button>
+                        <button type="button" class="comprar-btn"><i data-lucide="shopping-cart"></i>COMPRAR AGORA</button>
+                        <button type="button" class="desejo-btn" aria-label="Adicionar aos Favoritos"><i data-lucide="heart"></i></button>
                     </div>
                 </div>
 
                 <div class="bloco-lateral-2">
                     <h4>Informações da Chave:</h4>
                     <ul>
-                        <li>⚡ Envio imediato por e-mail</li>
-                        <li>🔑 Código de resgate oficial PSN</li>
+                        <li>⚡ Envio imediato por e-mail e perfil</li>
+                        <li>🔑 Código de resgate oficial Steam</li>
                         <li>🛡️ Garantia vitalícia contra bloqueios</li>
                     </ul>
                 </div>
-
             </div>
 
         </main>
+
+        <!-- Detalhes do Produto, Sinopse e Requisitos -->
+        <section class="detalhes-produto-container">
+            <div class="secao-info-badges">
+                <div class="info-badge-card">
+                    <div class="badge-icone"><i data-lucide="zap"></i></div>
+                    <div class="badge-texto">
+                        <strong>Envio Instantâneo</strong>
+                        <span>Chave entregue em segundos</span>
+                    </div>
+                </div>
+                <div class="info-badge-card">
+                    <div class="badge-icone"><i data-lucide="shield-check"></i></div>
+                    <div class="badge-texto">
+                        <strong>Garantia Vitalícia</strong>
+                        <span>Chave 100% original Steam</span>
+                    </div>
+                </div>
+                <div class="info-badge-card">
+                    <div class="badge-icone"><i data-lucide="headset"></i></div>
+                    <div class="badge-texto">
+                        <strong>Suporte Gamer 24/7</strong>
+                        <span>Atendimento especializado</span>
+                    </div>
+                </div>
+                <div class="info-badge-card">
+                    <div class="badge-icone"><i data-lucide="award"></i></div>
+                    <div class="badge-texto">
+                        <strong>Avaliação 4.9/5</strong>
+                        <span>Mais de 1.500 clientes VIP</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid-detalhes-jogo">
+                <div class="card-detalhe-jogo">
+                    <h3><i data-lucide="sparkles"></i> Sobre o Jogo</h3>
+                    <p>Sua perícia e ferocidade sobre-humanas são tudo o que restou entre a humanidade e as horrores da galáxia. Em <strong>Warhammer 40,000: Space Marine 2</strong>, encarne a fúria e o poder bélico implacável de um Space Marine, os guerreiros mais letais do Imperador.</p>
+                    <p>Mantenha à distância as abominações tirânidas em batalhas de proporções épicas, execute movimentos brutais de combate corpo a corpo e aniquile enxames vorazes com um arsenal devastador. Jogue em uma campanha solo cinematográfica ou junte forças com até 2 amigos no modo cooperativo para 3 jogadores.</p>
+
+                    <h3 style="margin-top: 30px;"><i data-lucide="cpu"></i> Requisitos de Sistema (PC / Steam)</h3>
+                    <div class="requisitos-tabela">
+                        <div class="coluna-requisito">
+                            <h4>Mínimos (1080p / 30 FPS)</h4>
+                            <ul>
+                                <li><strong>SO:</strong> Windows 10/11 (64-bit)</li>
+                                <li><strong>Processador:</strong> AMD Ryzen 5 2600X / Intel Core i5-8600K</li>
+                                <li><strong>Memória:</strong> 12 GB RAM</li>
+                                <li><strong>Placa de Vídeo:</strong> GeForce GTX 1060 (6GB) / Radeon RX 580</li>
+                                <li><strong>Armazenamento:</strong> 75 GB SSD (obrigatório)</li>
+                            </ul>
+                        </div>
+                        <div class="coluna-requisito">
+                            <h4>Recomendados (1080p / 60 FPS)</h4>
+                            <ul>
+                                <li><strong>SO:</strong> Windows 10/11 (64-bit)</li>
+                                <li><strong>Processador:</strong> AMD Ryzen 7 5800X / Intel Core i7-12700</li>
+                                <li><strong>Memória:</strong> 16 GB RAM</li>
+                                <li><strong>Placa de Vídeo:</strong> GeForce RTX 3070 / Radeon RX 6800 XT</li>
+                                <li><strong>Armazenamento:</strong> 75 GB SSD NVMe de alta velocidade</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card-detalhe-jogo">
+                    <h3><i data-lucide="key"></i> Como Ativar sua Chave no Steam</h3>
+                    <div class="passos-ativacao">
+                        <div class="passo-item">
+                            <span class="passo-numero">1</span>
+                            <div class="passo-texto">
+                                <strong>Receba seu código</strong>
+                                <p>Após a confirmação da compra, seu código digital Keep Keys é liberado imediatamente no painel de compras.</p>
+                            </div>
+                        </div>
+                        <div class="passo-item">
+                            <span class="passo-numero">2</span>
+                            <div class="passo-texto">
+                                <strong>Abra o aplicativo Steam</strong>
+                                <p>No menu superior do aplicativo, clique na aba <em>"Jogos"</em> e selecione <em>"Ativar um código de produto no Steam..."</em>.</p>
+                            </div>
+                        </div>
+                        <div class="passo-item">
+                            <span class="passo-numero">3</span>
+                            <div class="passo-texto">
+                                <strong>Resgate e jogue</strong>
+                                <p>Insira a chave recebida, confirme os termos e o jogo será permanentemente adicionado à sua biblioteca Steam!</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div style="margin-top: 25px; padding: 16px; background: rgba(0, 242, 254, 0.08); border-radius: 10px; border: 1px dashed rgba(0, 242, 254, 0.3);">
+                        <strong style="color: #00f2fe; display: block; margin-bottom: 5px; font-size: 0.9rem;">
+                            <i data-lucide="shield-alert" style="vertical-align: middle; width: 16px; height: 16px; margin-right: 4px;"></i> Compra 100% Protegida
+                        </strong>
+                        <p style="font-size: 0.8rem; color: #bbb; margin: 0; line-height: 1.4;">
+                            Todas as transações na Keep Keys contam com validação direta das distribuidoras oficiais e garantia vitalícia contra revogações.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
         <footer>
             <p>&copy; 2026 Keep Keys - Sua Loja Gamer. Todos os direitos reservados.</p>
@@ -150,27 +289,17 @@
         <div class="conteudo-carrinho">
             <div class="cabecalho-carrinho">
                 <h3><i data-lucide="shopping-bag"></i> Seu Carrinho</h3>
-                <span id="fechar-carrinho" class="fechar-carrinho">&times;</span>
+                <button type="button" id="fechar-carrinho" class="fechar-carrinho" aria-label="Fechar Carrinho">&times;</button>
             </div>
 
             <!-- Lista de itens adicionados -->
-            <div class="lista-itens-carrinho" id="lista-itens-carrinho">
-                <!-- Exemplo visual de um item no carrinho para testarmos o design -->
-                <div class="item-carrinho">
-                    <img src="/imagens/control.jpg" alt="Control: Resonant">
-                    <div class="detalhes-item">
-                        <h4>Control: Resonant</h4>
-                        <p class="preco-item">R$ 149,90</p>
-                    </div>
-                    <button type="button" class="btn-remover-item"><i data-lucide="trash-2"></i></button>
-                </div>
-            </div>
+            <div class="lista-itens-carrinho" id="lista-itens-carrinho"></div>
 
             <!-- Rodapé do Carrinho com Total e Botão de Checkout -->
             <div class="rodape-carrinho">
                 <div class="total-carrinho">
                     <span>Total:</span>
-                    <strong id="valor-total-carrinho">R$ 149,90</strong>
+                    <strong id="valor-total-carrinho">R$ 0,00</strong>
                 </div>
                 <button type="button" class="btn-finalizar-compra">Finalizar Compra</button>
             </div>
