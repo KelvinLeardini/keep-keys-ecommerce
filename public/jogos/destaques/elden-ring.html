@@ -134,7 +134,7 @@
             </div>
         </main>
 
-        <!-- Detalhes do Produto, Sinopse e Requisitos -->
+        <!-- Detalhes do Produto: Sobre, Ficha Técnica e Destaques -->
         <section class="detalhes-produto-container">
             <div class="secao-info-badges">
                 <div class="info-badge-card">
@@ -148,7 +148,7 @@
                     <div class="badge-icone"><i data-lucide="shield-check"></i></div>
                     <div class="badge-texto">
                         <strong>Garantia Vitalícia</strong>
-                        <span>Chave 100% original e legalizada</span>
+                        <span>Chave 100% original</span>
                     </div>
                 </div>
                 <div class="info-badge-card">
@@ -162,77 +162,102 @@
                     <div class="badge-icone"><i data-lucide="award"></i></div>
                     <div class="badge-texto">
                         <strong>Avaliação 4.9/5</strong>
-                        <span>Mais de 1.500 clientes VIP</span>
+                        <span>Mais de 1.500 clientes</span>
                     </div>
                 </div>
             </div>
 
             <div class="grid-detalhes-jogo">
-                <div class="card-detalhe-jogo">
+                <article class="card-detalhe-jogo">
                     <h3><i data-lucide="sparkles"></i> Sobre o Jogo</h3>
-                    <p>Prepare-se para uma experiência imersiva e inesquecível em <strong>Elden Ring</strong>. Desenvolvido para oferecer o ápice da fidelidade visual, jogabilidade refinada e narrativa marcante, cada detalhe deste título foi lapidado para proporcionar diversão de alto nível.</p>
-                    <p>Enfrente desafios memoráveis, aproveite modos de jogo completos e sinta a intensidade dos combates e da exploração com desempenho otimizado para PC e Consoles.</p>
+                    <div class="tags-genero"><span class="tag-genero">RPG</span><span class="tag-genero">Ação</span><span class="tag-genero">Soulslike</span><span class="tag-genero">Mundo Aberto</span></div>
+                    <p>Levante-se, Maculado, e seja guiado pela graça para portar o poder do Anel Prístino e se tornar um Lorde Prístino nas Terras Intermédias.</p>
+                    <p>Criado por Hidetaka Miyazaki em parceria com George R. R. Martin, Elden Ring combina exploração em mundo aberto com o combate desafiador da FromSoftware.</p>
 
-                    <h3 style="margin-top: 30px;"><i data-lucide="cpu"></i> Requisitos / Especificações</h3>
-                    <div class="requisitos-tabela">
-                        <div class="coluna-requisito">
-                            <h4>Mínimos</h4>
-                            <ul>
-                                <li><strong>Plataforma:</strong> PC e Consoles</li>
-                                <li><strong>Modo de Envio:</strong> Código Digital Oficial</li>
-                                <li><strong>Áudio / Legendas:</strong> Português (Brasil)</li>
-                                <li><strong>Armazenamento:</strong> 60 GB de espaço disponível</li>
-                                <li><strong>Conexão:</strong> Banda larga para download e online</li>
-                            </ul>
+                    <h3 class="titulo-secao-detalhe"><i data-lucide="file-text"></i> Ficha Técnica</h3>
+                    <dl class="ficha-tecnica">
+                        <div class="ficha-item">
+                            <dt><i data-lucide="tag"></i> Gênero</dt>
+                            <dd>RPG, Ação, Soulslike, Mundo Aberto</dd>
                         </div>
-                        <div class="coluna-requisito">
-                            <h4>Recomendados / Recursos</h4>
-                            <ul>
-                                <li><strong>Taxa de Quadros:</strong> 60 FPS / Suporte a 4K HDR</li>
-                                <li><strong>Áudio 3D:</strong> Compatível com som espacial</li>
-                                <li><strong>Garantia:</strong> Vitalícia contra bloqueios</li>
-                                <li><strong>Multiplayer:</strong> Cooperativo e competitivo online</li>
-                                <li><strong>Entrega:</strong> Automática e 100% segura</li>
-                            </ul>
+                        <div class="ficha-item">
+                            <dt><i data-lucide="code-2"></i> Desenvolvedora</dt>
+                            <dd>FromSoftware</dd>
                         </div>
-                    </div>
-                </div>
+                        <div class="ficha-item">
+                            <dt><i data-lucide="building-2"></i> Publicadora</dt>
+                            <dd>Bandai Namco</dd>
+                        </div>
+                        <div class="ficha-item">
+                            <dt><i data-lucide="calendar"></i> Lançamento</dt>
+                            <dd>25 de fevereiro de 2022</dd>
+                        </div>
+                        <div class="ficha-item">
+                            <dt><i data-lucide="monitor-smartphone"></i> Plataforma</dt>
+                            <dd>PC / PS5 / PS4 / Xbox</dd>
+                        </div>
+                        <div class="ficha-item">
+                            <dt><i data-lucide="languages"></i> Idioma</dt>
+                            <dd>Inglês (áudio) — Português (BR) (legendas)</dd>
+                        </div>
+                        <div class="ficha-item">
+                            <dt><i data-lucide="hard-drive"></i> Armazenamento</dt>
+                            <dd>60 GB</dd>
+                        </div>
+                        <div class="ficha-item">
+                            <dt><i data-lucide="users"></i> Modos de Jogo</dt>
+                            <dd>Solo, Cooperativo e PvP online</dd>
+                        </div>
+                        <div class="ficha-item">
+                            <dt><i data-lucide="key-round"></i> Tipo de Mídia</dt>
+                            <dd>Digital (chave Steam)</dd>
+                        </div>
+                        <div class="ficha-item">
+                            <dt><i data-lucide="shield"></i> Classificação</dt>
+                            <dd><span class="classind classind-16" aria-hidden="true">16</span> Não recomendado para menores de 16 anos</dd>
+                        </div>
+                    </dl>
+                    
+                    <h3 class="titulo-secao-detalhe"><i data-lucide="star"></i> Destaques do Jogo</h3>
+                    <ul class="lista-destaques">
+                        <li><i data-lucide="check-circle-2"></i><span>Jogo do Ano no The Game Awards 2022</span></li>
+                        <li><i data-lucide="check-circle-2"></i><span>Mundo vasto com masmorras e chefes épicos</span></li>
+                        <li><i data-lucide="check-circle-2"></i><span>Lore escrita com George R. R. Martin</span></li>
+                        <li><i data-lucide="check-circle-2"></i><span>Cooperativo e invasões online</span></li>
+                    </ul>
+                </article>
 
-                <div class="card-detalhe-jogo">
-                    <h3><i data-lucide="key"></i> Como Resgatar no PC e Consoles</h3>
+                <aside class="card-detalhe-jogo" aria-label="Como resgatar sua chave">
+                    <h3><i data-lucide="key"></i> Como Resgatar no Steam</h3>
                     <div class="passos-ativacao">
                         <div class="passo-item">
                             <span class="passo-numero">1</span>
                             <div class="passo-texto">
                                 <strong>Receba seu código</strong>
-                                <p>Após a confirmação da compra, seu código original é liberado instantaneamente na sua conta Keep Keys.</p>
+                                <p>Após a confirmação da compra, sua chave fica disponível na aba <em>"Jogos Comprados"</em> do seu perfil.</p>
                             </div>
                         </div>
                         <div class="passo-item">
                             <span class="passo-numero">2</span>
                             <div class="passo-texto">
-                                <strong>Acesse o plataforma oficial</strong>
-                                <p>Inicie a plataforma plataforma oficial no seu dispositivo e navegue até a opção de resgate de código.</p>
+                                <strong>Acesse a Steam</strong>
+                                <p>No aplicativo Steam, clique em <em>"Jogos"</em> e depois em <em>"Ativar um produto no Steam..."</em>.</p>
                             </div>
                         </div>
                         <div class="passo-item">
                             <span class="passo-numero">3</span>
                             <div class="passo-texto">
-                                <strong>Ative e comece a jogar</strong>
-                                <p>Digite o código de 12 a 25 dígitos recebido, confirme o resgate e dê início ao download imediatamente!</p>
+                                <strong>Ative e jogue</strong>
+                                <p>Digite o código recebido, confirme o resgate e o jogo será adicionado permanentemente à sua biblioteca.</p>
                             </div>
                         </div>
                     </div>
 
-                    <div style="margin-top: 25px; padding: 16px; background: rgba(0, 242, 254, 0.08); border-radius: 10px; border: 1px dashed rgba(0, 242, 254, 0.3);">
-                        <strong style="color: #00f2fe; display: block; margin-bottom: 5px; font-size: 0.9rem;">
-                            <i data-lucide="shield-alert" style="vertical-align: middle; width: 16px; height: 16px; margin-right: 4px;"></i> Compra 100% Protegida
-                        </strong>
-                        <p style="font-size: 0.8rem; color: #bbb; margin: 0; line-height: 1.4;">
-                            Todas as transações na Keep Keys contam com validação direta pelas distribuidoras oficiais e garantia vitalícia contra revogações.
-                        </p>
+                    <div class="aviso-compra-protegida">
+                        <strong><i data-lucide="shield-alert"></i> Compra 100% Protegida</strong>
+                        <p>Chaves adquiridas de distribuidoras oficiais, com garantia vitalícia contra revogações.</p>
                     </div>
-                </div>
+                </aside>
             </div>
         </section>
 

@@ -236,11 +236,11 @@ aside hr.divisoria {
     width: 110%;
 }
 
-.site {
+.site,
+.conteudo {
     flex: 1;
     min-width: 0;
     width: 100%;
-    max-width: calc(100% - 280px);
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -2232,198 +2232,453 @@ aside .footer-redes .icones-redes a .lucide {
 /* Telas de até 768px (Tablets e Celulares) */
 @media (max-width: 768px) {
 
-    /* Transforma as 2 colunas da página de produto em 1 coluna única */
-    .blocos {
-        grid-template-columns: 1fr; /* Agora tudo fica empilhado em uma coluna */
-        gap: 20px;
-        padding: 0 15px;
-        margin: 20px auto;
-    }
-
-    /* Ajusta os botões de comprar/favoritar para não quebrarem o texto */
-    .btns-jogo {
-        flex-direction: column; /* Em telas muito pequenas, empilha os botões */
-    }
-
-    .comprar-btn, .desejo-btn {
-        width: 100%; /* Cada botão ocupa a largura total da caixa */
-    }
-
-    .btn-hamburguer {
-        display: flex;
+    body {
+        overflow-x: hidden !important;
         position: relative;
-        left: 0;
-        flex-shrink: 0;
-        z-index: 1002;
-        transition: left 0.5s ease !important;
     }
 
-    aside {
-        position: fixed;
-        top: 0;
-        left: -280px;
-        width: 280px;
-        height: 100vh;
-        z-index: 1000;
-        transition: left 0.5s ease !important;
-        box-shadow: 2px 0 10px rgba(0,0,0,0.5);
+    /* O container do site ocupa 100% da tela mobile sem espremer */
+    .site,
+    .conteudo {
+        width: 100% !important;
+        max-width: 100% !important;
+        min-width: 0 !important;
+        padding: 12px 14px !important;
+        box-sizing: border-box !important;
+        overflow-x: hidden !important;
     }
 
-    aside.ativo {
-        left: 0; /* Puxa o menu de volta para a tela */
+    /* Menu Lateral Gaveta (Drawer) */
+    aside,
+    #aplicativo aside {
+        position: fixed !important;
+        top: 0 !important;
+        left: -290px !important;
+        width: 280px !important;
+        height: 100vh !important;
+        z-index: 1001 !important;
+        transition: left 0.35s cubic-bezier(0.4, 0, 0.2, 1) !important;
+        box-shadow: 4px 0 25px rgba(0, 0, 0, 0.8) !important;
     }
 
-    body:has(aside.ativo) .btn-hamburguer,
-    aside.ativo ~ header .btn-hamburguer {
-        left: 200px; /* Coloca o botão perfeitamente integrado no canto do menu azul */
-        background-color: transparent !important; /* Deixa o fundo transparente para fundir com o azul do menu */
-        border: none !important;
-        box-shadow: none;
+    aside.ativo,
+    #aplicativo aside.ativo {
+        left: 0 !important; /* Puxa o menu de volta para a tela */
     }
 
+    /* Botão Hamburguer visível e posicionado */
+    .btn-hamburguer {
+        display: flex !important;
+        position: relative !important;
+        left: 0 !important;
+        flex-shrink: 0 !important;
+        z-index: 1002 !important;
+        order: 1 !important;
+    }
+
+    /* Cabeçalho Responsivo */
+    header {
+        display: flex !important;
+        flex-wrap: wrap !important;
+        align-items: center !important;
+        justify-content: space-between !important;
+        gap: 8px !important;
+        padding: 8px 0 12px 0 !important;
+        width: 100% !important;
+        box-sizing: border-box !important;
+        margin-bottom: 0 !important;
+    }
+
+    header form {
+        order: 3 !important;
+        flex: 1 1 100% !important;
+        width: 100% !important;
+        margin: 4px 0 0 0 !important;
+        min-width: 0 !important;
+    }
+
+    header .buscar {
+        max-width: 100% !important;
+        width: 100% !important;
+        padding: 8px 12px !important;
+        box-sizing: border-box !important;
+    }
+
+    .area-usuario {
+        order: 2 !important;
+        flex-shrink: 0 !important;
+        margin: 0 !important;
+    }
+
+    .painel-usuario {
+        gap: 8px !important;
+    }
+
+    #btn-entrar-header {
+        padding: 6px 12px !important;
+        font-size: 0.8rem !important;
+        white-space: nowrap !important;
+    }
+
+    .btn-avatar-header {
+        width: 40px !important;
+        height: 40px !important;
+        min-width: 40px !important;
+        min-height: 40px !important;
+    }
+
+    .dropdown-menu-avatar {
+        right: 0 !important;
+        left: auto !important;
+        width: 260px !important;
+        max-width: calc(100vw - 28px) !important;
+    }
+
+    /* Grade de Produtos: 2 colunas organizadas no celular */
+    .grade-produtos {
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+        gap: 12px !important;
+        padding: 0 !important;
+        justify-content: center !important;
+    }
+
+    .produtos h3 {
+        font-size: 1.25rem !important;
+        margin: 20px 0 14px 0 !important;
+        text-align: left !important;
+    }
+
+    .jogo-produtos {
+        padding: 10px !important;
+        border-radius: 10px !important;
+    }
+
+    .jogo-produtos img {
+        height: 135px !important;
+        margin-bottom: 8px !important;
+    }
+
+    .jogo-produtos h4 {
+        font-size: 0.85rem !important;
+        height: 2.2rem !important;
+        line-height: 1.25 !important;
+        margin-bottom: 6px !important;
+    }
+
+    .jogo-produtos .precos {
+        margin-bottom: 8px !important;
+    }
+
+    .jogo-produtos .preco-antigo {
+        font-size: 0.72rem !important;
+    }
+
+    .jogo-produtos .preco-atual {
+        font-size: 0.95rem !important;
+    }
+
+    .jogo-produtos button {
+        font-size: 0.78rem !important;
+        padding: 7px 8px !important;
+        gap: 6px !important;
+    }
+
+    .jogo-produtos button .lucide {
+        width: 15px !important;
+        height: 15px !important;
+    }
+
+    /* Carrossel e Banners no Mobile */
     .carrocel-container {
         height: auto !important;
-        aspect-ratio: 16 / 9;
-        width: 100%;
+        aspect-ratio: 16 / 9 !important;
+        width: 100% !important;
+        border-radius: 10px !important;
     }
 
     .btn-carrocel {
-        padding: 8px 12px;
-        font-size: 16px;
+        width: 34px !important;
+        height: 34px !important;
+        padding: 0 !important;
+        font-size: 16px !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
     }
 
     .carrocel-container .slide h2 {
-        font-size: 0.75rem;
-        padding: 5px 10px;
-        top: 10px;
-        left: 10px;
+        font-size: 0.72rem !important;
+        padding: 4px 8px !important;
+        top: 8px !important;
+        left: 8px !important;
+    }
+
+    .slide-btn-ver {
+        bottom: 10px !important;
+        right: 10px !important;
+        padding: 6px 12px !important;
+        font-size: 0.75rem !important;
+        gap: 4px !important;
+        border-radius: 6px !important;
+    }
+
+    .slide-btn-ver .lucide {
+        width: 14px !important;
+        height: 14px !important;
+    }
+
+    .banner {
+        margin-bottom: 25px !important;
+    }
+
+    .banner img {
+        border-radius: 10px !important;
     }
 
     .logo-plataforma {
         width: 100% !important;
-        max-width: 1500px;
-        height: 350px;
+        height: 180px !important;
+        border-radius: 10px !important;
     }
 
     .logo-plataforma img {
-        object-fit: cover;
-        object-position: center center !important;
         width: 100% !important;
-        max-width: 100%;
-        height: 350px !important;
-    }
-
-    header {
-        display: flex;
-        flex-wrap: wrap;
-        align-items: center;
-        justify-content: space-between;
-        gap: 10px;
-        padding: 10px 0;
-        width: 100%;
-        box-sizing: border-box;
-        margin-bottom: 0;
-    }
-
-    /* 3. CAMPO DE BUSCA FLUIDO NO MEIO */
-    header form {
-        order: 3;
-        flex: 1 1 100%;
-        width: 100%;
-        margin: 5px 0 0 0;
-        min-width: 0;
-    }
-
-    header .buscar {
-        width: 100%;
-        box-sizing: border-box;
-        padding: 6px 10px;
-    } 
-
-    .area-usuario {
-        flex-shrink: 0;
-        margin: 0;
-    }
-    
-    #btn-entrar-header {
-        padding: 6px 12px;
-        font-size: 0.8rem;
-        white-space: nowrap;
+        height: 180px !important;
+        object-fit: cover !important;
+        border-radius: 10px !important;
     }
 
     .lanc-banner {
-        width: 100%;
-        height: auto;
-        aspect-ratio: 16 / 9;
-        position: relative;
-        overflow: hidden;
-        margin-bottom: 20px;
-    }
-
-    .lanc-banner {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        object-position: center center;
+        width: 100% !important;
+        height: auto !important;
+        aspect-ratio: 16 / 9 !important;
+        position: relative !important;
+        overflow: hidden !important;
+        margin-bottom: 20px !important;
+        border-radius: 10px !important;
     }
 
     .btn-lanc {
-        position: absolute;
-        bottom: 12px;
-        right: 12px;
-        padding: 6px 14px;
-        font-size: 0.7rem;
-        border-radius: 4px;
-        letter-spacing: 0.5px;
-        z-index: 10;
+        position: absolute !important;
+        bottom: 10px !important;
+        right: 10px !important;
+        padding: 6px 12px !important;
+        font-size: 0.72rem !important;
+        border-radius: 4px !important;
     }
 
-    /* Transforma o dashboard de admin em uma única coluna empilhada */
+    /* Página Individual de Jogo */
+    .blocos {
+        grid-template-columns: 1fr !important;
+        gap: 16px !important;
+        padding: 0 !important;
+        margin: 15px auto !important;
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+
+    .bloco-1 .jogo img {
+        width: 100% !important;
+        max-height: 320px !important;
+        object-fit: contain !important;
+    }
+
+    .coluna-direita {
+        gap: 14px !important;
+        width: 100% !important;
+    }
+
+    .bloco-lateral,
+    .bloco-lateral-2 {
+        padding: 18px 16px !important;
+        border-radius: 12px !important;
+        width: 100% !important;
+        box-sizing: border-box !important;
+    }
+
+    .btns-jogo {
+        display: flex !important;
+        flex-direction: row !important;
+        gap: 10px !important;
+        width: 100% !important;
+    }
+
+    .comprar-btn {
+        flex: 1 !important;
+        width: auto !important;
+        padding: 12px 14px !important;
+        font-size: 0.9rem !important;
+    }
+
+    .desejo-btn {
+        width: 48px !important;
+        height: 48px !important;
+        flex-shrink: 0 !important;
+        padding: 0 !important;
+        display: inline-flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+    }
+
+    .detalhes-produto-container {
+        padding: 0 !important;
+        margin: 20px auto 40px auto !important;
+        gap: 20px !important;
+        width: 100% !important;
+    }
+
+    .secao-info-badges {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 10px !important;
+    }
+
+    .info-badge-card {
+        padding: 12px 12px !important;
+        gap: 10px !important;
+        border-radius: 10px !important;
+    }
+
+    .info-badge-card .badge-icone {
+        width: 36px !important;
+        height: 36px !important;
+        border-radius: 8px !important;
+    }
+
+    .info-badge-card .badge-icone .lucide {
+        width: 18px !important;
+        height: 18px !important;
+    }
+
+    .info-badge-card .badge-texto strong {
+        font-size: 0.82rem !important;
+    }
+
+    .info-badge-card .badge-texto span {
+        font-size: 0.72rem !important;
+    }
+
+    .grid-detalhes-jogo {
+        grid-template-columns: 1fr !important;
+        gap: 20px !important;
+        width: 100% !important;
+    }
+
+    .card-detalhe-jogo {
+        padding: 18px 14px !important;
+        border-radius: 12px !important;
+    }
+
+    .card-detalhe-jogo h3 {
+        font-size: 1.15rem !important;
+        margin-bottom: 14px !important;
+    }
+
+    .ficha-tecnica {
+        grid-template-columns: 1fr !important;
+        gap: 8px !important;
+    }
+
+    .ficha-item {
+        padding: 9px 12px !important;
+    }
+
+    /* Footer no celular */
+    footer {
+        flex-direction: column !important;
+        gap: 12px !important;
+        text-align: center !important;
+        padding: 20px 10px !important;
+        margin-top: 30px !important;
+    }
+
+    footer ul {
+        justify-content: center !important;
+        gap: 16px !important;
+    }
+
+    /* Admin e páginas institucionais */
     .admin-dashboard {
         grid-template-columns: 1fr !important;
-        gap: 20px;
+        gap: 20px !important;
     }
 
-    /* Ajusta o espaçamento interno do container no mobile */
     .admin-container {
-        padding: 15px;
+        padding: 15px !important;
     }
 
-    /* Deixa os cards de estatísticas empilhados no celular */
     .admin-estatisticas {
-        flex-direction: column;
-        gap: 15px;
-    }
-
-    /* Faz a barra lateral do admin se comportar igual à da loja (escondida por padrão) */
-    #aplicativo aside {
-        position: fixed;
-        top: 0;
-        left: -280px;
-        width: 280px;
-        height: 100vh;
-        z-index: 1000;
-        transition: left 0.5s ease !important;
-        box-shadow: 2px 0 10px rgba(0,0,0,0.5);
-    }
-
-    /* Quando a classe 'ativo' for acionada pelo JS, o menu aparece */
-    #aplicativo aside.ativo {
-        left: 0;
+        flex-direction: column !important;
+        gap: 15px !important;
     }
 
     .suporte-grid {
-        grid-template-columns: 1fr; /* Quebra para apenas 1 coluna no celular */
+        grid-template-columns: 1fr !important;
     }
 
     .seguranca-banner {
-        flex-direction: column;
-        text-align: center;
-        padding: 20px;
+        flex-direction: column !important;
+        text-align: center !important;
+        padding: 18px !important;
     }
 
     .perfil-cabecalho-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr !important;
+    }
+
+    .perfil-container {
+        padding: 16px 10px !important;
+    }
+
+    .perfil-nav-abas {
+        flex-wrap: wrap !important;
+        gap: 8px !important;
+    }
+
+    .perfil-nav-abas button {
+        flex: 1 1 calc(50% - 8px) !important;
+        font-size: 0.8rem !important;
+        padding: 8px !important;
+    }
+
+    .perfil-saldo-acoes {
+        flex-direction: column !important;
+        width: 100% !important;
+    }
+}
+
+/* Telas muito pequenas (até 480px) */
+@media (max-width: 480px) {
+    .carteira-saldo-header .saldo-rotulo {
+        display: none !important; /* Oculta a palavra "Saldo:" para economizar espaço crítico */
+    }
+
+    .carteira-saldo-header {
+        padding: 4px 8px !important;
+        font-size: 0.74rem !important;
+        gap: 4px !important;
+    }
+
+    .btn-avatar-header {
+        width: 36px !important;
+        height: 36px !important;
+        min-width: 36px !important;
+        min-height: 36px !important;
+    }
+
+    .secao-info-badges {
+        grid-template-columns: 1fr !important;
+        gap: 8px !important;
+    }
+
+    .painel-usuario {
+        gap: 6px !important;
+    }
+}
+
+/* Telas mínimas (até 360px) */
+@media (max-width: 360px) {
+    .grade-produtos {
+        grid-template-columns: 1fr !important;
     }
 }
 
@@ -3853,51 +4108,187 @@ button.fechar-carrinho:hover {
     margin-bottom: 16px;
 }
 
-.requisitos-tabela {
+/* Tags de Gênero do Jogo */
+.tags-genero {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: -4px 0 16px 0;
+}
+
+.tag-genero {
+    display: inline-flex;
+    align-items: center;
+    background: rgba(0, 242, 254, 0.08);
+    border: 1px solid rgba(0, 242, 254, 0.28);
+    color: #00f2fe;
+    font-size: 0.78rem;
+    font-weight: 600;
+    padding: 4px 11px;
+    border-radius: 14px;
+    letter-spacing: 0.3px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
+}
+
+.titulo-secao-detalhe {
+    margin: 26px 0 14px 0 !important;
+    font-size: 1.12rem !important;
+    color: #ffffff !important;
+    display: flex !important;
+    align-items: center !important;
+    gap: 8px !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
+    padding-bottom: 10px !important;
+}
+
+.titulo-secao-detalhe .lucide {
+    color: #00f2fe !important;
+    width: 20px !important;
+    height: 20px !important;
+}
+
+/* Ficha Técnica (dl / dt / dd) */
+.ficha-tecnica {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
-    margin-top: 15px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px 14px;
+    margin: 0;
+    padding: 0;
 }
 
 @media (max-width: 600px) {
-    .requisitos-tabela {
+    .ficha-tecnica {
         grid-template-columns: 1fr;
     }
 }
 
-.coluna-requisito {
+.ficha-item {
     background: #23232c;
-    border-radius: 10px;
-    padding: 16px;
     border: 1px solid #363645;
+    border-radius: 8px;
+    padding: 10px 14px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    transition: border-color 0.2s ease, transform 0.2s ease;
 }
 
-.coluna-requisito h4 {
-    margin: 0 0 12px 0;
-    font-size: 0.95rem;
-    color: #00f2fe;
+.ficha-item:hover {
+    border-color: rgba(0, 242, 254, 0.45);
+    transform: translateY(-1px);
+}
+
+.ficha-item dt {
+    font-size: 0.74rem;
+    color: #8f92a3;
     text-transform: uppercase;
+    font-weight: 700;
     letter-spacing: 0.5px;
-}
-
-.coluna-requisito ul {
-    list-style: none;
-    padding: 0;
+    display: flex;
+    align-items: center;
+    gap: 6px;
     margin: 0;
 }
 
-.coluna-requisito ul li {
-    font-size: 0.82rem;
-    color: #bbb;
-    margin-bottom: 8px;
+.ficha-item dt .lucide {
+    width: 14px;
+    height: 14px;
+    color: #00f2fe;
+}
+
+.ficha-item dd {
+    font-size: 0.88rem;
+    color: #ffffff;
+    font-weight: 500;
+    margin: 0;
     line-height: 1.4;
+    word-break: break-word;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    flex-wrap: wrap;
 }
 
-.coluna-requisito ul li strong {
-    color: #fff;
+/* Classificação Indicativa Oficial Brasileira */
+.classind {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 22px;
+    height: 22px;
+    border-radius: 4px;
+    font-size: 0.74rem;
+    font-weight: 800;
+    color: #ffffff;
+    flex-shrink: 0;
+    line-height: 1;
 }
 
+.classind-l { background: #00a859; }
+.classind-10 { background: #0095da; }
+.classind-12 { background: #ffcc00; color: #1a1a1a; }
+.classind-14 { background: #f58220; }
+.classind-16 { background: #e51b24; }
+.classind-18 { background: #000000; border: 1px solid #e51b24; color: #fff; }
+
+/* Lista de Destaques */
+.lista-destaques {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.lista-destaques li {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    background: #23232c;
+    border: 1px solid #363645;
+    border-radius: 8px;
+    padding: 11px 14px;
+    font-size: 0.9rem;
+    color: #e0e0e0;
+    line-height: 1.45;
+    transition: border-color 0.2s ease;
+}
+
+.lista-destaques li:hover {
+    border-color: rgba(0, 242, 254, 0.4);
+}
+
+.lista-destaques li .lucide {
+    color: #00f2fe;
+    width: 18px;
+    height: 18px;
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+/* Aviso de Compra Protegida */
+.aviso-compra-protegida {
+    margin-top: 18px;
+    background: rgba(8, 70, 158, 0.2);
+    border: 1px solid rgba(0, 242, 254, 0.3);
+    border-radius: 10px;
+    padding: 12px 14px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 0.82rem;
+    color: #cccccc;
+}
+
+.aviso-compra-protegida .lucide {
+    color: #00f2fe;
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0;
+}
+
+/* Passos de Ativação */
 .passos-ativacao {
     display: flex;
     flex-direction: column;
@@ -3923,6 +4314,7 @@ button.fechar-carrinho:hover {
     flex-shrink: 0;
     font-size: 0.85rem;
     border: 1px solid #00f2fe;
+    box-shadow: 0 0 8px rgba(0, 242, 254, 0.3);
 }
 
 .passo-texto strong {
@@ -3937,6 +4329,29 @@ button.fechar-carrinho:hover {
     color: #aaa;
     margin: 0;
     line-height: 1.4;
+}
+
+/* Overlay do Menu Lateral em Telas Pequenas */
+.menu-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
+    z-index: 999;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+}
+
+.menu-overlay.ativo {
+    display: block;
+    opacity: 1;
+    pointer-events: auto;
 }
 
 

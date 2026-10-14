@@ -556,11 +556,45 @@ function inicializarMenuHamburguer() {
     const btnHamburguer = document.getElementById('btn-hamburguer');
     const menuLateral = document.querySelector('aside');
 
-    if (btnHamburguer && menuLateral) {
-        btnHamburguer.addEventListener('click', () => {
-            menuLateral.classList.toggle('ativo');
-        });
+    if (!btnHamburguer || !menuLateral) return;
+
+    // Cria overlay dinâmico caso não exista no DOM
+    let overlay = document.querySelector('.menu-overlay');
+    if (!overlay) {
+        overlay = document.createElement('div');
+        overlay.className = 'menu-overlay';
+        overlay.setAttribute('aria-hidden', 'true');
+        document.body.appendChild(overlay);
     }
+
+    const fecharMenu = () => {
+        menuLateral.classList.remove('ativo');
+        overlay.classList.remove('ativo');
+        btnHamburguer.setAttribute('aria-expanded', 'false');
+    };
+
+    const abrirMenu = () => {
+        menuLateral.classList.add('ativo');
+        overlay.classList.add('ativo');
+        btnHamburguer.setAttribute('aria-expanded', 'true');
+    };
+
+    btnHamburguer.addEventListener('click', (e) => {
+        e.stopPropagation();
+        if (menuLateral.classList.contains('ativo')) {
+            fecharMenu();
+        } else {
+            abrirMenu();
+        }
+    });
+
+    overlay.addEventListener('click', fecharMenu);
+
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && menuLateral.classList.contains('ativo')) {
+            fecharMenu();
+        }
+    });
 }
 
 // ==========================================

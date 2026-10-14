@@ -221,11 +221,46 @@ createApp({
     mounted() {
         this.verificarAcesso();
         this.carregarJogos();
+        
+        // Controle de clique fora do avatar
         document.addEventListener('click', (e) => {
             if (!e.target.closest('.usuario-avatar-dropdown-container')) {
                 this.menuAvatarAberto = false;
             }
         });
+
+        // Suporte ao menu hambúrguer no painel admin para celulares
+        const btnHamburguer = document.getElementById('btn-hamburguer');
+        const menuLateral = document.querySelector('aside');
+        if (btnHamburguer && menuLateral) {
+            let overlay = document.querySelector('.menu-overlay');
+            if (!overlay) {
+                overlay = document.createElement('div');
+                overlay.className = 'menu-overlay';
+                overlay.setAttribute('aria-hidden', 'true');
+                document.body.appendChild(overlay);
+            }
+
+            const fecharMenuAdmin = () => {
+                menuLateral.classList.remove('ativo');
+                overlay.classList.remove('ativo');
+                btnHamburguer.setAttribute('aria-expanded', 'false');
+            };
+
+            btnHamburguer.addEventListener('click', (e) => {
+                e.stopPropagation();
+                const ativo = menuLateral.classList.toggle('ativo');
+                overlay.classList.toggle('ativo', ativo);
+                btnHamburguer.setAttribute('aria-expanded', ativo ? 'true' : 'false');
+            });
+
+            overlay.addEventListener('click', fecharMenuAdmin);
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape' && menuLateral.classList.contains('ativo')) {
+                    fecharMenuAdmin();
+                }
+            });
+        }
     },
     updated() {
         if (typeof lucide !== 'undefined') lucide.createIcons();

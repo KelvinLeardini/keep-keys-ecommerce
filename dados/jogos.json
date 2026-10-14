@@ -7,7 +7,33 @@
     "imagem": "/imagens/gta6.avif",
     "categoria": "ps",
     "plataforma": "ps",
-    "link": "/jogos/ps/gta6.html"
+    "link": "/jogos/ps/gta6.html",
+    "detalhes": {
+      "genero": [
+        "Ação",
+        "Aventura",
+        "Mundo Aberto"
+      ],
+      "desenvolvedora": "Rockstar North",
+      "publicadora": "Rockstar Games",
+      "lancamento": "19 de novembro de 2026",
+      "plataformas": "PS5",
+      "idioma": "Inglês (áudio) — Português (BR) (legendas e interface)",
+      "armazenamento": "150 GB (estimado)",
+      "modos": "Campanha solo e GTA Online",
+      "classificacao": "18",
+      "resgate": "ps",
+      "sinopse": [
+        "Grand Theft Auto VI leva a série de volta ao estado de Leonida, uma versão moderna e caótica da Flórida, com Vice City como coração pulsante de neon, praias e crime organizado.",
+        "Acompanhe Lucia e Jason, uma dupla que se envolve em um plano arriscado após um assalto que dá errado, em uma história que mistura lealdade, ambição e a cultura das redes sociais."
+      ],
+      "destaques": [
+        "O maior e mais detalhado mundo aberto já criado pela Rockstar",
+        "Primeira protagonista feminina da série principal",
+        "Vice City e regiões inéditas com pântanos, ilhas e cidades",
+        "Novo GTA Online integrado desde o lançamento"
+      ]
+    }
   },
   {
     "id": "ps-naruto",
@@ -17,7 +43,33 @@
     "imagem": "/imagens/naruto.avif",
     "categoria": "ps",
     "plataforma": "ps",
-    "link": "/jogos/ps/naruto.html"
+    "link": "/jogos/ps/naruto.html",
+    "detalhes": {
+      "genero": [
+        "Luta",
+        "Anime",
+        "Arena 3D"
+      ],
+      "desenvolvedora": "CyberConnect2",
+      "publicadora": "Bandai Namco",
+      "lancamento": "17 de novembro de 2023",
+      "plataformas": "PS5 / PS4",
+      "idioma": "Japonês e Inglês (áudio) — Português (BR) (legendas)",
+      "armazenamento": "40 GB",
+      "modos": "Solo, Versus local e Online",
+      "classificacao": "12",
+      "resgate": "ps",
+      "sinopse": [
+        "O capítulo definitivo da série Ultimate Ninja STORM reúne toda a trajetória de Naruto, do início ao fim, e avança até a era de Boruto com batalhas cinematográficas.",
+        "O modo \"História Especial\" traz um enredo inédito focado em Boruto e Kawaki, enquanto o modo \"Lembranças\" revive os confrontos mais marcantes do anime."
+      ],
+      "destaques": [
+        "Mais de 130 personagens jogáveis — o maior elenco da série",
+        "História original inédita supervisionada pelo estúdio",
+        "Combates em arenas 3D com jutsus cinematográficos",
+        "Partidas online ranqueadas e casuais"
+      ]
+    }
   },
   {
     "id": "ps-hollow",
@@ -27,7 +79,33 @@
     "imagem": "/imagens/hollow.jpg",
     "categoria": "ps",
     "plataforma": "ps",
-    "link": "/jogos/ps/hollow.html"
+    "link": "/jogos/ps/hollow.html",
+    "detalhes": {
+      "genero": [
+        "Metroidvania",
+        "Ação",
+        "Plataforma 2D"
+      ],
+      "desenvolvedora": "Team Cherry",
+      "publicadora": "Team Cherry",
+      "lancamento": "25 de setembro de 2018 (PS4)",
+      "plataformas": "PS4 (compatível com PS5)",
+      "idioma": "Português (BR) — textos e interface",
+      "armazenamento": "9 GB",
+      "modos": "Solo",
+      "classificacao": "10",
+      "resgate": "ps",
+      "sinopse": [
+        "Desça às profundezas de Hallownest, um reino de insetos em ruínas, e desvende os segredos de uma praga que consumiu sua antiga glória.",
+        "Explore cavernas interligadas, enfrente mais de 150 inimigos e 30 chefes com combate preciso e evolua seu Cavaleiro com amuletos e novas habilidades."
+      ],
+      "destaques": [
+        "Mundo vasto e interligado desenhado à mão",
+        "Inclui as 4 expansões gratuitas lançadas",
+        "Trilha sonora orquestral premiada de Christopher Larkin",
+        "Mais de 30 horas de exploração e segredos"
+      ]
+    }
   },
   {
     "id": "ps-ghost",
@@ -37,7 +115,33 @@
     "imagem": "/imagens/ghost.webp",
     "categoria": "ps",
     "plataforma": "ps",
-    "link": "/jogos/ps/ghost of thushima.html"
+    "link": "/jogos/ps/ghost of thushima.html",
+    "detalhes": {
+      "genero": [
+        "Ação",
+        "Aventura",
+        "Mundo Aberto"
+      ],
+      "desenvolvedora": "Sucker Punch Productions",
+      "publicadora": "Sony Interactive Entertainment",
+      "lancamento": "17 de julho de 2020",
+      "plataformas": "PS5 / PS4",
+      "idioma": "Português (BR) — áudio dublado e legendas",
+      "armazenamento": "50 GB",
+      "modos": "Solo e Lendas (cooperativo online)",
+      "classificacao": "18",
+      "resgate": "ps",
+      "sinopse": [
+        "No ano de 1274, o Império Mongol invade a ilha de Tsushima. Jin Sakai, um dos últimos samurais sobreviventes, precisa abandonar as tradições para se tornar o Fantasma e libertar seu povo.",
+        "Cavalgue por campos de flores, florestas de bambu e templos antigos em um Japão feudal deslumbrante, guiado apenas pelo vento."
+      ],
+      "destaques": [
+        "Dublagem completa em português",
+        "Modo Kurosawa em preto e branco cinematográfico",
+        "Combate com katana baseado em posturas",
+        "Modo cooperativo Lendas para até 4 jogadores"
+      ]
+    }
   },
   {
     "id": "ps-bloodborne",
@@ -47,7 +151,33 @@
     "imagem": "/imagens/blood.webp",
     "categoria": "ps",
     "plataforma": "ps",
-    "link": "/jogos/ps/bloodborne.html"
+    "link": "/jogos/ps/bloodborne.html",
+    "detalhes": {
+      "genero": [
+        "Ação",
+        "RPG",
+        "Soulslike"
+      ],
+      "desenvolvedora": "FromSoftware",
+      "publicadora": "Sony Interactive Entertainment",
+      "lancamento": "24 de março de 2015",
+      "plataformas": "PS4 (compatível com PS5)",
+      "idioma": "Inglês (áudio) — Português (BR) (legendas)",
+      "armazenamento": "35 GB",
+      "modos": "Solo, Cooperativo e PvP online",
+      "classificacao": "16",
+      "resgate": "ps",
+      "sinopse": [
+        "Viaje até Yharnam, uma cidade gótica amaldiçoada por uma estranha doença que transforma seus habitantes em bestas. Como Caçador, você precisa sobreviver à noite e descobrir a origem do flagelo.",
+        "Combate agressivo e veloz, armas transformáveis e um horror cósmico inspirado em Lovecraft fazem deste um dos jogos mais aclamados da FromSoftware."
+      ],
+      "destaques": [
+        "Combate rápido que recompensa o ataque",
+        "Armas que se transformam durante o combate",
+        "Masmorras do Cálice geradas proceduralmente",
+        "Cooperativo e invasões online"
+      ]
+    }
   },
   {
     "id": "ps-tlou1",
@@ -57,7 +187,33 @@
     "imagem": "/imagens/the_last1.jpg",
     "categoria": "ps",
     "plataforma": "ps",
-    "link": "/jogos/ps/thhe last of us.html"
+    "link": "/jogos/ps/the last of us.html",
+    "detalhes": {
+      "genero": [
+        "Ação",
+        "Aventura",
+        "Sobrevivência"
+      ],
+      "desenvolvedora": "Naughty Dog",
+      "publicadora": "Sony Interactive Entertainment",
+      "lancamento": "2 de setembro de 2022 (remake)",
+      "plataformas": "PS5",
+      "idioma": "Português (BR) — áudio dublado e legendas",
+      "armazenamento": "79 GB",
+      "modos": "Solo",
+      "classificacao": "18",
+      "resgate": "ps",
+      "sinopse": [
+        "Vinte anos após uma pandemia devastar a civilização, o contrabandista Joel é contratado para tirar Ellie, uma garota de 14 anos, de uma zona de quarentena militar.",
+        "Reconstruído do zero para o PS5, o remake inclui a campanha original e a expansão Left Behind, com gráficos, animações e IA totalmente refeitos."
+      ],
+      "destaques": [
+        "Remake completo com tecnologia do PS5",
+        "Inclui a expansão Left Behind",
+        "Feedback tátil do controle DualSense",
+        "Dublagem e legendas em português"
+      ]
+    }
   },
   {
     "id": "ps-tlou2",
@@ -67,7 +223,33 @@
     "imagem": "/imagens/the_last2.jpg",
     "categoria": "ps",
     "plataforma": "ps",
-    "link": "/jogos/ps/the last of us part 2.html"
+    "link": "/jogos/ps/the last of us part 2.html",
+    "detalhes": {
+      "genero": [
+        "Ação",
+        "Aventura",
+        "Sobrevivência"
+      ],
+      "desenvolvedora": "Naughty Dog",
+      "publicadora": "Sony Interactive Entertainment",
+      "lancamento": "19 de junho de 2020",
+      "plataformas": "PS5 / PS4",
+      "idioma": "Português (BR) — áudio dublado e legendas",
+      "armazenamento": "100 GB",
+      "modos": "Solo e modo Sem Volta (roguelike)",
+      "classificacao": "18",
+      "resgate": "ps",
+      "sinopse": [
+        "Cinco anos após a jornada pelos Estados Unidos, Ellie e Joel vivem em Jackson. Quando um evento violento destrói essa paz, Ellie parte em uma busca implacável por justiça.",
+        "Uma narrativa intensa e madura sobre vingança e suas consequências, com combate furtivo refinado e um mundo hostil em Seattle."
+      ],
+      "destaques": [
+        "Vencedor de Jogo do Ano no The Game Awards 2020",
+        "Combate furtivo e de sobrevivência aprimorado",
+        "Mais de 60 opções de acessibilidade",
+        "Dublagem e legendas em português"
+      ]
+    }
   },
   {
     "id": "ps-spiderman",
@@ -77,7 +259,33 @@
     "imagem": "/imagens/spiderman.jpg",
     "categoria": "ps",
     "plataforma": "ps",
-    "link": "/jogos/ps/spider - man.html"
+    "link": "/jogos/ps/spider - man.html",
+    "detalhes": {
+      "genero": [
+        "Ação",
+        "Aventura",
+        "Super-herói"
+      ],
+      "desenvolvedora": "Insomniac Games",
+      "publicadora": "Sony Interactive Entertainment",
+      "lancamento": "7 de setembro de 2018",
+      "plataformas": "PS5 / PS4",
+      "idioma": "Português (BR) — áudio dublado e legendas",
+      "armazenamento": "50 GB",
+      "modos": "Solo",
+      "classificacao": "12",
+      "resgate": "ps",
+      "sinopse": [
+        "Peter Parker já é o Homem-Aranha há oito anos e equilibra a vida pessoal com a proteção de Nova York. Quando o Senhor Negativo surge, a cidade mergulha no caos.",
+        "Balance-se entre os arranha-céus de Manhattan com fluidez, enfrente vilões clássicos e use o ambiente a seu favor em combates acrobáticos."
+      ],
+      "destaques": [
+        "Locomoção com teia fluida por toda Manhattan",
+        "Mais de 25 trajes desbloqueáveis",
+        "Vilões clássicos como Rino, Escorpião e Abutre",
+        "Dublagem completa em português"
+      ]
+    }
   },
   {
     "id": "ps-uncharted4",
@@ -87,7 +295,33 @@
     "imagem": "/imagens/uncharted.avif",
     "categoria": "ps",
     "plataforma": "ps",
-    "link": "/jogos/ps/uncharted 4.html"
+    "link": "/jogos/ps/uncharted 4.html",
+    "detalhes": {
+      "genero": [
+        "Ação",
+        "Aventura",
+        "Tiro em Terceira Pessoa"
+      ],
+      "desenvolvedora": "Naughty Dog",
+      "publicadora": "Sony Interactive Entertainment",
+      "lancamento": "10 de maio de 2016",
+      "plataformas": "PS4 (compatível com PS5)",
+      "idioma": "Português (BR) — áudio dublado e legendas",
+      "armazenamento": "60 GB",
+      "modos": "Solo e Multijogador online",
+      "classificacao": "14",
+      "resgate": "ps",
+      "sinopse": [
+        "Anos depois de abandonar a vida de caçador de tesouros, Nathan Drake é puxado de volta à aventura quando seu irmão Sam reaparece pedindo ajuda.",
+        "A jornada em busca do tesouro perdido do pirata Henry Avery leva Drake de Madagascar a uma ilha escondida, no capítulo final de sua história."
+      ],
+      "destaques": [
+        "Desfecho da saga de Nathan Drake",
+        "Cenários amplos com múltiplos caminhos",
+        "Perseguições de veículos espetaculares",
+        "Modo multijogador competitivo"
+      ]
+    }
   },
   {
     "id": "ps-gow3",
@@ -97,7 +331,33 @@
     "imagem": "/imagens/gow.avif",
     "categoria": "ps",
     "plataforma": "ps",
-    "link": "/jogos/ps/god of war 3.html"
+    "link": "/jogos/ps/god of war 3.html",
+    "detalhes": {
+      "genero": [
+        "Ação",
+        "Hack and Slash",
+        "Mitologia"
+      ],
+      "desenvolvedora": "Santa Monica Studio",
+      "publicadora": "Sony Interactive Entertainment",
+      "lancamento": "14 de julho de 2015 (Remasterizado)",
+      "plataformas": "PS4 (compatível com PS5)",
+      "idioma": "Português (BR) — áudio dublado e legendas",
+      "armazenamento": "40 GB",
+      "modos": "Solo",
+      "classificacao": "18",
+      "resgate": "ps",
+      "sinopse": [
+        "Traído pelos deuses do Olimpo, Kratos escala o Monte Olimpo ao lado dos Titãs para concretizar sua vingança contra Zeus.",
+        "A versão remasterizada roda em 1080p e 60 FPS e traz o desfecho épico da trilogia grega com batalhas contra deuses colossais."
+      ],
+      "destaques": [
+        "Remasterizado em 1080p a 60 FPS",
+        "Chefes colossais como Poseidon e Cronos",
+        "Modo Foto inédito",
+        "Inclui o DLC Desafio dos Deuses"
+      ]
+    }
   },
   {
     "id": "steam-warhammer",
@@ -107,7 +367,33 @@
     "imagem": "/imagens/space-marine.avif",
     "categoria": "steam",
     "plataforma": "steam",
-    "link": "/jogos/steam/warhammer.html"
+    "link": "/jogos/steam/warhammer.html",
+    "detalhes": {
+      "genero": [
+        "Ação",
+        "Tiro em Terceira Pessoa",
+        "Cooperativo"
+      ],
+      "desenvolvedora": "Saber Interactive",
+      "publicadora": "Focus Entertainment",
+      "lancamento": "9 de setembro de 2024",
+      "plataformas": "PC (Steam)",
+      "idioma": "Inglês (áudio) — Português (BR) (legendas e interface)",
+      "armazenamento": "75 GB (SSD)",
+      "modos": "Campanha solo, Cooperativo para 3 e PvP",
+      "classificacao": "18",
+      "resgate": "steam",
+      "sinopse": [
+        "Encarne o Tenente Titus, um Space Marine Ultramarino, e defenda o Imperium contra hordas massivas de Tirânidos em batalhas brutais pela galáxia.",
+        "Combine tiro e combate corpo a corpo devastador, jogue a campanha com até dois amigos e participe de operações cooperativas e modos PvP."
+      ],
+      "destaques": [
+        "Hordas com centenas de inimigos na tela",
+        "Campanha cooperativa para até 3 jogadores",
+        "Execuções brutais e arsenal icônico de Warhammer",
+        "Modos PvP e Operações com progressão de classes"
+      ]
+    }
   },
   {
     "id": "steam-eafc27",
@@ -117,7 +403,33 @@
     "imagem": "/imagens/eafcbanner.avif",
     "categoria": "steam",
     "plataforma": "steam",
-    "link": "/jogos/steam/Ea fc27.html"
+    "link": "/jogos/steam/Ea fc27.html",
+    "detalhes": {
+      "genero": [
+        "Esporte",
+        "Futebol",
+        "Simulação"
+      ],
+      "desenvolvedora": "EA Vancouver / EA Romania",
+      "publicadora": "Electronic Arts",
+      "lancamento": "Setembro de 2026",
+      "plataformas": "PC (Steam)",
+      "idioma": "Português (BR) — narração e legendas",
+      "armazenamento": "100 GB",
+      "modos": "Carreira, Ultimate Team, Clubes e Online",
+      "classificacao": "L",
+      "resgate": "steam",
+      "sinopse": [
+        "EA SPORTS FC 27 traz mais de 19.000 jogadores licenciados, 700 clubes e 30 ligas, com jogabilidade aprimorada pela tecnologia HyperMotion.",
+        "Monte seu time dos sonhos no Ultimate Team, conduza sua carreira de técnico ou jogador e dispute partidas com amigos no modo Clubes."
+      ],
+      "destaques": [
+        "Narração em português do Brasil",
+        "Mais de 700 clubes e 30 ligas licenciadas",
+        "Ultimate Team com eventos semanais",
+        "Jogo cruzado entre plataformas"
+      ]
+    }
   },
   {
     "id": "steam-rdr2",
@@ -127,7 +439,34 @@
     "imagem": "/imagens/Red Dead Redemption 2.jpg",
     "categoria": "steam",
     "plataforma": "steam",
-    "link": "/jogos/steam/Red dead 2.html"
+    "link": "/jogos/steam/Red dead 2.html",
+    "detalhes": {
+      "genero": [
+        "Ação",
+        "Aventura",
+        "Mundo Aberto",
+        "Faroeste"
+      ],
+      "desenvolvedora": "Rockstar Studios",
+      "publicadora": "Rockstar Games",
+      "lancamento": "5 de novembro de 2019 (PC)",
+      "plataformas": "PC (Steam)",
+      "idioma": "Inglês (áudio) — Português (BR) (legendas)",
+      "armazenamento": "150 GB",
+      "modos": "Campanha solo e Red Dead Online",
+      "classificacao": "18",
+      "resgate": "steam",
+      "sinopse": [
+        "América, 1899. Arthur Morgan e a gangue Van der Linde são forçados a fugir após um roubo fracassado, enquanto o Velho Oeste chega ao fim.",
+        "Explore um mundo aberto vivo e detalhado, caçe, pesque, faça escolhas morais e decida o destino de Arthur em uma das narrativas mais aclamadas dos games."
+      ],
+      "destaques": [
+        "Mundo aberto extremamente detalhado e vivo",
+        "Versão de PC com gráficos aprimorados e 4K",
+        "Inclui o Red Dead Online",
+        "Mais de 60 horas de campanha"
+      ]
+    }
   },
   {
     "id": "steam-rerequiem",
@@ -137,7 +476,32 @@
     "imagem": "/imagens/Resident Evil Requiem.jpg",
     "categoria": "steam",
     "plataforma": "steam",
-    "link": "/jogos/steam/resident evil requiem.html"
+    "link": "/jogos/steam/resident evil requiem.html",
+    "detalhes": {
+      "genero": [
+        "Survival Horror",
+        "Ação"
+      ],
+      "desenvolvedora": "Capcom",
+      "publicadora": "Capcom",
+      "lancamento": "27 de fevereiro de 2026",
+      "plataformas": "PC (Steam)",
+      "idioma": "Português (BR) — áudio dublado e legendas",
+      "armazenamento": "60 GB (SSD)",
+      "modos": "Solo",
+      "classificacao": "18",
+      "resgate": "steam",
+      "sinopse": [
+        "O nono capítulo principal de Resident Evil acompanha Grace Ashcroft, analista do FBI que investiga mortes misteriosas ligadas a um hotel abandonado.",
+        "Com a RE Engine, o jogo combina o terror tenso dos clássicos da série com novas mecânicas, alternando entre primeira e terceira pessoa."
+      ],
+      "destaques": [
+        "Nova protagonista: Grace Ashcroft",
+        "Alterne entre câmera em primeira e terceira pessoa",
+        "Gráficos de ponta com Ray Tracing",
+        "Dublagem em português"
+      ]
+    }
   },
   {
     "id": "steam-theisle",
@@ -147,7 +511,33 @@
     "imagem": "/imagens/TheIsle.jpg",
     "categoria": "steam",
     "plataforma": "steam",
-    "link": "/jogos/steam/the-isle.html"
+    "link": "/jogos/steam/the-isle.html",
+    "detalhes": {
+      "genero": [
+        "Sobrevivência",
+        "Mundo Aberto",
+        "Multijogador"
+      ],
+      "desenvolvedora": "Afterthought LLC",
+      "publicadora": "Afterthought LLC",
+      "lancamento": "Acesso Antecipado (2015)",
+      "plataformas": "PC (Steam)",
+      "idioma": "Inglês — interface",
+      "armazenamento": "25 GB",
+      "modos": "Multijogador online",
+      "classificacao": "16",
+      "resgate": "steam",
+      "sinopse": [
+        "Em The Isle você vive como um dinossauro em uma ilha misteriosa. Comece como filhote, encontre comida e água, fuja de predadores e cresça até a fase adulta.",
+        "Cace em bando com outros jogadores ou sobreviva sozinho em servidores com ecossistemas dinâmicos, clima e ciclo de dia e noite."
+      ],
+      "destaques": [
+        "Jogue como dezenas de espécies de dinossauros",
+        "Crescimento do filhote até o adulto",
+        "Servidores com centenas de jogadores",
+        "Sistema de nutrição e caça realista"
+      ]
+    }
   },
   {
     "id": "steam-halloween",
@@ -157,7 +547,33 @@
     "imagem": "/imagens/Halloween The Game.jpg",
     "categoria": "steam",
     "plataforma": "steam",
-    "link": "/jogos/steam/halloween the game.html"
+    "link": "/jogos/steam/halloween the game.html",
+    "detalhes": {
+      "genero": [
+        "Terror",
+        "Ação",
+        "Sobrevivência"
+      ],
+      "desenvolvedora": "IllFonic",
+      "publicadora": "Gun Interactive",
+      "lancamento": "2026",
+      "plataformas": "PC (Steam)",
+      "idioma": "Inglês (áudio) — Português (BR) (legendas)",
+      "armazenamento": "40 GB (estimado)",
+      "modos": "Solo e Multijogador online",
+      "classificacao": "18",
+      "resgate": "steam",
+      "sinopse": [
+        "Baseado no clássico filme de John Carpenter, Halloween coloca você em Haddonfield, na noite em que Michael Myers volta para casa.",
+        "Viva o terror dos dois lados: sobreviva escondendo-se e salvando moradores ou encarne o próprio Michael Myers em uma perseguição implacável."
+      ],
+      "destaques": [
+        "Licença oficial da franquia Halloween",
+        "Recriação fiel de Haddonfield",
+        "Trilha sonora icônica de John Carpenter",
+        "Partidas assimétricas online"
+      ]
+    }
   },
   {
     "id": "steam-bf6",
@@ -167,7 +583,33 @@
     "imagem": "/imagens/Battlefield™ 6.jpg",
     "categoria": "steam",
     "plataforma": "steam",
-    "link": "/jogos/steam/battlefield 6.html"
+    "link": "/jogos/steam/battlefield 6.html",
+    "detalhes": {
+      "genero": [
+        "Tiro em Primeira Pessoa",
+        "Ação",
+        "Multijogador"
+      ],
+      "desenvolvedora": "Battlefield Studios",
+      "publicadora": "Electronic Arts",
+      "lancamento": "10 de outubro de 2025",
+      "plataformas": "PC (Steam)",
+      "idioma": "Português (BR) — áudio dublado e legendas",
+      "armazenamento": "80 GB",
+      "modos": "Campanha, Multijogador e Portal",
+      "classificacao": "16",
+      "resgate": "steam",
+      "sinopse": [
+        "Battlefield 6 retorna à guerra moderna em escala total, com destruição tática dos cenários, combate de infantaria, tanques e aeronaves.",
+        "Jogue a campanha cinematográfica ou entre em batalhas multijogador de grande escala com o sistema clássico de quatro classes."
+      ],
+      "destaques": [
+        "Destruição tática de prédios e cenários",
+        "Retorno das quatro classes clássicas",
+        "Batalhas com veículos terrestres e aéreos",
+        "Modo Portal para criar experiências personalizadas"
+      ]
+    }
   },
   {
     "id": "steam-phoenix",
@@ -177,7 +619,33 @@
     "imagem": "/imagens/Phoenix Wright Ace Attorney Trilogy.jpg",
     "categoria": "steam",
     "plataforma": "steam",
-    "link": "/jogos/steam/Phoenix Wright Ace Attorney Trilogy.html"
+    "link": "/jogos/steam/Phoenix Wright Ace Attorney Trilogy.html",
+    "detalhes": {
+      "genero": [
+        "Aventura",
+        "Visual Novel",
+        "Investigação"
+      ],
+      "desenvolvedora": "Capcom",
+      "publicadora": "Capcom",
+      "lancamento": "9 de abril de 2019",
+      "plataformas": "PC (Steam)",
+      "idioma": "Inglês, Japonês — textos",
+      "armazenamento": "10 GB",
+      "modos": "Solo",
+      "classificacao": "12",
+      "resgate": "steam",
+      "sinopse": [
+        "Assuma o papel do advogado novato Phoenix Wright e defenda clientes inocentes investigando cenas de crime e confrontando testemunhas no tribunal.",
+        "A trilogia reúne os três primeiros jogos da série em alta definição, com dezenas de casos repletos de reviravoltas e humor."
+      ],
+      "destaques": [
+        "Três jogos completos em uma coleção",
+        "Gráficos remasterizados em alta definição",
+        "Mais de 14 casos de investigação",
+        "Grite \"OBJECTION!\" no tribunal"
+      ]
+    }
   },
   {
     "id": "steam-tekken8",
@@ -187,7 +655,32 @@
     "imagem": "/imagens/TEKKEN 8.jpg",
     "categoria": "steam",
     "plataforma": "steam",
-    "link": "/jogos/steam/tekken 8.html"
+    "link": "/jogos/steam/tekken 8.html",
+    "detalhes": {
+      "genero": [
+        "Luta",
+        "Ação"
+      ],
+      "desenvolvedora": "Bandai Namco Studios",
+      "publicadora": "Bandai Namco",
+      "lancamento": "26 de janeiro de 2024",
+      "plataformas": "PC (Steam)",
+      "idioma": "Português (BR) — legendas e interface",
+      "armazenamento": "100 GB",
+      "modos": "História, Arcade, Versus local e Online",
+      "classificacao": "14",
+      "resgate": "steam",
+      "sinopse": [
+        "TEKKEN 8 continua a saga da família Mishima com o confronto definitivo entre Jin Kazama e seu pai, Kazuya, em uma batalha que ameaça o mundo inteiro.",
+        "O novo sistema Heat incentiva um estilo agressivo, enquanto a Unreal Engine 5 entrega personagens e cenários impressionantes."
+      ],
+      "destaques": [
+        "32 lutadores no elenco de lançamento",
+        "Novo sistema Heat focado em agressividade",
+        "Netcode com rollback para partidas online",
+        "Modo Arcade Quest e treinamento completo"
+      ]
+    }
   },
   {
     "id": "steam-stray",
@@ -197,7 +690,33 @@
     "imagem": "/imagens/Stray.jpg",
     "categoria": "steam",
     "plataforma": "steam",
-    "link": "/jogos/steam/stray.html"
+    "link": "/jogos/steam/stray.html",
+    "detalhes": {
+      "genero": [
+        "Aventura",
+        "Puzzle",
+        "Indie"
+      ],
+      "desenvolvedora": "BlueTwelve Studio",
+      "publicadora": "Annapurna Interactive",
+      "lancamento": "19 de julho de 2022",
+      "plataformas": "PC (Steam)",
+      "idioma": "Português (BR) — textos e interface",
+      "armazenamento": "10 GB",
+      "modos": "Solo",
+      "classificacao": "10",
+      "resgate": "steam",
+      "sinopse": [
+        "Perdido, sozinho e separado da família, um gato de rua precisa desvendar um mistério antigo para escapar de uma cidade cibernética esquecida.",
+        "Ao lado do drone B-12, interaja com robôs pacíficos, resolva quebra-cabeças e fuja de perigos usando a agilidade felina."
+      ],
+      "destaques": [
+        "Jogue como um gato de verdade",
+        "Cidade neon cyberpunk atmosférica",
+        "Companheiro drone B-12",
+        "Experiência de cerca de 6 horas"
+      ]
+    }
   },
   {
     "id": "steam-silksong",
@@ -207,7 +726,33 @@
     "imagem": "/imagens/Hollow Knight Silksong.jpg",
     "categoria": "steam",
     "plataforma": "steam",
-    "link": "/jogos/steam/hollow knight silksong.html"
+    "link": "/jogos/steam/hollow knight silksong.html",
+    "detalhes": {
+      "genero": [
+        "Metroidvania",
+        "Ação",
+        "Plataforma 2D"
+      ],
+      "desenvolvedora": "Team Cherry",
+      "publicadora": "Team Cherry",
+      "lancamento": "4 de setembro de 2025",
+      "plataformas": "PC (Steam)",
+      "idioma": "Português (BR) — textos e interface",
+      "armazenamento": "8 GB",
+      "modos": "Solo",
+      "classificacao": "10",
+      "resgate": "steam",
+      "sinopse": [
+        "Jogue como Hornet, a princesa protetora de Hallownest, capturada e levada a um reino desconhecido governado por seda e canções.",
+        "Escale até o topo de Pharloom com combate acrobático, ferramentas mortais e mais de 200 inimigos e chefes inéditos."
+      ],
+      "destaques": [
+        "Sequência de Hollow Knight",
+        "Hornet com movimentos acrobáticos e ferramentas",
+        "Mais de 200 inimigos e chefes inéditos",
+        "Sistema de missões e Crestas de habilidade"
+      ]
+    }
   },
   {
     "id": "xbox-forza6",
@@ -217,7 +762,32 @@
     "imagem": "/imagens/forza.png",
     "categoria": "xbox",
     "plataforma": "xbox",
-    "link": "/jogos/xbox/forza-horizon-6.html"
+    "link": "/jogos/xbox/forza-horizon-6.html",
+    "detalhes": {
+      "genero": [
+        "Corrida",
+        "Mundo Aberto"
+      ],
+      "desenvolvedora": "Playground Games",
+      "publicadora": "Xbox Game Studios",
+      "lancamento": "2026",
+      "plataformas": "Xbox Series X|S",
+      "idioma": "Português (BR) — áudio e legendas",
+      "armazenamento": "130 GB (estimado)",
+      "modos": "Solo, Cooperativo e Multijogador online",
+      "classificacao": "L",
+      "resgate": "xbox",
+      "sinopse": [
+        "Forza Horizon 6 leva o festival Horizon ao Japão, com cidades vibrantes como Tóquio, estradas de montanha e paisagens que mudam com as estações.",
+        "Colecione centenas de carros licenciados, personalize cada detalhe e participe de corridas, eventos e desafios com jogadores do mundo todo."
+      ],
+      "destaques": [
+        "Ambientado no Japão, com Tóquio incluída",
+        "Centenas de carros licenciados",
+        "Estações do ano dinâmicas",
+        "Disponível no Xbox Game Pass"
+      ]
+    }
   },
   {
     "id": "xbox-halo",
@@ -227,7 +797,32 @@
     "imagem": "/imagens/halo.jpg",
     "categoria": "xbox",
     "plataforma": "xbox",
-    "link": "/jogos/xbox/halo-infinite.html"
+    "link": "/jogos/xbox/halo-infinite.html",
+    "detalhes": {
+      "genero": [
+        "Tiro em Primeira Pessoa",
+        "Ficção Científica"
+      ],
+      "desenvolvedora": "343 Industries",
+      "publicadora": "Xbox Game Studios",
+      "lancamento": "8 de dezembro de 2021",
+      "plataformas": "Xbox Series X|S / Xbox One",
+      "idioma": "Português (BR) — áudio dublado e legendas",
+      "armazenamento": "48 GB",
+      "modos": "Campanha (solo/coop) e Multijogador",
+      "classificacao": "14",
+      "resgate": "xbox",
+      "sinopse": [
+        "Quando toda a esperança está perdida e o destino da humanidade está em jogo, o Master Chief está pronto para enfrentar o inimigo mais cruel que já encontrou.",
+        "Explore o anel Zeta Halo em uma campanha semiaberta, use o gancho de agarrar e lute contra os Banidos com o arsenal clássico da série."
+      ],
+      "destaques": [
+        "Campanha semiaberta no Zeta Halo",
+        "Gancho de agarrar para mobilidade",
+        "Multijogador gratuito com temporadas",
+        "Até 120 FPS no Xbox Series X"
+      ]
+    }
   },
   {
     "id": "xbox-forza5",
@@ -237,7 +832,32 @@
     "imagem": "/imagens/forza5.jpg",
     "categoria": "xbox",
     "plataforma": "xbox",
-    "link": "/jogos/xbox/forza-horizon-5.html"
+    "link": "/jogos/xbox/forza-horizon-5.html",
+    "detalhes": {
+      "genero": [
+        "Corrida",
+        "Mundo Aberto"
+      ],
+      "desenvolvedora": "Playground Games",
+      "publicadora": "Xbox Game Studios",
+      "lancamento": "9 de novembro de 2021",
+      "plataformas": "Xbox Series X|S / Xbox One",
+      "idioma": "Português (BR) — áudio e legendas",
+      "armazenamento": "110 GB",
+      "modos": "Solo, Cooperativo e Multijogador online",
+      "classificacao": "L",
+      "resgate": "xbox",
+      "sinopse": [
+        "Explore as paisagens vibrantes e em constante evolução do México, de desertos e selvas a cidades históricas e vulcões ativos.",
+        "Lidere expedições inesquecíveis com centenas dos melhores carros do mundo e crie seus próprios eventos com o EventLab."
+      ],
+      "destaques": [
+        "Maior mapa da série Horizon",
+        "Mais de 500 carros licenciados",
+        "Clima e estações dinâmicas",
+        "Criador de eventos EventLab"
+      ]
+    }
   },
   {
     "id": "xbox-gears5",
@@ -247,7 +867,32 @@
     "imagem": "/imagens/gears5.jpg",
     "categoria": "xbox",
     "plataforma": "xbox",
-    "link": "/jogos/xbox/gears-5.html"
+    "link": "/jogos/xbox/gears-5.html",
+    "detalhes": {
+      "genero": [
+        "Tiro em Terceira Pessoa",
+        "Ação"
+      ],
+      "desenvolvedora": "The Coalition",
+      "publicadora": "Xbox Game Studios",
+      "lancamento": "10 de setembro de 2019",
+      "plataformas": "Xbox Series X|S / Xbox One",
+      "idioma": "Português (BR) — áudio dublado e legendas",
+      "armazenamento": "80 GB",
+      "modos": "Campanha (até 3 jogadores), Horda, Fuga e Versus",
+      "classificacao": "18",
+      "resgate": "xbox",
+      "sinopse": [
+        "Com a guerra contra o Enxame se intensificando, Kait Diaz parte em busca de respostas sobre sua origem e sua ligação com o inimigo.",
+        "Explore áreas abertas com o esquife, combata em cobertura com o clássico estilo Gears e jogue a campanha em cooperativo com amigos."
+      ],
+      "destaques": [
+        "Campanha cooperativa para até 3 jogadores",
+        "Modos Horda e Fuga",
+        "Áreas abertas exploráveis com o esquife",
+        "Otimizado para Xbox Series X|S"
+      ]
+    }
   },
   {
     "id": "xbox-seaof",
@@ -257,7 +902,33 @@
     "imagem": "/imagens/seaof.webp",
     "categoria": "xbox",
     "plataforma": "xbox",
-    "link": "/jogos/xbox/sea-of-thieves.html"
+    "link": "/jogos/xbox/sea-of-thieves.html",
+    "detalhes": {
+      "genero": [
+        "Aventura",
+        "Mundo Aberto",
+        "Multijogador"
+      ],
+      "desenvolvedora": "Rare",
+      "publicadora": "Xbox Game Studios",
+      "lancamento": "20 de março de 2018",
+      "plataformas": "Xbox Series X|S / Xbox One",
+      "idioma": "Português (BR) — textos e áudio",
+      "armazenamento": "70 GB",
+      "modos": "Multijogador online (solo ou tripulação)",
+      "classificacao": "12",
+      "resgate": "xbox",
+      "sinopse": [
+        "Sea of Thieves oferece a experiência pirata definitiva: navegue, lute, explore e saqueie em um mundo compartilhado com outros jogadores.",
+        "Forme uma tripulação com amigos, encontre tesouros lendários, enfrente o Kraken e escreva sua própria lenda nos mares."
+      ],
+      "destaques": [
+        "Mundo compartilhado com outros piratas",
+        "Navegação cooperativa em tripulação",
+        "Conteúdo gratuito em temporadas",
+        "Aventuras inspiradas em Piratas do Caribe"
+      ]
+    }
   },
   {
     "id": "xbox-starfield",
@@ -267,7 +938,33 @@
     "imagem": "/imagens/starfield.jpg",
     "categoria": "xbox",
     "plataforma": "xbox",
-    "link": "/jogos/xbox/starfield.html"
+    "link": "/jogos/xbox/starfield.html",
+    "detalhes": {
+      "genero": [
+        "RPG",
+        "Ficção Científica",
+        "Mundo Aberto"
+      ],
+      "desenvolvedora": "Bethesda Game Studios",
+      "publicadora": "Bethesda Softworks",
+      "lancamento": "6 de setembro de 2023",
+      "plataformas": "Xbox Series X|S",
+      "idioma": "Inglês (áudio) — Português (BR) (legendas)",
+      "armazenamento": "125 GB",
+      "modos": "Solo",
+      "classificacao": "16",
+      "resgate": "xbox",
+      "sinopse": [
+        "No ano de 2330, a humanidade se aventurou além do Sistema Solar. Junte-se à Constelação, o último grupo de exploradores espaciais, em busca de artefatos misteriosos.",
+        "Crie seu personagem, construa naves, explore mais de 1.000 planetas e decida seu caminho em um RPG espacial de proporções gigantescas."
+      ],
+      "destaques": [
+        "Mais de 1.000 planetas para explorar",
+        "Construção e personalização de naves",
+        "Facções e escolhas que mudam a história",
+        "Primeiro novo universo da Bethesda em 25 anos"
+      ]
+    }
   },
   {
     "id": "xbox-senuas",
@@ -277,7 +974,33 @@
     "imagem": "/imagens/senuas.jpg",
     "categoria": "xbox",
     "plataforma": "xbox",
-    "link": "/jogos/xbox/senua-s-saga-hellblade-ii.html"
+    "link": "/jogos/xbox/senua-s-saga-hellblade-ii.html",
+    "detalhes": {
+      "genero": [
+        "Ação",
+        "Aventura",
+        "Narrativo"
+      ],
+      "desenvolvedora": "Ninja Theory",
+      "publicadora": "Xbox Game Studios",
+      "lancamento": "21 de maio de 2024",
+      "plataformas": "Xbox Series X|S",
+      "idioma": "Inglês (áudio) — Português (BR) (legendas)",
+      "armazenamento": "50 GB",
+      "modos": "Solo",
+      "classificacao": "18",
+      "resgate": "xbox",
+      "sinopse": [
+        "Após os eventos do primeiro jogo, Senua viaja à Islândia do século X para confrontar os traficantes de escravos que aterrorizam seu povo.",
+        "Uma jornada brutal e emocionante pela mente e pela mitologia nórdica, com visuais quase fotorrealistas e áudio binaural imersivo."
+      ],
+      "destaques": [
+        "Gráficos fotorrealistas com Unreal Engine 5",
+        "Áudio binaural 3D (recomendado com fones)",
+        "Combate cinematográfico corpo a corpo",
+        "Narrativa sobre saúde mental premiada"
+      ]
+    }
   },
   {
     "id": "xbox-flight",
@@ -287,7 +1010,32 @@
     "imagem": "/imagens/flight.jpg",
     "categoria": "xbox",
     "plataforma": "xbox",
-    "link": "/jogos/xbox/microsoft-flight-simulator.html"
+    "link": "/jogos/xbox/microsoft-flight-simulator.html",
+    "detalhes": {
+      "genero": [
+        "Simulação",
+        "Aviação"
+      ],
+      "desenvolvedora": "Asobo Studio",
+      "publicadora": "Xbox Game Studios",
+      "lancamento": "27 de julho de 2021 (Xbox)",
+      "plataformas": "Xbox Series X|S",
+      "idioma": "Português (BR) — textos e interface",
+      "armazenamento": "130 GB",
+      "modos": "Solo e Multijogador online",
+      "classificacao": "L",
+      "resgate": "xbox",
+      "sinopse": [
+        "Voe por todo o planeta Terra recriado com dados de satélite e inteligência artificial, com cidades, aeroportos e paisagens em escala real.",
+        "Pilote aviões leves até jatos comerciais com modelos de voo realistas, clima em tempo real e ciclo de dia e noite."
+      ],
+      "destaques": [
+        "O planeta inteiro em escala real",
+        "Clima e tráfego aéreo em tempo real",
+        "Mais de 37.000 aeroportos",
+        "Aeronaves com cabines detalhadas"
+      ]
+    }
   },
   {
     "id": "xbox-state",
@@ -297,7 +1045,33 @@
     "imagem": "/imagens/state.jpg",
     "categoria": "xbox",
     "plataforma": "xbox",
-    "link": "/jogos/xbox/state-of-decay-2.html"
+    "link": "/jogos/xbox/state-of-decay-2.html",
+    "detalhes": {
+      "genero": [
+        "Sobrevivência",
+        "Zumbi",
+        "Mundo Aberto"
+      ],
+      "desenvolvedora": "Undead Labs",
+      "publicadora": "Xbox Game Studios",
+      "lancamento": "22 de maio de 2018",
+      "plataformas": "Xbox Series X|S / Xbox One",
+      "idioma": "Português (BR) — textos e legendas",
+      "armazenamento": "30 GB",
+      "modos": "Solo e Cooperativo para 4",
+      "classificacao": "16",
+      "resgate": "xbox",
+      "sinopse": [
+        "Os mortos se levantaram e a civilização caiu. Reúna sobreviventes, construa uma base e tome decisões difíceis para manter sua comunidade viva.",
+        "Cada sobrevivente tem habilidades únicas e, se morrer, se vai para sempre. Explore, colete recursos e enfrente os Corações da Praga."
+      ],
+      "destaques": [
+        "Gerenciamento de comunidade e base",
+        "Morte permanente dos sobreviventes",
+        "Cooperativo online para até 4 jogadores",
+        "Inclui a Juggernaut Edition com mapas extras"
+      ]
+    }
   },
   {
     "id": "xbox-ori",
@@ -307,7 +1081,33 @@
     "imagem": "/imagens/ori.avif",
     "categoria": "xbox",
     "plataforma": "xbox",
-    "link": "/jogos/xbox/ori-and-the-will-of-the-wisps.html"
+    "link": "/jogos/xbox/ori-and-the-will-of-the-wisps.html",
+    "detalhes": {
+      "genero": [
+        "Metroidvania",
+        "Plataforma",
+        "Aventura"
+      ],
+      "desenvolvedora": "Moon Studios",
+      "publicadora": "Xbox Game Studios",
+      "lancamento": "11 de março de 2020",
+      "plataformas": "Xbox Series X|S / Xbox One",
+      "idioma": "Português (BR) — textos e interface",
+      "armazenamento": "20 GB",
+      "modos": "Solo",
+      "classificacao": "10",
+      "resgate": "xbox",
+      "sinopse": [
+        "O pequeno espírito Ori embarca em uma nova jornada além da floresta para descobrir seu verdadeiro destino e salvar uma terra em ruínas.",
+        "Com combate renovado, novas habilidades e cenários pintados à mão, a sequência amplia tudo o que tornou o original inesquecível."
+      ],
+      "destaques": [
+        "Arte deslumbrante pintada à mão",
+        "Trilha sonora orquestral emocionante",
+        "Sistema de fragmentos de habilidade",
+        "Até 120 FPS em 4K no Xbox Series X"
+      ]
+    }
   },
   {
     "id": "destaque-control",
@@ -317,7 +1117,33 @@
     "imagem": "/imagens/control.jpg",
     "categoria": "destaque",
     "plataforma": "destaque",
-    "link": "/jogos/destaques/control-resonant.html"
+    "link": "/jogos/destaques/control-resonant.html",
+    "detalhes": {
+      "genero": [
+        "Ação",
+        "Aventura",
+        "Sobrenatural"
+      ],
+      "desenvolvedora": "Remedy Entertainment",
+      "publicadora": "Remedy Entertainment",
+      "lancamento": "2026",
+      "plataformas": "PC / PS5 / Xbox Series X|S",
+      "idioma": "Inglês (áudio) — Português (BR) (legendas)",
+      "armazenamento": "60 GB (estimado)",
+      "modos": "Solo",
+      "classificacao": "16",
+      "resgate": "steam",
+      "sinopse": [
+        "Control: Resonant retorna ao universo do Federal Bureau of Control, a agência secreta que investiga fenômenos sobrenaturais e objetos de poder.",
+        "Use poderes telecinéticos e a Arma de Serviço transformável para enfrentar ameaças de outras dimensões em ambientes totalmente destrutíveis."
+      ],
+      "destaques": [
+        "Poderes telecinéticos e levitação",
+        "Cenários altamente destrutíveis",
+        "Parte do Universo Conectado da Remedy",
+        "Visuais com Ray Tracing avançado"
+      ]
+    }
   },
   {
     "id": "destaque-onimusha",
@@ -327,7 +1153,33 @@
     "imagem": "/imagens/ONIMUSHA so.avif",
     "categoria": "destaque",
     "plataforma": "destaque",
-    "link": "/jogos/destaques/onimusha-way-of-the-sword.html"
+    "link": "/jogos/destaques/onimusha-way-of-the-sword.html",
+    "detalhes": {
+      "genero": [
+        "Ação",
+        "Hack and Slash",
+        "Samurai"
+      ],
+      "desenvolvedora": "Capcom",
+      "publicadora": "Capcom",
+      "lancamento": "2026",
+      "plataformas": "PC / PS5 / Xbox Series X|S",
+      "idioma": "Japonês (áudio) — Português (BR) (legendas)",
+      "armazenamento": "60 GB (estimado)",
+      "modos": "Solo",
+      "classificacao": "18",
+      "resgate": "steam",
+      "sinopse": [
+        "Ambientado em uma Kyoto do período Edo tomada por demônios, Onimusha: Way of the Sword marca o retorno da clássica franquia de ação da Capcom.",
+        "Empunhe a Manopla Oni, absorva as almas dos Genma e domine um combate de espadas intenso e cinematográfico."
+      ],
+      "destaques": [
+        "Retorno da franquia Onimusha",
+        "Kyoto do período Edo infestada por demônios",
+        "Combate de espadas visceral",
+        "Desenvolvido na RE Engine"
+      ]
+    }
   },
   {
     "id": "destaque-eldenring",
@@ -337,7 +1189,34 @@
     "imagem": "/imagens/EldenRing.png",
     "categoria": "destaque",
     "plataforma": "destaque",
-    "link": "/jogos/destaques/elden-ring.html"
+    "link": "/jogos/destaques/elden-ring.html",
+    "detalhes": {
+      "genero": [
+        "RPG",
+        "Ação",
+        "Soulslike",
+        "Mundo Aberto"
+      ],
+      "desenvolvedora": "FromSoftware",
+      "publicadora": "Bandai Namco",
+      "lancamento": "25 de fevereiro de 2022",
+      "plataformas": "PC / PS5 / PS4 / Xbox",
+      "idioma": "Inglês (áudio) — Português (BR) (legendas)",
+      "armazenamento": "60 GB",
+      "modos": "Solo, Cooperativo e PvP online",
+      "classificacao": "16",
+      "resgate": "steam",
+      "sinopse": [
+        "Levante-se, Maculado, e seja guiado pela graça para portar o poder do Anel Prístino e se tornar um Lorde Prístino nas Terras Intermédias.",
+        "Criado por Hidetaka Miyazaki em parceria com George R. R. Martin, Elden Ring combina exploração em mundo aberto com o combate desafiador da FromSoftware."
+      ],
+      "destaques": [
+        "Jogo do Ano no The Game Awards 2022",
+        "Mundo vasto com masmorras e chefes épicos",
+        "Lore escrita com George R. R. Martin",
+        "Cooperativo e invasões online"
+      ]
+    }
   },
   {
     "id": "destaque-wukong",
@@ -347,7 +1226,33 @@
     "imagem": "/imagens/Black MythWukong.png",
     "categoria": "destaque",
     "plataforma": "destaque",
-    "link": "/jogos/destaques/black-myth-wukong.html"
+    "link": "/jogos/destaques/black-myth-wukong.html",
+    "detalhes": {
+      "genero": [
+        "Ação",
+        "RPG",
+        "Mitologia Chinesa"
+      ],
+      "desenvolvedora": "Game Science",
+      "publicadora": "Game Science",
+      "lancamento": "20 de agosto de 2024",
+      "plataformas": "PC / PS5",
+      "idioma": "Chinês e Inglês (áudio) — Português (BR) (legendas)",
+      "armazenamento": "130 GB (SSD)",
+      "modos": "Solo",
+      "classificacao": "16",
+      "resgate": "steam",
+      "sinopse": [
+        "Inspirado no clássico \"Jornada ao Oeste\", Black Myth: Wukong coloca você no papel do Predestinado, em uma jornada repleta de perigos e maravilhas.",
+        "Enfrente criaturas lendárias da mitologia chinesa com combate dinâmico baseado em bastão, transformações e feitiços."
+      ],
+      "destaques": [
+        "Mais de 80 chefes inspirados na mitologia",
+        "Transformações em criaturas e feitiços",
+        "Visuais impressionantes com Unreal Engine 5",
+        "Mais de 1 milhão de avaliações positivas"
+      ]
+    }
   },
   {
     "id": "promo-control",
@@ -357,7 +1262,33 @@
     "imagem": "/imagens/control.jpg",
     "categoria": "promocao",
     "plataforma": "promocao",
-    "link": "/jogos/destaques/control-resonant.html"
+    "link": "/jogos/destaques/control-resonant.html",
+    "detalhes": {
+      "genero": [
+        "Ação",
+        "Aventura",
+        "Sobrenatural"
+      ],
+      "desenvolvedora": "Remedy Entertainment",
+      "publicadora": "Remedy Entertainment",
+      "lancamento": "2026",
+      "plataformas": "PC / PS5 / Xbox Series X|S",
+      "idioma": "Inglês (áudio) — Português (BR) (legendas)",
+      "armazenamento": "60 GB (estimado)",
+      "modos": "Solo",
+      "classificacao": "16",
+      "resgate": "steam",
+      "sinopse": [
+        "Control: Resonant retorna ao universo do Federal Bureau of Control, a agência secreta que investiga fenômenos sobrenaturais e objetos de poder.",
+        "Use poderes telecinéticos e a Arma de Serviço transformável para enfrentar ameaças de outras dimensões em ambientes totalmente destrutíveis."
+      ],
+      "destaques": [
+        "Poderes telecinéticos e levitação",
+        "Cenários altamente destrutíveis",
+        "Parte do Universo Conectado da Remedy",
+        "Visuais com Ray Tracing avançado"
+      ]
+    }
   },
   {
     "id": "promo-eldenring",
@@ -367,7 +1298,34 @@
     "imagem": "/imagens/EldenRing.png",
     "categoria": "promocao",
     "plataforma": "promocao",
-    "link": "/jogos/destaques/elden-ring.html"
+    "link": "/jogos/destaques/elden-ring.html",
+    "detalhes": {
+      "genero": [
+        "RPG",
+        "Ação",
+        "Soulslike",
+        "Mundo Aberto"
+      ],
+      "desenvolvedora": "FromSoftware",
+      "publicadora": "Bandai Namco",
+      "lancamento": "25 de fevereiro de 2022",
+      "plataformas": "PC / PS5 / PS4 / Xbox",
+      "idioma": "Inglês (áudio) — Português (BR) (legendas)",
+      "armazenamento": "60 GB",
+      "modos": "Solo, Cooperativo e PvP online",
+      "classificacao": "16",
+      "resgate": "steam",
+      "sinopse": [
+        "Levante-se, Maculado, e seja guiado pela graça para portar o poder do Anel Prístino e se tornar um Lorde Prístino nas Terras Intermédias.",
+        "Criado por Hidetaka Miyazaki em parceria com George R. R. Martin, Elden Ring combina exploração em mundo aberto com o combate desafiador da FromSoftware."
+      ],
+      "destaques": [
+        "Jogo do Ano no The Game Awards 2022",
+        "Mundo vasto com masmorras e chefes épicos",
+        "Lore escrita com George R. R. Martin",
+        "Cooperativo e invasões online"
+      ]
+    }
   },
   {
     "id": "ps-ufc6",
@@ -377,6 +1335,32 @@
     "imagem": "/imagens/ufc6.avif",
     "categoria": "ps",
     "plataforma": "ps",
-    "link": "/jogos/ps/ufc-6.html"
+    "link": "/jogos/ps/ufc-6.html",
+    "detalhes": {
+      "genero": [
+        "Esporte",
+        "Luta",
+        "MMA"
+      ],
+      "desenvolvedora": "EA Vancouver",
+      "publicadora": "Electronic Arts",
+      "lancamento": "2026",
+      "plataformas": "PS5",
+      "idioma": "Inglês (áudio) — Português (BR) (legendas e interface)",
+      "armazenamento": "60 GB (estimado)",
+      "modos": "Carreira, Versus local e Online",
+      "classificacao": "16",
+      "resgate": "ps",
+      "sinopse": [
+        "EA SPORTS UFC 6 traz o octógono para a nova geração com animações capturadas de lutadores reais e um sistema de dano progressivo ainda mais realista.",
+        "Crie seu atleta no modo Carreira, evolua do circuito regional até o cinturão e enfrente jogadores do mundo todo em eventos ao vivo."
+      ],
+      "destaques": [
+        "Elenco com os principais lutadores do UFC",
+        "Novo sistema de grappling e finalizações",
+        "Modo Carreira com rivalidades dinâmicas",
+        "Eventos online semanais"
+      ]
+    }
   }
 ]

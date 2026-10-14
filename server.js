@@ -18,6 +18,7 @@ app.use(express.json());
 //---------------------------------------------------- API PARA BACKEND -------------------
 
 const fs = require('fs');
+const { gerarSecaoDetalhes, esc } = require('./utils/detalhesJogo');
 
 const PORT = process.env.PORT || 3000;
 
@@ -280,107 +281,7 @@ function gerarHtmlPaginaJogo(jogo) {
             </div>
         </main>
 
-        <!-- Detalhes do Produto, Sinopse e Requisitos -->
-        <section class="detalhes-produto-container">
-            <div class="secao-info-badges">
-                <div class="info-badge-card">
-                    <div class="badge-icone"><i data-lucide="zap"></i></div>
-                    <div class="badge-texto">
-                        <strong>Envio Instantâneo</strong>
-                        <span>Chave entregue em segundos</span>
-                    </div>
-                </div>
-                <div class="info-badge-card">
-                    <div class="badge-icone"><i data-lucide="shield-check"></i></div>
-                    <div class="badge-texto">
-                        <strong>Garantia Vitalícia</strong>
-                        <span>Chave 100% original e legalizada</span>
-                    </div>
-                </div>
-                <div class="info-badge-card">
-                    <div class="badge-icone"><i data-lucide="headset"></i></div>
-                    <div class="badge-texto">
-                        <strong>Suporte Gamer 24/7</strong>
-                        <span>Atendimento especializado</span>
-                    </div>
-                </div>
-                <div class="info-badge-card">
-                    <div class="badge-icone"><i data-lucide="award"></i></div>
-                    <div class="badge-texto">
-                        <strong>Avaliação 4.9/5</strong>
-                        <span>Mais de 1.500 clientes VIP</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="grid-detalhes-jogo">
-                <div class="card-detalhe-jogo">
-                    <h3><i data-lucide="sparkles"></i> Sobre o Jogo</h3>
-                    <p>Prepare-se para uma experiência imersiva e inesquecível em <strong>${jogo.titulo}</strong>. Desenvolvido para oferecer o ápice da fidelidade gráfica, jogabilidade fluida e narrativa envolvente, cada momento deste título foi desenhado para colocar suas habilidades à prova.</p>
-                    <p>Explore cenários detalhados, enfrente desafios épicos com amigos ou em campanhas solo cativantes e aproveite o suporte completo a altas taxas de quadros e resoluções 4K HDR para sua plataforma favorita.</p>
-
-                    <h3 style="margin-top: 30px;"><i data-lucide="cpu"></i> Requisitos / Especificações</h3>
-                    <div class="requisitos-tabela">
-                        <div class="coluna-requisito">
-                            <h4>Mínimos</h4>
-                            <ul>
-                                <li><strong>SO:</strong> Windows 10 (64-bit) / Console</li>
-                                <li><strong>Processador:</strong> Core i5-8400 / Ryzen 5 2600</li>
-                                <li><strong>Memória:</strong> 12 GB RAM</li>
-                                <li><strong>Placa de Vídeo:</strong> GTX 1060 (6GB) / RX 580</li>
-                                <li><strong>Armazenamento:</strong> 70 GB SSD disponível</li>
-                            </ul>
-                        </div>
-                        <div class="coluna-requisito">
-                            <h4>Recomendados</h4>
-                            <ul>
-                                <li><strong>SO:</strong> Windows 11 (64-bit) / Console</li>
-                                <li><strong>Processador:</strong> Core i7-12700 / Ryzen 7 5800X</li>
-                                <li><strong>Memória:</strong> 16 GB RAM</li>
-                                <li><strong>Placa de Vídeo:</strong> RTX 3070 / RX 6800 XT</li>
-                                <li><strong>Armazenamento:</strong> 70 GB SSD NVMe de alta velocidade</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="card-detalhe-jogo">
-                    <h3><i data-lucide="key"></i> Como Ativar sua Chave</h3>
-                    <div class="passos-ativacao">
-                        <div class="passo-item">
-                            <span class="passo-numero">1</span>
-                            <div class="passo-texto">
-                                <strong>Receba seu código</strong>
-                                <p>Após a confirmação da compra, sua chave oficial é liberada instantaneamente no seu perfil.</p>
-                            </div>
-                        </div>
-                        <div class="passo-item">
-                            <span class="passo-numero">2</span>
-                            <div class="passo-texto">
-                                <strong>Acesse sua plataforma</strong>
-                                <p>Abra o cliente oficial (${infoChave}) no computador ou console.</p>
-                            </div>
-                        </div>
-                        <div class="passo-item">
-                            <span class="passo-numero">3</span>
-                            <div class="passo-texto">
-                                <strong>Resgate e jogue</strong>
-                                <p>Selecione "Resgatar Código / Ativar Produto", insira o código e inicie o download imediato!</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div style="margin-top: 25px; padding: 16px; background: rgba(0, 242, 254, 0.08); border-radius: 10px; border: 1px dashed rgba(0, 242, 254, 0.3);">
-                        <strong style="color: #00f2fe; display: block; margin-bottom: 5px; font-size: 0.9rem;">
-                            <i data-lucide="shield-alert" style="vertical-align: middle; width: 16px; height: 16px; margin-right: 4px;"></i> Compra 100% Protegida
-                        </strong>
-                        <p style="font-size: 0.8rem; color: #bbb; margin: 0; line-height: 1.4;">
-                            Todas as transações na Keep Keys contam com certificação SSL e validação direta pelas distribuidoras oficiais.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </section>
+        ${gerarSecaoDetalhes(jogo)}
 
         <footer>
             <p>&copy; 2026 Keep Keys - Sua Loja Gamer. Todos os direitos reservados.</p>
@@ -421,7 +322,15 @@ function gerarHtmlPaginaJogo(jogo) {
 }
 
 function salvarPaginaJogo(jogo) {
-    const { pastaFisica, caminhoFisico, linkPublico } = obterCaminhoPagina(jogo);
+    let { pastaFisica, caminhoFisico, linkPublico } = obterCaminhoPagina(jogo);
+
+    // Se o jogo já possui uma página, atualiza o próprio arquivo (evita duplicatas ao editar)
+    if (jogo.link && jogo.link.startsWith('/jogos/') && !jogo.link.includes('..')) {
+        linkPublico = jogo.link;
+        caminhoFisico = path.join(__dirname, 'public', jogo.link);
+        pastaFisica = path.dirname(caminhoFisico);
+    }
+
     if (!fs.existsSync(pastaFisica)) {
         fs.mkdirSync(pastaFisica, { recursive: true });
     }

@@ -171,7 +171,7 @@
 
         </main>
 
-        <!-- Detalhes do Produto, Sinopse e Requisitos -->
+        <!-- Detalhes do Produto: Sobre, Ficha Técnica e Destaques -->
         <section class="detalhes-produto-container">
             <div class="secao-info-badges">
                 <div class="info-badge-card">
@@ -185,7 +185,7 @@
                     <div class="badge-icone"><i data-lucide="shield-check"></i></div>
                     <div class="badge-texto">
                         <strong>Garantia Vitalícia</strong>
-                        <span>Chave 100% original Steam</span>
+                        <span>Chave 100% original</span>
                     </div>
                 </div>
                 <div class="info-badge-card">
@@ -199,77 +199,102 @@
                     <div class="badge-icone"><i data-lucide="award"></i></div>
                     <div class="badge-texto">
                         <strong>Avaliação 4.9/5</strong>
-                        <span>Mais de 1.500 clientes VIP</span>
+                        <span>Mais de 1.500 clientes</span>
                     </div>
                 </div>
             </div>
 
             <div class="grid-detalhes-jogo">
-                <div class="card-detalhe-jogo">
+                <article class="card-detalhe-jogo">
                     <h3><i data-lucide="sparkles"></i> Sobre o Jogo</h3>
-                    <p><strong>The Isle</strong> é um jogo de terror e sobrevivência em mundo aberto onde os jogadores experimentam a vida selvagem implacável na pele de dinossauros. Comece como um filhote frágil e indefeso e evolua até se tornar um predador colossal no topo da cadeia alimentar.</p>
-                    <p>Navegue por biomas densos, cace em bandos com outros jogadores ou fuja de carnívoros temíveis em servidores multiplayer dinâmicos e cheios de adrenalina com física realista e ecossistemas vivos.</p>
+                    <div class="tags-genero"><span class="tag-genero">Sobrevivência</span><span class="tag-genero">Mundo Aberto</span><span class="tag-genero">Multijogador</span></div>
+                    <p>Em The Isle você vive como um dinossauro em uma ilha misteriosa. Comece como filhote, encontre comida e água, fuja de predadores e cresça até a fase adulta.</p>
+                    <p>Cace em bando com outros jogadores ou sobreviva sozinho em servidores com ecossistemas dinâmicos, clima e ciclo de dia e noite.</p>
 
-                    <h3 style="margin-top: 30px;"><i data-lucide="cpu"></i> Requisitos de Sistema (PC / Steam)</h3>
-                    <div class="requisitos-tabela">
-                        <div class="coluna-requisito">
-                            <h4>Mínimos</h4>
-                            <ul>
-                                <li><strong>SO:</strong> Windows 10 (64-bit)</li>
-                                <li><strong>Processador:</strong> Quad-core Intel / AMD 3.0 GHz</li>
-                                <li><strong>Memória:</strong> 8 GB RAM</li>
-                                <li><strong>Placa de Vídeo:</strong> NVIDIA GeForce GTX 960 / AMD Radeon R9 280X</li>
-                                <li><strong>Armazenamento:</strong> 25 GB disponível</li>
-                            </ul>
+                    <h3 class="titulo-secao-detalhe"><i data-lucide="file-text"></i> Ficha Técnica</h3>
+                    <dl class="ficha-tecnica">
+                        <div class="ficha-item">
+                            <dt><i data-lucide="tag"></i> Gênero</dt>
+                            <dd>Sobrevivência, Mundo Aberto, Multijogador</dd>
                         </div>
-                        <div class="coluna-requisito">
-                            <h4>Recomendados</h4>
-                            <ul>
-                                <li><strong>SO:</strong> Windows 10/11 (64-bit)</li>
-                                <li><strong>Processador:</strong> Intel Core i7-7700K / AMD Ryzen 5 3600</li>
-                                <li><strong>Memória:</strong> 16 GB RAM</li>
-                                <li><strong>Placa de Vídeo:</strong> NVIDIA GeForce GTX 1070 / RTX 2060</li>
-                                <li><strong>Armazenamento:</strong> 25 GB SSD disponível</li>
-                            </ul>
+                        <div class="ficha-item">
+                            <dt><i data-lucide="code-2"></i> Desenvolvedora</dt>
+                            <dd>Afterthought LLC</dd>
                         </div>
-                    </div>
-                </div>
+                        <div class="ficha-item">
+                            <dt><i data-lucide="building-2"></i> Publicadora</dt>
+                            <dd>Afterthought LLC</dd>
+                        </div>
+                        <div class="ficha-item">
+                            <dt><i data-lucide="calendar"></i> Lançamento</dt>
+                            <dd>Acesso Antecipado (2015)</dd>
+                        </div>
+                        <div class="ficha-item">
+                            <dt><i data-lucide="monitor-smartphone"></i> Plataforma</dt>
+                            <dd>PC (Steam)</dd>
+                        </div>
+                        <div class="ficha-item">
+                            <dt><i data-lucide="languages"></i> Idioma</dt>
+                            <dd>Inglês — interface</dd>
+                        </div>
+                        <div class="ficha-item">
+                            <dt><i data-lucide="hard-drive"></i> Armazenamento</dt>
+                            <dd>25 GB</dd>
+                        </div>
+                        <div class="ficha-item">
+                            <dt><i data-lucide="users"></i> Modos de Jogo</dt>
+                            <dd>Multijogador online</dd>
+                        </div>
+                        <div class="ficha-item">
+                            <dt><i data-lucide="key-round"></i> Tipo de Mídia</dt>
+                            <dd>Digital (chave Steam)</dd>
+                        </div>
+                        <div class="ficha-item">
+                            <dt><i data-lucide="shield"></i> Classificação</dt>
+                            <dd><span class="classind classind-16" aria-hidden="true">16</span> Não recomendado para menores de 16 anos</dd>
+                        </div>
+                    </dl>
+                    
+                    <h3 class="titulo-secao-detalhe"><i data-lucide="star"></i> Destaques do Jogo</h3>
+                    <ul class="lista-destaques">
+                        <li><i data-lucide="check-circle-2"></i><span>Jogue como dezenas de espécies de dinossauros</span></li>
+                        <li><i data-lucide="check-circle-2"></i><span>Crescimento do filhote até o adulto</span></li>
+                        <li><i data-lucide="check-circle-2"></i><span>Servidores com centenas de jogadores</span></li>
+                        <li><i data-lucide="check-circle-2"></i><span>Sistema de nutrição e caça realista</span></li>
+                    </ul>
+                </article>
 
-                <div class="card-detalhe-jogo">
+                <aside class="card-detalhe-jogo" aria-label="Como resgatar sua chave">
                     <h3><i data-lucide="key"></i> Como Resgatar no Steam</h3>
                     <div class="passos-ativacao">
                         <div class="passo-item">
                             <span class="passo-numero">1</span>
                             <div class="passo-texto">
                                 <strong>Receba seu código</strong>
-                                <p>Após a confirmação da compra, seu código digital Keep Keys é liberado imediatamente no painel de compras.</p>
+                                <p>Após a confirmação da compra, sua chave fica disponível na aba <em>"Jogos Comprados"</em> do seu perfil.</p>
                             </div>
                         </div>
                         <div class="passo-item">
                             <span class="passo-numero">2</span>
                             <div class="passo-texto">
-                                <strong>Abra o aplicativo Steam</strong>
-                                <p>No menu superior do aplicativo, clique na aba <em>"Jogos"</em> e selecione <em>"Ativar um código de produto no Steam..."</em>.</p>
+                                <strong>Acesse a Steam</strong>
+                                <p>No aplicativo Steam, clique em <em>"Jogos"</em> e depois em <em>"Ativar um produto no Steam..."</em>.</p>
                             </div>
                         </div>
                         <div class="passo-item">
                             <span class="passo-numero">3</span>
                             <div class="passo-texto">
-                                <strong>Resgate e jogue</strong>
-                                <p>Insira a chave recebida, confirme os termos e o jogo será permanentemente adicionado à sua biblioteca Steam!</p>
+                                <strong>Ative e jogue</strong>
+                                <p>Digite o código recebido, confirme o resgate e o jogo será adicionado permanentemente à sua biblioteca.</p>
                             </div>
                         </div>
                     </div>
 
-                    <div style="margin-top: 25px; padding: 16px; background: rgba(0, 242, 254, 0.08); border-radius: 10px; border: 1px dashed rgba(0, 242, 254, 0.3);">
-                        <strong style="color: #00f2fe; display: block; margin-bottom: 5px; font-size: 0.9rem;">
-                            <i data-lucide="shield-alert" style="vertical-align: middle; width: 16px; height: 16px; margin-right: 4px;"></i> Compra 100% Protegida
-                        </strong>
-                        <p style="font-size: 0.8rem; color: #bbb; margin: 0; line-height: 1.4;">
-                            Todas as transações na Keep Keys contam com validação direta das distribuidoras oficiais e garantia vitalícia contra revogações.
-                        </p>
+                    <div class="aviso-compra-protegida">
+                        <strong><i data-lucide="shield-alert"></i> Compra 100% Protegida</strong>
+                        <p>Chaves adquiridas de distribuidoras oficiais, com garantia vitalícia contra revogações.</p>
                     </div>
-                </div>
+                </aside>
             </div>
         </section>
 
@@ -313,3 +338,4 @@
 
 </body>
 </html>
+
