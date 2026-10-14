@@ -140,6 +140,16 @@
     "link": "/jogos/steam/resident evil requiem.html"
   },
   {
+    "id": "steam-theisle",
+    "titulo": "The Isle",
+    "preco": "36,99",
+    "precoAntigo": "59,90",
+    "imagem": "/imagens/TheIsle.jpg",
+    "categoria": "steam",
+    "plataforma": "steam",
+    "link": "/jogos/steam/the-isle.html"
+  },
+  {
     "id": "steam-halloween",
     "titulo": "Halloween The Game",
     "preco": "124,99",

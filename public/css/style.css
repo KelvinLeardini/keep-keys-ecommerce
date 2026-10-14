@@ -316,11 +316,69 @@ aside hr.divisoria {
     pointer-events: auto; /* Permite interação com o slide ativo */
 }
 
+/* Link que torna todo o slide clicável */
+.carrocel-container .slide a.slide-link {
+    display: block;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    color: inherit;
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+}
+
 /* Ajuste da imagem dentro do banner */
-.carrocel-container .slide img {
+.carrocel-container .slide img,
+.carrocel-container .slide a.slide-link img {
     width: 100%;
     height: 100%;
     object-fit: cover; /* Garante que a imagem preencha o espaço do slide sem distorcer */
+    transition: transform 0.5s ease, filter 0.3s ease;
+    display: block;
+}
+
+.carrocel-container .slide a.slide-link:hover img {
+    transform: scale(1.03);
+    filter: brightness(1.06);
+}
+
+/* Botão interativo "Ver Jogo" sobre o banner */
+.slide-btn-ver {
+    position: absolute;
+    bottom: 25px;
+    right: 25px;
+    background: rgba(8, 70, 158, 0.92);
+    backdrop-filter: blur(8px);
+    color: #ffffff;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    font-weight: bold;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    border: 1px solid #00f2fe;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6), 0 0 10px rgba(0, 242, 254, 0.3);
+    transition: all 0.25s ease;
+    z-index: 6;
+}
+
+.slide-btn-ver .lucide {
+    width: 18px;
+    height: 18px;
+    transition: transform 0.2s ease;
+}
+
+.carrocel-container .slide a.slide-link:hover .slide-btn-ver {
+    background: #00f2fe;
+    color: #050c1a;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 242, 254, 0.6);
+}
+
+.carrocel-container .slide a.slide-link:hover .slide-btn-ver .lucide {
+    transform: translateX(4px);
 }
 
 /* BOTÕES DAS SETAS (ANTERIOR / PRÓXIMO) */
