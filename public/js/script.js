@@ -237,13 +237,12 @@ function inicializarAutenticacao() {
         let carteiraHeader = document.getElementById('carteira-saldo-header');
         const saudacaoEl = painelUsuario ? painelUsuario.querySelector('span strong') : null;
 
-        // Injeção dinâmica do Saldo da Carteira no Header caso a página não tenha no HTML
+        // Injeção dinâmica do Saldo da Carteira no Header (meramente visual, sem cliques ou links)
         if (painelUsuario && !carteiraHeader) {
-            carteiraHeader = document.createElement('a');
-            carteiraHeader.href = '/perfil.html';
+            carteiraHeader = document.createElement('div');
             carteiraHeader.id = 'carteira-saldo-header';
             carteiraHeader.className = 'carteira-saldo-header';
-            carteiraHeader.title = 'Saldo na Carteira Digital Keep Keys';
+            carteiraHeader.title = 'Saldo disponível na Carteira Digital Keep Keys';
             carteiraHeader.innerHTML = '<i data-lucide="wallet"></i> <span class="saldo-rotulo">Saldo:</span> <span class="saldo-valor" id="valor-saldo-header">R$ 1.000,00</span>';
             
             const btnAbrirCarrinho = document.getElementById('btn-abrir-carrinho');
@@ -253,6 +252,10 @@ function inicializarAutenticacao() {
                 painelUsuario.prepend(carteiraHeader);
             }
             if (typeof lucide !== 'undefined') lucide.createIcons();
+        } else if (carteiraHeader && carteiraHeader.tagName.toLowerCase() === 'a') {
+            // Remove qualquer link remanescente para ser puramente visual
+            carteiraHeader.removeAttribute('href');
+            carteiraHeader.removeAttribute('target');
         }
 
         // Injeção dinâmica do Botão de Perfil no Header caso a página não tenha no HTML

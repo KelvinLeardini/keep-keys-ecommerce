@@ -16,20 +16,19 @@ main {
     flex: 1;
 }
 
-/* O <header> segura a busca e o botão entrar */
+/* O <header> segura a busca e a área de usuário */
 header {
-    display: grid;
-    grid-template-columns: 1fr auto 1fr; /* Dividi o header em 3 colunas: Esquerda vazia, Meio (busca) e Direita (login) */
+    display: flex;
     align-items: center;
-    align-items: center;
-    justify-content: space-between; /* Distribui a busca no meio e o botão na ponta */
+    justify-content: space-between;
+    gap: 15px;
     width: 100%;
     padding: 15px 0;
     box-sizing: border-box;
 }
 
 header form {
-    grid-column: 2; /* Força o formulário de busca a ficar cravado na coluna do meio */
+    flex: 0 1 340px;
     margin: 0;
 }
 
@@ -41,7 +40,9 @@ header .buscar{
     border: 1px solid #333333; /* Borda sutil */
     border-radius: 20px; /* Bordas arredondadas */
     padding: 8px 16px;
-    width: 320px; /* Largura fixa para o campo de busca */
+    width: 100%;
+    max-width: 340px;
+    box-sizing: border-box;
     transition: border-color 0.2s ease; /* Animação suave para hover */
 }
 
@@ -91,43 +92,52 @@ header button[type="button"]:hover {
 
 /* Container da área do usuário no header */
 .area-usuario {
-    grid-column: 3; /* Força o login a ficar na terceira coluna */
-    justify-self: end; /* Alinha o login no final da última coluna (à direita) */
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
     margin: 0;
+    margin-left: auto;
+    flex-shrink: 0;
 }
 
 /* Painel exibido quando logado */
 .painel-usuario {
     display: flex !important;
-    align-items: center !important; /* Centraliza o texto e o botão na mesma linha vertical */
-    justify-content: center;
-    gap: 12px; /* Espaço horizontal entre o texto e o botão */
+    align-items: center !important;
+    justify-content: flex-end;
+    gap: 10px;
     color: #fff;
-    font-size: 14px;
-    height: 100%; /* Garante a altura do container */
+    font-size: 13px;
+    height: 100%;
+    flex-wrap: nowrap;
+    white-space: nowrap;
 }
 
 .painel-usuario span {
     display: inline-flex;
     align-items: center;
-    margin: 0 !important; /* Remove margens antigas que possam atrapalhar */
+    margin: 0 !important;
     padding: 0 !important;
-    line-height: 1  !important; /* Remove altura de linha extra do texto */
+    line-height: 1 !important;
     color: #fff;
+    white-space: nowrap;
 }
 
-/* Botão Sair discreto */
+/* Botão Sair discreto e acessível */
 .btn-sair {
     background-color: transparent;
     border: 1px solid #ff4444;
     color: #ff4444;
-    padding: 5px 12px;
-    border-radius: 4px;
+    padding: 6px 12px;
+    border-radius: 6px;
     cursor: pointer;
     font-size: 12px;
-    transition: 0.2s;
-    margin: 0 !important; /* Remove margens extras do botão caso existam */
+    font-weight: 600;
+    transition: all 0.2s ease;
+    margin: 0 !important;
     vertical-align: middle;
+    flex-shrink: 0;
+    white-space: nowrap;
 }
 
 .btn-sair:hover {
@@ -2219,8 +2229,8 @@ aside .footer-redes .icones-redes a .lucide {
     }
 
     header {
-        display: grid;
-        grid-template-columns: 1fr auto 1fr;
+        display: flex;
+        flex-wrap: wrap;
         align-items: center;
         justify-content: space-between;
         gap: 10px;
@@ -2232,8 +2242,10 @@ aside .footer-redes .icones-redes a .lucide {
 
     /* 3. CAMPO DE BUSCA FLUIDO NO MEIO */
     header form {
-        flex: 1;
-        margin: 0;
+        order: 3;
+        flex: 1 1 100%;
+        width: 100%;
+        margin: 5px 0 0 0;
         min-width: 0;
     }
 
@@ -2637,42 +2649,37 @@ aside .footer-redes .icones-redes a .lucide {
 }
 
 /* ==========================================================================
-   BADGE DE SALDO DA CARTEIRA NO HEADER (EM TODAS AS PÁGINAS)
+   BADGE DE SALDO DA CARTEIRA NO HEADER (MERAMENTE VISUAL)
    ========================================================================== */
 .carteira-saldo-header {
     display: inline-flex;
     align-items: center;
-    gap: 8px;
-    background: linear-gradient(135deg, #131b26, #10141d);
-    border: 1px solid #1e4976;
+    gap: 6px;
+    background: #141c26;
+    border: 1px solid #1e3a5f;
     color: #ffffff;
-    padding: 6px 14px;
-    border-radius: 20px;
-    font-size: 0.85rem;
+    padding: 5px 10px;
+    border-radius: 16px;
+    font-size: 0.8rem;
     font-weight: 600;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
-    cursor: pointer;
-    text-decoration: none;
-    transition: all 0.25s ease;
-}
-
-.carteira-saldo-header:hover {
-    border-color: #28a745;
-    background: linear-gradient(135deg, #18283d, #141b26);
-    transform: translateY(-1px);
-    box-shadow: 0 4px 12px rgba(40, 167, 69, 0.2);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+    cursor: default;
+    user-select: none;
+    pointer-events: none; /* Meramente visual, sem cliques ou dependências */
+    flex-shrink: 0;
+    white-space: nowrap;
 }
 
 .carteira-saldo-header .lucide {
-    width: 16px;
-    height: 16px;
+    width: 14px;
+    height: 14px;
     color: #28a745;
     display: block;
 }
 
 .carteira-saldo-header .saldo-rotulo {
     color: #8da4be;
-    font-size: 0.72rem;
+    font-size: 0.7rem;
     text-transform: uppercase;
     letter-spacing: 0.5px;
     font-weight: 700;
