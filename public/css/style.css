@@ -1087,9 +1087,11 @@ aside .footer-redes .icones-redes a .lucide {
 /* Layout Principal (Formulário Esquerda / Lista Direita) */
 .admin-dashboard {
     display: grid;
-    grid-template-columns: 350px 1fr; /* Coluna do form fixa, resto para o catálogo */
+    grid-template-columns: minmax(320px, 380px) minmax(0, 1fr); /* Coluna do form responsiva, resto para o catálogo */
     gap: 30px;
     align-items: start;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .admin-titulo-secao {
@@ -1105,20 +1107,28 @@ aside .footer-redes .icones-redes a .lucide {
     display: flex;
     flex-direction: column;
     gap: 15px;
+    width: 100%;
+    box-sizing: border-box;
 }
 
-.admin-form input, .admin-form select {
+.admin-form input,
+.admin-form select {
     background-color: #1a1a1a;
     border: 1px solid #333333;
     color: #ffffff;
-    padding: 12px 15px;
+    padding: 10px 14px;
     border-radius: 6px;
-    font-size: 1rem;
+    font-size: 0.95rem;
     outline: none;
     transition: border-color 0.2s ease;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    box-sizing: border-box !important;
 }
 
-.admin-form input:focus, .admin-form select:focus {
+.admin-form input:focus,
+.admin-form select:focus {
     border-color: #08469E;
 }
 
@@ -1329,16 +1339,35 @@ aside .footer-redes .icones-redes a .lucide {
 
 /* Formulário de Admin Melhorado */
 .admin-label {
-    font-size: 0.85rem;
-    color: #aaa;
-    margin-bottom: -8px;
+    font-size: 0.82rem;
+    color: #bbb;
+    margin-bottom: 2px;
     font-weight: 500;
+    display: block;
 }
 
 .admin-form-duplo {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 10px;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: 12px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.admin-form-duplo > div {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    min-width: 0;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.admin-form-duplo input {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    box-sizing: border-box !important;
 }
 
 .admin-preview-imagem {

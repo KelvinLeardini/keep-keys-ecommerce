@@ -1667,3 +1667,4 @@ module.exports = {
 // Aliases para os itens promocionais que apontam para a mesma base
 module.exports["promo-control"] = module.exports["destaque-control"];
 module.exports["promo-eldenring"] = module.exports["destaque-eldenring"];
+
