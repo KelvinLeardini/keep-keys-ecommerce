@@ -12,11 +12,8 @@ const app = express();
 // fazendo com que tudo dentro de 'public' seja acessível direto na raiz do navegador
 app.use(express.static(path.join(__dirname, 'public')));
 
-// 5. Inicia o servidor e o coloca para escutar as requisições na porta 3000.
-// A função de callback exibe a mensagem no terminal assim que o servidor estiver rodando
-app.listen(3000, () => {
-  console.log('Servidor rodando em http://localhost:3000');
-});
+// Middleware para ler JSON no corpo das requisições e servir arquivos estáticos
+app.use(express.json());
 
 //---------------------------------------------------- API PARA BACKEND -------------------
 
@@ -84,10 +81,32 @@ app.get('/api/jogos', (req, res) => {
 
 app.post('/api/jogos', (req, res) => {
     const jogos = lerArquivo(caminhoJogos);
-    const novoJogo = { id: Date.now().toString(), ...req.body };
+    const dados = req.body;
+    const categoria = dados.categoria || dados.plataforma || 'ps';
+    const plataforma = dados.plataforma || dados.categoria || 'ps';
+    const novoJogo = { 
+        id: Date.now().toString(), 
+        ...dados,
+        categoria,
+        plataforma
+    };
     jogos.push(novoJogo);
     salvarArquivo(caminhoJogos, jogos);
     res.status(201).json({ sucesso: true, jogo: novoJogo });
+});
+
+app.put('/api/jogos/:id', (req, res) => {
+    const { id } = req.params;
+    let jogos = lerArquivo(caminhoJogos);
+    const index = jogos.findIndex(j => j.id === id);
+    if (index === -1) {
+        return res.status(404).json({ sucesso: false, mensagem: 'Jogo não encontrado' });
+    }
+    const categoria = req.body.categoria || req.body.plataforma || jogos[index].categoria;
+    const plataforma = req.body.plataforma || req.body.categoria || jogos[index].plataforma;
+    jogos[index] = { ...jogos[index], ...req.body, categoria, plataforma };
+    salvarArquivo(caminhoJogos, jogos);
+    res.json({ sucesso: true, jogo: jogos[index] });
 });
 
 app.delete('/api/jogos/:id', (req, res) => {

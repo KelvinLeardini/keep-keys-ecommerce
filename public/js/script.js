@@ -1,124 +1,193 @@
-// Aguarda o HTML carregar completamente para renderizar os ícones
+// /js/script.js - Scripts principais da loja Keep Keys
+
+// Aguarda o HTML carregar completamente
 document.addEventListener('DOMContentLoaded', () => {
-    
-    // Verifica se a biblioteca Lucide carregou antes de chamar
+    // 1. Inicializa ícones Lucide
     if (typeof lucide !== 'undefined') {
         lucide.createIcons();
     }
 
+    // 2. Inicializa o carrossel de banners
+    inicializarCarrossel();
+
+    // 3. Inicializa autenticação e modais de login / cadastro
+    inicializarAutenticacao();
+
+    // 4. Inicializa o menu hambúrguer para mobile
+    inicializarMenuHamburguer();
+
+    // 5. Inicializa o carrinho de compras
+    inicializarCarrinho();
+    atualizarContadorCarrinho();
+
+    // 6. Carrega os jogos dinamicamente a partir do JSON / API
+    carregarJogosDinamicos();
+
+    // 7. Configura busca inicial e botões de compra
+    configurarBusca();
+    configurarBotoesComprar();
 });
 
-const inputBusca = document.querySelector('.buscar input');
-const cardsJogos = document.querySelectorAll('.jogo-produtos');
+// ==========================================
+//   CARREGAMENTO DINÂMICO DE JOGOS (JSON / API)
+// ==========================================
+async function carregarJogosDinamicos() {
+    const containers = document.querySelectorAll('.grade-produtos[data-categoria]');
+    if (containers.length === 0) return;
 
-inputBusca.addEventListener('input', () => {
-    const termoBusca = inputBusca.value.toLowerCase().trim();
-
-    cardsJogos.forEach(card => {
-        const tituloJogo = card.querySelector('h4').textContent.toLowerCase();
-
-        if (tituloJogo.includes(termoBusca)) {
-            // Primeiramente reexibe o elemento no layout
-            card.style.display = '';
-            
-            // Remove a classe para iniciar a animação de "aparecer"
-            setTimeout(() => {
-                card.classList.remove('escondido');
-            }, 10);
-        } else {
-            // Adiciona a classe que reduz a opacidade e o tamanho
-            card.classList.add('escondido');
-            
-            // Espera os 300ms da animação CSS terminar antes de aplicar display: none
-            setTimeout(() => {
-                if (card.classList.contains('escondido')) {
-                    card.style.display = 'none';
-                }
-            }, 300);
+    try {
+        let resposta;
+        try {
+            resposta = await fetch('/api/jogos');
+        } catch {
+            resposta = await fetch('/dados/jogos.json');
         }
-    });
-});
 
+        if (!resposta || !resposta.ok) {
+            resposta = await fetch('/dados/jogos.json');
+        }
 
+        const todosJogos = await resposta.json();
 
-// Seleciona todos os botões COMPRAR dos cards
-const botoesComprar = document.querySelectorAll('.jogo-produtos button');
+        containers.forEach(container => {
+            const categoriaAlvo = (container.dataset.categoria || '').toLowerCase().trim();
 
-botoesComprar.forEach(botao => {
-    botao.addEventListener('click', () => {
-        // Altera o texto e aplica a cor verde
-        botao.textContent = 'ADICIONADO!';
-        botao.classList.add('adicionado');
+            const jogosFiltrados = todosJogos.filter(jogo => {
+                const catJogo = (jogo.categoria || jogo.plataforma || '').toLowerCase().trim();
+                return catJogo === categoriaAlvo;
+            });
 
-        // Volta ao estado original depois de 1.5 segundo
-        setTimeout(() => {
-            botao.innerHTML = '<i data-lucide="shopping-cart"></i> COMPRAR';
-            botao.classList.remove('adicionado');
-
-            if (typeof lucide !== 'undefined') {
-                lucide.createIcons();
+            if (jogosFiltrados.length === 0) {
+                container.innerHTML = '<p style="color: #888; text-align: center; grid-column: 1 / -1; padding: 30px;">Nenhum jogo encontrado nesta categoria.</p>';
+                return;
             }
 
-        }, 1500);
-    });
-});
+            container.innerHTML = jogosFiltrados.map(jogo => {
+                const precoFormatado = jogo.preco.startsWith('R$') ? jogo.preco : `R$ ${jogo.preco}`;
+                const precoAntigoHtml = jogo.precoAntigo 
+                    ? `<p style="color: #ff4444; text-decoration: line-through; font-size: 0.9rem; margin: 0;">R$ ${jogo.precoAntigo.replace('R$', '').trim()}</p>`
+                    : '';
 
+                const cardHtml = `
+                    <article class="jogo-produtos">
+                        <img src="${jogo.imagem}" alt="${jogo.titulo}" width="200px">
+                        <h4>${jogo.titulo}</h4>
+                        ${precoAntigoHtml}
+                        <p>${precoFormatado}</p>
+                        <button type="button"><i data-lucide="shopping-cart"></i>COMPRAR</button>
+                    </article>
+                `;
 
+                if (jogo.link && jogo.link.trim() !== '') {
+                    return `<a href="${jogo.link}">${cardHtml}</a>`;
+                }
+                return cardHtml;
+            }).join('');
+        });
 
-// Seleciona os elementos do carrossel
-const slides = document.querySelectorAll('.carrocel-container .slide');
-const btnAnterior = document.querySelector('.btn-carrocel.anterior');
-const btnProximo = document.querySelector('.btn-carrocel.proximo');
+        // Atualiza os ícones do Lucide nos novos cards gerados
+        if (typeof lucide !== 'undefined') {
+            lucide.createIcons();
+        }
 
-let slideAtual = 0;
-let temporizadorCarrocel;
+        // Reassocia eventos de compra e busca
+        configurarBotoesComprar();
+        configurarBusca();
 
-function mostrarSlide(indice) {
-    // Garante rotação contínua (volta ao início ou vai ao final)
-    if (indice >= slides.length) slideAtual = 0;
-    else if (indice < 0) slideAtual = slides.length - 1;
-    else slideAtual = indice;
-
-    // Atualiza a classe ativo
-    slides.forEach((slide, i) => {
-        slide.classList.toggle('ativo', i === slideAtual);
-    });
+    } catch (erro) {
+        console.error('Erro ao carregar jogos dinâmicos:', erro);
+    }
 }
 
-function proximoSlide() {
-    mostrarSlide(slideAtual + 1);
+// ==========================================
+//   SISTEMA DE BUSCA EM TEMPO REAL
+// ==========================================
+function configurarBusca() {
+    const inputBusca = document.querySelector('.buscar input');
+    if (!inputBusca) return;
+
+    inputBusca.oninput = () => {
+        const termoBusca = inputBusca.value.toLowerCase().trim();
+        const cardsJogos = document.querySelectorAll('.jogo-produtos');
+
+        cardsJogos.forEach(card => {
+            const tituloEl = card.querySelector('h4');
+            const tituloJogo = tituloEl ? tituloEl.textContent.toLowerCase() : '';
+
+            if (tituloJogo.includes(termoBusca)) {
+                card.style.display = '';
+                setTimeout(() => card.classList.remove('escondido'), 10);
+            } else {
+                card.classList.add('escondido');
+                setTimeout(() => {
+                    if (card.classList.contains('escondido')) {
+                        card.style.display = 'none';
+                    }
+                }, 300);
+            }
+        });
+    };
 }
 
-function anteriorSlide() {
-    mostrarSlide(slideAtual - 1);
-}
+// ==========================================
+//   CARROSSEL DE BANNERS
+// ==========================================
+function inicializarCarrossel() {
+    const slides = document.querySelectorAll('.carrocel-container .slide');
+    const btnAnterior = document.querySelector('.btn-carrocel.anterior');
+    const btnProximo = document.querySelector('.btn-carrocel.proximo');
 
-// Inicia temporizador automático (a cada 5 segundos)
-function iniciarAutoPlay() {
-    temporizadorCarrocel = setInterval(proximoSlide, 5000);
-}
+    if (slides.length === 0) return;
 
-function reiniciarAutoPlay() {
-    clearInterval(temporizadorCarrocel);
+    let slideAtual = 0;
+    let temporizadorCarrocel;
+
+    function mostrarSlide(indice) {
+        if (indice >= slides.length) slideAtual = 0;
+        else if (indice < 0) slideAtual = slides.length - 1;
+        else slideAtual = indice;
+
+        slides.forEach((slide, i) => {
+            slide.classList.toggle('ativo', i === slideAtual);
+        });
+    }
+
+    function proximoSlide() {
+        mostrarSlide(slideAtual + 1);
+    }
+
+    function anteriorSlide() {
+        mostrarSlide(slideAtual - 1);
+    }
+
+    function iniciarAutoPlay() {
+        temporizadorCarrocel = setInterval(proximoSlide, 5000);
+    }
+
+    function reiniciarAutoPlay() {
+        clearInterval(temporizadorCarrocel);
+        iniciarAutoPlay();
+    }
+
+    if (btnProximo && btnAnterior) {
+        btnProximo.addEventListener('click', () => {
+            proximoSlide();
+            reiniciarAutoPlay();
+        });
+
+        btnAnterior.addEventListener('click', () => {
+            anteriorSlide();
+            reiniciarAutoPlay();
+        });
+    }
+
     iniciarAutoPlay();
 }
 
-// Eventos dos botões
-if (btnProximo && btnAnterior) {
-    btnProximo.addEventListener('click', () => {
-        proximoSlide();
-        reiniciarAutoPlay();
-    });
-
-    btnAnterior.addEventListener('click', () => {
-        anteriorSlide();
-        reiniciarAutoPlay();
-    });
-}
-
-
-document.addEventListener('DOMContentLoaded', () => {
-    // Captura dos elementos
+// ==========================================
+//   AUTENTICAÇÃO (LOGIN, CADASTRO, ROLES)
+// ==========================================
+function inicializarAutenticacao() {
     const modal = document.getElementById('modal-login');
     const btnEntrar = document.getElementById('btn-entrar-header');
     const btnSair = document.getElementById('btn-sair-header');
@@ -128,55 +197,51 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const linkIrCadastro = document.getElementById('link-ir-cadastro');
     const linkIrLogin = document.getElementById('link-ir-login');
-    const formCadastro = document.getElementById('form-cadastro'); 
-    // Certifique-se de que const formLogin = document.getElementById('form-login'); também está lá em cima
+    const formCadastro = document.getElementById('form-cadastro');
 
-    // Clicou em "Cadastre-se"
-    if (linkIrCadastro) {
+    if (linkIrCadastro && formLogin && formCadastro) {
         linkIrCadastro.addEventListener('click', (e) => {
-            e.preventDefault(); 
+            e.preventDefault();
             formLogin.style.display = 'none';
-            formCadastro.style.display = 'block'; // Mostra o de cadastro
+            formCadastro.style.display = 'block';
         });
     }
 
-    // Clicou em "Faça login"
-    if (linkIrLogin) {
+    if (linkIrLogin && formLogin && formCadastro) {
         linkIrLogin.addEventListener('click', (e) => {
             e.preventDefault();
             formCadastro.style.display = 'none';
-            formLogin.style.display = 'block'; // Mostra o de login
+            formLogin.style.display = 'block';
         });
     }
 
-    // Alterna a exibição entre Entrar x Painel do Usuário e aplica Roles
     function atualizarEstadoLogin() {
         const estaLogado = localStorage.getItem('usuarioLogado') === 'true';
-        const role = localStorage.getItem('usuarioRole'); // Pega se é admin ou cliente
-        
-        // Captura o novo botão Admin
+        const role = localStorage.getItem('usuarioRole');
+        const nome = localStorage.getItem('usuarioNome') || 'Gamer';
         const btnAdmin = document.getElementById('btn-admin-header');
+        const saudacaoEl = painelUsuario ? painelUsuario.querySelector('span strong') : null;
+
+        if (saudacaoEl) {
+            saudacaoEl.innerText = nome;
+        }
 
         if (estaLogado) {
             if (btnEntrar) btnEntrar.style.setProperty('display', 'none', 'important');
             if (painelUsuario) painelUsuario.style.setProperty('display', 'flex', 'important');
-            
-            // Lógica do Administrador
+
             if (role === 'admin') {
                 if (btnAdmin) btnAdmin.style.setProperty('display', 'inline-block', 'important');
             } else {
-                // Se for cliente comum, garante que o botão admin fica escondido
                 if (btnAdmin) btnAdmin.style.setProperty('display', 'none', 'important');
             }
         } else {
-            // Se estiver deslogado, volta tudo ao estado inicial
             if (btnEntrar) btnEntrar.style.setProperty('display', 'inline-block', 'important');
             if (painelUsuario) painelUsuario.style.setProperty('display', 'none', 'important');
             if (btnAdmin) btnAdmin.style.setProperty('display', 'none', 'important');
         }
     }
 
-    // Ações dos botões
     if (btnEntrar && modal) {
         btnEntrar.addEventListener('click', () => {
             modal.style.display = 'flex';
@@ -186,8 +251,8 @@ document.addEventListener('DOMContentLoaded', () => {
     if (btnSair) {
         btnSair.addEventListener('click', () => {
             localStorage.removeItem('usuarioLogado');
-            localStorage.removeItem('usuarioRole'); // Limpa a role
-            localStorage.removeItem('usuarioNome'); // Limpa o nome
+            localStorage.removeItem('usuarioRole');
+            localStorage.removeItem('usuarioNome');
             atualizarEstadoLogin();
         });
     }
@@ -204,12 +269,9 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // Submissão do Formulário de Login
-// Submissão do Formulário de Login
     if (formLogin) {
         formLogin.addEventListener('submit', async (e) => {
             e.preventDefault();
-
             const emailInput = document.getElementById('email').value;
             const senhaInput = document.getElementById('senha').value;
 
@@ -226,26 +288,23 @@ document.addEventListener('DOMContentLoaded', () => {
                     localStorage.setItem('usuarioLogado', 'true');
                     localStorage.setItem('usuarioRole', dados.usuario.role);
                     localStorage.setItem('usuarioNome', dados.usuario.nome);
-                    
-                    atualizarEstadoLogin();
 
+                    atualizarEstadoLogin();
                     modal.style.display = 'none';
                     formLogin.reset();
                 } else {
                     alert(dados.mensagem);
                 }
             } catch (erro) {
-                console.error("Erro ao fazer login:", erro);
-                alert("Não foi possível conectar ao servidor.");
+                console.error('Erro ao fazer login:', erro);
+                alert('Não foi possível conectar ao servidor.');
             }
         });
     }
 
-    // Captura o formulário de cadastro e envia para a API
     if (formCadastro) {
         formCadastro.addEventListener('submit', async (e) => {
             e.preventDefault();
-
             const nomeInput = document.getElementById('nome-cadastro').value;
             const emailInput = document.getElementById('email-cadastro').value;
             const senhaInput = document.getElementById('senha-cadastro').value;
@@ -261,61 +320,44 @@ document.addEventListener('DOMContentLoaded', () => {
 
                 if (dados.sucesso) {
                     alert('Conta criada com sucesso!');
-                    
                     localStorage.setItem('usuarioLogado', 'true');
                     localStorage.setItem('usuarioRole', dados.usuario.role);
                     localStorage.setItem('usuarioNome', dados.usuario.nome);
-                    
-                    atualizarEstadoLogin();
 
+                    atualizarEstadoLogin();
                     modal.style.display = 'none';
                     formCadastro.reset();
                 } else {
                     alert(dados.mensagem);
                 }
             } catch (erro) {
-                console.error("Erro no cadastro:", erro);
-                alert("Não foi possível conectar ao servidor.");
+                console.error('Erro no cadastro:', erro);
+                alert('Não foi possível conectar ao servidor.');
             }
         });
     }
 
-    // Inicialização do estado visual dos botões ao carregar a página
     atualizarEstadoLogin();
-});
-
-// Seleciona os elementos do DOM (Menu Lateral)
-const btnHamburguer = document.getElementById('btn-hamburguer');
-const menuLateral = document.querySelector('aside');
-
-if (btnHamburguer && menuLateral) {
-    btnHamburguer.addEventListener('click', () => {
-        menuLateral.classList.toggle('ativo');
-    });
 }
 
-// Exemplo para o botão de comprar não acionar o link do elemento pai
-document.querySelectorAll('.jogo-produtos button').forEach(botao => {
-    botao.addEventListener('click', (evento) => {
-        evento.stopPropagation(); // Impede que o clique suba para a tag <a> do card
-        evento.preventDefault();  // Evita comportamentos indesejados de link
-        
-        // A sua lógica atual de adicionar ao carrinho entra aqui:
-        // ...
-    });
-});
+// ==========================================
+//   MENU LATERAL MOBILE (HAMBÚRGUER)
+// ==========================================
+function inicializarMenuHamburguer() {
+    const btnHamburguer = document.getElementById('btn-hamburguer');
+    const menuLateral = document.querySelector('aside');
+
+    if (btnHamburguer && menuLateral) {
+        btnHamburguer.addEventListener('click', () => {
+            menuLateral.classList.toggle('ativo');
+        });
+    }
+}
 
 // ==========================================
 //   LÓGICA DO CARRINHO DE COMPRAS
 // ==========================================
-
 let carrinho = JSON.parse(localStorage.getItem('keepkeys_carrinho')) || [];
-
-document.addEventListener('DOMContentLoaded', () => {
-    inicializarCarrinho();
-    atualizarContadorCarrinho();
-    configurarBotoesComprar();
-});
 
 function inicializarCarrinho() {
     const modalCarrinho = document.getElementById('modal-carrinho');
@@ -324,7 +366,6 @@ function inicializarCarrinho() {
 
     if (!modalCarrinho) return;
 
-    // Garante que o modal comece totalmente oculto ao carregar a página
     modalCarrinho.style.display = 'none';
     modalCarrinho.classList.remove('ativo');
 
@@ -358,39 +399,47 @@ function inicializarCarrinho() {
 
 function configurarBotoesComprar() {
     document.querySelectorAll('.jogo-produtos button').forEach((botao) => {
-        botao.addEventListener('click', (evento) => {
+        botao.onclick = (evento) => {
             evento.stopPropagation();
             evento.preventDefault();
 
-            // Verifica se o usuário está logado (pode usar a mesma chave que o admin ou o login usam)
-            const usuarioLogado = localStorage.getItem('usuarioLogado'); // ou 'usuarioRole', ajuste conforme a chave do seu login
+            const usuarioLogado = localStorage.getItem('usuarioLogado');
 
             if (!usuarioLogado) {
                 alert('Você precisa estar logado para adicionar itens ao carrinho!');
-                // Opcional: Redirecionar para a página de login, se houver
-                // window.location.href = 'login.html'; 
+                const modal = document.getElementById('modal-login');
+                if (modal) modal.style.display = 'flex';
                 return;
             }
 
-            // Se estiver logado, continua a lógica normal de adicionar ao carrinho
             const card = botao.closest('.jogo-produtos');
             if (!card) return;
 
             const tituloEl = card.querySelector('h4');
-            const precoEl = card.querySelector('p');
+            const precos = card.querySelectorAll('p');
+            const precoEl = precos.length > 0 ? precos[precos.length - 1] : null;
             const imagemEl = card.querySelector('img');
 
             if (tituloEl && precoEl && imagemEl) {
                 const produto = {
-                    titulo: tituloEl.innerText,
-                    preco: precoEl.innerText,
+                    titulo: tituloEl.innerText.trim(),
+                    preco: precoEl.innerText.trim(),
                     imagem: imagemEl.getAttribute('src')
                 };
 
                 adicionarAoCarrinho(produto);
 
+                // Feedback visual de adicionado
+                botao.textContent = 'ADICIONADO!';
+                botao.classList.add('adicionado');
+
+                setTimeout(() => {
+                    botao.innerHTML = '<i data-lucide="shopping-cart"></i> COMPRAR';
+                    botao.classList.remove('adicionado');
+                    if (typeof lucide !== 'undefined') lucide.createIcons();
+                }, 1500);
             }
-        });
+        };
     });
 }
 

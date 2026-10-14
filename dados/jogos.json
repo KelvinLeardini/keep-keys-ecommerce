@@ -1,9 +1,362 @@
 [
   {
-    "id": "1",
+    "id": "ps-gta6",
     "titulo": "Grand Theft Auto VI",
     "preco": "449,90",
+    "precoAntigo": "",
     "imagem": "/imagens/gta6.avif",
-    "plataforma": "ps"
+    "categoria": "ps",
+    "plataforma": "ps",
+    "link": "/jogos/ps/gta6.html"
+  },
+  {
+    "id": "ps-naruto",
+    "titulo": "NARUTO X BORUTO Ultimate Ninja STORM CONNECTIONS",
+    "preco": "299,90",
+    "precoAntigo": "",
+    "imagem": "/imagens/naruto.avif",
+    "categoria": "ps",
+    "plataforma": "ps",
+    "link": "/jogos/ps/naruto.html"
+  },
+  {
+    "id": "ps-hollow",
+    "titulo": "Hollow Knight",
+    "preco": "85,50",
+    "precoAntigo": "",
+    "imagem": "/imagens/hollow.jpg",
+    "categoria": "ps",
+    "plataforma": "ps",
+    "link": "/jogos/ps/hollow.html"
+  },
+  {
+    "id": "ps-ghost",
+    "titulo": "Ghost of Tsushima",
+    "preco": "249,90",
+    "precoAntigo": "",
+    "imagem": "/imagens/ghost.webp",
+    "categoria": "ps",
+    "plataforma": "ps",
+    "link": "/jogos/ps/ghost of thushima.html"
+  },
+  {
+    "id": "ps-bloodborne",
+    "titulo": "Bloodborne",
+    "preco": "114,90",
+    "precoAntigo": "",
+    "imagem": "/imagens/blood.webp",
+    "categoria": "ps",
+    "plataforma": "ps",
+    "link": "/jogos/ps/bloodborne.html"
+  },
+  {
+    "id": "ps-tlou1",
+    "titulo": "The Last of Us Part 1",
+    "preco": "149,99",
+    "precoAntigo": "",
+    "imagem": "/imagens/the_last1.jpg",
+    "categoria": "ps",
+    "plataforma": "ps",
+    "link": "/jogos/ps/thhe last of us.html"
+  },
+  {
+    "id": "ps-tlou2",
+    "titulo": "The Last of Us Part 2",
+    "preco": "199,90",
+    "precoAntigo": "",
+    "imagem": "/imagens/the_last2.jpg",
+    "categoria": "ps",
+    "plataforma": "ps",
+    "link": "/jogos/ps/the last of us part 2.html"
+  },
+  {
+    "id": "ps-spiderman",
+    "titulo": "Marvel's Spider-Man",
+    "preco": "169,00",
+    "precoAntigo": "",
+    "imagem": "/imagens/spiderman.jpg",
+    "categoria": "ps",
+    "plataforma": "ps",
+    "link": "/jogos/ps/spider - man.html"
+  },
+  {
+    "id": "ps-uncharted4",
+    "titulo": "Uncharted 4: A Thief's End",
+    "preco": "115,00",
+    "precoAntigo": "",
+    "imagem": "/imagens/uncharted.avif",
+    "categoria": "ps",
+    "plataforma": "ps",
+    "link": "/jogos/ps/uncharted 4.html"
+  },
+  {
+    "id": "ps-gow3",
+    "titulo": "God of War III",
+    "preco": "89,00",
+    "precoAntigo": "",
+    "imagem": "/imagens/gow.avif",
+    "categoria": "ps",
+    "plataforma": "ps",
+    "link": "/jogos/ps/god of war 3.html"
+  },
+  {
+    "id": "steam-warhammer",
+    "titulo": "Warhammer 40,000: Space Marine 2",
+    "preco": "49,97",
+    "precoAntigo": "",
+    "imagem": "/imagens/space-marine.avif",
+    "categoria": "steam",
+    "plataforma": "steam",
+    "link": "/jogos/steam/warhammer.html"
+  },
+  {
+    "id": "steam-eafc27",
+    "titulo": "EA SPORTS FC™ 27",
+    "preco": "299,00",
+    "precoAntigo": "",
+    "imagem": "/imagens/eafcbanner.avif",
+    "categoria": "steam",
+    "plataforma": "steam",
+    "link": "/jogos/steam/Ea fc27.html"
+  },
+  {
+    "id": "steam-rdr2",
+    "titulo": "Red Dead Redemption 2",
+    "preco": "299,99",
+    "precoAntigo": "",
+    "imagem": "/imagens/Red Dead Redemption 2.jpg",
+    "categoria": "steam",
+    "plataforma": "steam",
+    "link": "/jogos/steam/Red dead 2.html"
+  },
+  {
+    "id": "steam-rerequiem",
+    "titulo": "Resident Evil Requiem",
+    "preco": "229,99",
+    "precoAntigo": "",
+    "imagem": "/imagens/Resident Evil Requiem.jpg",
+    "categoria": "steam",
+    "plataforma": "steam",
+    "link": "/jogos/steam/resident evil requiem.html"
+  },
+  {
+    "id": "steam-halloween",
+    "titulo": "Halloween The Game",
+    "preco": "124,99",
+    "precoAntigo": "",
+    "imagem": "/imagens/Halloween The Game.jpg",
+    "categoria": "steam",
+    "plataforma": "steam",
+    "link": "/jogos/steam/halloween the game.html"
+  },
+  {
+    "id": "steam-bf6",
+    "titulo": "Battlefield™ 6",
+    "preco": "149,50",
+    "precoAntigo": "",
+    "imagem": "/imagens/Battlefield™ 6.jpg",
+    "categoria": "steam",
+    "plataforma": "steam",
+    "link": "/jogos/steam/battlefield 6.html"
+  },
+  {
+    "id": "steam-phoenix",
+    "titulo": "Phoenix Wright Ace Attorney Trilogy",
+    "preco": "42,57",
+    "precoAntigo": "",
+    "imagem": "/imagens/Phoenix Wright Ace Attorney Trilogy.jpg",
+    "categoria": "steam",
+    "plataforma": "steam",
+    "link": "/jogos/steam/Phoenix Wright Ace Attorney Trilogy.html"
+  },
+  {
+    "id": "steam-tekken8",
+    "titulo": "TEKKEN 8",
+    "preco": "176,90",
+    "precoAntigo": "",
+    "imagem": "/imagens/TEKKEN 8.jpg",
+    "categoria": "steam",
+    "plataforma": "steam",
+    "link": "/jogos/steam/tekken 8.html"
+  },
+  {
+    "id": "steam-stray",
+    "titulo": "Stray",
+    "preco": "89,99",
+    "precoAntigo": "",
+    "imagem": "/imagens/Stray.jpg",
+    "categoria": "steam",
+    "plataforma": "steam",
+    "link": "/jogos/steam/stray.html"
+  },
+  {
+    "id": "steam-silksong",
+    "titulo": "Hollow Knight Silksong",
+    "preco": "59,99",
+    "precoAntigo": "",
+    "imagem": "/imagens/Hollow Knight Silksong.jpg",
+    "categoria": "steam",
+    "plataforma": "steam",
+    "link": "/jogos/steam/hollow knight silksong.html"
+  },
+  {
+    "id": "xbox-forza6",
+    "titulo": "Forza Horizon 6",
+    "preco": "299,00",
+    "precoAntigo": "",
+    "imagem": "/imagens/forza.png",
+    "categoria": "xbox",
+    "plataforma": "xbox",
+    "link": ""
+  },
+  {
+    "id": "xbox-halo",
+    "titulo": "Halo Infinite",
+    "preco": "299,00",
+    "precoAntigo": "",
+    "imagem": "/imagens/halo.jpg",
+    "categoria": "xbox",
+    "plataforma": "xbox",
+    "link": ""
+  },
+  {
+    "id": "xbox-forza5",
+    "titulo": "Forza Horizon 5",
+    "preco": "249,00",
+    "precoAntigo": "",
+    "imagem": "/imagens/forza5.jpg",
+    "categoria": "xbox",
+    "plataforma": "xbox",
+    "link": ""
+  },
+  {
+    "id": "xbox-gears5",
+    "titulo": "Gears 5",
+    "preco": "199,00",
+    "precoAntigo": "",
+    "imagem": "/imagens/gears5.jpg",
+    "categoria": "xbox",
+    "plataforma": "xbox",
+    "link": ""
+  },
+  {
+    "id": "xbox-seaof",
+    "titulo": "Sea of Thieves",
+    "preco": "199,99",
+    "precoAntigo": "",
+    "imagem": "/imagens/seaof.webp",
+    "categoria": "xbox",
+    "plataforma": "xbox",
+    "link": ""
+  },
+  {
+    "id": "xbox-starfield",
+    "titulo": "Starfield",
+    "preco": "299,00",
+    "precoAntigo": "",
+    "imagem": "/imagens/starfield.jpg",
+    "categoria": "xbox",
+    "plataforma": "xbox",
+    "link": ""
+  },
+  {
+    "id": "xbox-senuas",
+    "titulo": "Senua's Saga: Hellblade II",
+    "preco": "249,00",
+    "precoAntigo": "",
+    "imagem": "/imagens/senuas.jpg",
+    "categoria": "xbox",
+    "plataforma": "xbox",
+    "link": ""
+  },
+  {
+    "id": "xbox-flight",
+    "titulo": "Microsoft Flight Simulator",
+    "preco": "249,95",
+    "precoAntigo": "",
+    "imagem": "/imagens/flight.jpg",
+    "categoria": "xbox",
+    "plataforma": "xbox",
+    "link": ""
+  },
+  {
+    "id": "xbox-state",
+    "titulo": "State of Decay 2",
+    "preco": "99,00",
+    "precoAntigo": "",
+    "imagem": "/imagens/state.jpg",
+    "categoria": "xbox",
+    "plataforma": "xbox",
+    "link": ""
+  },
+  {
+    "id": "xbox-ori",
+    "titulo": "Ori and the Will of the Wisps",
+    "preco": "129,00",
+    "precoAntigo": "",
+    "imagem": "/imagens/ori.avif",
+    "categoria": "xbox",
+    "plataforma": "xbox",
+    "link": ""
+  },
+  {
+    "id": "destaque-control",
+    "titulo": "Control: Resonant",
+    "preco": "299,90",
+    "precoAntigo": "",
+    "imagem": "/imagens/control.jpg",
+    "categoria": "destaque",
+    "plataforma": "destaque",
+    "link": ""
+  },
+  {
+    "id": "destaque-onimusha",
+    "titulo": "Onimusha: Way of the Sword",
+    "preco": "299,00",
+    "precoAntigo": "",
+    "imagem": "/imagens/ONIMUSHA so.avif",
+    "categoria": "destaque",
+    "plataforma": "destaque",
+    "link": ""
+  },
+  {
+    "id": "destaque-eldenring",
+    "titulo": "Elden Ring",
+    "preco": "299,90",
+    "precoAntigo": "",
+    "imagem": "/imagens/EldenRing.png",
+    "categoria": "destaque",
+    "plataforma": "destaque",
+    "link": ""
+  },
+  {
+    "id": "destaque-wukong",
+    "titulo": "Black Myth: Wukong",
+    "preco": "229,99",
+    "precoAntigo": "",
+    "imagem": "/imagens/Black MythWukong.png",
+    "categoria": "destaque",
+    "plataforma": "destaque",
+    "link": ""
+  },
+  {
+    "id": "promo-control",
+    "titulo": "Control: Resonant",
+    "preco": "149,90",
+    "precoAntigo": "299,90",
+    "imagem": "/imagens/control.jpg",
+    "categoria": "promocao",
+    "plataforma": "promocao",
+    "link": ""
+  },
+  {
+    "id": "promo-eldenring",
+    "titulo": "Elden Ring",
+    "preco": "199,90",
+    "precoAntigo": "299,90",
+    "imagem": "/imagens/EldenRing.png",
+    "categoria": "promocao",
+    "plataforma": "promocao",
+    "link": ""
   }
 ]
