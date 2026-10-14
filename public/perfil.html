@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Perfil - Keep Keys</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="icon" href="/imagens/Logo-1.png" type="image/png">
+</head>
+<body>
+    
+    <!-- Barra Lateral -->
+    <aside>
+        <div class="logo">
+            <a href="/index.html" class="logo-link"><img src="/imagens/Logo-1.png" alt="logo da loja"></a>
+        </div>
+
+        <nav>
+            <ul>
+                <li><a href="/lancamentos.html">Lançamentos</a></li>
+                <li><a href="/promocoes.html">Promoções</a></li>
+                <hr class="divisoria">
+                <li><a href="/jogos/ps/ps.html">Playstation</a></li>
+                <li><a href="/jogos/xbox/xbox.html">Xbox</a></li>
+                <li><a href="/jogos/steam/Steam.html">Steam</a></li>
+                <hr class="divisoria">
+                <li class="ativo"><a href="/perfil.html"><i data-lucide="user"></i> Meu Perfil</a></li>
+            </ul>
+        </nav>
+
+        <div class="footer-redes">
+            <div class="icones-redes">
+                <a href="https://www.instagram.com/" aria-label="Instagram" target="_blank">
+                    <svg class="lucide" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+                        <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+                        <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                        <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line>
+                    </svg>
+                </a>
+                <a href="https://www.facebook.com/" aria-label="Facebook" target="_blank">
+                    <svg class="lucide" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </aside>
+
+    <!-- Modal de Login -->
+    <div id="modal-login" class="modal-login">
+        <div class="conteudo-modal">
+            <span class="fechar-modal">&times;</span>
+            <form id="form-login">
+                <h2>Acessar Conta</h2>
+                <input type="email" id="email" placeholder="Digite seu e-mail" required>
+                <input type="password" id="senha" placeholder="Senha" required>
+                <button type="submit">ENTRAR</button>
+                <p style="text-align: center; margin-top: 15px; font-size: 0.9rem;">
+                    Não tem uma conta? <a href="#" id="link-ir-cadastro" style="color: #ff0000;">Cadastre-se</a>
+                </p>
+            </form>
+            <form id="form-cadastro" style="display: none;">
+                <h2>Criar Nova Conta</h2>
+                <input type="text" id="nome-cadastro" placeholder="Seu Nome" required>
+                <input type="email" id="email-cadastro" placeholder="Seu E-mail" required>
+                <input type="password" id="senha-cadastro" placeholder="Sua Senha" required>
+                <button type="submit">CADASTRAR</button>
+                <p style="text-align: center; margin-top: 15px; font-size: 0.9rem;">
+                    Já tem uma conta? <a href="#" id="link-ir-login" style="color: #ff0000;">Faça login</a>
+                </p>
+            </form>
+        </div>
+    </div>
+
+    <div class="site">
+        <header>
+            <button type="button" class="btn-hamburguer" id="btn-hamburguer" aria-label="Abrir Menu">
+                <span></span><span></span><span></span>
+            </button>
+
+            <form action="#">
+                <div class="buscar">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#888888" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                    </svg>
+                    <input type="text" placeholder="Buscar jogos...">
+                </div>
+            </form>
+
+            <div class="area-usuario">
+                <button type="button" id="btn-entrar-header">Entrar</button>
+
+                <div id="painel-usuario" class="painel-usuario" style="display: none;">
+                    <button type="button" id="btn-abrir-carrinho" class="btn-carrinho-icone" aria-label="Abrir Carrinho">
+                        <i data-lucide="shopping-cart"></i>
+                        <span id="contador-carrinho" class="contador-badge">0</span>
+                    </button>
+
+                    <a href="/perfil.html" id="btn-perfil-header" class="btn-perfil">
+                        <i data-lucide="user"></i> Perfil
+                    </a>
+
+                    <a href="/admin.html" id="btn-admin-header" class="btn-admin" style="display: none;">
+                        Painel Admin
+                    </a>
+
+                    <span>Olá, <strong>Gamer</strong>!</span>
+                    <button type="button" id="btn-sair-header" class="btn-sair">Sair</button>
+                </div>
+            </div>
+        </header>
+
+        <main class="perfil-container">
+            
+            <!-- Banner Superior do Perfil com Dados do Usuário e Carteira Digital -->
+            <div class="perfil-cabecalho-grid">
+                
+                <!-- Card de Perfil do Gamer -->
+                <div class="perfil-card-usuario">
+                    <div class="perfil-avatar">
+                        <i data-lucide="user"></i>
+                    </div>
+                    <div class="perfil-dados">
+                        <h2 id="perfil-nome">Carregando...</h2>
+                        <p id="perfil-email" class="perfil-email">gamer@keepkeys.com</p>
+                        <span id="perfil-cargo" class="tag-categoria tag-ps">Cliente VIP</span>
+                    </div>
+                </div>
+
+                <!-- Card da Carteira Digital com Simulação e Contador de 1 min -->
+                <div class="perfil-card-carteira">
+                    <div class="carteira-topo">
+                        <div class="carteira-icone">
+                            <i data-lucide="wallet"></i>
+                        </div>
+                        <div>
+                            <h4>Carteira Digital Keep Keys</h4>
+                            <span class="tag-status-carteira"><i data-lucide="check-circle-2"></i> Saldo Disponível</span>
+                        </div>
+                    </div>
+                    
+                    <div class="carteira-valor-box">
+                        <strong id="carteira-saldo">R$ 1.000,00</strong>
+                        <div class="carteira-timer-box">
+                            <i data-lucide="clock"></i>
+                            <span id="carteira-timer-texto">Reset automático em: 60s</span>
+                        </div>
+                    </div>
+
+                    <div class="carteira-acoes">
+                        <button type="button" id="btn-recarregar-carteira" class="btn-recarregar">
+                            <i data-lucide="rotate-ccw"></i> Recarregar R$ 1.000 (Imediato)
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Abas de Navegação do Perfil -->
+            <div class="perfil-abas-nav">
+                <button type="button" class="aba-perfil-btn ativa" data-aba="comprados">
+                    <i data-lucide="gamepad-2"></i> Meus Jogos Comprados (<span id="contador-comprados">0</span>)
+                </button>
+                <button type="button" class="aba-perfil-btn" data-aba="favoritos">
+                    <i data-lucide="heart"></i> Meus Favoritos (<span id="contador-favoritos">0</span>)
+                </button>
+                <button type="button" class="aba-perfil-btn" data-aba="extrato">
+                    <i data-lucide="receipt"></i> Extrato da Carteira
+                </button>
+            </div>
+
+            <!-- SEÇÃO 1: JOGOS COMPRADOS -->
+            <section id="aba-comprados" class="perfil-secao-aba ativa">
+                <div id="grade-jogos-comprados" class="grade-comprados">
+                    <!-- Preenchido dinamicamente via JS -->
+                </div>
+            </section>
+
+            <!-- SEÇÃO 2: FAVORITOS -->
+            <section id="aba-favoritos" class="perfil-secao-aba" style="display: none;">
+                <div id="grade-jogos-favoritos" class="grade-produtos">
+                    <!-- Preenchido dinamicamente via JS -->
+                </div>
+            </section>
+
+            <!-- SEÇÃO 3: EXTRATO -->
+            <section id="aba-extrato" class="perfil-secao-aba" style="display: none;">
+                <div class="bloco-lateral" style="padding: 20px;">
+                    <h3 style="margin-top: 0;"><i data-lucide="history"></i> Histórico de Transações</h3>
+                    <div id="tabela-extrato-container" class="admin-tabela-responsiva">
+                        <!-- Preenchido dinamicamente via JS -->
+                    </div>
+                </div>
+            </section>
+
+        </main>
+
+        <footer>
+            <p>&copy; 2026 Keep Keys - Sua Loja Gamer. Todos os direitos reservados.</p>
+            <ul>
+                <li><a href="/suporte.html">Suporte</a></li>
+                <li><a href="/sobre.html">Sobre Nós</a></li>
+                <li><a href="/pagamentos.html">Pagamentos</a></li>
+            </ul>
+        </footer>
+    </div>
+
+    <!-- Modal / Gaveta do Carrinho de Compras -->
+    <div id="modal-carrinho" class="modal-carrinho">
+        <div class="conteudo-carrinho">
+            <div class="cabecalho-carrinho">
+                <h3><i data-lucide="shopping-bag"></i> Seu Carrinho</h3>
+                <span id="fechar-carrinho" class="fechar-carrinho">&times;</span>
+            </div>
+
+            <div class="lista-itens-carrinho" id="lista-itens-carrinho"></div>
+
+            <div class="rodape-carrinho">
+                <div class="total-carrinho">
+                    <span>Total:</span>
+                    <strong id="valor-total-carrinho">R$ 0,00</strong>
+                </div>
+                <button type="button" class="btn-finalizar-compra">Finalizar Compra</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- CDN do Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <!-- Vincula o JavaScript principal -->
+    <script src="/js/script.js"></script>
+</body>
+</html>

@@ -2311,4 +2311,314 @@ aside .footer-redes .icones-redes a .lucide {
         text-align: center;
         padding: 20px;
     }
+
+    .perfil-cabecalho-grid {
+        grid-template-columns: 1fr;
+    }
 }
+
+/* ==========================================
+   ESTILOS DA PÁGINA DE PERFIL E CARTEIRA
+   ========================================== */
+.btn-perfil {
+    background-color: #2a2a34;
+    color: #fff;
+    padding: 8px 14px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    border: 1px solid #404050;
+    transition: 0.2s;
+}
+.btn-perfil:hover {
+    background-color: #08469E;
+    border-color: #08469E;
+    color: #fff;
+}
+
+/* Botão de Favorito Ativo */
+.desejo-btn {
+    cursor: pointer;
+    transition: 0.2s;
+}
+.desejo-btn.ativo {
+    color: #ff3344 !important;
+    background-color: rgba(255, 51, 68, 0.15) !important;
+    border-color: #ff3344 !important;
+}
+.desejo-btn.ativo svg,
+.desejo-btn.ativo .lucide {
+    fill: #ff3344 !important;
+    stroke: #ff3344 !important;
+}
+
+.perfil-container {
+    padding: 30px;
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.perfil-cabecalho-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.3fr;
+    gap: 25px;
+    align-items: stretch;
+}
+
+.perfil-card-usuario {
+    background: #202026;
+    border: 1px solid #363642;
+    border-radius: 14px;
+    padding: 24px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.perfil-avatar {
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #08469E, #ff0055);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    flex-shrink: 0;
+}
+.perfil-avatar .lucide {
+    width: 38px;
+    height: 38px;
+}
+
+.perfil-dados h2 {
+    margin: 0 0 6px 0;
+    color: #fff;
+    font-size: 1.4rem;
+}
+
+.perfil-email {
+    margin: 0 0 10px 0;
+    color: #888;
+    font-size: 0.9rem;
+}
+
+/* Card da Carteira */
+.perfil-card-carteira {
+    background: linear-gradient(135deg, #18261e 0%, #171d24 100%);
+    border: 1px solid #28a745;
+    border-radius: 14px;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.carteira-topo {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.carteira-icone {
+    background-color: #28a745;
+    color: #fff;
+    width: 44px;
+    height: 44px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.carteira-topo h4 {
+    margin: 0 0 4px 0;
+    color: #fff;
+    font-size: 1.1rem;
+}
+
+.tag-status-carteira {
+    color: #28a745;
+    font-size: 0.8rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.carteira-valor-box {
+    margin: 15px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.carteira-valor-box strong {
+    font-size: 2.2rem;
+    color: #28a745;
+}
+
+.carteira-timer-box {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background: #111a14;
+    border: 1px solid #28a745;
+    padding: 6px 12px;
+    border-radius: 20px;
+    color: #a3e9b4;
+    font-size: 0.85rem;
+}
+
+.btn-recarregar {
+    background: #28a745;
+    color: #fff;
+    border: none;
+    padding: 10px 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.9rem;
+    transition: 0.2s;
+}
+.btn-recarregar:hover {
+    background: #218838;
+}
+
+/* Abas do Perfil */
+.perfil-abas-nav {
+    display: flex;
+    gap: 12px;
+    border-bottom: 2px solid #33333d;
+    padding-bottom: 12px;
+    flex-wrap: wrap;
+}
+
+.aba-perfil-btn {
+    background: #1c1c24;
+    border: 1px solid #333342;
+    color: #aaa;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: 0.2s;
+}
+
+.aba-perfil-btn:hover {
+    background: #292936;
+    color: #fff;
+}
+
+.aba-perfil-btn.ativa {
+    background: #08469E;
+    color: #fff;
+    border-color: #08469E;
+}
+
+/* Grade de Jogos Comprados */
+.grade-comprados {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.card-jogo-comprado {
+    background: #202028;
+    border: 1px solid #353544;
+    border-radius: 12px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-jogo-comprado img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+}
+
+.detalhes-comprado {
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    flex: 1;
+    justify-content: space-between;
+}
+
+.detalhes-comprado h4 {
+    margin: 0;
+    color: #fff;
+    font-size: 1.05rem;
+}
+
+.data-compra-tag {
+    font-size: 0.8rem;
+    color: #888;
+}
+
+.box-chave-digital {
+    background: #131318;
+    border: 1px dashed #444458;
+    border-radius: 8px;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 8px;
+}
+
+.box-chave-digital code {
+    color: #66c0f4;
+    font-weight: bold;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+}
+
+.btn-copiar-chave {
+    background: #2a2a36;
+    border: 1px solid #48485c;
+    color: #fff;
+    padding: 6px 10px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.8rem;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+.btn-copiar-chave:hover {
+    background: #08469E;
+}
+
+.btn-acessar-jogo {
+    background: #08469E;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 6px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 0.9rem;
+    display: block;
+    margin-top: 5px;
+}
+.btn-acessar-jogo:hover {
+    background: #0a5bc9;
+}

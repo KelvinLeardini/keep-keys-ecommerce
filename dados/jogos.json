@@ -358,5 +358,15 @@
     "categoria": "promocao",
     "plataforma": "promocao",
     "link": "/jogos/destaques/elden-ring.html"
+  },
+  {
+    "id": "ps-ufc6",
+    "titulo": "EA SPORTS UFC 6",
+    "preco": "349,90",
+    "precoAntigo": "",
+    "imagem": "/imagens/ufc6.avif",
+    "categoria": "ps",
+    "plataforma": "ps",
+    "link": "/jogos/ps/ufc-6.html"
   }
 ]
