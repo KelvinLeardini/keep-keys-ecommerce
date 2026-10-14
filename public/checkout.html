@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout Seguro - Keep Keys</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="icon" href="/imagens/Logo-1.png" type="image/png">
+</head>
+<body>
+    
+    <aside>
+        <div class="logo">
+            <a href="/index.html" class="logo-link"><img src="/imagens/Logo-1.png" alt="logo da loja"></a>
+        </div>
+
+        <nav>
+            <ul>
+                <li><a href="/lancamentos.html">Lançamentos</a></li>
+                <li><a href="/promocoes.html">Promoções</a></li>
+                <hr class="divisoria">
+                <li><a href="/jogos/ps/ps.html">Playstation</a></li>
+                <li><a href="/jogos/xbox/xbox.html">Xbox</a></li>
+                <li><a href="/jogos/steam/Steam.html">Steam</a></li>
+            </ul>
+        </nav>
+
+        <div class="footer-redes">
+            <div class="icones-redes">
+                <a href="https://www.instagram.com/" aria-label="Instagram" target="_blank">
+                    <svg class="lucide" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+                        <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+                        <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                        <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line>
+                    </svg>
+                </a>
+                <a href="https://www.facebook.com/" aria-label="Facebook" target="_blank">
+                    <svg class="lucide" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+                    </svg>
+                </a>
+                <a href="https://x.com/" aria-label="Twitter / X" target="_blank">
+                    <svg class="lucide" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M4 4l11.733 16h4.267l-11.733 -16z"></path>
+                        <path d="M4 20l6.768 -6.768m2.46 -2.46l6.772 -6.772"></path>
+                    </svg>
+                </a>
+            </div>
+            <a href="/sobre.html" class="link-sobre">Sobre nós</a>
+        </div>
+    </aside>
+
+    <div class="conteudo">
+        <header>
+            <div class="checkout-breadcrumbs" style="display: flex; align-items: center; gap: 8px; color: #888; font-size: 0.85rem;">
+                <a href="/index.html" style="color: #66c0f4; text-decoration: none;">Início</a>
+                <i data-lucide="chevron-right" style="width: 14px; height: 14px;"></i>
+                <span>Carrinho</span>
+                <i data-lucide="chevron-right" style="width: 14px; height: 14px;"></i>
+                <span style="color: #fff; font-weight: bold;">Checkout Seguro</span>
+            </div>
+
+            <div class="area-usuario">
+                <button type="button" id="btn-entrar-header">Entrar</button>
+
+                <div id="painel-usuario" class="painel-usuario" style="display: none;">
+                    
+                    <!-- Saldo da Carteira no Header -->
+                    <a href="/perfil.html" id="carteira-saldo-header" class="carteira-saldo-header" title="Saldo na Carteira Digital Keep Keys">
+                        <i data-lucide="wallet"></i>
+                        <span class="saldo-rotulo">Saldo:</span>
+                        <span class="saldo-valor" id="valor-saldo-header">R$ 1.000,00</span>
+                    </a>
+
+                    <button type="button" id="btn-abrir-carrinho" class="btn-carrinho-icone" aria-label="Abrir Carrinho">
+                        <i data-lucide="shopping-cart"></i>
+                        <span id="contador-carrinho" class="contador-badge">0</span>
+                    </button>
+
+                    <a href="/perfil.html" id="btn-perfil-header" class="btn-perfil">
+                        <i data-lucide="user"></i> Perfil
+                    </a>
+
+                    <a href="/admin.html" id="btn-admin-header" class="btn-admin" style="display: none;">
+                        Painel Admin
+                    </a>
+
+                    <span>Olá, <strong>Gamer</strong>!</span>
+                    <button type="button" id="btn-sair-header" class="btn-sair">Sair</button>
+                </div>
+            </div>
+        </header>
+
+        <main class="checkout-container">
+            
+            <div class="checkout-header-titulo">
+                <h1><i data-lucide="shield-check" style="color: #28a745;"></i> Checkout & Envio Digital</h1>
+                <div class="checkout-badge-seguranca">
+                    <i data-lucide="lock"></i> Criptografia SSL 256-Bit
+                </div>
+            </div>
+
+            <div class="checkout-grid">
+                
+                <!-- Coluna Principal (Dados e Pagamento) -->
+                <div class="checkout-coluna-principal">
+                    
+                    <!-- Passo 1: Identificação do Gamer -->
+                    <div class="checkout-passo-card">
+                        <div class="checkout-passo-cabecalho">
+                            <span class="checkout-numero-passo">1</span>
+                            <h3>Identificação e Envio das Chaves Digitais</h3>
+                        </div>
+
+                        <div class="checkout-form-grid">
+                            <div class="checkout-form-grupo">
+                                <label for="checkout-nome">Nome Completo</label>
+                                <input type="text" id="checkout-nome" placeholder="Seu Nome de Gamer" value="Kelvin Gamer" required>
+                            </div>
+                            <div class="checkout-form-grupo">
+                                <label for="checkout-email">E-mail para Envio das Chaves</label>
+                                <input type="email" id="checkout-email" placeholder="seu-email@dominio.com" value="gamer@keepkeys.com" required>
+                            </div>
+                            <div class="checkout-form-grupo span-2">
+                                <label for="checkout-cpf">CPF ou ID de Identificação</label>
+                                <input type="text" id="checkout-cpf" placeholder="000.000.000-00" value="123.456.789-00">
+                            </div>
+                        </div>
+
+                        <div class="checkout-aviso-digital">
+                            <i data-lucide="zap" style="min-width: 18px; margin-top: 2px; color: #66c0f4;"></i>
+                            <span><strong>Envio Automático e Imediato:</strong> Assim que a compra for confirmada, as chaves digitais originais (CD-Keys) serão liberadas na sua biblioteca do Perfil e enviadas ao e-mail informado.</span>
+                        </div>
+                    </div>
+
+                    <!-- Passo 2: Método de Pagamento -->
+                    <div class="checkout-passo-card">
+                        <div class="checkout-passo-cabecalho">
+                            <span class="checkout-numero-passo">2</span>
+                            <h3>Forma de Pagamento</h3>
+                        </div>
+
+                        <div class="metodos-pagamento-opcoes">
+                            
+                            <!-- Opção 1: Carteira Digital Keep Keys (Principal / Simulada) -->
+                            <div class="metodo-opcao-card selecionado" id="opcao-carteira" onclick="selecionarMetodoPagamento('carteira')">
+                                <div class="metodo-opcao-header">
+                                    <input type="radio" name="metodo-pagamento" id="radio-carteira" value="carteira" checked>
+                                    <div class="metodo-opcao-info">
+                                        <h4>
+                                            <i data-lucide="wallet" style="color: #28a745;"></i>
+                                            Carteira Digital Keep Keys
+                                            <span class="metodo-tag-destaque">Recomendado</span>
+                                        </h4>
+                                        <p>Débito direto do seu saldo simulado de loja virtual com liberação instantânea das chaves.</p>
+                                    </div>
+                                </div>
+
+                                <div class="metodo-detalhes-painel" id="painel-detalhes-carteira">
+                                    <div class="box-saldo-carteira-checkout">
+                                        <div>
+                                            <span style="font-size: 0.85rem; color: #aaa; display: block;">Seu saldo disponível:</span>
+                                            <strong id="checkout-saldo-carteira">R$ 1.000,00</strong>
+                                        </div>
+                                        <div style="text-align: right;">
+                                            <span style="display: block; font-size: 0.8rem; color: #28a745;"><i data-lucide="check-circle-2" style="width: 14px; height: 14px; vertical-align: middle;"></i> Saldo Pronto para Uso</span>
+                                            <span style="font-size: 0.75rem; color: #777;">(Reseta a cada 1 min para novas simulações)</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Opção 2: Pix Instantâneo -->
+                            <div class="metodo-opcao-card" id="opcao-pix" onclick="selecionarMetodoPagamento('pix')">
+                                <div class="metodo-opcao-header">
+                                    <input type="radio" name="metodo-pagamento" id="radio-pix" value="pix">
+                                    <div class="metodo-opcao-info">
+                                        <h4>
+                                            <i data-lucide="qr-code" style="color: #00b4d8;"></i>
+                                            Pix Instantâneo
+                                        </h4>
+                                        <p>Pague via QR Code ou Copia e Cola. Chave gerada no ato.</p>
+                                    </div>
+                                </div>
+
+                                <div class="metodo-detalhes-painel" id="painel-detalhes-pix" style="display: none;">
+                                    <div style="background: #121218; padding: 16px; border-radius: 8px; text-align: center; border: 1px dashed #3a3a4e;">
+                                        <div style="width: 140px; height: 140px; background: #fff; margin: 0 auto 12px auto; display: flex; align-items: center; justify-content: center; border-radius: 8px;">
+                                            <i data-lucide="qr-code" style="width: 110px; height: 110px; color: #111;"></i>
+                                        </div>
+                                        <p style="font-size: 0.85rem; color: #bbb; margin: 0 0 10px 0;">Escaneie o código acima no app do seu banco ou use a chave abaixo:</p>
+                                        <div style="display: flex; gap: 8px; max-width: 400px; margin: 0 auto;">
+                                            <input type="text" readonly value="00020126580014br.gov.bcb.pix0136keepkeys-pagamento-simulado-2026" style="flex: 1; font-size: 0.8rem; background: #1c1c24; border: 1px solid #444; color: #aaa; padding: 6px 10px; border-radius: 4px;">
+                                            <button type="button" class="btn-copiar-chave" onclick="navigator.clipboard.writeText('00020126580014br.gov.bcb.pix0136keepkeys-pagamento-simulado-2026'); alert('Chave Pix copiada com sucesso!');">Copiar</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Opção 3: Cartão de Crédito -->
+                            <div class="metodo-opcao-card" id="opcao-cartao" onclick="selecionarMetodoPagamento('cartao')">
+                                <div class="metodo-opcao-header">
+                                    <input type="radio" name="metodo-pagamento" id="radio-cartao" value="cartao">
+                                    <div class="metodo-opcao-info">
+                                        <h4>
+                                            <i data-lucide="credit-card" style="color: #e0a96d;"></i>
+                                            Cartão de Crédito
+                                        </h4>
+                                        <p>Parcele em até 3x sem juros (simulação).</p>
+                                    </div>
+                                </div>
+
+                                <div class="metodo-detalhes-painel" id="painel-detalhes-cartao" style="display: none;">
+                                    <div class="checkout-form-grid">
+                                        <div class="checkout-form-grupo span-2">
+                                            <label>Número do Cartão</label>
+                                            <input type="text" placeholder="•••• •••• •••• 4242" value="4532 •••• •••• 8899">
+                                        </div>
+                                        <div class="checkout-form-grupo">
+                                            <label>Validade</label>
+                                            <input type="text" placeholder="MM/AA" value="12/29">
+                                        </div>
+                                        <div class="checkout-form-grupo">
+                                            <label>CVV</label>
+                                            <input type="text" placeholder="123" value="789">
+                                        </div>
+                                        <div class="checkout-form-grupo span-2">
+                                            <label>Nome no Cartão</label>
+                                            <input type="text" placeholder="Como impresso no cartão" value="KELVIN G LEARDINI">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Coluna Lateral (Resumo do Pedido) -->
+                <div class="checkout-coluna-resumo">
+                    <div class="checkout-resumo-card">
+                        <h3><i data-lucide="shopping-bag"></i> Resumo do Pedido</h3>
+
+                        <!-- Lista dos Itens do Carrinho -->
+                        <div class="checkout-lista-jogos" id="checkout-lista-jogos">
+                            <!-- Preenchido dinamicamente via JS -->
+                        </div>
+
+                        <!-- Caixa de Cupom de Desconto -->
+                        <div class="checkout-cupom-box">
+                            <span style="font-size: 0.85rem; font-weight: 600; color: #ddd; display: block; margin-bottom: 8px;">Possui um cupom?</span>
+                            <div class="checkout-cupom-form">
+                                <input type="text" id="input-cupom" placeholder="Ex: KEEP10 ou GAMER" maxlength="15">
+                                <button type="button" id="btn-aplicar-cupom">Aplicar</button>
+                            </div>
+                            <span id="cupom-feedback" class="cupom-feedback">Cupom aplicado com sucesso (-10%)!</span>
+                        </div>
+
+                        <!-- Valores Totais -->
+                        <div class="checkout-totais">
+                            <div class="linha-total">
+                                <span>Subtotal:</span>
+                                <span id="checkout-subtotal">R$ 0,00</span>
+                            </div>
+                            <div class="linha-total" id="linha-desconto-cupom" style="display: none; color: #28a745;">
+                                <span>Desconto do Cupom:</span>
+                                <span id="checkout-desconto">- R$ 0,00</span>
+                            </div>
+                            <div class="linha-total">
+                                <span>Entrega Digital:</span>
+                                <span style="color: #28a745; font-weight: bold;">GRÁTIS</span>
+                            </div>
+                            <div class="linha-total destaque">
+                                <span>Total a Pagar:</span>
+                                <span id="checkout-total">R$ 0,00</span>
+                            </div>
+                        </div>
+
+                        <!-- Botão Principal de Conclusão -->
+                        <button type="button" id="btn-confirmar-pedido" class="btn-checkout-confirmar">
+                            <i data-lucide="shield-check"></i>
+                            <span>FINALIZAR PEDIDO</span>
+                        </button>
+
+                        <!-- Selos de Garantia e Confiança -->
+                        <div class="checkout-selos-garantia">
+                            <div class="selo-garantia-item">
+                                <i data-lucide="check"></i>
+                                <span>Chave 100% Original e Vitalícia</span>
+                            </div>
+                            <div class="selo-garantia-item">
+                                <i data-lucide="zap"></i>
+                                <span>Ativação Instantânea na Steam, PSN ou Xbox</span>
+                            </div>
+                            <div class="selo-garantia-item">
+                                <i data-lucide="headphones"></i>
+                                <span>Suporte Gamer Especializado 24/7</span>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+        </main>
+
+        <footer>
+            <p>&copy; 2026 Keep Keys - Sua Loja Gamer. Todos os direitos reservados.</p>
+            <ul>
+                <li><a href="/suporte.html">Suporte</a></li>
+                <li><a href="/sobre.html">Sobre Nós</a></li>
+                <li><a href="/pagamentos.html">Pagamentos</a></li>
+            </ul>
+        </footer>
+
+    </div>
+
+    <!-- Modal do Carrinho Drawer (para navegação consistente) -->
+    <div id="modal-carrinho" class="modal-carrinho">
+        <div class="conteudo-carrinho">
+            <div class="cabecalho-carrinho">
+                <h3><i data-lucide="shopping-bag"></i> Seu Carrinho</h3>
+                <span id="fechar-carrinho" class="fechar-carrinho">&times;</span>
+            </div>
+            <div class="lista-itens-carrinho" id="lista-itens-carrinho"></div>
+            <div class="rodape-carrinho">
+                <div class="total-carrinho">
+                    <span>Total:</span>
+                    <strong id="valor-total-carrinho">R$ 0,00</strong>
+                </div>
+                <button type="button" class="btn-finalizar-compra">Finalizar Compra</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal de Login & Cadastro -->
+    <div id="modal-login" class="modal-overlay">
+        <div class="modal-box">
+            <span class="fechar-modal">&times;</span>
+            <form id="form-login" class="form-auth">
+                <h2>Login</h2>
+                <div class="campo-grupo">
+                    <label for="email">E-mail</label>
+                    <input type="email" id="email" required placeholder="seu@email.com">
+                </div>
+                <div class="campo-grupo">
+                    <label for="senha">Senha</label>
+                    <input type="password" id="senha" required placeholder="Sua senha">
+                </div>
+                <button type="submit" class="btn-entrar">Entrar</button>
+                <p class="troca-form">Não tem uma conta? <a href="#" id="link-ir-cadastro">Cadastre-se</a></p>
+            </form>
+            <form id="form-cadastro" class="form-auth" style="display: none;">
+                <h2>Criar Conta</h2>
+                <div class="campo-grupo">
+                    <label for="cad-nome">Nome Completo</label>
+                    <input type="text" id="cad-nome" required placeholder="Seu nome">
+                </div>
+                <div class="campo-grupo">
+                    <label for="cad-email">E-mail</label>
+                    <input type="email" id="cad-email" required placeholder="seu@email.com">
+                </div>
+                <div class="campo-grupo">
+                    <label for="cad-senha">Senha</label>
+                    <input type="password" id="cad-senha" required placeholder="Crie uma senha">
+                </div>
+                <button type="submit" class="btn-entrar">Cadastrar</button>
+                <p class="troca-form">Já tem uma conta? <a href="#" id="link-ir-login">Fazer Login</a></p>
+            </form>
+        </div>
+    </div>
+
+    <!-- Modal Profissional de Confirmação e Sucesso da Compra -->
+    <div id="modal-sucesso-pedido" class="modal-sucesso-pedido">
+        <div class="conteudo-sucesso-pedido">
+            <div class="icone-sucesso-animado">
+                <i data-lucide="check"></i>
+            </div>
+            <h2 id="sucesso-titulo">🎉 Compra Realizada com Sucesso!</h2>
+            <p id="sucesso-subtitulo">
+                Seu pagamento foi confirmado com a <strong>Carteira Digital Keep Keys</strong>.<br>
+                As seguintes chaves originais de ativação foram geradas e vinculadas à sua conta:
+            </p>
+
+            <div class="chaves-geradas-container" id="lista-chaves-sucesso">
+                <!-- Preenchido via JS -->
+            </div>
+
+            <p style="font-size: 0.85rem; color: #888; margin-bottom: 20px;">
+                💡 <em>Dica: Todas as chaves também ficam salvas permanentemente na aba "Meus Jogos Comprados" do seu perfil.</em>
+            </p>
+
+            <div class="acoes-sucesso-pedido">
+                <a href="/perfil.html" class="btn-sucesso-perfil">
+                    <i data-lucide="gamepad-2"></i> Ir para Meus Jogos (Perfil)
+                </a>
+                <a href="/index.html" class="btn-sucesso-loja">
+                    <i data-lucide="shopping-bag"></i> Continuar Comprando
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="/js/script.js"></script>
+</body>
+</html>

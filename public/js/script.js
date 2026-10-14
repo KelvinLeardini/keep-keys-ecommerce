@@ -27,8 +27,9 @@ document.addEventListener('DOMContentLoaded', () => {
     // 7. Inicializa sistema de favoritos
     configurarBotaoFavorito();
 
-    // 8. Se estiver na página de perfil, inicializa a lógica do perfil
+    // 8. Se estiver na página de perfil ou checkout, inicializa as lógicas
     inicializarPaginaPerfil();
+    inicializarPaginaCheckout();
 
     // 9. Carrega os jogos dinamicamente a partir do JSON / API
     carregarJogosDinamicos();
@@ -232,8 +233,43 @@ function inicializarAutenticacao() {
         const role = localStorage.getItem('usuarioRole');
         const nome = localStorage.getItem('usuarioNome') || 'Gamer';
         const btnAdmin = document.getElementById('btn-admin-header');
-        const btnPerfil = document.getElementById('btn-perfil-header');
+        let btnPerfil = document.getElementById('btn-perfil-header');
+        let carteiraHeader = document.getElementById('carteira-saldo-header');
         const saudacaoEl = painelUsuario ? painelUsuario.querySelector('span strong') : null;
+
+        // Injeção dinâmica do Saldo da Carteira no Header caso a página não tenha no HTML
+        if (painelUsuario && !carteiraHeader) {
+            carteiraHeader = document.createElement('a');
+            carteiraHeader.href = '/perfil.html';
+            carteiraHeader.id = 'carteira-saldo-header';
+            carteiraHeader.className = 'carteira-saldo-header';
+            carteiraHeader.title = 'Saldo na Carteira Digital Keep Keys';
+            carteiraHeader.innerHTML = '<i data-lucide="wallet"></i> <span class="saldo-rotulo">Saldo:</span> <span class="saldo-valor" id="valor-saldo-header">R$ 1.000,00</span>';
+            
+            const btnAbrirCarrinho = document.getElementById('btn-abrir-carrinho');
+            if (btnAbrirCarrinho) {
+                painelUsuario.insertBefore(carteiraHeader, btnAbrirCarrinho);
+            } else {
+                painelUsuario.prepend(carteiraHeader);
+            }
+            if (typeof lucide !== 'undefined') lucide.createIcons();
+        }
+
+        // Injeção dinâmica do Botão de Perfil no Header caso a página não tenha no HTML
+        if (painelUsuario && !btnPerfil) {
+            btnPerfil = document.createElement('a');
+            btnPerfil.href = '/perfil.html';
+            btnPerfil.id = 'btn-perfil-header';
+            btnPerfil.className = 'btn-perfil';
+            btnPerfil.innerHTML = '<i data-lucide="user"></i> Perfil';
+            
+            if (btnAdmin) {
+                painelUsuario.insertBefore(btnPerfil, btnAdmin);
+            } else {
+                painelUsuario.appendChild(btnPerfil);
+            }
+            if (typeof lucide !== 'undefined') lucide.createIcons();
+        }
 
         if (saudacaoEl) {
             saudacaoEl.innerText = nome;
@@ -243,6 +279,12 @@ function inicializarAutenticacao() {
             if (btnEntrar) btnEntrar.style.setProperty('display', 'none', 'important');
             if (painelUsuario) painelUsuario.style.setProperty('display', 'flex', 'important');
             if (btnPerfil) btnPerfil.style.setProperty('display', 'inline-flex', 'important');
+            if (carteiraHeader) carteiraHeader.style.setProperty('display', 'inline-flex', 'important');
+
+            // Atualiza o saldo exibido no cabeçalho
+            const { saldo } = obterSaldoCarteira();
+            const valorHeader = document.getElementById('valor-saldo-header');
+            if (valorHeader) valorHeader.innerText = `R$ ${saldo.toFixed(2).replace('.', ',')}`;
 
             if (role === 'admin') {
                 if (btnAdmin) btnAdmin.style.setProperty('display', 'inline-block', 'important');
@@ -253,6 +295,7 @@ function inicializarAutenticacao() {
             if (btnEntrar) btnEntrar.style.setProperty('display', 'inline-block', 'important');
             if (painelUsuario) painelUsuario.style.setProperty('display', 'none', 'important');
             if (btnPerfil) btnPerfil.style.setProperty('display', 'none', 'important');
+            if (carteiraHeader) carteiraHeader.style.setProperty('display', 'none', 'important');
             if (btnAdmin) btnAdmin.style.setProperty('display', 'none', 'important');
         }
     }
@@ -426,14 +469,21 @@ function inicializarCarteiraDigital() {
     // Loop de contagem regressiva para atualizar a UI em tempo real
     setInterval(() => {
         const { saldo, segundosRestantes } = obterSaldoCarteira();
+        const textoFormatado = `R$ ${saldo.toFixed(2).replace('.', ',')}`;
 
+        // Atualiza saldo no perfil
         const saldoEl = document.getElementById('carteira-saldo');
+        if (saldoEl) saldoEl.innerText = textoFormatado;
+
+        // Atualiza saldo no cabeçalho em qualquer página
+        const saldoHeaderEl = document.getElementById('valor-saldo-header');
+        if (saldoHeaderEl) saldoHeaderEl.innerText = textoFormatado;
+
+        // Atualiza saldo no painel do checkout
+        const saldoCheckoutEl = document.getElementById('checkout-saldo-carteira');
+        if (saldoCheckoutEl) saldoCheckoutEl.innerText = textoFormatado;
+
         const timerTextoEl = document.getElementById('carteira-timer-texto');
-
-        if (saldoEl) {
-            saldoEl.innerText = `R$ ${saldo.toFixed(2).replace('.', ',')}`;
-        }
-
         if (timerTextoEl) {
             if (saldo >= 1000) {
                 timerTextoEl.innerText = 'Carteira cheia (R$ 1.000,00)';
@@ -449,6 +499,10 @@ function inicializarCarteiraDigital() {
             salvarSaldoCarteira(1000.00);
             const saldoEl = document.getElementById('carteira-saldo');
             if (saldoEl) saldoEl.innerText = 'R$ 1.000,00';
+            const saldoHeaderEl = document.getElementById('valor-saldo-header');
+            if (saldoHeaderEl) saldoHeaderEl.innerText = 'R$ 1.000,00';
+            const saldoCheckoutEl = document.getElementById('checkout-saldo-carteira');
+            if (saldoCheckoutEl) saldoCheckoutEl.innerText = 'R$ 1.000,00';
             alert('🎉 Carteira recarregada com sucesso para R$ 1.000,00!');
         };
     }
@@ -580,76 +634,19 @@ function configurarFinalizarCompra() {
                 return;
             }
 
-            // Calcula o valor total do carrinho
-            let totalCompra = 0;
-            carrinho.forEach(item => {
-                let precoNumerico = parseFloat(
-                    item.preco.replace('R$', '').replace('.', '').replace(',', '.').trim()
-                ) || 0;
-                totalCompra += precoNumerico;
-            });
-
-            // Verifica o saldo da carteira digital
-            const { saldo } = obterSaldoCarteira();
-
-            if (saldo < totalCompra) {
-                alert(`⚠️ Saldo insuficiente na Carteira Digital!\n\nSaldo Atual: R$ ${saldo.toFixed(2).replace('.', ',')}\nTotal da Compra: R$ ${totalCompra.toFixed(2).replace('.', ',')}\n\nAguarde o reset automático de 1 minuto para receber mais R$ 1.000,00 ou recarregue no seu perfil!`);
-                return;
-            }
-
-            // Desconta da carteira
-            const novoSaldo = saldo - totalCompra;
-            salvarSaldoCarteira(novoSaldo);
-
-            // Gera e adiciona os jogos à biblioteca de comprados
-            const comprados = JSON.parse(localStorage.getItem('keepkeys_jogos_comprados')) || [];
-            const dataAgora = new Date().toLocaleString('pt-BR');
-
-            carrinho.forEach(item => {
-                const randomKey = `KEEP-${Math.random().toString(36).substring(2,6).toUpperCase()}-${Math.random().toString(36).substring(2,6).toUpperCase()}-${Math.random().toString(36).substring(2,6).toUpperCase()}`;
-                comprados.unshift({
-                    id: Date.now().toString() + Math.random().toString(36).substring(2,4),
-                    titulo: item.titulo,
-                    preco: item.preco,
-                    imagem: item.imagem,
-                    chave: randomKey,
-                    dataCompra: dataAgora,
-                    link: item.link || '#'
-                });
-            });
-
-            localStorage.setItem('keepkeys_jogos_comprados', JSON.stringify(comprados));
-
-            // Salva histórico de transação
-            const transacoes = JSON.parse(localStorage.getItem('keepkeys_transacoes')) || [];
-            transacoes.unshift({
-                id: Date.now(),
-                tipo: 'Compra',
-                valor: totalCompra,
-                itensQtd: carrinho.length,
-                data: dataAgora
-            });
-            localStorage.setItem('keepkeys_transacoes', JSON.stringify(transacoes));
-
-            // Limpa o carrinho
-            carrinho = [];
-            salvarEAtualizar();
-            renderizarCarrinho();
-
-            // Fecha o modal do carrinho
+            // Fecha a gaveta do carrinho
             const modalCarrinho = document.getElementById('modal-carrinho');
             if (modalCarrinho) modalCarrinho.style.display = 'none';
 
-            alert(`🎉 Compra realizada com sucesso!\n\nValor debitado: R$ ${totalCompra.toFixed(2).replace('.', ',')}\nSaldo restante da carteira: R$ ${novoSaldo.toFixed(2).replace('.', ',')}\n(O saldo será resetado para R$ 1.000,00 em 1 minuto para você continuar testando)\n\nSeus jogos foram adicionados à sua biblioteca!`);
-
-            // Redireciona para o perfil para ver os jogos comprados
-            window.location.href = '/perfil.html';
+            // Redireciona para o checkout profissional
+            window.location.href = '/checkout.html';
         };
     });
 }
 
 function configurarBotoesComprar() {
-    document.querySelectorAll('.jogo-produtos button').forEach((botao) => {
+    // Apenas botões de compra dentro de grades de produtos e destaques (nunca afeta botões de remoção de favoritos)
+    document.querySelectorAll('.grade-produtos .jogo-produtos > button:not(.btn-remover-favorito), .destaques .jogo-produtos > button').forEach((botao) => {
         botao.onclick = (evento) => {
             evento.stopPropagation();
             evento.preventDefault();
@@ -956,17 +953,23 @@ function renderizarJogosFavoritos() {
     }
 
     grade.innerHTML = favoritos.map((jogo, index) => `
-        <article class="jogo-produtos">
-            <img src="${jogo.imagem}" alt="${jogo.titulo}" width="200px">
-            <h4>${jogo.titulo}</h4>
-            <p>${jogo.preco}</p>
-            <div style="display: flex; gap: 8px; width: 100%;">
-                <button type="button" style="flex: 1;" onclick="adicionarFavoritoAoCarrinho(${index})">
-                    <i data-lucide="shopping-cart"></i> COMPRAR
-                </button>
-                <button type="button" style="background-color: #333; padding: 0 12px;" onclick="removerFavoritoDoPerfil(${index})" title="Remover dos Favoritos">
-                    <i data-lucide="trash-2"></i>
-                </button>
+        <article class="card-jogo-favorito">
+            <a href="${jogo.link || '#'}" class="favorito-capa-link">
+                <img src="${jogo.imagem}" alt="${jogo.titulo}">
+            </a>
+            <div class="favorito-info">
+                <div>
+                    <h4>${jogo.titulo}</h4>
+                    <p class="preco-jogo-favorito">${jogo.preco}</p>
+                </div>
+                <div class="favorito-acoes">
+                    <button type="button" class="btn-favorito-comprar" onclick="adicionarFavoritoAoCarrinho(event, ${index})">
+                        <i data-lucide="shopping-cart"></i> COMPRAR
+                    </button>
+                    <button type="button" class="btn-remover-favorito" onclick="removerFavoritoDoPerfil(event, ${index})" title="Remover dos Favoritos" aria-label="Remover dos Favoritos">
+                        <i data-lucide="trash-2"></i>
+                    </button>
+                </div>
             </div>
         </article>
     `).join('');
@@ -974,18 +977,38 @@ function renderizarJogosFavoritos() {
     if (typeof lucide !== 'undefined') lucide.createIcons();
 }
 
-function adicionarFavoritoAoCarrinho(index) {
+function adicionarFavoritoAoCarrinho(evento, index) {
+    if (evento) {
+        evento.stopPropagation();
+        evento.preventDefault();
+    }
     const favoritos = obterFavoritos();
     const jogo = favoritos[index];
     if (jogo) {
         adicionarAoCarrinho(jogo);
-        alert(`"${jogo.titulo}" adicionado ao carrinho!`);
+        
+        const botao = evento ? evento.currentTarget : null;
+        if (botao) {
+            const originalHtml = botao.innerHTML;
+            botao.innerHTML = '<i data-lucide="check"></i> ADICIONADO!';
+            botao.style.backgroundColor = '#28a745';
+            setTimeout(() => {
+                botao.innerHTML = originalHtml;
+                botao.style.backgroundColor = '';
+                if (typeof lucide !== 'undefined') lucide.createIcons();
+            }, 1200);
+        }
+
         const btnAbrir = document.getElementById('btn-abrir-carrinho');
         if (btnAbrir) btnAbrir.click();
     }
 }
 
-function removerFavoritoDoPerfil(index) {
+function removerFavoritoDoPerfil(evento, index) {
+    if (evento) {
+        evento.stopPropagation();
+        evento.preventDefault();
+    }
     const favoritos = obterFavoritos();
     favoritos.splice(index, 1);
     salvarFavoritos(favoritos);
@@ -1027,4 +1050,238 @@ function renderizarExtrato() {
             </tbody>
         </table>
     `;
+}
+
+// ==========================================
+//   LÓGICA DO CHECKOUT PROFISSIONAL (checkout.html)
+// ==========================================
+let cupomAtivo = null;
+
+window.selecionarMetodoPagamento = function(metodo) {
+    const opcoes = ['carteira', 'pix', 'cartao'];
+    opcoes.forEach(m => {
+        const card = document.getElementById(`opcao-${m}`);
+        const painel = document.getElementById(`painel-detalhes-${m}`);
+        const radio = document.getElementById(`radio-${m}`);
+        
+        if (m === metodo) {
+            if (card) card.classList.add('selecionado');
+            if (painel) painel.style.display = 'block';
+            if (radio) radio.checked = true;
+        } else {
+            if (card) card.classList.remove('selecionado');
+            if (painel) painel.style.display = 'none';
+            if (radio) radio.checked = false;
+        }
+    });
+};
+
+function inicializarPaginaCheckout() {
+    const containerCheckout = document.querySelector('.checkout-container');
+    if (!containerCheckout) return;
+
+    const estaLogado = localStorage.getItem('usuarioLogado') === 'true';
+    if (!estaLogado) {
+        alert('Você precisa estar logado para acessar o checkout!');
+        window.location.href = '/index.html';
+        return;
+    }
+
+    if (carrinho.length === 0) {
+        alert('Seu carrinho está vazio! Redirecionando para a loja...');
+        window.location.href = '/index.html';
+        return;
+    }
+
+    // Carrega dados do usuário nos campos do formulário
+    const nome = localStorage.getItem('usuarioNome') || 'Kelvin Gamer';
+    const email = localStorage.getItem('usuarioEmail') || 'gamer@keepkeys.com';
+    const inputNome = document.getElementById('checkout-nome');
+    const inputEmail = document.getElementById('checkout-email');
+    if (inputNome && !inputNome.value) inputNome.value = nome;
+    if (inputEmail && !inputEmail.value) inputEmail.value = email;
+
+    renderizarResumoCheckout();
+
+    // Lógica do Cupom de Desconto
+    const btnCupom = document.getElementById('btn-aplicar-cupom');
+    const inputCupom = document.getElementById('input-cupom');
+    const feedbackCupom = document.getElementById('cupom-feedback');
+
+    if (btnCupom && inputCupom) {
+        btnCupom.onclick = () => {
+            const codigo = inputCupom.value.trim().toUpperCase();
+            if (codigo === 'KEEP10' || codigo === 'GAMER' || codigo === 'GAMER10') {
+                cupomAtivo = { codigo: codigo, porcentagem: 0.10 };
+                if (feedbackCupom) {
+                    feedbackCupom.className = 'cupom-feedback sucesso';
+                    feedbackCupom.innerText = `Cupom ${codigo} aplicado com sucesso (-10%)!`;
+                }
+                renderizarResumoCheckout();
+            } else if (codigo === '') {
+                alert('Digite um código de cupom.');
+            } else {
+                cupomAtivo = null;
+                if (feedbackCupom) {
+                    feedbackCupom.className = 'cupom-feedback erro';
+                    feedbackCupom.innerText = 'Cupom inválido ou expirado.';
+                }
+                renderizarResumoCheckout();
+            }
+        };
+    }
+
+    // Lógica do Botão Finalizar Pedido
+    const btnConfirmar = document.getElementById('btn-confirmar-pedido');
+    if (btnConfirmar) {
+        btnConfirmar.onclick = () => {
+            executarFinalizacaoPedidoCheckout();
+        };
+    }
+}
+
+function calcularTotaisCheckout() {
+    let subtotal = 0;
+    carrinho.forEach(item => {
+        let precoNumerico = parseFloat(
+            item.preco.replace('R$', '').replace('.', '').replace(',', '.').trim()
+        ) || 0;
+        subtotal += precoNumerico;
+    });
+
+    let desconto = 0;
+    if (cupomAtivo) {
+        desconto = subtotal * cupomAtivo.porcentagem;
+    }
+
+    const totalFinal = Math.max(0, subtotal - desconto);
+
+    return { subtotal, desconto, totalFinal };
+}
+
+function renderizarResumoCheckout() {
+    const listaJogosEl = document.getElementById('checkout-lista-jogos');
+    const subtotalEl = document.getElementById('checkout-subtotal');
+    const linhaDesconto = document.getElementById('linha-desconto-cupom');
+    const descontoEl = document.getElementById('checkout-desconto');
+    const totalEl = document.getElementById('checkout-total');
+    const btnConfirmar = document.getElementById('btn-confirmar-pedido');
+
+    if (!listaJogosEl) return;
+
+    listaJogosEl.innerHTML = carrinho.map(item => `
+        <div class="checkout-item-jogo">
+            <img src="${item.imagem}" alt="${item.titulo}">
+            <div class="checkout-item-info">
+                <h5>${item.titulo}</h5>
+                <span>${item.preco}</span>
+            </div>
+        </div>
+    `).join('');
+
+    const { subtotal, desconto, totalFinal } = calcularTotaisCheckout();
+
+    if (subtotalEl) subtotalEl.innerText = `R$ ${subtotal.toFixed(2).replace('.', ',')}`;
+
+    if (desconto > 0 && linhaDesconto && descontoEl) {
+        linhaDesconto.style.display = 'flex';
+        descontoEl.innerText = `- R$ ${desconto.toFixed(2).replace('.', ',')}`;
+    } else if (linhaDesconto) {
+        linhaDesconto.style.display = 'none';
+    }
+
+    if (totalEl) totalEl.innerText = `R$ ${totalFinal.toFixed(2).replace('.', ',')}`;
+    if (btnConfirmar) {
+        btnConfirmar.innerHTML = `<i data-lucide="shield-check"></i> FINALIZAR PEDIDO (R$ ${totalFinal.toFixed(2).replace('.', ',')})`;
+        if (typeof lucide !== 'undefined') lucide.createIcons();
+    }
+}
+
+function executarFinalizacaoPedidoCheckout() {
+    if (carrinho.length === 0) {
+        alert('Seu carrinho está vazio!');
+        window.location.href = '/index.html';
+        return;
+    }
+
+    const radioCarteira = document.getElementById('radio-carteira');
+    const metodoEscolhido = radioCarteira && radioCarteira.checked ? 'carteira' : (
+        document.getElementById('radio-pix')?.checked ? 'pix' : 'cartao'
+    );
+
+    const { totalFinal } = calcularTotaisCheckout();
+    const { saldo } = obterSaldoCarteira();
+
+    if (metodoEscolhido === 'carteira') {
+        if (saldo < totalFinal) {
+            alert(`⚠️ Saldo insuficiente na Carteira Digital Keep Keys!\n\nSaldo Atual: R$ ${saldo.toFixed(2).replace('.', ',')}\nTotal do Pedido: R$ ${totalFinal.toFixed(2).replace('.', ',')}\n\nAguarde o reset automático de 1 minuto para receber mais R$ 1.000,00 ou recarregue no seu perfil!`);
+            return;
+        }
+
+        // Debita da carteira
+        const novoSaldo = saldo - totalFinal;
+        salvarSaldoCarteira(novoSaldo);
+    }
+
+    // Gera as chaves digitais e adiciona aos comprados
+    const comprados = JSON.parse(localStorage.getItem('keepkeys_jogos_comprados')) || [];
+    const dataAgora = new Date().toLocaleString('pt-BR');
+    const chavesGeradasParaModal = [];
+
+    carrinho.forEach(item => {
+        const randomKey = `KEEP-${Math.random().toString(36).substring(2,6).toUpperCase()}-${Math.random().toString(36).substring(2,6).toUpperCase()}-${Math.random().toString(36).substring(2,6).toUpperCase()}`;
+        const jogoComprado = {
+            id: Date.now().toString() + Math.random().toString(36).substring(2,4),
+            titulo: item.titulo,
+            preco: item.preco,
+            imagem: item.imagem,
+            chave: randomKey,
+            dataCompra: dataAgora,
+            link: item.link || '#'
+        };
+        comprados.unshift(jogoComprado);
+        chavesGeradasParaModal.push(jogoComprado);
+    });
+
+    localStorage.setItem('keepkeys_jogos_comprados', JSON.stringify(comprados));
+
+    // Salva histórico de transação
+    const transacoes = JSON.parse(localStorage.getItem('keepkeys_transacoes')) || [];
+    const nomeMetodo = metodoEscolhido === 'carteira' ? 'Carteira Digital' : (metodoEscolhido === 'pix' ? 'Pix' : 'Cartão de Crédito');
+    transacoes.unshift({
+        id: Date.now(),
+        tipo: `Compra (${nomeMetodo})`,
+        valor: totalFinal,
+        itensQtd: carrinho.length,
+        data: dataAgora
+    });
+    localStorage.setItem('keepkeys_transacoes', JSON.stringify(transacoes));
+
+    // Limpa o carrinho
+    carrinho = [];
+    salvarEAtualizar();
+
+    // Exibe o modal profissional de sucesso com as chaves geradas
+    const modalSucesso = document.getElementById('modal-sucesso-pedido');
+    const containerChaves = document.getElementById('lista-chaves-sucesso');
+
+    if (modalSucesso && containerChaves) {
+        containerChaves.innerHTML = chavesGeradasParaModal.map(j => `
+            <div class="item-chave-gerada">
+                <div>
+                    <strong style="color: #fff; font-size: 0.95rem; display: block;">${j.titulo}</strong>
+                    <code>${j.chave}</code>
+                </div>
+                <button type="button" class="btn-copiar-chave" onclick="copiarChave('${j.chave}', this)">
+                    <i data-lucide="copy"></i> Copiar
+                </button>
+            </div>
+        `).join('');
+
+        modalSucesso.style.display = 'flex';
+        if (typeof lucide !== 'undefined') lucide.createIcons();
+    } else {
+        alert('🎉 Parabéns! Compra finalizada com sucesso! Seus jogos foram adicionados à sua biblioteca.');
+        window.location.href = '/perfil.html';
+    }
 }

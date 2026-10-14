@@ -423,7 +423,7 @@ aside hr.divisoria {
 
 .jogo-produtos button {
     display: flex;
-    align-items: flex;
+    align-items: center;
     justify-content: center;
     gap: 8px;
 }
@@ -1546,17 +1546,30 @@ aside .footer-redes .icones-redes a .lucide {
     border: none;
     color: #ff4444;
     cursor: pointer;
-    padding: 5px;
-    transition: transform 0.2s;
+    width: 36px;
+    height: 36px;
+    min-width: 36px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6px;
+    padding: 0;
+    margin: 0;
+    transition: background-color 0.2s ease, transform 0.2s ease, color 0.2s ease;
 }
 
 .btn-remover-item:hover {
-    transform: scale(1.1);
+    background-color: rgba(255, 68, 68, 0.15);
+    color: #ff6b6b;
+    transform: scale(1.08);
 }
 
-.btn-remover-item .lucide {
+.btn-remover-item .lucide,
+.btn-remover-item svg {
     width: 18px;
     height: 18px;
+    display: block;
+    margin: auto;
 }
 
 /* Rodapé do Carrinho */
@@ -2621,4 +2634,759 @@ aside .footer-redes .icones-redes a .lucide {
 }
 .btn-acessar-jogo:hover {
     background: #0a5bc9;
-}
+}
+
+/* ==========================================================================
+   BADGE DE SALDO DA CARTEIRA NO HEADER (EM TODAS AS PÁGINAS)
+   ========================================================================== */
+.carteira-saldo-header {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: linear-gradient(135deg, #131b26, #10141d);
+    border: 1px solid #1e4976;
+    color: #ffffff;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 0.25s ease;
+}
+
+.carteira-saldo-header:hover {
+    border-color: #28a745;
+    background: linear-gradient(135deg, #18283d, #141b26);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(40, 167, 69, 0.2);
+}
+
+.carteira-saldo-header .lucide {
+    width: 16px;
+    height: 16px;
+    color: #28a745;
+    display: block;
+}
+
+.carteira-saldo-header .saldo-rotulo {
+    color: #8da4be;
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-weight: 700;
+}
+
+.carteira-saldo-header .saldo-valor {
+    color: #28a745;
+    font-weight: 800;
+    letter-spacing: 0.3px;
+}
+
+/* ==========================================================================
+   CARDS DE JOGOS FAVORITOS NA ABA DE PERFIL
+   ========================================================================== */
+.grade-favoritos-perfil {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.card-jogo-favorito {
+    background-color: #202026;
+    border: 1px solid #333340;
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card-jogo-favorito:hover {
+    transform: translateY(-5px);
+    border-color: #08469e;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+}
+
+.card-jogo-favorito .favorito-capa-link {
+    display: block;
+    width: 100%;
+    height: 220px;
+    overflow: hidden;
+    position: relative;
+}
+
+.card-jogo-favorito .favorito-capa-link img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.card-jogo-favorito:hover .favorito-capa-link img {
+    transform: scale(1.04);
+}
+
+.favorito-info {
+    padding: 14px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.favorito-info h4 {
+    margin: 0;
+    color: #fff;
+    font-size: 0.95rem;
+    line-height: 1.3;
+}
+
+.preco-jogo-favorito {
+    color: #28a745;
+    font-weight: bold;
+    font-size: 1.1rem;
+    margin: 0;
+}
+
+.favorito-acoes {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 6px;
+}
+
+.btn-favorito-comprar {
+    flex: 1;
+    background-color: #ff0000;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    padding: 10px 12px;
+    font-weight: bold;
+    font-size: 0.85rem;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    text-transform: uppercase;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.btn-favorito-comprar:hover {
+    background-color: #cc0000;
+    transform: scale(1.02);
+}
+
+.btn-favorito-comprar .lucide {
+    width: 16px;
+    height: 16px;
+    display: block;
+}
+
+.btn-remover-favorito {
+    background-color: #2b2b36;
+    border: 1px solid #444458;
+    color: #ff4d4d;
+    width: 38px;
+    height: 38px;
+    min-width: 38px;
+    border-radius: 6px;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+    transition: background-color 0.2s ease, transform 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+
+.btn-remover-favorito:hover {
+    background-color: rgba(255, 77, 77, 0.18);
+    border-color: #ff4d4d;
+    color: #ff7878;
+    transform: scale(1.08);
+}
+
+.btn-remover-favorito .lucide,
+.btn-remover-favorito svg {
+    width: 18px;
+    height: 18px;
+    display: block;
+    margin: auto;
+}
+
+/* ==========================================================================
+   PÁGINA PROFISSIONAL DE CHECKOUT (checkout.html)
+   ========================================================================== */
+.checkout-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 30px 20px 60px 20px;
+}
+
+.checkout-header-titulo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+    flex-wrap: wrap;
+    gap: 15px;
+    border-bottom: 1px solid #333342;
+    padding-bottom: 15px;
+}
+
+.checkout-header-titulo h1 {
+    font-size: 1.8rem;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin: 0;
+}
+
+.checkout-badge-seguranca {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: rgba(40, 167, 69, 0.15);
+    border: 1px solid #28a745;
+    color: #28a745;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 0.82rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+.checkout-grid {
+    display: grid;
+    grid-template-columns: 1fr 420px;
+    gap: 30px;
+    align-items: start;
+}
+
+@media (max-width: 980px) {
+    .checkout-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.checkout-passo-card {
+    background: #202028;
+    border: 1px solid #333342;
+    border-radius: 12px;
+    padding: 24px;
+    margin-bottom: 24px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.checkout-passo-cabecalho {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.checkout-numero-passo {
+    width: 32px;
+    height: 32px;
+    background-color: #08469E;
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 0.95rem;
+}
+
+.checkout-passo-cabecalho h3 {
+    margin: 0;
+    color: #fff;
+    font-size: 1.15rem;
+}
+
+.checkout-form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+@media (max-width: 600px) {
+    .checkout-form-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.checkout-form-grupo {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.checkout-form-grupo.span-2 {
+    grid-column: 1 / -1;
+}
+
+.checkout-form-grupo label {
+    font-size: 0.85rem;
+    color: #bbb;
+    font-weight: 600;
+}
+
+.checkout-form-grupo input,
+.checkout-form-grupo select {
+    background: #15151c;
+    border: 1px solid #3d3d4e;
+    color: #fff;
+    padding: 12px 14px;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.checkout-form-grupo input:focus,
+.checkout-form-grupo select:focus {
+    border-color: #08469E;
+}
+
+.checkout-aviso-digital {
+    margin-top: 15px;
+    background: rgba(8, 70, 158, 0.12);
+    border-left: 4px solid #08469E;
+    padding: 12px 16px;
+    border-radius: 0 8px 8px 0;
+    font-size: 0.85rem;
+    color: #c0d8f8;
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+/* Opções de Pagamento no Checkout */
+.metodos-pagamento-opcoes {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.metodo-opcao-card {
+    background: #171720;
+    border: 2px solid #333344;
+    border-radius: 10px;
+    padding: 16px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.metodo-opcao-card.selecionado {
+    border-color: #08469E;
+    background: #192033;
+}
+
+.metodo-opcao-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.metodo-opcao-header input[type="radio"] {
+    accent-color: #08469E;
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+}
+
+.metodo-opcao-info {
+    flex: 1;
+}
+
+.metodo-opcao-info h4 {
+    margin: 0;
+    color: #fff;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.metodo-opcao-info p {
+    margin: 4px 0 0 0;
+    font-size: 0.85rem;
+    color: #999;
+}
+
+.metodo-tag-destaque {
+    background: #28a745;
+    color: #fff;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.metodo-detalhes-painel {
+    margin-top: 15px;
+    padding-top: 15px;
+    border-top: 1px solid #313144;
+}
+
+.box-saldo-carteira-checkout {
+    background: #101520;
+    border: 1px dashed #28a745;
+    padding: 14px 18px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.box-saldo-carteira-checkout strong {
+    font-size: 1.25rem;
+    color: #28a745;
+}
+
+/* Coluna de Resumo do Pedido */
+.checkout-resumo-card {
+    background: #202028;
+    border: 1px solid #333342;
+    border-radius: 12px;
+    padding: 24px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    position: sticky;
+    top: 20px;
+}
+
+.checkout-resumo-card h3 {
+    margin: 0 0 20px 0;
+    color: #fff;
+    font-size: 1.2rem;
+    border-bottom: 1px solid #333342;
+    padding-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.checkout-lista-jogos {
+    max-height: 280px;
+    overflow-y: auto;
+    padding-right: 6px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.checkout-item-jogo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: #181822;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #2e2e3e;
+}
+
+.checkout-item-jogo img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+.checkout-item-info {
+    flex: 1;
+}
+
+.checkout-item-info h5 {
+    margin: 0 0 4px 0;
+    color: #fff;
+    font-size: 0.88rem;
+}
+
+.checkout-item-info span {
+    color: #28a745;
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+/* Formulário de Cupom */
+.checkout-cupom-box {
+    margin-bottom: 20px;
+    padding: 14px;
+    background: #171720;
+    border-radius: 8px;
+    border: 1px solid #2e2e3e;
+}
+
+.checkout-cupom-form {
+    display: flex;
+    gap: 8px;
+}
+
+.checkout-cupom-form input {
+    flex: 1;
+    background: #111116;
+    border: 1px solid #3f3f50;
+    color: #fff;
+    padding: 10px 12px;
+    border-radius: 6px;
+    text-transform: uppercase;
+    font-weight: bold;
+    outline: none;
+    font-size: 0.85rem;
+}
+
+.checkout-cupom-form button {
+    background: #08469E;
+    color: #fff;
+    border: none;
+    padding: 0 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 0.85rem;
+    transition: background 0.2s;
+}
+
+.checkout-cupom-form button:hover {
+    background: #0c56be;
+}
+
+.cupom-feedback {
+    margin-top: 8px;
+    font-size: 0.8rem;
+    display: none;
+}
+
+.cupom-feedback.sucesso {
+    color: #28a745;
+    display: block;
+}
+
+.cupom-feedback.erro {
+    color: #ff4d4d;
+    display: block;
+}
+
+/* Linhas de Valores Totais */
+.checkout-totais {
+    border-top: 1px solid #333342;
+    padding-top: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.linha-total {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.95rem;
+    color: #aaa;
+}
+
+.linha-total.destaque {
+    font-size: 1.3rem;
+    font-weight: 800;
+    color: #fff;
+    border-top: 1px dashed #333342;
+    padding-top: 10px;
+}
+
+.linha-total.destaque span:last-child {
+    color: #28a745;
+}
+
+.btn-checkout-confirmar {
+    width: 100%;
+    background: #28a745;
+    color: #fff;
+    border: none;
+    padding: 16px;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    box-shadow: 0 4px 15px rgba(40, 167, 69, 0.4);
+    transition: background 0.2s, transform 0.1s, box-shadow 0.2s;
+}
+
+.btn-checkout-confirmar:hover {
+    background: #218838;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(40, 167, 69, 0.6);
+}
+
+.btn-checkout-confirmar:active {
+    transform: translateY(0);
+}
+
+.checkout-selos-garantia {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    font-size: 0.8rem;
+    color: #888;
+}
+
+.selo-garantia-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.selo-garantia-item .lucide {
+    color: #08469E;
+    width: 16px;
+    height: 16px;
+}
+
+/* Modal de Confirmação e Sucesso da Compra */
+.modal-sucesso-pedido {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(8px);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 10000;
+    padding: 20px;
+}
+
+.conteudo-sucesso-pedido {
+    background: #1c1c24;
+    border: 1px solid #38384a;
+    border-radius: 16px;
+    max-width: 650px;
+    width: 100%;
+    padding: 35px 30px;
+    text-align: center;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.7);
+    animation: surgimentoModal 0.3s ease-out;
+}
+
+.icone-sucesso-animado {
+    width: 72px;
+    height: 72px;
+    background: rgba(40, 167, 69, 0.15);
+    border: 2px solid #28a745;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px auto;
+    color: #28a745;
+}
+
+.icone-sucesso-animado .lucide {
+    width: 36px;
+    height: 36px;
+}
+
+.conteudo-sucesso-pedido h2 {
+    color: #fff;
+    margin: 0 0 10px 0;
+    font-size: 1.6rem;
+}
+
+.conteudo-sucesso-pedido p {
+    color: #aaa;
+    margin: 0 0 20px 0;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+.chaves-geradas-container {
+    background: #121218;
+    border: 1px solid #2c2c3b;
+    border-radius: 10px;
+    padding: 15px;
+    max-height: 200px;
+    overflow-y: auto;
+    margin-bottom: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    text-align: left;
+}
+
+.item-chave-gerada {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #191922;
+    padding: 10px 14px;
+    border-radius: 8px;
+    gap: 10px;
+}
+
+.item-chave-gerada code {
+    color: #66c0f4;
+    font-weight: bold;
+    font-size: 0.95rem;
+    letter-spacing: 1px;
+}
+
+.acoes-sucesso-pedido {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.btn-sucesso-perfil {
+    background: #08469E;
+    color: #fff;
+    text-decoration: none;
+    padding: 14px 24px;
+    border-radius: 8px;
+    font-weight: bold;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: background 0.2s;
+}
+
+.btn-sucesso-perfil:hover {
+    background: #0a5bc9;
+}
+
+.btn-sucesso-loja {
+    background: #2a2a36;
+    color: #ccc;
+    text-decoration: none;
+    padding: 14px 24px;
+    border-radius: 8px;
+    font-weight: bold;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.2s;
+}
+
+.btn-sucesso-loja:hover {
+    background: #363646;
+    color: #fff;
+}
+
