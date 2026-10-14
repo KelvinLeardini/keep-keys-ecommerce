@@ -1,4 +1,4 @@
-// /js/script.js - Scripts principais da loja Keep Keys
+// /scripts/script.js - Scripts principais da loja Keep Keys
 
 // Aguarda o HTML carregar completamente
 document.addEventListener('DOMContentLoaded', () => {

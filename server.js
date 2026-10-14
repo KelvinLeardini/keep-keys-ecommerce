@@ -18,13 +18,15 @@ app.use(express.json());
 //---------------------------------------------------- API PARA BACKEND -------------------
 
 const fs = require('fs');
-const { gerarSecaoDetalhes, esc } = require('./utils/detalhesJogo');
+const { gerarSecaoDetalhes, esc } = require('./public/scripts/detalhesJogo');
 
 const PORT = process.env.PORT || 3000;
 
 // Middleware para ler JSON no corpo das requisições e servir arquivos estáticos
 app.use(express.json());
 app.use(express.static(path.join(__dirname, 'public')));
+// Compatibilidade caso algum cliente ou cache ainda busque por /js/
+app.use('/js', express.static(path.join(__dirname, 'public', 'scripts')));
 
 // Funções auxiliares para ler e salvar JSON
 const lerArquivo = (caminho) => JSON.parse(fs.readFileSync(caminho, 'utf-8'));
@@ -316,7 +318,7 @@ function gerarHtmlPaginaJogo(jogo) {
     <!-- CDN do Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
     <!-- Vincula o JavaScript principal -->
-    <script src="/js/script.js"></script>
+    <script src="/scripts/script.js"></script>
 </body>
 </html>`;
 }

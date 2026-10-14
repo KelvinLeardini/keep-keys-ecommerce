@@ -1,4 +1,4 @@
-// /js/admin.js - Controle do Painel Administrativo Keep Keys
+// /scripts/admin.js - Controle do Painel Administrativo Keep Keys
 
 const { createApp } = Vue;
 

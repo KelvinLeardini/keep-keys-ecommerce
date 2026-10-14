@@ -1,13 +1,13 @@
-// scripts/atualizar-paginas-jogos.js
+// public/scripts/atualizar-paginas-jogos.js
 // Reaplica a seção de detalhes (Sobre, Ficha Técnica e Destaques) em todas as
 // páginas individuais existentes, usando os dados salvos em dados/jogos.json.
-// Uso: node scripts/atualizar-paginas-jogos.js
+// Uso: node public/scripts/atualizar-paginas-jogos.js
 
 const fs = require('fs');
 const path = require('path');
-const { gerarSecaoDetalhes } = require('../utils/detalhesJogo');
+const { gerarSecaoDetalhes } = require('./detalhesJogo');
 
-const raiz = path.join(__dirname, '..');
+const raiz = path.join(__dirname, '..', '..');
 const jogos = JSON.parse(fs.readFileSync(path.join(raiz, 'dados', 'jogos.json'), 'utf-8'));
 
 // Páginas extras que reutilizam a ficha de outro jogo
