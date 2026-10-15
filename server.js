@@ -115,19 +115,21 @@ function obterCaminhoPagina(jogo) {
 }
 
 function gerarHtmlPaginaJogo(jogo) {
-    const cat = (jogo.categoria || jogo.plataforma || 'geral').toLowerCase();
-    
-    let tagPlat = 'Mídia Digital';
-    let infoChave = 'Código de ativação oficial';
+    const cats = Array.isArray(jogo.categorias) && jogo.categorias.length > 0 
+        ? jogo.categorias.map(c => c.toLowerCase()) 
+        : [(jogo.categoria || jogo.plataforma || 'geral').toLowerCase()];
 
-    if (cat === 'xbox') {
-        tagPlat = 'Xbox Series X|S · Mídia Digital';
+    let tagPlat = 'Steam - Mídia Digital';
+    let infoChave = 'Código de resgate oficial Steam';
+
+    if (cats.includes('xbox') || (jogo.link && jogo.link.includes('/xbox/'))) {
+        tagPlat = 'Xbox - Mídia Digital';
         infoChave = 'Código de resgate oficial Xbox Live / Microsoft Store';
-    } else if (cat === 'ps') {
-        tagPlat = 'PS5 / PS4 · Mídia Digital';
+    } else if (cats.includes('ps') || (jogo.link && jogo.link.includes('/ps/')) || (jogo.id === 'destaque-onimusha')) {
+        tagPlat = 'PS5 - Mídia Digital';
         infoChave = 'Código de resgate oficial PlayStation Network (PSN)';
-    } else if (cat === 'steam') {
-        tagPlat = 'PC · Mídia Digital';
+    } else {
+        tagPlat = 'Steam - Mídia Digital';
         infoChave = 'Código de resgate oficial Steam';
     }
 
