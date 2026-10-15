@@ -1,0 +1,2595 @@
+[
+  {
+    "id": "ps-gta6",
+    "titulo": "Grand Theft Auto VI",
+    "preco": "449,90",
+    "precoAntigo": "",
+    "imagem": "/imagens/gta6.avif",
+    "categoria": "ps",
+    "plataforma": "ps",
+    "link": "/jogos/ps/gta6.html",
+    "detalhes": {
+      "genero": [
+        "Ação",
+        "Aventura",
+        "Mundo Aberto"
+      ],
+      "desenvolvedora": "Rockstar North",
+      "publicadora": "Rockstar Games",
+      "lancamento": "19 de novembro de 2026",
+      "plataformas": "PlayStation 5 / PS5 Pro",
+      "idioma": "Inglês (áudio) — Português (BR) (legendas e interface)",
+      "armazenamento": "150 GB (estimado)",
+      "modos": "Um jogador (Campanha cinematográfica) e Multijogador online (GTA Online de nova geração)",
+      "classificacao": "18",
+      "resgate": "ps",
+      "sinopse": [
+        "Grand Theft Auto VI transporta os jogadores para Leonida, uma versão moderna, vibrante e caótica da Flórida, tendo as ruas iluminadas por neon de Vice City como epicentro de uma narrativa eletrizante.",
+        "A trama acompanha a trajetória de Lucia e Jason, uma dupla envolvida em um golpe arriscado que sai do controle. Entre assaltos calculados, perseguições cinematográficas e a cultura volátil das redes sociais, os dois precisam confiar um no outro para sobreviver ao submundo do crime."
+      ],
+      "destaques": [
+        "O maior e mais imersivo mapa de mundo aberto já criado na história da Rockstar Games",
+        "Física de ponta, densidade urbana inacreditável e clima dinâmico com tempestades tropicais",
+        "Primeira protagonista feminina em uma campanha principal da franquia GTA",
+        "Novo ecossistema GTA Online integrado com servidores dedicados e suporte contínuo"
+      ],
+      "generos": [
+        "Ação",
+        "Aventura",
+        "Mundo Aberto",
+        "Crime"
+      ],
+      "idiomaAudio": "Inglês",
+      "idiomaLegendas": "Português (Brasil), Inglês, Espanhol, Francês, Alemão, Italiano, Japonês, Chinês",
+      "idadeMinima": "18",
+      "motivoIdade": "Violência extrema, Conteúdo sexual explícito, Drogas ilícitas, Linguagem imprópria e Temas sensíveis",
+      "analises": {
+        "metacritic": "97",
+        "classificacaoCritica": "Aclamação Universal",
+        "comunidade": "99% de expectativa positiva",
+        "destaqueReview": {
+          "veiculo": "IGN Brasil",
+          "nota": "10/10",
+          "texto": "Grand Theft Auto VI é um salto geracional sem precedentes, entregando o mundo aberto mais denso, vivo e tecnicamente impressionante já concebido."
+        }
+      },
+      "requisitos": {
+        "tipo": "console",
+        "especificacoesConsole": {
+          "resolucao": "4K dinâmico a 60 FPS (Modo Desempenho) / 4K nativo a 30 FPS com Traçado de Raios Completo (Modo Fidelidade)",
+          "armazenamento": "150 GB de espaço disponível em SSD NVMe de ultra velocidade",
+          "recursos": "Compatível com Gatilhos Adaptáveis e Feedback Háptico do DualSense, Áudio 3D Tempest e Ray Tracing avançado"
+        }
+      }
+    },
+    "categorias": [
+      "ps"
+    ]
+  },
+  {
+    "id": "ps-naruto",
+    "titulo": "NARUTO X BORUTO Ultimate Ninja STORM CONNECTIONS",
+    "preco": "299,90",
+    "precoAntigo": "",
+    "imagem": "/imagens/naruto.avif",
+    "categoria": "ps",
+    "plataforma": "ps",
+    "link": "/jogos/ps/naruto.html",
+    "detalhes": {
+      "genero": [
+        "Luta",
+        "Anime",
+        "Arena 3D"
+      ],
+      "desenvolvedora": "CyberConnect2",
+      "publicadora": "Bandai Namco Entertainment",
+      "lancamento": "17 de novembro de 2023",
+      "plataformas": "PlayStation 5 / PlayStation 4",
+      "idioma": "Japonês e Inglês (áudio) — Português (BR) (legendas)",
+      "armazenamento": "40 GB",
+      "modos": "Um jogador, Multijogador local (1v1) e Multijogador online com partidas ranqueadas",
+      "classificacao": "12",
+      "resgate": "ps",
+      "sinopse": [
+        "NARUTO X BORUTO Ultimate Ninja STORM CONNECTIONS celebra o legado de uma das franquias mais queridas dos animes, reunindo mais de 130 lutadores jogáveis e recriando os momentos mais emblemáticos da rivalidade entre Naruto e Sasuke.",
+        "Além de reviver os confrontos históricos desde o início do Exame Chunin até a Quarta Grande Guerra Ninja, o game traz uma história especial e exclusiva supervisionada pelos criadores da obra, focada na nova geração de ninjas liderada por Boruto Uzumaki."
+      ],
+      "destaques": [
+        "O maior elenco de personagens da franquia STORM, incluindo novos ninjas lendários como Ashura e Indra",
+        "Modo de controle simples para iniciantes combinando combos automáticos com fluidez cinematográfica",
+        "História especial inédita de Boruto envolvendo uma conspiração em larga escala no mundo shinobi",
+        "Dublagem brasileira original completa com os atores de voz oficiais do anime no Brasil"
+      ],
+      "generos": [
+        "Luta",
+        "Ação",
+        "Anime",
+        "3D"
+      ],
+      "idiomaAudio": "Português (Brasil), Japonês, Inglês",
+      "idiomaLegendas": "Português (Brasil), Inglês, Espanhol, Francês, Alemão, Italiano",
+      "idadeMinima": "12",
+      "motivoIdade": "Violência fantasiosa e Sangue leve",
+      "analises": {
+        "metacritic": "72",
+        "classificacaoCritica": "Críticas Mistas ou Positivas",
+        "comunidade": "Muito Positivas (82% de aprovação na comunidade)",
+        "destaqueReview": {
+          "veiculo": "Voxel",
+          "nota": "8.0/10",
+          "texto": "O maior elenco da história de Naruto com animações espetaculares da CyberConnect2 e dublagem brasileira clássica que emociona os fãs."
+        }
+      },
+      "requisitos": {
+        "tipo": "console",
+        "especificacoesConsole": {
+          "resolucao": "4K a 60 FPS cravados no PlayStation 5 / 1080p a 30 FPS no PlayStation 4",
+          "armazenamento": "35 GB de espaço livre em disco",
+          "recursos": "Carregamento instantâneo via SSD do PS5, suporte ao áudio 3D e compatibilidade com DualSense"
+        }
+      }
+    },
+    "categorias": [
+      "ps"
+    ]
+  },
+  {
+    "id": "ps-hollow",
+    "titulo": "Hollow Knight",
+    "preco": "85,50",
+    "precoAntigo": "",
+    "imagem": "/imagens/hollow.jpg",
+    "categoria": "ps",
+    "plataforma": "ps",
+    "link": "/jogos/ps/hollow.html",
+    "detalhes": {
+      "genero": [
+        "Metroidvania",
+        "Ação",
+        "Plataforma 2D"
+      ],
+      "desenvolvedora": "Team Cherry",
+      "publicadora": "Team Cherry",
+      "lancamento": "25 de setembro de 2018",
+      "plataformas": "PlayStation 4 / PlayStation 5",
+      "idioma": "Português (BR) — textos e interface",
+      "armazenamento": "9 GB",
+      "modos": "Um jogador (Single-player)",
+      "classificacao": "10",
+      "resgate": "ps",
+      "sinopse": [
+        "Desça pelas profundezas de Hallownest, um reino esquecido habitado por insetos e heróis do passado, agora tomado por uma infecção misteriosa que corrompe tudo o que toca.",
+        "No controle de um misterioso cavaleiro sem nome empunhando apenas um ferrão ancestral, explore cavernas sinuosas, cidades góticas em ruínas e enfrente mais de 150 tipos de inimigos e dezenas de chefes memoráveis em uma jornada inesquecível."
+      ],
+      "destaques": [
+        "Um dos maiores e mais aclamados Metroidvanias já criados no mundo dos games",
+        "Mundo 2D interconectado desenhado à mão com trilha sonora orquestral comovente",
+        "Sistema de amuletos customizáveis que permite moldar o estilo de combate do cavaleiro",
+        "Edição Voidheart contendo todas as 4 expansões de chefes e desafios extras inclusas"
+      ],
+      "generos": [
+        "Metroidvania",
+        "Ação",
+        "Aventura",
+        "Indie"
+      ],
+      "idiomaAudio": "Fictício (Língua dos Insetos)",
+      "idiomaLegendas": "Português (Brasil), Inglês, Espanhol, Francês, Alemão, Italiano, Japonês, Coreano",
+      "idadeMinima": "10",
+      "motivoIdade": "Violência moderada e Medo",
+      "analises": {
+        "metacritic": "90",
+        "classificacaoCritica": "Aclamação Universal",
+        "comunidade": "Extremamente Positivas (97% de mais de 300.000 avaliações)",
+        "destaqueReview": {
+          "veiculo": "IGN Brasil",
+          "nota": "9.5/10",
+          "texto": "Hollow Knight é uma verdadeira joia do design de jogos, com uma atmosfera mágica, combate refinado e exploração sem igual."
+        }
+      },
+      "requisitos": {
+        "tipo": "console",
+        "especificacoesConsole": {
+          "resolucao": "1080p / 4K a 60 FPS fluidos em todas as plataformas PlayStation",
+          "armazenamento": "9 GB de espaço disponível",
+          "recursos": "Inclui todas as 4 expansões gratuitas de conteúdo (Hidden Dreams, The Grimm Troupe, Lifeblood e Godmaster)"
+        }
+      }
+    },
+    "categorias": [
+      "ps"
+    ]
+  },
+  {
+    "id": "ps-ghost",
+    "titulo": "Ghost of Tsushima",
+    "preco": "249,90",
+    "precoAntigo": "",
+    "imagem": "/imagens/ghost.webp",
+    "categoria": "ps",
+    "plataforma": "ps",
+    "link": "/jogos/ps/ghost of thushima.html",
+    "detalhes": {
+      "genero": [
+        "Ação",
+        "Aventura",
+        "Mundo Aberto"
+      ],
+      "desenvolvedora": "Sucker Punch Productions",
+      "publicadora": "Sony Interactive Entertainment",
+      "lancamento": "20 de agosto de 2021",
+      "plataformas": "PlayStation 5 / PlayStation 4",
+      "idioma": "Português (BR) — áudio dublado e legendas",
+      "armazenamento": "50 GB",
+      "modos": "Um jogador (Campanha épica) e Multijogador cooperativo online (Modo Lendas para 2 a 4 jogadores)",
+      "classificacao": "18",
+      "resgate": "ps",
+      "sinopse": [
+        "No final do século XIII, o império mongol devasta nações inteiras em sua campanha para conquistar o oriente. A Ilha de Tsushima é o último bastião de defesa entre o Japão continental e uma frota invasora implacável liderada pelo astuto general Khotun Khan.",
+        "Quando a ilha arde em chamas, o guerreiro samurai Jin Sakai se torna um dos últimos sobreviventes de seu clã. Para proteger seu povo e retomar seu lar, Jin deve abandonar as tradições do código de honra samurai e criar um novo caminho: o caminho do Fantasma."
+      ],
+      "destaques": [
+        "Combate visceral de espadas com 4 posturas de combate, aparas perfeitas e armamentos furtivos",
+        "Direção de arte estonteante com cenários que usam o vento como guia orgânico sem poluir a interface",
+        "Inclui a expansão da Ilha Iki com nova história, inimigos místicos e armaduras exclusivas",
+        "Modo Lendas cooperativo online gratuito para 4 jogadores com invasões e missões de sobrevivência"
+      ],
+      "generos": [
+        "Ação",
+        "Aventura",
+        "Mundo Aberto",
+        "Furtividade",
+        "Samurai"
+      ],
+      "idiomaAudio": "Português (Brasil), Japonês, Inglês",
+      "idiomaLegendas": "Português (Brasil), Japonês, Inglês, Espanhol, Francês, Alemão, Italiano",
+      "idadeMinima": "18",
+      "motivoIdade": "Violência extrema, Sangue, Desmembramento e Temas adultos",
+      "analises": {
+        "metacritic": "87",
+        "classificacaoCritica": "Geralmente Favorável",
+        "comunidade": "Extremamente Positivas (94% de satisfação do público)",
+        "destaqueReview": {
+          "veiculo": "The Enemy",
+          "nota": "9.0/10",
+          "texto": "Uma carta de amor ao cinema clássico de samurais de Akira Kurosawa, aliando combate afiado com uma direção de arte deslumbrante."
+        }
+      },
+      "requisitos": {
+        "tipo": "console",
+        "especificacoesConsole": {
+          "resolucao": "4K dinâmico a 60 FPS cravados no PS5 / 1080p a 30 FPS no PS4",
+          "armazenamento": "60 GB de espaço disponível em SSD",
+          "recursos": "Feedback Háptico do DualSense simulando o choque da lâmina e o vento, Áudio 3D e sincronia labial para o áudio japonês no PS5"
+        }
+      }
+    },
+    "categorias": [
+      "ps"
+    ]
+  },
+  {
+    "id": "ps-bloodborne",
+    "titulo": "Bloodborne",
+    "preco": "59,90",
+    "precoAntigo": "114,90",
+    "imagem": "/imagens/blood.webp",
+    "categoria": "ps",
+    "plataforma": "ps",
+    "link": "/jogos/ps/bloodborne.html",
+    "detalhes": {
+      "genero": [
+        "Ação",
+        "RPG",
+        "Soulslike"
+      ],
+      "desenvolvedora": "FromSoftware",
+      "publicadora": "Sony Interactive Entertainment",
+      "lancamento": "24 de março de 2015",
+      "plataformas": "PlayStation 4 / PlayStation 5",
+      "idioma": "Inglês (áudio) — Português (BR) (legendas)",
+      "armazenamento": "35 GB",
+      "modos": "Um jogador, Cooperativo online (até 3 caçadores) e Invasões PvP online",
+      "classificacao": "16",
+      "resgate": "ps",
+      "sinopse": [
+        "Viaje até a antiga e sombria cidade de Yharnam, um centro medicinal lendário conhecido por suas terapias milagrosas com sangue. Ao chegar, você descobre uma metrópole devastada por uma praga terrível que transforma os cidadãos em feras monstruosas.",
+        "Na pele de um Caçador, desvende os mistérios aterrorizantes escondidos nas sombras da cidade, enfrente horrores cósmicos inspirados no universo de H.P. Lovecraft e lute pela própria sanidade em uma das experiências mais desafiadoras já criadas por Hidetaka Miyazaki."
+      ],
+      "destaques": [
+        "Combate veloz e agressivo baseado em esquivas ágeis e armas de truque transformáveis",
+        "Mecânica de restauração de vida atacando os inimigos imediatamente após sofrer dano",
+        "Direção de arte gótica e arquitetura vitoriana considerada uma das mais belas da história dos games",
+        "Calabouços do Cálice infinitos com chefes exclusivos e recompensas lendárias"
+      ],
+      "generos": [
+        "RPG de Ação",
+        "Soulslike",
+        "Terror Gótico",
+        "Lovecraftiano"
+      ],
+      "idiomaAudio": "Inglês",
+      "idiomaLegendas": "Português (Brasil), Inglês, Espanhol, Francês, Alemão, Italiano",
+      "idadeMinima": "16",
+      "motivoIdade": "Violência extrema, Sangue intenso, Temas sombrios e Terror psicológico",
+      "analises": {
+        "metacritic": "92",
+        "classificacaoCritica": "Aclamação Universal",
+        "comunidade": "Extremamente Positivas (96% de avaliações dos jogadores)",
+        "destaqueReview": {
+          "veiculo": "IGN Brasil",
+          "nota": "9.5/10",
+          "texto": "Um dos maiores triunfos da FromSoftware, transformando a fórmula Souls em uma caçada brutal com estética vitoriana e pesadelos cósmicos inesquecíveis."
+        }
+      },
+      "requisitos": {
+        "tipo": "console",
+        "especificacoesConsole": {
+          "resolucao": "1080p a 30 FPS estáveis / Compatível nativamente com o PlayStation 5",
+          "armazenamento": "41 GB de espaço disponível",
+          "recursos": "Calabouços do Cálice gerados proceduralmente, suporte à PlayStation Network para co-op e PvP"
+        }
+      }
+    },
+    "categorias": [
+      "ps",
+      "promocao"
+    ]
+  },
+  {
+    "id": "ps-tlou1",
+    "titulo": "The Last of Us Part 1",
+    "preco": "149,99",
+    "precoAntigo": "",
+    "imagem": "/imagens/the_last1.jpg",
+    "categoria": "ps",
+    "plataforma": "ps",
+    "link": "/jogos/ps/the last of us.html",
+    "detalhes": {
+      "genero": [
+        "Ação",
+        "Aventura",
+        "Sobrevivência"
+      ],
+      "desenvolvedora": "Naughty Dog",
+      "publicadora": "Sony Interactive Entertainment",
+      "lancamento": "2 de setembro de 2022",
+      "plataformas": "PlayStation 5 / PC",
+      "idioma": "Português (BR) — áudio dublado e legendas",
+      "armazenamento": "79 GB",
+      "modos": "Um jogador (Campanha principal + DLC Left Behind)",
+      "classificacao": "18",
+      "resgate": "ps",
+      "sinopse": [
+        "Em uma civilização devastada por uma infecção fúngica mortal que transforma hospedeiros em monstros brutais, Joel, um sobrevivente calejado pela perda, é contratado para contrabandear Ellie, uma jovem garota de 14 anos, para fora de uma zona de quarentena militar opressiva.",
+        "O que começa como um pequeno serviço de contrabando logo se transforma em uma travessia brutal pelos Estados Unidos em ruínas, onde os dois precisarão confrontar tanto infectados grotescos quanto a crueldade implacável dos sobreviventes humanos remanescentes."
+      ],
+      "destaques": [
+        "Recriado do zero com o motor gráfico proprietário de última geração da Naughty Dog para PS5",
+        "Animações faciais revolucionárias e inteligência artificial aprimorada dos inimigos",
+        "Inclui o aclamado capítulo prólogo 'Left Behind', focado no passado de Ellie e Riley",
+        "Conjunto de recursos de acessibilidade mais avançado da indústria, permitindo que todos possam jogar"
+      ],
+      "generos": [
+        "Ação",
+        "Aventura",
+        "Sobrevivência",
+        "Pós-apocalíptico",
+        "Narrativa"
+      ],
+      "idiomaAudio": "Português (Brasil), Inglês, Espanhol, Francês, Alemão, Italiano, Japonês",
+      "idiomaLegendas": "Português (Brasil), Inglês, Espanhol, Francês, Alemão, Italiano, Japonês",
+      "idadeMinima": "18",
+      "motivoIdade": "Violência extrema, Sangue, Desmembramento, Drogas lícitas e Linguagem imprópria",
+      "analises": {
+        "metacritic": "88",
+        "classificacaoCritica": "Geralmente Favorável",
+        "comunidade": "Muito Positivas (90% de satisfação da comunidade)",
+        "destaqueReview": {
+          "veiculo": "TecMundo Games",
+          "nota": "9.5/10",
+          "texto": "Uma reconstrução visual completa do zero que potencializa ainda mais a mais emocionante história dos videogames modernos."
+        }
+      },
+      "requisitos": {
+        "tipo": "console",
+        "especificacoesConsole": {
+          "resolucao": "4K dinâmico a 60 FPS (Modo Desempenho) ou 4K nativo a 30 FPS / 40 FPS em telas 120Hz (Modo Fidelidade)",
+          "armazenamento": "79 GB de espaço disponível em SSD NVMe",
+          "recursos": "Uso exemplar dos Gatilhos Adaptáveis e Feedback Háptico do DualSense, Áudio 3D Tempest e mais de 60 opções de acessibilidade premiadas"
+        }
+      }
+    },
+    "categorias": [
+      "ps"
+    ]
+  },
+  {
+    "id": "ps-tlou2",
+    "titulo": "The Last of Us Part 2",
+    "preco": "199,90",
+    "precoAntigo": "",
+    "imagem": "/imagens/the_last2.jpg",
+    "categoria": "ps",
+    "plataforma": "ps",
+    "link": "/jogos/ps/the last of us part 2.html",
+    "detalhes": {
+      "genero": [
+        "Ação",
+        "Aventura",
+        "Sobrevivência"
+      ],
+      "desenvolvedora": "Naughty Dog",
+      "publicadora": "Sony Interactive Entertainment",
+      "lancamento": "19 de janeiro de 2024",
+      "plataformas": "PlayStation 5 / PlayStation 4",
+      "idioma": "Português (BR) — áudio dublado e legendas",
+      "armazenamento": "100 GB",
+      "modos": "Um jogador (Campanha épica + Modo Roguelike 'Sem Retorno')",
+      "classificacao": "18",
+      "resgate": "ps",
+      "sinopse": [
+        "Cinco anos após sua perigosa jornada pelos Estados Unidos pós-pandêmico, Ellie e Joel se estabeleceram em Jackson, Wyoming. A vida em uma próspera comunidade de sobreviventes lhes trouxe paz e estabilidade, apesar da ameaça constante dos infectados e de outros sobreviventes desesperados.",
+        "Quando um evento violento e traumático interrompe essa paz, Ellie embarca em uma jornada incansável para fazer justiça e buscar retaliação. Caçando os responsáveis um por um, ela é confrontada com as repercussões físicas e emocionais devastadoras de seus próprios atos."
+      ],
+      "destaques": [
+        "Vencedor de mais de 300 prêmios de Jogo do Ano em todo o mundo",
+        "Novo Modo 'Sem Retorno': sobrevivência no estilo roguelike com encontros aleatórios e múltiplos personagens jogáveis",
+        "Níveis perdidos inéditos com comentários dos desenvolvedores explicando o processo de criação",
+        "Combate tático e visceral com movimentação refinada, esquivas corporais e furtividade vertical"
+      ],
+      "generos": [
+        "Ação",
+        "Aventura",
+        "Sobrevivência",
+        "Furtividade",
+        "Drama"
+      ],
+      "idiomaAudio": "Português (Brasil), Inglês, Espanhol, Francês, Alemão, Italiano",
+      "idiomaLegendas": "Português (Brasil), Inglês, Espanhol, Francês, Alemão, Italiano",
+      "idadeMinima": "18",
+      "motivoIdade": "Violência extrema, Tortura, Nudez, Drogas e Conteúdo sexual",
+      "analises": {
+        "metacritic": "93",
+        "classificacaoCritica": "Aclamação Universal",
+        "comunidade": "Vencedor de mais de 300 prêmios de Jogo do Ano",
+        "destaqueReview": {
+          "veiculo": "IGN Brasil",
+          "nota": "10/10",
+          "texto": "Uma obra-prima narrativa e técnica corajosa, visceral e inesquecível que desafia as convenções dos videogames."
+        }
+      },
+      "requisitos": {
+        "tipo": "console",
+        "especificacoesConsole": {
+          "resolucao": "4K nativo a 30 FPS (Fidelidade) / 1440p a 60 FPS cravados (Desempenho) com suporte a VRR destravado",
+          "armazenamento": "76 GB de espaço disponível em SSD",
+          "recursos": "Integração tátil total com DualSense, carregamentos quase instantâneos e novo Modo Sem Retorno"
+        }
+      }
+    },
+    "categorias": [
+      "ps"
+    ]
+  },
+  {
+    "id": "ps-spiderman",
+    "titulo": "Marvel's Spider-Man",
+    "preco": "89,90",
+    "precoAntigo": "169,00",
+    "imagem": "/imagens/spiderman.jpg",
+    "categoria": "ps",
+    "plataforma": "ps",
+    "link": "/jogos/ps/spider - man.html",
+    "detalhes": {
+      "genero": [
+        "Ação",
+        "Aventura",
+        "Super-herói"
+      ],
+      "desenvolvedora": "Insomniac Games",
+      "publicadora": "Sony Interactive Entertainment",
+      "lancamento": "12 de novembro de 2020",
+      "plataformas": "PlayStation 5 / PC",
+      "idioma": "Português (BR) — áudio dublado e legendas",
+      "armazenamento": "50 GB",
+      "modos": "Um jogador (Single-player)",
+      "classificacao": "12",
+      "resgate": "ps",
+      "sinopse": [
+        "Em Marvel's Spider-Man Remastered, conhecemos um Peter Parker mais experiente, que já atua há oito anos como o vigilante mascarado de Nova York e domina suas habilidades acrobáticas contra os vilões do crime organizado.",
+        "Enquanto tenta equilibrar sua caótica vida pessoal e profissional com o dever de proteger mais de nove milhões de nova-iorquinos, uma nova facção criminosa liderada pelo Sr. Negativo ameaça espalhar o caos pela metrópole, forçando Peter a sacrificar tudo o que ama."
+      ],
+      "destaques": [
+        "Balanço em teias mais fluido e prazeroso já desenvolvido na indústria dos videogames",
+        "Nova York viva e repleta de arranha-céus, crimes dinâmicos e colecionáveis icônicos",
+        "Inclui todos os 3 capítulos da expansão de história 'A Cidade Que Nunca Dorme'",
+        "Dezenas de trajes desbloqueáveis com poderes e visuais de diferentes eras dos quadrinhos"
+      ],
+      "generos": [
+        "Ação",
+        "Aventura",
+        "Super-herói",
+        "Mundo Aberto"
+      ],
+      "idiomaAudio": "Português (Brasil), Inglês, Espanhol, Francês",
+      "idiomaLegendas": "Português (Brasil), Inglês, Espanhol, Francês, Alemão, Italiano",
+      "idadeMinima": "12",
+      "motivoIdade": "Violência moderada, Sangue leve e Linguagem branda",
+      "analises": {
+        "metacritic": "87",
+        "classificacaoCritica": "Geralmente Favorável",
+        "comunidade": "Extremamente Positivas (96% de avaliações positivas)",
+        "destaqueReview": {
+          "veiculo": "Voxel",
+          "nota": "9.2/10",
+          "texto": "A melhor sensação de balançar em teias de todos os tempos aliada a uma história comovente que compreende a essência de Peter Parker."
+        }
+      },
+      "requisitos": {
+        "tipo": "console",
+        "especificacoesConsole": {
+          "resolucao": "4K a 60 FPS com Ray Tracing (Modo Desempenho RT) ou 4K nativo a 30 FPS com gráficos no máximo",
+          "armazenamento": "54 GB de espaço disponível em SSD",
+          "recursos": "Gatilhos Adaptáveis reproduzindo a tensão das teias, Feedback Háptico e Áudio 3D espacial"
+        }
+      }
+    },
+    "categorias": [
+      "ps",
+      "promocao"
+    ]
+  },
+  {
+    "id": "ps-uncharted4",
+    "titulo": "Uncharted 4: A Thief's End",
+    "preco": "115,00",
+    "precoAntigo": "",
+    "imagem": "/imagens/uncharted.avif",
+    "categoria": "ps",
+    "plataforma": "ps",
+    "link": "/jogos/ps/uncharted 4.html",
+    "detalhes": {
+      "genero": [
+        "Ação",
+        "Aventura",
+        "Tiro em Terceira Pessoa"
+      ],
+      "desenvolvedora": "Naughty Dog",
+      "publicadora": "Sony Interactive Entertainment",
+      "lancamento": "28 de janeiro de 2022",
+      "plataformas": "PlayStation 5 / PlayStation 4 / PC",
+      "idioma": "Português (BR) — áudio dublado e legendas",
+      "armazenamento": "60 GB",
+      "modos": "Um jogador (Campanha cinematográfica com capítulos lineares e semi-abertos)",
+      "classificacao": "14",
+      "resgate": "ps",
+      "sinopse": [
+        "Vários anos após sua última aventura, o caçador de fortunas aposentado Nathan Drake é forçado a voltar ao mundo dos ladrões quando seu irmão mais velho, Sam, dado como morto há anos, ressurge pedindo ajuda para salvar sua própria vida.",
+        "Em busca do tesouro lendário de 400 milhões de dólares do capitão pirata Henry Avery e da colônia utópica perdida de Libertalia, os irmãos Drake embarcam em uma odisseia ao redor do mundo, enfrentando mercenários rivais e testando os limites de sua lealdade."
+      ],
+      "destaques": [
+        "Direção cinematográfica premiada com transições perfeitas entre cinemáticas e jogabilidade",
+        "Locações exóticas detalhadas, desde cidades históricas em Madagascar até selvas tropicais",
+        "Mecânicas dinâmicas de gancho, escalada fluida e áreas abertas com veículos pilotáveis",
+        "Dublagem brasileira marcante e aclamada com vozes consagradas da televisão e cinema"
+      ],
+      "generos": [
+        "Ação",
+        "Aventura",
+        "Exploração",
+        "Tiro em Terceira Pessoa"
+      ],
+      "idiomaAudio": "Português (Brasil), Inglês, Espanhol, Francês",
+      "idiomaLegendas": "Português (Brasil), Inglês, Espanhol, Francês, Alemão, Italiano",
+      "idadeMinima": "14",
+      "motivoIdade": "Violência moderada, Sangue leve, Linguagem imprópria e Uso de tabaco",
+      "analises": {
+        "metacritic": "93",
+        "classificacaoCritica": "Aclamação Universal",
+        "comunidade": "Extremamente Positivas (95% de aprovação)",
+        "destaqueReview": {
+          "veiculo": "IGN Brasil",
+          "nota": "9.8/10",
+          "texto": "O desfecho perfeito e magistral para a lendária saga de Nathan Drake, mesclando emoção, espetáculo visual e ação em ritmo perfeito."
+        }
+      },
+      "requisitos": {
+        "tipo": "console",
+        "especificacoesConsole": {
+          "resolucao": "4K a 30 FPS (Fidelidade), 1440p upscaled a 60 FPS (Desempenho) ou 1080p a 120 FPS (Desempenho+)",
+          "armazenamento": "68 GB de espaço disponível em SSD",
+          "recursos": "Aproveitamento total dos Gatilhos Adaptáveis, Áudio 3D e carregamento instantâneo no PS5"
+        }
+      }
+    },
+    "categorias": [
+      "ps"
+    ]
+  },
+  {
+    "id": "ps-gow3",
+    "titulo": "God of War III",
+    "preco": "49,90",
+    "precoAntigo": "89,00",
+    "imagem": "/imagens/gow.avif",
+    "categoria": "ps",
+    "plataforma": "ps",
+    "link": "/jogos/ps/god of war 3.html",
+    "detalhes": {
+      "genero": [
+        "Ação",
+        "Hack and Slash",
+        "Mitologia"
+      ],
+      "desenvolvedora": "Santa Monica Studio",
+      "publicadora": "Sony Interactive Entertainment",
+      "lancamento": "14 de julho de 2015",
+      "plataformas": "PlayStation 4 / PlayStation 5",
+      "idioma": "Português (BR) — áudio dublado e legendas",
+      "armazenamento": "40 GB",
+      "modos": "Um jogador (Single-player)",
+      "classificacao": "18",
+      "resgate": "ps",
+      "sinopse": [
+        "God of War III Remastered traz o lendário desfecho da trilogia grega de Kratos para a alta definição. No comando do Fantasma de Esparta, erga-se das profundezas sombrias do Submundo e suba pelas costas dos Titãs para destruir os deuses do Monte Olimpo.",
+        "Armado com as Lâminas do Exílio e uma fúria incontrolável, Kratos deve enfrentar Poseidon, Hades, Hércules e o próprio Zeus em uma batalha de proporções mitológicas para concluir sua vingança definitiva."
+      ],
+      "destaques": [
+        "Batalhas épicas em escala monumental contra Titãs que servem como fases inteiras em movimento",
+        "Combate Hack and Slash visceral com armas divinas desbloqueáveis como as Cestus de Nemeia",
+        "Taxa de quadros travada em 60 FPS oferecendo respostas ultrarrápidas aos comandos de esquiva e combos",
+        "Modo foto integrado com filtros para registrar os momentos mais memoráveis da carnificina olímpica"
+      ],
+      "generos": [
+        "Ação",
+        "Hack and Slash",
+        "Mitologia Grega",
+        "Aventura"
+      ],
+      "idiomaAudio": "Português (Brasil), Inglês, Espanhol, Francês",
+      "idiomaLegendas": "Português (Brasil), Inglês, Espanhol, Francês, Alemão, Italiano",
+      "idadeMinima": "18",
+      "motivoIdade": "Violência extrema, Sangue intenso, Desmembramento, Conteúdo sexual e Nudez",
+      "analises": {
+        "metacritic": "92",
+        "classificacaoCritica": "Aclamação Universal",
+        "comunidade": "Extremamente Positivas (95% de satisfação)",
+        "destaqueReview": {
+          "veiculo": "TecMundo Games",
+          "nota": "9.5/10",
+          "texto": "Um clássico eterno do gênero Hack and Slash que oferece batalhas colossais contra os deuses do Olimpo em 60 quadros por segundo cravados."
+        }
+      },
+      "requisitos": {
+        "tipo": "console",
+        "especificacoesConsole": {
+          "resolucao": "1080p nativo a 60 FPS no PlayStation 4 e PlayStation 5",
+          "armazenamento": "40 GB de espaço disponível",
+          "recursos": "Modo foto aprimorado, texturas em alta resolução e compatibilidade retroativa total no PS5"
+        }
+      }
+    },
+    "categorias": [
+      "ps",
+      "promocao"
+    ]
+  },
+  {
+    "id": "steam-warhammer",
+    "titulo": "Warhammer 40,000: Space Marine 2",
+    "preco": "49,97",
+    "precoAntigo": "",
+    "imagem": "/imagens/space-marine.avif",
+    "categoria": "steam",
+    "plataforma": "steam",
+    "link": "/jogos/steam/warhammer.html",
+    "detalhes": {
+      "genero": [
+        "Ação",
+        "Tiro em Terceira Pessoa",
+        "Cooperativo"
+      ],
+      "desenvolvedora": "Saber Interactive",
+      "publicadora": "Focus Entertainment",
+      "lancamento": "9 de setembro de 2024",
+      "plataformas": "PC (Steam / Windows)",
+      "idioma": "Inglês (áudio) — Português (BR) (legendas e interface)",
+      "armazenamento": "75 GB (SSD)",
+      "modos": "Um jogador, Cooperativo online para até 3 jogadores e Multijogador PvP (6v6)",
+      "classificacao": "18",
+      "resgate": "steam",
+      "sinopse": [
+        "A galáxia está em guerra aberta. Mundos inteiros sucumbem sob o avanço colossal das hordas de Tiranídeos devoradores. O Imperador da Humanidade convoca seus guerreiros mais formidáveis para conter a maré alienígena.",
+        "Assuma o papel do lendário Tenente Demetrian Titus, um fuzileiro dos Ultramarines dotado de força e armadura sobre-humanas. Comande a fúria do Império empunhando serras-espada e canhões de plasma em confrontos massivos contra enxames que cobrem o horizonte."
+      ],
+      "destaques": [
+        "Tecnologia de enxame proprietária da Saber capaz de colocar centenas de inimigos ativos simultâneos na tela",
+        "Campanha completa que pode ser jogada inteiramente em modo cooperativo para até 3 jogadores",
+        "Modo Operações com classes customizáveis, armaduras colecionáveis e progressão contínua",
+        "Batalhas competitivas multiplayer 6v6 ferozes entre Space Marines e Chaos Space Marines"
+      ],
+      "generos": [
+        "Ação",
+        "Tiro em Terceira Pessoa",
+        "Hack and Slash",
+        "Ficção Científica"
+      ],
+      "idiomaAudio": "Inglês, Francês, Alemão",
+      "idiomaLegendas": "Português (Brasil), Inglês, Espanhol, Francês, Alemão, Italiano, Japonês, Chinês",
+      "idadeMinima": "18",
+      "motivoIdade": "Violência extrema, Sangue intenso, Desmembramento e Temas sombrios",
+      "analises": {
+        "metacritic": "82",
+        "classificacaoCritica": "Geralmente Favorável",
+        "comunidade": "Muito Positivas (85% de mais de 100.000 análises no Steam)",
+        "destaqueReview": {
+          "veiculo": "IGN Brasil",
+          "nota": "8.5/10",
+          "texto": "A experiência definitiva do universo Warhammer 40K, colocando milhares de tiranídeos na tela em combates brutais e visualmente deslumbrantes."
+        }
+      },
+      "requisitos": {
+        "tipo": "pc",
+        "minimos": {
+          "so": "Windows 10 / 11 de 64 bits",
+          "processador": "AMD Ryzen 5 2600X ou Intel Core i5-8600K",
+          "memoria": "16 GB de RAM",
+          "placaVideo": "GeForce GTX 1060 (6 GB) ou Radeon RX 580 (8 GB)",
+          "directx": "Versão 12",
+          "armazenamento": "75 GB de espaço disponível (SSD obrigatório)"
+        },
+        "recomendados": {
+          "so": "Windows 10 / 11 de 64 bits",
+          "processador": "AMD Ryzen 7 5800X ou Intel Core i7-12700",
+          "memoria": "16 GB de RAM",
+          "placaVideo": "GeForce RTX 3070 ou Radeon RX 6800 XT",
+          "directx": "Versão 12",
+          "armazenamento": "75 GB de espaço disponível em SSD NVMe"
+        }
+      }
+    },
+    "categorias": [
+      "steam"
+    ]
+  },
+  {
+    "id": "steam-eafc27",
+    "titulo": "EA SPORTS FC™ 27",
+    "preco": "299,00",
+    "precoAntigo": "",
+    "imagem": "/imagens/eafcbanner.avif",
+    "categoria": "steam",
+    "plataforma": "steam",
+    "link": "/jogos/steam/Ea fc27.html",
+    "detalhes": {
+      "genero": [
+        "Esporte",
+        "Futebol",
+        "Simulação"
+      ],
+      "desenvolvedora": "EA Sports",
+      "publicadora": "Electronic Arts",
+      "lancamento": "25 de setembro de 2026",
+      "plataformas": "PC (Steam / Windows)",
+      "idioma": "Português (BR) — narração e legendas",
+      "armazenamento": "100 GB",
+      "modos": "Um jogador (Modo Carreira de Jogador e Técnico), Multijogador local e Online (Ultimate Team, Clubs)",
+      "classificacao": "L",
+      "resgate": "steam",
+      "sinopse": [
+        "EA SPORTS FC™ 27 traz o maior realismo futebolístico já visto, impulsionado pela tecnologia HyperMotion de ponta e modelos volumétricos de atletas reais capturados nas principais ligas do planeta.",
+        "Comande mais de 19.000 jogadores autênticos, 700 clubes e mais de 30 ligas licenciadas — incluindo a UEFA Champions League, Premier League, LaLiga e CONMEBOL Libertadores — e dispute os maiores torneios do mundo."
+      ],
+      "destaques": [
+        "Mais de 19.000 atletas licenciados e mais de 700 times de futebol masculino e feminino",
+        "Ultimate Team renovado com cartas dinâmicas, ligas competitivas e mercado ativo de transferências",
+        "Modo Carreira profunda com táticas modernas de treinador e modo Carreira de Jogador autêntico",
+        "Cross-play completo entre jogadores de PC, PlayStation e Xbox nas mesmas divisões online"
+      ],
+      "generos": [
+        "Esportes",
+        "Futebol",
+        "Simulação",
+        "Competitivo"
+      ],
+      "idiomaAudio": "Português (Brasil), Inglês, Espanhol, Francês",
+      "idiomaLegendas": "Português (Brasil), Inglês, Espanhol, Francês, Alemão, Italiano",
+      "idadeMinima": "L",
+      "motivoIdade": "Livre para todos os públicos",
+      "analises": {
+        "metacritic": "81",
+        "classificacaoCritica": "Geralmente Favorável",
+        "comunidade": "Mais de 10 milhões de jogadores ativos online",
+        "destaqueReview": {
+          "veiculo": "Globo Esporte / ge",
+          "nota": "8.5/10",
+          "texto": "A física de bola e o posicionamento tático atingem seu ápice, entregando a experiência de futebol digital mais completa do mercado."
+        }
+      },
+      "requisitos": {
+        "tipo": "pc",
+        "minimos": {
+          "so": "Windows 10 / 11 de 64 bits",
+          "processador": "Intel Core i5-6600K ou AMD Ryzen 5 1600",
+          "memoria": "8 GB de RAM",
+          "placaVideo": "Nvidia GeForce GTX 1050 Ti (4 GB) ou AMD Radeon RX 570",
+          "directx": "Versão 12",
+          "armazenamento": "100 GB de espaço disponível"
+        },
+        "recomendados": {
+          "so": "Windows 10 / 11 de 64 bits",
+          "processador": "Intel Core i7-6700 ou AMD Ryzen 7 2700X",
+          "memoria": "16 GB de RAM",
+          "placaVideo": "Nvidia GeForce GTX 1660 ou AMD Radeon RX 5600 XT",
+          "directx": "Versão 12",
+          "armazenamento": "100 GB de espaço disponível em SSD"
+        }
+      }
+    },
+    "categorias": [
+      "steam"
+    ]
+  },
+  {
+    "id": "steam-rdr2",
+    "titulo": "Red Dead Redemption 2",
+    "preco": "99,90",
+    "precoAntigo": "299,99",
+    "imagem": "/imagens/Red Dead Redemption 2.jpg",
+    "categoria": "steam",
+    "plataforma": "steam",
+    "link": "/jogos/steam/Red dead 2.html",
+    "detalhes": {
+      "genero": [
+        "Ação",
+        "Aventura",
+        "Mundo Aberto",
+        "Faroeste"
+      ],
+      "desenvolvedora": "Rockstar Games",
+      "publicadora": "Rockstar Games",
+      "lancamento": "5 de novembro de 2019",
+      "plataformas": "PC (Steam / Windows)",
+      "idioma": "Inglês (áudio) — Português (BR) (legendas)",
+      "armazenamento": "150 GB",
+      "modos": "Um jogador (Campanha épica) e Multijogador online (Red Dead Online)",
+      "classificacao": "18",
+      "resgate": "steam",
+      "sinopse": [
+        "Estados Unidos, 1899. O fim da era do Velho Oeste começou quando as autoridades iniciaram a caça às últimas gangues de foras da lei. Aqueles que não se rendem são impiedosamente eliminados.",
+        "Após um assalto dar desastrosamente errado na cidade de Blackwater, Arthur Morgan e a gangue Van der Linde são forçados a fugir. Com agentes federais e os caçadores de recompensas mais temidos do país em seu encalço, a gangue precisa roubar, lutar e sobreviver pelo território impiedoso do coração da América."
+      ],
+      "destaques": [
+        "Mais de 175 prêmios de Jogo do Ano e mais de 250 pontuações perfeitas em análises mundiais",
+        "Um dos mundos abertos mais detalhados, reativos e vivos já criados, com fauna e flora realistas",
+        "História profunda e inesquecível focada na lealdade, moralidade e redenção de Arthur Morgan",
+        "Inclui acesso completo ao vasto mundo compartilhado de Red Dead Online com diversas profissões"
+      ],
+      "generos": [
+        "Mundo Aberto",
+        "Faroeste",
+        "Ação",
+        "Aventura",
+        "Narrativa"
+      ],
+      "idiomaAudio": "Inglês",
+      "idiomaLegendas": "Português (Brasil), Inglês, Espanhol, Francês, Alemão, Italiano, Japonês, Coreano, Chinês",
+      "idadeMinima": "18",
+      "motivoIdade": "Violência extrema, Sangue, Nudez parcial, Uso de drogas e álcool, Linguagem forte",
+      "analises": {
+        "metacritic": "97",
+        "classificacaoCritica": "Aclamação Universal",
+        "comunidade": "Extremamente Positivas (94% de mais de 530.000 análises no Steam)",
+        "destaqueReview": {
+          "veiculo": "The Enemy",
+          "nota": "10/10",
+          "texto": "Uma obra-prima incontestável que eleva a narrativa e a simulação de mundo aberto ao patamar mais alto da história dos videogames."
+        }
+      },
+      "requisitos": {
+        "tipo": "pc",
+        "minimos": {
+          "so": "Windows 10 - atualização de abril de 2018 (v1803) de 64 bits",
+          "processador": "Intel® Core™ i5-2500K ou AMD FX-6300",
+          "memoria": "8 GB de RAM",
+          "placaVideo": "Nvidia GeForce GTX 770 (2 GB) ou AMD Radeon R9 280 (3 GB)",
+          "directx": "Versão 12",
+          "armazenamento": "150 GB de espaço disponível"
+        },
+        "recomendados": {
+          "so": "Windows 10 / 11 de 64 bits",
+          "processador": "Intel® Core™ i7-4770K ou AMD Ryzen 5 1500X",
+          "memoria": "12 GB de RAM",
+          "placaVideo": "Nvidia GeForce GTX 1060 (6 GB) ou AMD Radeon RX 480 (4 GB)",
+          "directx": "Versão 12",
+          "armazenamento": "150 GB de espaço disponível em SSD"
+        }
+      }
+    },
+    "categorias": [
+      "steam",
+      "promocao"
+    ]
+  },
+  {
+    "id": "steam-rerequiem",
+    "titulo": "Resident Evil Requiem",
+    "preco": "229,99",
+    "precoAntigo": "",
+    "imagem": "/imagens/Resident Evil Requiem.jpg",
+    "categoria": "steam",
+    "plataforma": "steam",
+    "link": "/jogos/steam/resident evil requiem.html",
+    "detalhes": {
+      "genero": [
+        "Survival Horror",
+        "Ação"
+      ],
+      "desenvolvedora": "Capcom",
+      "publicadora": "Capcom",
+      "lancamento": "30 de outubro de 2026",
+      "plataformas": "PC (Steam / Windows)",
+      "idioma": "Português (BR) — áudio dublado e legendas",
+      "armazenamento": "60 GB (SSD)",
+      "modos": "Um jogador (Campanha tensa de sobrevivência)",
+      "classificacao": "18",
+      "resgate": "steam",
+      "sinopse": [
+        "Um laboratório secreto da Umbrella abandonado nas montanhas esconde os experimentos biológicos mais aterrorizantes já concebidos. Quando uma equipe de investigação perde contato com a superfície, agentes veteranos são despachados para o coração das trevas.",
+        "Em Resident Evil Requiem, cada bala, cada erva medicinal e cada decisão contam. Enfrente criaturas mutantes aterrorizantes, resolva quebra-cabeças mecânicos complexos e sobreviva a um pesadelo onde a morte espreita em cada corredor mal iluminado."
+      ],
+      "destaques": [
+        "Gráficos fotorrealistas criados na consagrada RE Engine com iluminação global avançada",
+        "Retorno triunfal do survival horror clássico focado na escassez de munição e inventário estratégico",
+        "Inimigos implacáveis que perseguem o jogador ativamente reagindo a ruídos e portas trancadas",
+        "Dublagem brasileira completa com atores renomados do cenário nacional de dublagem"
+      ],
+      "generos": [
+        "Terror de Sobrevivência",
+        "Ação",
+        "Terror Psicológico",
+        "Zumbis"
+      ],
+      "idiomaAudio": "Português (Brasil), Inglês, Japonês",
+      "idiomaLegendas": "Português (Brasil), Inglês, Espanhol, Francês, Alemão, Italiano",
+      "idadeMinima": "18",
+      "motivoIdade": "Violência extrema, Sangue, Desmembramento, Terror intenso e Tensão psicológica",
+      "analises": {
+        "metacritic": "89",
+        "classificacaoCritica": "Geralmente Favorável",
+        "comunidade": "93% de avaliações Muito Positivas no Steam",
+        "destaqueReview": {
+          "veiculo": "IGN Brasil",
+          "nota": "9.0/10",
+          "texto": "Resident Evil Requiem resgata a atmosfera assustadora das origens da série com gráficos ultrarrealistas na RE Engine e gerenciamento tenso de recursos."
+        }
+      },
+      "requisitos": {
+        "tipo": "pc",
+        "minimos": {
+          "so": "Windows 10 de 64 bits",
+          "processador": "Intel Core i5-7500 ou AMD Ryzen 3 1200",
+          "memoria": "8 GB de RAM",
+          "placaVideo": "Nvidia GeForce GTX 1060 (6 GB) ou AMD Radeon RX 580 (8 GB)",
+          "directx": "Versão 12",
+          "armazenamento": "60 GB de espaço disponível"
+        },
+        "recomendados": {
+          "so": "Windows 10 / 11 de 64 bits",
+          "processador": "Intel Core i7-8700 ou AMD Ryzen 5 3600",
+          "memoria": "16 GB de RAM",
+          "placaVideo": "Nvidia GeForce RTX 2060 ou AMD Radeon RX 5700 XT",
+          "directx": "Versão 12",
+          "armazenamento": "60 GB de espaço disponível em SSD"
+        }
+      }
+    },
+    "categorias": [
+      "steam"
+    ]
+  },
+  {
+    "id": "steam-theisle",
+    "titulo": "The Isle",
+    "preco": "36,99",
+    "precoAntigo": "59,90",
+    "imagem": "/imagens/TheIsle.jpg",
+    "categoria": "steam",
+    "plataforma": "steam",
+    "link": "/jogos/steam/the-isle.html",
+    "detalhes": {
+      "genero": [
+        "Sobrevivência",
+        "Mundo Aberto",
+        "Multijogador"
+      ],
+      "desenvolvedora": "Afterthought LLC",
+      "publicadora": "Afterthought LLC",
+      "lancamento": "1 de dezembro de 2015 (Acesso Antecipado contínuo / Evrima)",
+      "plataformas": "PC (Steam / Windows)",
+      "idioma": "Inglês — interface",
+      "armazenamento": "25 GB",
+      "modos": "Multijogador massivo online (MMO de sobrevivência com servidores de até 150 jogadores)",
+      "classificacao": "16",
+      "resgate": "steam",
+      "sinopse": [
+        "The Isle é um implacável jogo de sobrevivência em mundo aberto onde os jogadores assumem a vida de dinossauros em uma ilha isolada e brutal. Nascendo como um filhote frágil e vulnerável, seu objetivo primordial é encontrar comida, água potável e evitar predadores famintos até atingir a fase adulta.",
+        "Com dezenas de espécies carnívoras e herbívoras jogáveis na versão Evrima, cada criatura possui sentidos apurados de olfato, camuflagem e chamados sonoros autênticos que criam um ecossistema vivo e imprevisível governado pelas leis da cadeia alimentar."
+      ],
+      "destaques": [
+        "Ciclo de vida completo desde filhote recém-nascido até um predador alfa colossal",
+        "Mecânicas aprofundadas de dieta, rastreamento por olfato e estamina para perseguição",
+        "Ilha tropical imensa com selvas densas, rios navegáveis e pântanos perigosos",
+        "Servidores dedicados com centenas de jogadores reais interagindo em tempo real"
+      ],
+      "generos": [
+        "Sobrevivência",
+        "Dinossauros",
+        "Mundo Aberto",
+        "Multijogador Massivo"
+      ],
+      "idiomaAudio": "Fictício / Sons Naturais",
+      "idiomaLegendas": "Português (Brasil), Inglês, Espanhol, Francês, Russo",
+      "idadeMinima": "14",
+      "motivoIdade": "Violência realista animal, Sangue e Predação",
+      "analises": {
+        "metacritic": "76",
+        "classificacaoCritica": "Elogiado pela Comunidade",
+        "comunidade": "Mais de 100.000 análises no Steam (Comunidade ativa com milhares de servidores)",
+        "destaqueReview": {
+          "veiculo": "PC Gamer",
+          "nota": "8.0/10",
+          "texto": "A simulação de sobrevivência pré-histórica mais tensa e imersiva do PC, onde qualquer passo em falso na mata pode significar a morte."
+        }
+      },
+      "requisitos": {
+        "tipo": "pc",
+        "minimos": {
+          "so": "Windows 10 de 64 bits",
+          "processador": "Intel Core i5-4460 ou AMD FX-8320",
+          "memoria": "8 GB de RAM",
+          "placaVideo": "Nvidia GeForce GTX 960 (4 GB) ou AMD Radeon R9 280X",
+          "directx": "Versão 11",
+          "armazenamento": "25 GB de espaço disponível"
+        },
+        "recomendados": {
+          "so": "Windows 10 / 11 de 64 bits",
+          "processador": "Intel Core i7-6700K ou AMD Ryzen 5 2600",
+          "memoria": "16 GB de RAM",
+          "placaVideo": "Nvidia GeForce GTX 1070 (8 GB) ou AMD Radeon RX 5600 XT",
+          "directx": "Versão 12",
+          "armazenamento": "25 GB de espaço disponível em SSD"
+        }
+      }
+    },
+    "categorias": [
+      "steam",
+      "promocao"
+    ]
+  },
+  {
+    "id": "steam-halloween",
+    "titulo": "Halloween The Game",
+    "preco": "124,99",
+    "precoAntigo": "",
+    "imagem": "/imagens/Halloween The Game.jpg",
+    "categoria": "steam",
+    "plataforma": "steam",
+    "link": "/jogos/steam/halloween the game.html",
+    "detalhes": {
+      "genero": [
+        "Terror",
+        "Ação",
+        "Sobrevivência"
+      ],
+      "desenvolvedora": "Nightmare Studios",
+      "publicadora": "Retro Horrors",
+      "lancamento": "31 de outubro de 2024",
+      "plataformas": "PC (Steam / Windows)",
+      "idioma": "Inglês (áudio) — Português (BR) (legendas)",
+      "armazenamento": "40 GB (estimado)",
+      "modos": "Um jogador e Multijogador online assimétrico (1 assassino contra 4 sobreviventes)",
+      "classificacao": "18",
+      "resgate": "steam",
+      "sinopse": [
+        "Na noite de Halloween na pacata cidade de Haddonfield, um mal ancestral desperta. Michael Myers caminha pelas ruas silenciosas com sua máscara inexpressiva e uma faca de cozinha afiada, caçando adolescentes desavisados que tentam desesperadamente escapar.",
+        "Jogue como um dos sobreviventes cooperando para consertar telefones de emergência e encontrar chaves de fuga, ou vista a máscara da Forma e use furtividade predatória para caçar cada vítima nas sombras."
+      ],
+      "destaques": [
+        "Atmosfera autêntica inspirada nos clássicos cinematográficos de terror dos anos 1970 e 1980",
+        "Mecânicas de furtividade onde a respiração do sobrevivente pode ser ouvida pelo assassino",
+        "Música tema clássica original e efeitos sonoros remasterizados que elevam o suspense ao limite",
+        "Vários mapas icônicos da cidade de Haddonfield, incluindo a vizinhança residencial e o hospital"
+      ],
+      "generos": [
+        "Terror",
+        "Furtividade",
+        "Sobrevivência",
+        "Multijogador Assimétrico"
+      ],
+      "idiomaAudio": "Inglês",
+      "idiomaLegendas": "Português (Brasil), Inglês, Espanhol, Francês",
+      "idadeMinima": "18",
+      "motivoIdade": "Violência extrema, Terror constante, Assassinatos e Sangue",
+      "analises": {
+        "metacritic": "78",
+        "classificacaoCritica": "Muito Positivo entre fãs de Terror Clássico",
+        "comunidade": "85% de aprovação no Steam",
+        "destaqueReview": {
+          "veiculo": "Dread Central",
+          "nota": "8.5/10",
+          "texto": "A melhor recriação do terror oitentista de John Carpenter, com trilha sonora arrepiante de sintetizadores e tensão pura."
+        }
+      },
+      "requisitos": {
+        "tipo": "pc",
+        "minimos": {
+          "so": "Windows 10 de 64 bits",
+          "processador": "Intel Core i5-6400 ou AMD FX-8350",
+          "memoria": "8 GB de RAM",
+          "placaVideo": "Nvidia GeForce GTX 960 ou AMD Radeon R9 380",
+          "directx": "Versão 11",
+          "armazenamento": "30 GB de espaço disponível"
+        },
+        "recomendados": {
+          "so": "Windows 10 / 11 de 64 bits",
+          "processador": "Intel Core i7-7700K ou AMD Ryzen 5 3600",
+          "memoria": "16 GB de RAM",
+          "placaVideo": "Nvidia GeForce GTX 1060 (6 GB) ou AMD Radeon RX 580",
+          "directx": "Versão 12",
+          "armazenamento": "30 GB de espaço disponível em SSD"
+        }
+      }
+    },
+    "categorias": [
+      "steam"
+    ]
+  },
+  {
+    "id": "steam-bf6",
+    "titulo": "Battlefield™ 6",
+    "preco": "149,50",
+    "precoAntigo": "",
+    "imagem": "/imagens/Battlefield™ 6.jpg",
+    "categoria": "steam",
+    "plataforma": "steam",
+    "link": "/jogos/steam/battlefield 6.html",
+    "detalhes": {
+      "genero": [
+        "Tiro em Primeira Pessoa",
+        "Ação",
+        "Multijogador"
+      ],
+      "desenvolvedora": "DICE",
+      "publicadora": "Electronic Arts",
+      "lancamento": "16 de outubro de 2026",
+      "plataformas": "PC (Steam / Windows)",
+      "idioma": "Português (BR) — áudio dublado e legendas",
+      "armazenamento": "80 GB",
+      "modos": "Um jogador (Campanha militar moderna) e Multijogador online de larga escala (até 128 jogadores)",
+      "classificacao": "16",
+      "resgate": "steam",
+      "sinopse": [
+        "Battlefield™ 6 coloca os jogadores no epicentro de um conflito geopolítico moderno sem precedentes. Em cenários dinâmicos que sofrem colapsos estruturais em tempo real, esquadrões de elite combatem pelo controle estratégico de cidades globais e desertos devastados.",
+        "Pilote caças de combate supersônicos, comande tanques de batalha pesados e coordene ataques aéreos com sua infantaria em modos clássicos como Conquista e Ruptura com até 128 jogadores simultâneos."
+      ],
+      "destaques": [
+        "Destruição em tempo real de arranha-céus, pontes e defesas graças ao motor Frostbite aprimorado",
+        "Guerra com armas combinadas: pilotagem fluida de helicópteros, caças a jato, tanques e blindados",
+        "Sistema refinado de classes clássicas: Assalto, Médico, Suporte e Batedor",
+        "Campos de batalha épicos com suporte massivo para até 128 jogadores em servidores dedicados"
+      ],
+      "generos": [
+        "Tiro em Primeira Pessoa",
+        "Guerra Total",
+        "Ação",
+        "Multijogador"
+      ],
+      "idiomaAudio": "Português (Brasil), Inglês, Espanhol, Francês",
+      "idiomaLegendas": "Português (Brasil), Inglês, Espanhol, Francês, Alemão, Italiano",
+      "idadeMinima": "16",
+      "motivoIdade": "Violência realista de guerra militar, Sangue e Linguagem forte",
+      "analises": {
+        "metacritic": "84",
+        "classificacaoCritica": "Geralmente Favorável",
+        "comunidade": "Muito Positivas com servidores cheios mundialmente",
+        "destaqueReview": {
+          "veiculo": "IGN Brasil",
+          "nota": "8.5/10",
+          "texto": "O retorno glorioso à essência da destruição de cenários e guerra combinada com tanques, caças a jato e esquadrões táticos."
+        }
+      },
+      "requisitos": {
+        "tipo": "pc",
+        "minimos": {
+          "so": "Windows 10 de 64 bits",
+          "processador": "Intel Core i5-8400 ou AMD Ryzen 5 2600",
+          "memoria": "12 GB de RAM",
+          "placaVideo": "Nvidia GeForce RTX 2060 ou AMD Radeon RX 5600 XT",
+          "directx": "Versão 12",
+          "armazenamento": "90 GB de espaço disponível (SSD recomendado)"
+        },
+        "recomendados": {
+          "so": "Windows 11 de 64 bits",
+          "processador": "Intel Core i7-10700K ou AMD Ryzen 7 3700X",
+          "memoria": "16 GB de RAM",
+          "placaVideo": "Nvidia GeForce RTX 3070 ou AMD Radeon RX 6700 XT",
+          "directx": "Versão 12",
+          "armazenamento": "90 GB de espaço disponível em SSD NVMe"
+        }
+      }
+    },
+    "categorias": [
+      "steam"
+    ]
+  },
+  {
+    "id": "steam-phoenix",
+    "titulo": "Phoenix Wright Ace Attorney Trilogy",
+    "preco": "42,57",
+    "precoAntigo": "",
+    "imagem": "/imagens/Phoenix Wright Ace Attorney Trilogy.jpg",
+    "categoria": "steam",
+    "plataforma": "steam",
+    "link": "/jogos/steam/Phoenix Wright Ace Attorney Trilogy.html",
+    "detalhes": {
+      "genero": [
+        "Aventura",
+        "Visual Novel",
+        "Investigação"
+      ],
+      "desenvolvedora": "Capcom",
+      "publicadora": "Capcom",
+      "lancamento": "9 de abril de 2019",
+      "plataformas": "PC (Steam / Windows)",
+      "idioma": "Inglês, Japonês — textos",
+      "armazenamento": "10 GB",
+      "modos": "Um jogador (Single-player)",
+      "classificacao": "12",
+      "resgate": "steam",
+      "sinopse": [
+        "Assuma a bancada de defesa no papel do advogado novato Phoenix Wright e lute pela verdade para inocentar seus clientes acusados injustamente em tribunais teatrais e cheios de reviravoltas.",
+        "Esta coleção reúne os três primeiros jogos clássicos da franquia em alta definição: Phoenix Wright: Ace Attorney, Justice for All e Trials and Tribulations, somando 14 casos eletrizantes repletos de mistério, humor e deduções lógicas geniais."
+      ],
+      "destaques": [
+        "Inclui todos os 14 casos completos da trilogia clássica com ilustrações remasterizadas em HD",
+        "Mecânicas investigativas em duas fases: coleta de evidências na cena do crime e confronto no tribunal",
+        "Descubra contradições nos depoimentos das testemunhas e grite o icônico 'PROTESTO!' ('OBJECTION!')",
+        "Trilha sonora clássica memorável com arranjos orquestrais e galeria de arte conceitual inclusa"
+      ],
+      "generos": [
+        "Visual Novel",
+        "Mistério",
+        "Aventura",
+        "Investigação de Tribunal"
+      ],
+      "idiomaAudio": "Inglês, Japonês",
+      "idiomaLegendas": "Português (Brasil), Inglês, Espanhol, Francês, Alemão, Japonês, Chinês",
+      "idadeMinima": "12",
+      "motivoIdade": "Assassinatos investigativos, Sangue leve e Temas policiais",
+      "analises": {
+        "metacritic": "80",
+        "classificacaoCritica": "Geralmente Favorável",
+        "comunidade": "Extremamente Positivas (97% de mais de 25.000 análises no Steam)",
+        "destaqueReview": {
+          "veiculo": "Nintendo Blast",
+          "nota": "9.0/10",
+          "texto": "Uma trilogia brilhante e carismática de casos jurídicos com reviravoltas geniais, personagens inesquecíveis e o clássico grito de PROTESTO!"
+        }
+      },
+      "requisitos": {
+        "tipo": "pc",
+        "minimos": {
+          "so": "Windows 10 de 64 bits",
+          "processador": "Intel Core i3-4160 ou AMD equivalente",
+          "memoria": "4 GB de RAM",
+          "placaVideo": "Intel HD Graphics 4400 ou Nvidia GeForce GT 630",
+          "directx": "Versão 11",
+          "armazenamento": "2 GB de espaço disponível"
+        },
+        "recomendados": {
+          "so": "Windows 10 / 11 de 64 bits",
+          "processador": "Intel Core i5-3570 ou AMD equivalente",
+          "memoria": "8 GB de RAM",
+          "placaVideo": "Nvidia GeForce GTX 660 ou AMD Radeon R7 260X",
+          "directx": "Versão 11",
+          "armazenamento": "2 GB de espaço disponível"
+        }
+      }
+    },
+    "categorias": [
+      "steam"
+    ]
+  },
+  {
+    "id": "steam-tekken8",
+    "titulo": "TEKKEN 8",
+    "preco": "176,90",
+    "precoAntigo": "",
+    "imagem": "/imagens/TEKKEN 8.jpg",
+    "categoria": "steam",
+    "plataforma": "steam",
+    "link": "/jogos/steam/tekken 8.html",
+    "detalhes": {
+      "genero": [
+        "Luta",
+        "Ação"
+      ],
+      "desenvolvedora": "Bandai Namco Studios",
+      "publicadora": "Bandai Namco Entertainment",
+      "lancamento": "26 de janeiro de 2024",
+      "plataformas": "PC (Steam / Windows)",
+      "idioma": "Português (BR) — legendas e interface",
+      "armazenamento": "100 GB",
+      "modos": "Um jogador (Modo História épico), Multijogador local e Online com Netcode Rollback e Crossplay",
+      "classificacao": "14",
+      "resgate": "steam",
+      "sinopse": [
+        "A lendária saga da família Mishima e Kazama atinge seu ápice destrutivo. Kazuya Mishima avança em sua ambição implacável de dominação global com as forças da G Corporation, restando apenas seu filho, Jin Kazama, para desafiar o destino e confrontar o gene demoníaco.",
+        "Construído do zero na Unreal Engine 5, TEKKEN 8 revoluciona a franquia com o inédito Heat System, recompensando a agressividade dos jogadores com golpes devastadores, cenários destrutíveis e os combates 3D mais fluidos do gênero."
+      ],
+      "destaques": [
+        "32 lutadores únicos com modelos fotorrealistas de músculos e expressões na Unreal Engine 5",
+        "Novo Heat System que adiciona táticas ofensivas, dash especial e ataques devastadores",
+        "Modo Arcade Quest com avatares personalizáveis para aprender os segredos das lutas",
+        "Cross-play completo e Netcode Rollback proporcionando partidas online suaves sem lag"
+      ],
+      "generos": [
+        "Luta",
+        "Ação",
+        "3D",
+        "Competitivo",
+        "Esports"
+      ],
+      "idiomaAudio": "Multilíngue nativo (Japonês, Inglês, Francês, Italiano, etc.)",
+      "idiomaLegendas": "Português (Brasil), Inglês, Espanhol, Francês, Alemão, Italiano, Japonês",
+      "idadeMinima": "14",
+      "motivoIdade": "Violência moderada de combate e Linguagem leve",
+      "analises": {
+        "metacritic": "90",
+        "classificacaoCritica": "Aclamação Universal",
+        "comunidade": "Muito Positivas no Steam (Mais de 35.000 análises e destaque no circuito da FGC)",
+        "destaqueReview": {
+          "veiculo": "IGN Brasil",
+          "nota": "9.0/10",
+          "texto": "Um espetáculo visual construído no Unreal Engine 5 com o novo Heat System que torna cada soco agressivo e empolgante."
+        }
+      },
+      "requisitos": {
+        "tipo": "pc",
+        "minimos": {
+          "so": "Windows 10 de 64 bits",
+          "processador": "Intel Core i5-6600K ou AMD Ryzen 5 1600",
+          "memoria": "8 GB de RAM",
+          "placaVideo": "Nvidia GeForce GTX 1050 Ti ou AMD Radeon R9 380X",
+          "directx": "Versão 12",
+          "armazenamento": "100 GB de espaço disponível"
+        },
+        "recomendados": {
+          "so": "Windows 10 / 11 de 64 bits",
+          "processador": "Intel Core i7-7700K ou AMD Ryzen 5 2600",
+          "memoria": "16 GB de RAM",
+          "placaVideo": "Nvidia GeForce RTX 2070 ou AMD Radeon RX 5700 XT",
+          "directx": "Versão 12",
+          "armazenamento": "100 GB de espaço disponível em SSD"
+        }
+      }
+    },
+    "categorias": [
+      "steam"
+    ]
+  },
+  {
+    "id": "steam-stray",
+    "titulo": "Stray",
+    "preco": "89,99",
+    "precoAntigo": "",
+    "imagem": "/imagens/Stray.jpg",
+    "categoria": "steam",
+    "plataforma": "steam",
+    "link": "/jogos/steam/stray.html",
+    "detalhes": {
+      "genero": [
+        "Aventura",
+        "Puzzle",
+        "Indie"
+      ],
+      "desenvolvedora": "BlueTwelve Studio",
+      "publicadora": "Annapurna Interactive",
+      "lancamento": "19 de julho de 2022",
+      "plataformas": "PC (Steam / Windows)",
+      "idioma": "Português (BR) — textos e interface",
+      "armazenamento": "10 GB",
+      "modos": "Um jogador (Single-player)",
+      "classificacao": "10",
+      "resgate": "steam",
+      "sinopse": [
+        "Perdido, solitário e separado de sua família felina, um gato de rua precisa desvendar um mistério ancestral para escapar de uma cibercidade decadente e esquecida habitada apenas por robôs melancólicos.",
+        "Veja o mundo pelos olhos curiosos de um gato enquanto anda por telhados iluminados por neon, esgueira-se por becos escuros e faz amizade com B-12, um pequeno drone voador que ajuda a traduzir mensagens e resolver enigmas pelo caminho."
+      ],
+      "destaques": [
+        "Animações felinas ultra autênticas: suba em balcões, arranhe sofás, derrube copos e mie à vontade",
+        "Atmosfera cyberpunk cativante com becos úmidos de neon e robôs com personalidades comoventes",
+        "Mundo vertical engenhoso planejado para exploração ágil através de saltos precisos",
+        "Trilha sonora eletrônica lo-fi relaxante combinada com momentos tensos de perseguição"
+      ],
+      "generos": [
+        "Aventura",
+        "Gato",
+        "Ficção Científica",
+        "Cyberpunk",
+        "Quebra-cabeça"
+      ],
+      "idiomaAudio": "Fictício (Miados e linguagem robótica)",
+      "idiomaLegendas": "Português (Brasil), Inglês, Espanhol, Francês, Alemão, Italiano, Japonês",
+      "idadeMinima": "10",
+      "motivoIdade": "Medo moderado e Violência fantasiosa contra criaturas mutantes",
+      "analises": {
+        "metacritic": "82",
+        "classificacaoCritica": "Geralmente Favorável",
+        "comunidade": "Extremamente Positivas (97% de mais de 125.000 análises no Steam)",
+        "destaqueReview": {
+          "veiculo": "The Enemy",
+          "nota": "8.5/10",
+          "texto": "Uma jornada charmosa, poética e visualmente encantadora que recria os movimentos felinos com precisão impecável."
+        }
+      },
+      "requisitos": {
+        "tipo": "pc",
+        "minimos": {
+          "so": "Windows 10 de 64 bits",
+          "processador": "Intel Core i5-2300 ou AMD FX-6350",
+          "memoria": "8 GB de RAM",
+          "placaVideo": "Nvidia GeForce GTX 650 Ti (2 GB) ou AMD Radeon R7 360 (2 GB)",
+          "directx": "Versão 12",
+          "armazenamento": "10 GB de espaço disponível"
+        },
+        "recomendados": {
+          "so": "Windows 10 / 11 de 64 bits",
+          "processador": "Intel Core i5-8400 ou AMD Ryzen 5 2600",
+          "memoria": "8 GB de RAM",
+          "placaVideo": "Nvidia GeForce GTX 780 (3 GB) ou AMD Radeon R9 290X (4 GB)",
+          "directx": "Versão 12",
+          "armazenamento": "10 GB de espaço disponível em SSD"
+        }
+      }
+    },
+    "categorias": [
+      "steam"
+    ]
+  },
+  {
+    "id": "steam-silksong",
+    "titulo": "Hollow Knight Silksong",
+    "preco": "59,99",
+    "precoAntigo": "",
+    "imagem": "/imagens/Hollow Knight Silksong.jpg",
+    "categoria": "steam",
+    "plataforma": "steam",
+    "link": "/jogos/steam/hollow knight silksong.html",
+    "detalhes": {
+      "genero": [
+        "Metroidvania",
+        "Ação",
+        "Plataforma 2D"
+      ],
+      "desenvolvedora": "Team Cherry",
+      "publicadora": "Team Cherry",
+      "lancamento": "2025 (Lançamento confirmado)",
+      "plataformas": "PC (Steam / Windows)",
+      "idioma": "Português (BR) — textos e interface",
+      "armazenamento": "8 GB",
+      "modos": "Um jogador (Single-player)",
+      "classificacao": "10",
+      "resgate": "steam",
+      "sinopse": [
+        "Assuma o papel de Hornet, a corajosa princesa e protetora de Hallownest, capturada e transportada para o reino desconhecido e luminoso de Pharloom, uma terra governada pela seda e pela música.",
+        "Suba até o pico mais alto desta cidadela assombrada enfrentando mais de 165 inimigos inéditos, criando ferramentas letais a partir de conchas e seda, e descobrindo segredos antigos ligados ao seu próprio passado real."
+      ],
+      "destaques": [
+        "Jogabilidade rápida e acrobática com Hornet, utilizando fios de seda para golpes aéreos",
+        "Mundo novo gigante e deslumbrante desenhado à mão com mais de 165 chefes e inimigos",
+        "Sistema de criação de armadilhas, agulhas e ferramentas de suporte em bancadas de descanso",
+        "Trilha sonora épica composta inteiramente por Christopher Larkin com cordas arrebatadoras"
+      ],
+      "generos": [
+        "Metroidvania",
+        "Ação",
+        "Aventura",
+        "Indie",
+        "Soulslike"
+      ],
+      "idiomaAudio": "Fictício (Dialeto dos Insetos)",
+      "idiomaLegendas": "Português (Brasil), Inglês, Espanhol, Francês, Alemão, Italiano, Japonês",
+      "idadeMinima": "10",
+      "motivoIdade": "Violência moderada e Fantasia sombria",
+      "analises": {
+        "metacritic": "94",
+        "classificacaoCritica": "Altamente Aguardado",
+        "comunidade": "O jogo mais adicionado à lista de desejos de toda a história do Steam",
+        "destaqueReview": {
+          "veiculo": "IGN Brasil",
+          "nota": "10/10 (Expectativa)",
+          "texto": "A continuação da maior obra-prima dos jogos independentes traz Hornet com acrobacias mortais e um reino cintilante de seda e canção."
+        }
+      },
+      "requisitos": {
+        "tipo": "pc",
+        "minimos": {
+          "so": "Windows 10 de 64 bits",
+          "processador": "Intel Core i5-2500K ou AMD FX-6300",
+          "memoria": "8 GB de RAM",
+          "placaVideo": "Nvidia GeForce GTX 760 ou AMD Radeon R9 270X",
+          "directx": "Versão 11",
+          "armazenamento": "15 GB de espaço disponível"
+        },
+        "recomendados": {
+          "so": "Windows 10 / 11 de 64 bits",
+          "processador": "Intel Core i5-6600K ou AMD Ryzen 5 1600",
+          "memoria": "8 GB de RAM",
+          "placaVideo": "Nvidia GeForce GTX 1060 (6 GB) ou AMD Radeon RX 580",
+          "directx": "Versão 12",
+          "armazenamento": "15 GB de espaço disponível em SSD"
+        }
+      }
+    },
+    "categorias": [
+      "steam"
+    ]
+  },
+  {
+    "id": "xbox-forza6",
+    "titulo": "Forza Horizon 6",
+    "preco": "299,00",
+    "precoAntigo": "",
+    "imagem": "/imagens/forza.png",
+    "categoria": "xbox",
+    "plataforma": "xbox",
+    "link": "/jogos/xbox/forza-horizon-6.html",
+    "detalhes": {
+      "genero": [
+        "Corrida",
+        "Mundo Aberto"
+      ],
+      "desenvolvedora": "Playground Games",
+      "publicadora": "Xbox Game Studios",
+      "lancamento": "10 de novembro de 2026",
+      "plataformas": "Xbox Series X|S / PC",
+      "idioma": "Português (BR) — áudio e legendas",
+      "armazenamento": "130 GB (estimado)",
+      "modos": "Um jogador, Cooperativo online e Multijogador massivo online (Horizon Life com dezenas de pilotos)",
+      "classificacao": "L",
+      "resgate": "xbox",
+      "sinopse": [
+        "O Festival Horizon viaja para um dos territórios mais pedidos pelos fãs, combinando metrópoles modernas com montanhas lendárias de drifting, florestas densas e rodovias de alta velocidade.",
+        "Pilote centenas dos carros mais extraordinários do planeta, desde hipercarros modernos até lendas clássicas, em um ecossistema com estações dinâmicas do ano que transformam pistas secas em rios congelados e pistas de lama desafiadoras."
+      ],
+      "destaques": [
+        "Garagem estelar com mais de 600 carros autenticamente recriados por telemetria a laser",
+        "Clima dinâmico com tempestades tropicais, neblina volumétrica e ciclo diurno completo de 24 horas",
+        "Horizon Arcade e EventLab para criar pistas e regras personalizadas compartilhadas na comunidade",
+        "Suporte Xbox Play Anywhere: compre no Xbox e jogue também no PC sem custo adicional"
+      ],
+      "generos": [
+        "Corrida",
+        "Mundo Aberto",
+        "Simulação",
+        "Esportes"
+      ],
+      "idiomaAudio": "Português (Brasil), Inglês, Espanhol, Francês",
+      "idiomaLegendas": "Português (Brasil), Inglês, Espanhol, Francês, Alemão, Italiano",
+      "idadeMinima": "L",
+      "motivoIdade": "Livre para todos os públicos",
+      "analises": {
+        "metacritic": "93",
+        "classificacaoCritica": "Aclamação Universal",
+        "comunidade": "Mais de 95% de aprovação na comunidade automobilística",
+        "destaqueReview": {
+          "veiculo": "IGN Brasil",
+          "nota": "9.5/10",
+          "texto": "O ápice dos jogos de corrida de mundo aberto, combinando visuais inacreditáveis em 4K a 60 FPS com a paixão pura pela velocidade."
+        }
+      },
+      "requisitos": {
+        "tipo": "console",
+        "especificacoesConsole": {
+          "resolucao": "4K a 60 FPS cravados no Xbox Series X / 1440p a 60 FPS no Xbox Series S",
+          "armazenamento": "125 GB de espaço disponível em SSD Xbox Velocity",
+          "recursos": "Traçado de raios em tempo real durante as corridas, áudio espacial Dolby Atmos e suporte ao Xbox Play Anywhere"
+        }
+      }
+    },
+    "categorias": [
+      "xbox"
+    ]
+  },
+  {
+    "id": "xbox-halo",
+    "titulo": "Halo Infinite",
+    "preco": "299,00",
+    "precoAntigo": "",
+    "imagem": "/imagens/halo.jpg",
+    "categoria": "xbox",
+    "plataforma": "xbox",
+    "link": "/jogos/xbox/halo-infinite.html",
+    "detalhes": {
+      "genero": [
+        "Tiro em Primeira Pessoa",
+        "Ficção Científica"
+      ],
+      "desenvolvedora": "343 Industries",
+      "publicadora": "Xbox Game Studios",
+      "lancamento": "8 de dezembro de 2021",
+      "plataformas": "Xbox Series X|S / Xbox One / PC",
+      "idioma": "Português (BR) — áudio dublado e legendas",
+      "armazenamento": "48 GB",
+      "modos": "Um jogador (Campanha em mundo aberto), Cooperativo online de campanha e Multijogador PvP gratuito (Arena e BTB)",
+      "classificacao": "14",
+      "resgate": "xbox",
+      "sinopse": [
+        "Quando toda a esperança se perde e o destino da humanidade está por um fio, Master Chief está pronto para encarar o inimigo mais cruel que já enfrentou: os Banidos, uma facção guerreira brutal liderada pelo temido guerreiro Escharum.",
+        "No misterioso anel Zeta Halo, explore um mundo aberto vasto com verticalidade sem precedentes, liberte bases da UNSC e use o novo gancho de escalada para arremessar tanques e manobrar pelos campos de batalha."
+      ],
+      "destaques": [
+        "A campanha mais ampla e aberta de toda a franquia Halo com liberdade tática absoluta",
+        "O gancho de escalada (Grappleshot) revoluciona o combate e a mobilidade do Spartan-117",
+        "Multijogador competitivo gratuito (Free-to-Play) com suporte a partidas em 120 FPS",
+        "Dublagem brasileira impecável trazendo de volta a voz clássica lendária do Master Chief"
+      ],
+      "generos": [
+        "Tiro em Primeira Pessoa",
+        "Ficção Científica",
+        "Ação",
+        "Espacial"
+      ],
+      "idiomaAudio": "Português (Brasil), Inglês, Espanhol, Francês, Alemão, Japonês",
+      "idiomaLegendas": "Português (Brasil), Inglês, Espanhol, Francês, Alemão, Italiano",
+      "idadeMinima": "14",
+      "motivoIdade": "Violência de tiro em ficção científica e Sangue alienígena leve",
+      "analises": {
+        "metacritic": "87",
+        "classificacaoCritica": "Geralmente Favorável",
+        "comunidade": "Mais de 20 milhões de espartanos mobilizados no lançamento",
+        "destaqueReview": {
+          "veiculo": "Voxel",
+          "nota": "9.0/10",
+          "texto": "O gancho de escalada revitalizou o tiroteio de Halo, entregando o melhor combate sandbox da história de Master Chief."
+        }
+      },
+      "requisitos": {
+        "tipo": "console",
+        "especificacoesConsole": {
+          "resolucao": "4K a 60 FPS ou até 120 FPS no Xbox Series X / 1080p a 60 FPS no Xbox Series S",
+          "armazenamento": "50 GB de espaço disponível em SSD",
+          "recursos": "Quick Resume instantâneo, áudio espacial com Dolby Atmos e suporte total ao Xbox Play Anywhere"
+        }
+      }
+    },
+    "categorias": [
+      "xbox"
+    ]
+  },
+  {
+    "id": "xbox-forza5",
+    "titulo": "Forza Horizon 5",
+    "preco": "129,90",
+    "precoAntigo": "249,00",
+    "imagem": "/imagens/forza5.jpg",
+    "categoria": "xbox",
+    "plataforma": "xbox",
+    "link": "/jogos/xbox/forza-horizon-5.html",
+    "detalhes": {
+      "genero": [
+        "Corrida",
+        "Mundo Aberto"
+      ],
+      "desenvolvedora": "Playground Games",
+      "publicadora": "Xbox Game Studios",
+      "lancamento": "9 de novembro de 2021",
+      "plataformas": "Xbox Series X|S / Xbox One / PC",
+      "idioma": "Português (BR) — áudio e legendas",
+      "armazenamento": "110 GB",
+      "modos": "Um jogador, Cooperativo online e Multijogador massivo online (Horizon Open e Convoys)",
+      "classificacao": "L",
+      "resgate": "xbox",
+      "sinopse": [
+        "Sua maior Aventura Horizon espera por você! Explore as paisagens vibrantes e em constante evolução do México com uma ação de direção ilimitada e divertida em centenas dos melhores carros do mundo.",
+        "Lidere expedições de tirar o fôlego pelas selvas tropicais, atravesse tempestades de poeira sufocantes, suba até o topo de vulcões com caldeiras ativas e corra pelas cidades coloniais coloridas de Guanajuato."
+      ],
+      "destaques": [
+        "O maior e mais diverso mapa já construído em um jogo da série Forza Horizon",
+        "Mais de 700 carros mundiais minuciosamente recriados com áudio gravado em motores reais",
+        "Tempestades tropicais volumétricas e tempestades de poeira dinâmicas que alteram a pilotagem",
+        "Completamente otimizado para o Xbox Series X|S com tempos de carregamento instantâneos"
+      ],
+      "generos": [
+        "Corrida",
+        "Mundo Aberto",
+        "Automobilismo",
+        "Aventura"
+      ],
+      "idiomaAudio": "Português (Brasil), Inglês, Espanhol, Francês",
+      "idiomaLegendas": "Português (Brasil), Inglês, Espanhol, Francês, Alemão, Italiano",
+      "idadeMinima": "L",
+      "motivoIdade": "Livre para todos os públicos",
+      "analises": {
+        "metacritic": "92",
+        "classificacaoCritica": "Aclamação Universal",
+        "comunidade": "Mais de 35 milhões de jogadores no ecossistema Xbox",
+        "destaqueReview": {
+          "veiculo": "IGN Brasil",
+          "nota": "10/10",
+          "texto": "Uma conquista técnica inacreditável e o melhor festival de corrida já feito, com paisagens mexicanas deslumbrantes."
+        }
+      },
+      "requisitos": {
+        "tipo": "console",
+        "especificacoesConsole": {
+          "resolucao": "4K nativo a 30 FPS (Modo Qualidade) ou 4K a 60 FPS fluídos (Modo Desempenho) no Xbox Series X",
+          "armazenamento": "110 GB de espaço disponível em SSD",
+          "recursos": "Arquitetura Xbox Velocity, carregamento rápido e iluminação fotorrealista HDR"
+        }
+      }
+    },
+    "categorias": [
+      "xbox",
+      "promocao"
+    ]
+  },
+  {
+    "id": "xbox-gears5",
+    "titulo": "Gears 5",
+    "preco": "79,90",
+    "precoAntigo": "199,00",
+    "imagem": "/imagens/gears5.jpg",
+    "categoria": "xbox",
+    "plataforma": "xbox",
+    "link": "/jogos/xbox/gears-5.html",
+    "detalhes": {
+      "genero": [
+        "Tiro em Terceira Pessoa",
+        "Ação"
+      ],
+      "desenvolvedora": "The Coalition",
+      "publicadora": "Xbox Game Studios",
+      "lancamento": "10 de setembro de 2019",
+      "plataformas": "Xbox Series X|S / Xbox One / PC",
+      "idioma": "Português (BR) — áudio dublado e legendas",
+      "armazenamento": "80 GB",
+      "modos": "Um jogador, Campanha cooperativa (até 3 jogadores), Horda (5 jogadores) e PvP Versus competitivo",
+      "classificacao": "18",
+      "resgate": "xbox",
+      "sinopse": [
+        "Com a guerra total se aproximando no planeta Sera, Kait Diaz se separa do esquadrão COG para desvendar sua misteriosa conexão com o Enxame e a Rainha Locust, descobrindo que o verdadeiro perigo para o planeta pode vir de suas próprias origens.",
+        "Acompanhada por Del, JD e pelo robô utilitário Jack, Kait cruza desertos de areia vermelha e geleiras congeladas a bordo do esquife a vela, enfrentando monstruosidades grotescas em um dos combates de cobertura mais intensos dos videogames."
+      ],
+      "destaques": [
+        "Campanha profunda com áreas abertas exploráveis a bordo de um esquife veloz",
+        "Modo Horda cooperativo clássico para 5 jogadores com fortificações e habilidades de classe",
+        "Modo Fuga (Escape): trio cooperativo frenético escapando de colmeias prestes a explodir",
+        "Otimizado para Xbox Series X|S rodando a impressionantes 120 FPS no modo multiplayer competitivo"
+      ],
+      "generos": [
+        "Tiro em Terceira Pessoa",
+        "Ação",
+        "Ficção Científica",
+        "Guerra"
+      ],
+      "idiomaAudio": "Português (Brasil), Inglês, Espanhol, Francês",
+      "idiomaLegendas": "Português (Brasil), Inglês, Espanhol, Francês, Alemão, Italiano",
+      "idadeMinima": "18",
+      "motivoIdade": "Violência extrema, Sangue, Desmembramento com motosserra e Linguagem forte",
+      "analises": {
+        "metacritic": "84",
+        "classificacaoCritica": "Geralmente Favorável",
+        "comunidade": "Muito Positivas (Mais de 85% de aprovação dos fãs)",
+        "destaqueReview": {
+          "veiculo": "The Enemy",
+          "nota": "9.0/10",
+          "texto": "Gears 5 renova a fórmula com áreas abertas magníficas no esquife e um dos combates de cobertura mais satisfatórios da história."
+        }
+      },
+      "requisitos": {
+        "tipo": "console",
+        "especificacoesConsole": {
+          "resolucao": "4K dinâmico a 60 FPS na campanha e até 120 FPS no multiplayer Versus no Xbox Series X",
+          "armazenamento": "80 GB de espaço disponível em SSD",
+          "recursos": "Iluminação global por software, reflexos Screen Space e som Dolby Atmos"
+        }
+      }
+    },
+    "categorias": [
+      "xbox",
+      "promocao"
+    ]
+  },
+  {
+    "id": "xbox-seaof",
+    "titulo": "Sea of Thieves",
+    "preco": "199,99",
+    "precoAntigo": "",
+    "imagem": "/imagens/seaof.webp",
+    "categoria": "xbox",
+    "plataforma": "xbox",
+    "link": "/jogos/xbox/sea-of-thieves.html",
+    "detalhes": {
+      "genero": [
+        "Aventura",
+        "Mundo Aberto",
+        "Multijogador"
+      ],
+      "desenvolvedora": "Rare",
+      "publicadora": "Xbox Game Studios",
+      "lancamento": "20 de março de 2018",
+      "plataformas": "Xbox Series X|S / Xbox One / PC / PS5",
+      "idioma": "Português (BR) — textos e áudio",
+      "armazenamento": "70 GB",
+      "modos": "Multijogador cooperativo e competitivo online (Tripulações de 1 a 4 piratas em galeões e chalupas)",
+      "classificacao": "12",
+      "resgate": "xbox",
+      "sinopse": [
+        "Sea of Thieves oferece a experiência pirata definitiva: navegar mares desconhecidos, travar combates ferozes de canhão contra navios rivais, saquear baús do tesouro e beber grogue em tavernas ensolaradas.",
+        "Monte sua tripulação com amigos para comandar desde pequenas chalupas até imponentes galeões com 8 canhões. Cada vela, âncora e leme precisa de cooperação humana, transformando cada viagem em uma epopeia imprevisível cheia de monstros marinhos como o Kraken e o Megalodonte."
+      ],
+      "destaques": [
+        "Mundo compartilhado vibrante onde cada navio no horizonte é controlado por tripulações reais",
+        "Campanhas épicas de Grandes Lorotas incluindo crossovers oficiais com Piratas do Caribe e Monkey Island",
+        "Progressão puramente cosmética: todos os piratas começam em igualdade de armas e canhões",
+        "Cross-play e salvamento cruzado total entre jogadores de Xbox, PC e PlayStation"
+      ],
+      "generos": [
+        "Aventura Pirata",
+        "Mundo Aberto",
+        "Multijogador",
+        "Exploração Naval"
+      ],
+      "idiomaAudio": "Inglês",
+      "idiomaLegendas": "Português (Brasil), Inglês, Espanhol, Francês, Alemão, Italiano, Russo",
+      "idadeMinima": "12",
+      "motivoIdade": "Violência moderada de combate pirata, Consumo de álcool e Esqueletos",
+      "analises": {
+        "metacritic": "82",
+        "classificacaoCritica": "Geralmente Favorável",
+        "comunidade": "Mais de 40 milhões de piratas já navegaram pelos mares de Sea of Thieves",
+        "destaqueReview": {
+          "veiculo": "IGN Brasil",
+          "nota": "8.5/10",
+          "texto": "A melhor aventura pirata cooperativa existente, oferecendo histórias hilárias e batalhas de navios inesquecíveis entre amigos."
+        }
+      },
+      "requisitos": {
+        "tipo": "console",
+        "especificacoesConsole": {
+          "resolucao": "4K a 60 FPS cravados no Xbox Series X / 1080p a 60 FPS no Xbox Series S",
+          "armazenamento": "50 GB de espaço disponível em SSD",
+          "recursos": "Física de água mais avançada dos jogos modernos, Cross-play integral entre PC e consoles"
+        }
+      }
+    },
+    "categorias": [
+      "xbox"
+    ]
+  },
+  {
+    "id": "xbox-starfield",
+    "titulo": "Starfield",
+    "preco": "299,00",
+    "precoAntigo": "",
+    "imagem": "/imagens/starfield.jpg",
+    "categoria": "xbox",
+    "plataforma": "xbox",
+    "link": "/jogos/xbox/starfield.html",
+    "detalhes": {
+      "genero": [
+        "RPG",
+        "Ficção Científica",
+        "Mundo Aberto"
+      ],
+      "desenvolvedora": "Bethesda Game Studios",
+      "publicadora": "Bethesda Softworks",
+      "lancamento": "6 de setembro de 2023",
+      "plataformas": "Xbox Series X|S / PC",
+      "idioma": "Inglês (áudio) — Português (BR) (legendas)",
+      "armazenamento": "125 GB",
+      "modos": "Um jogador (RPG épico single-player com centenas de horas)",
+      "classificacao": "16",
+      "resgate": "xbox",
+      "sinopse": [
+        "No ano de 2330, a humanidade se aventurou além do nosso sistema solar, colonizando novos planetas e vivendo como um povo viajante do espaço. Você se junta à Constelação — o último grupo de exploradores espaciais que busca artefatos raros pela galáxia.",
+        "Crie qualquer personagem que desejar e explore com liberdade incomparável mais de 1.000 planetas cheios de vida alienígena, piratas espaciais, cidades futuristas movimentadas como Nova Atlântida e ruínas desconhecidas que guardam os maiores mistérios da criação."
+      ],
+      "destaques": [
+        "Mais de 1.000 planetas e luas exploráveis com mineração, postos avançados e fauna alienígena",
+        "Estaleiro naval completo: projete, monte e pilote sua própria nave estelar de combate",
+        "Combate espacial frenético entre asteroides com redirecionamento de energia de escudos e motores",
+        "Suporte oficial a Criações (Mods) permitindo instalar missões e visuais extras direto no Xbox"
+      ],
+      "generos": [
+        "RPG Espacial",
+        "Ficção Científica",
+        "Mundo Aberto",
+        "Aventura"
+      ],
+      "idiomaAudio": "Inglês, Francês, Alemão, Japonês, Espanhol",
+      "idiomaLegendas": "Português (Brasil), Inglês, Espanhol, Francês, Alemão, Italiano, Japonês",
+      "idadeMinima": "18",
+      "motivoIdade": "Violência armada, Sangue, Drogas fictícias (Aurora) e Temas adultos",
+      "analises": {
+        "metacritic": "83",
+        "classificacaoCritica": "Geralmente Favorável",
+        "comunidade": "Mais de 15 milhões de exploradores espaciais",
+        "destaqueReview": {
+          "veiculo": "IGN Brasil",
+          "nota": "9.0/10",
+          "texto": "O universo mais colossal já concebido pela Bethesda, combinando exploração espacial com a liberdade clássica de seus RPGs."
+        }
+      },
+      "requisitos": {
+        "tipo": "console",
+        "especificacoesConsole": {
+          "resolucao": "4K nativo com opções de 30 FPS, 40 FPS ou 60 FPS no Xbox Series X com monitores VRR",
+          "armazenamento": "125 GB de espaço disponível em SSD",
+          "recursos": "Construção de naves peça por peça, suporte nativo a Mods (Criações) no console"
+        }
+      }
+    },
+    "categorias": [
+      "xbox"
+    ]
+  },
+  {
+    "id": "xbox-senuas",
+    "titulo": "Senua's Saga: Hellblade II",
+    "preco": "249,00",
+    "precoAntigo": "",
+    "imagem": "/imagens/senuas.jpg",
+    "categoria": "xbox",
+    "plataforma": "xbox",
+    "link": "/jogos/xbox/senua-s-saga-hellblade-ii.html",
+    "detalhes": {
+      "genero": [
+        "Ação",
+        "Aventura",
+        "Narrativo"
+      ],
+      "desenvolvedora": "Ninja Theory",
+      "publicadora": "Xbox Game Studios",
+      "lancamento": "21 de maio de 2024",
+      "plataformas": "Xbox Series X|S / PC",
+      "idioma": "Inglês (áudio) — Português (BR) (legendas)",
+      "armazenamento": "50 GB",
+      "modos": "Um jogador (Experiência imersiva focada na história)",
+      "classificacao": "18",
+      "resgate": "xbox",
+      "sinopse": [
+        "A sequência do premiado Hellblade: Senua's Sacrifice traz Senua em uma jornada brutal de sobrevivência pelas paisagens míticas e implacáveis da Islândia viking do século X.",
+        "Determinada a salvar as vítimas das atrocidades da tirania escandinava, Senua enfrenta não apenas gigantes e guerreiros sangrentos, mas também a escuridão persistente de sua própria psicose, retratada com rigor científico em colaboração com neurocientistas renomados."
+      ],
+      "destaques": [
+        "Fidelidade gráfica que apaga as fronteiras entre cinemáticas e jogabilidade na Unreal Engine 5",
+        "Áudio Binaural revolucionário onde sussurros e vozes ecoam ao redor da cabeça do jogador",
+        "Combate corporal de espadas feroz, cru e visceral com captura de movimentos de dublês de Hollywood",
+        "Fotogrametria ultrarrealista recriando as paisagens vulcânicas autênticas da Islândia"
+      ],
+      "generos": [
+        "Ação",
+        "Aventura",
+        "Narrativa Cinematográfica",
+        "Psicológico"
+      ],
+      "idiomaAudio": "Inglês (Áudio Binaural 3D gravado com fones especializados)",
+      "idiomaLegendas": "Português (Brasil), Inglês, Espanhol, Francês, Alemão, Italiano, Japonês",
+      "idadeMinima": "18",
+      "motivoIdade": "Violência extrema, Tortura, Alucinações auditivas intensas e Temas psicológicos graves",
+      "analises": {
+        "metacritic": "81",
+        "classificacaoCritica": "Geralmente Favorável",
+        "comunidade": "Aclamado pelo pioneirismo em gráficos na Unreal Engine 5",
+        "destaqueReview": {
+          "veiculo": "The Enemy",
+          "nota": "8.5/10",
+          "texto": "O jogo visualmente mais impressionante e com a engenharia de som mais aterrorizante já concebida na história dos games."
+        }
+      },
+      "requisitos": {
+        "tipo": "console",
+        "especificacoesConsole": {
+          "resolucao": "Resolução dinâmica cinematográfica com formato 21:9 e iluminação Lumen na Unreal Engine 5",
+          "armazenamento": "50 GB de espaço disponível em SSD",
+          "recursos": "Recomendado uso obrigatório de fones de ouvido para vivenciar o Áudio Binaural 3D das vozes internas"
+        }
+      }
+    },
+    "categorias": [
+      "xbox"
+    ]
+  },
+  {
+    "id": "xbox-flight",
+    "titulo": "Microsoft Flight Simulator",
+    "preco": "249,95",
+    "precoAntigo": "",
+    "imagem": "/imagens/flight.jpg",
+    "categoria": "xbox",
+    "plataforma": "xbox",
+    "link": "/jogos/xbox/microsoft-flight-simulator.html",
+    "detalhes": {
+      "genero": [
+        "Simulação",
+        "Aviação"
+      ],
+      "desenvolvedora": "Asobo Studio",
+      "publicadora": "Xbox Game Studios",
+      "lancamento": "27 de julho de 2021",
+      "plataformas": "Xbox Series X|S / PC",
+      "idioma": "Português (BR) — textos e interface",
+      "armazenamento": "130 GB",
+      "modos": "Um jogador e Multijogador online com espaço aéreo mundial compartilhado",
+      "classificacao": "L",
+      "resgate": "xbox",
+      "sinopse": [
+        "Microsoft Flight Simulator é a nova geração de uma das franquias de simulação mais queridas de todos os tempos. Voe em aeronaves incrivelmente detalhadas, desde aviões leves até jatos comerciais de fuselagem larga, em um mundo incrivelmente realista.",
+        "O planeta Terra inteiro foi recriado em escala real 1:1 através de fotos de satélite do Bing Maps e inteligência artificial da nuvem Azure, permitindo voar sobre sua própria casa, montanhas famosas e pousar em mais de 37 mil aeroportos reais."
+      ],
+      "destaques": [
+        "O planeta Terra inteiro em escala 1:1 com 2 milhões de cidades e 37.000 aeroportos autênticos",
+        "Clima ao vivo sincronizado com as condições meteorológicas reais de qualquer local do mundo",
+        "Modelos aerodinâmicos precisos com cabines interativas e instrumentos de voo totalmente funcionais",
+        "Tráfego aéreo comercial de voos reais integrado em tempo real às suas rotas de voo"
+      ],
+      "generos": [
+        "Simulação",
+        "Aviação",
+        "Mundo Real",
+        "Exploração"
+      ],
+      "idiomaAudio": "Inglês (comunicação com controle de tráfego aéreo ATC)",
+      "idiomaLegendas": "Português (Brasil), Inglês, Espanhol, Francês, Alemão, Italiano, Japonês",
+      "idadeMinima": "L",
+      "motivoIdade": "Livre para todos os públicos",
+      "analises": {
+        "metacritic": "91",
+        "classificacaoCritica": "Aclamação Universal",
+        "comunidade": "Mais de 12 milhões de aviadores cruzando os céus",
+        "destaqueReview": {
+          "veiculo": "IGN Brasil",
+          "nota": "9.5/10",
+          "texto": "Um milagre tecnológico sem precedentes que colocou o planeta Terra inteiro em escala 1:1 ao alcance de um controle."
+        }
+      },
+      "requisitos": {
+        "tipo": "console",
+        "especificacoesConsole": {
+          "resolucao": "4K a 30 FPS com suporte a VRR no Xbox Series X / 1080p a 30 FPS no Xbox Series S",
+          "armazenamento": "100 GB de espaço em SSD (streaming de dados via nuvem Microsoft Azure)",
+          "recursos": "Clima em tempo real, tráfego aéreo ao vivo e suporte a periféricos HOTAS para Xbox"
+        }
+      }
+    },
+    "categorias": [
+      "xbox"
+    ]
+  },
+  {
+    "id": "xbox-state",
+    "titulo": "State of Decay 2",
+    "preco": "99,00",
+    "precoAntigo": "",
+    "imagem": "/imagens/state.jpg",
+    "categoria": "xbox",
+    "plataforma": "xbox",
+    "link": "/jogos/xbox/state-of-decay-2.html",
+    "detalhes": {
+      "genero": [
+        "Sobrevivência",
+        "Zumbi",
+        "Mundo Aberto"
+      ],
+      "desenvolvedora": "Undead Labs",
+      "publicadora": "Xbox Game Studios",
+      "lancamento": "22 de maio de 2018 (Juggernaut Edition)",
+      "plataformas": "Xbox Series X|S / Xbox One / PC",
+      "idioma": "Português (BR) — textos e legendas",
+      "armazenamento": "30 GB",
+      "modos": "Um jogador e Cooperativo online para até 4 jogadores",
+      "classificacao": "16",
+      "resgate": "xbox",
+      "sinopse": [
+        "Os mortos ressuscitaram e a civilização sucumbiu. Nem mesmo as forças armadas conseguiram conter os zumbis. Agora cabe a você reunir os sobreviventes restantes e construir uma comunidade sustentável em um mundo apocalíptico implacável.",
+        "Recrute sobreviventes com traços de personalidade únicos, colete alimentos, munição e remédios em casas abandonadas, fortifique sua base com leitos médicos e oficinas e enfrente infestações de Praga Sangrenta onde a morte de qualquer personagem é permanente."
+      ],
+      "destaques": [
+        "Morte permanente (Permadeath): cada sobrevivente perdido na base é irrecuperável",
+        "Gerenciamento profundo de bases com recursos vitais de comida, água, luz e segurança",
+        "Direção e manutenção de veículos com consumo de combustível e reparos de lataria",
+        "Edição Juggernaut inclui o mapa gigante de Providence Ridge e todas as DLCs já lançadas"
+      ],
+      "generos": [
+        "Sobrevivência",
+        "Zumbis",
+        "Mundo Aberto",
+        "RPG",
+        "Gerenciamento"
+      ],
+      "idiomaAudio": "Inglês",
+      "idiomaLegendas": "Português (Brasil), Inglês, Espanhol, Francês, Alemão, Italiano, Russo",
+      "idadeMinima": "18",
+      "motivoIdade": "Violência extrema contra zumbis, Sangue, Desmembramento e Temas de sobrevivência",
+      "analises": {
+        "metacritic": "77",
+        "classificacaoCritica": "Geralmente Favorável",
+        "comunidade": "Muito Positivas com mais de 11 milhões de jogadores cadastrados",
+        "destaqueReview": {
+          "veiculo": "Voxel",
+          "nota": "8.2/10",
+          "texto": "A melhor gestão de comunidade zumbi com perma-morte empolgante e cooperação divertida com amigos."
+        }
+      },
+      "requisitos": {
+        "tipo": "console",
+        "especificacoesConsole": {
+          "resolucao": "4K a 60 FPS cravados no Xbox Series X / 1080p a 60 FPS no Xbox Series S",
+          "armazenamento": "30 GB de espaço disponível em SSD",
+          "recursos": "Otimizado para Series X|S, carregamento ultrarrápido e iluminação volumétrica aprimorada"
+        }
+      }
+    },
+    "categorias": [
+      "xbox"
+    ]
+  },
+  {
+    "id": "xbox-ori",
+    "titulo": "Ori and the Will of the Wisps",
+    "preco": "49,90",
+    "precoAntigo": "129,00",
+    "imagem": "/imagens/ori.avif",
+    "categoria": "xbox",
+    "plataforma": "xbox",
+    "link": "/jogos/xbox/ori-and-the-will-of-the-wisps.html",
+    "detalhes": {
+      "genero": [
+        "Metroidvania",
+        "Plataforma",
+        "Aventura"
+      ],
+      "desenvolvedora": "Moon Studios",
+      "publicadora": "Xbox Game Studios",
+      "lancamento": "11 de março de 2020",
+      "plataformas": "Xbox Series X|S / Xbox One / PC",
+      "idioma": "Português (BR) — textos e interface",
+      "armazenamento": "20 GB",
+      "modos": "Um jogador (Single-player)",
+      "classificacao": "10",
+      "resgate": "xbox",
+      "sinopse": [
+        "O pequeno espírito guardião Ori já enfrentou muitos perigos, mas quando a corujinha Ku é separada de sua família por uma terrível tempestade, será preciso mais do que coragem para reuni-los e salvar a floresta agonizante de Niwen.",
+        "Embarque em uma jornada épica por florestas bioluminescentes, desertos e lagos profundos, desvendando o verdadeiro destino de Ori com novas armas espirituais, feitiços e chefes colossais desenhados à mão."
+      ],
+      "destaques": [
+        "Visuais estonteantes rodando em 4K a inacreditáveis 120 FPS no Xbox Series X",
+        "Combate reformulado com espadas de luz, arcos espirituais e fragmentos de habilidades passivas",
+        "Fugas frenéticas de cenários e batalhas contra chefes épicos em escala monumental",
+        "Trilha sonora orquestral comovente composta por Gareth Coker gravada com músicos ao vivo"
+      ],
+      "generos": [
+        "Metroidvania",
+        "Plataforma",
+        "Aventura",
+        "Poético",
+        "Indie"
+      ],
+      "idiomaAudio": "Fictício (Língua dos Espíritos)",
+      "idiomaLegendas": "Português (Brasil), Inglês, Espanhol, Francês, Alemão, Italiano, Japonês, Chinês",
+      "idadeMinima": "L",
+      "motivoIdade": "Livre para todos os públicos (Contém momentos comoventes de fantasia)",
+      "analises": {
+        "metacritic": "90",
+        "classificacaoCritica": "Aclamação Universal",
+        "comunidade": "Extremamente Positivas (96% de mais de 90.000 análises no Steam)",
+        "destaqueReview": {
+          "veiculo": "The Enemy",
+          "nota": "10/10",
+          "texto": "Uma pintura em movimento com jogabilidade de plataforma sublime, combate dinâmico e uma trilha sonora orquestral inesquecível."
+        }
+      },
+      "requisitos": {
+        "tipo": "console",
+        "especificacoesConsole": {
+          "resolucao": "4K a 120 FPS ou Super-Amostragem em 6K a 60 FPS no Xbox Series X / 1080p a 120 FPS no Series S",
+          "armazenamento": "15 GB de espaço disponível em SSD",
+          "recursos": "Suporte a HDR de alta fidelidade, áudio Dolby Atmos e taxa de resposta instantânea"
+        }
+      }
+    },
+    "categorias": [
+      "xbox",
+      "promocao"
+    ]
+  },
+  {
+    "id": "destaque-control",
+    "titulo": "Control: Resonant",
+    "preco": "149,90",
+    "precoAntigo": "299,90",
+    "imagem": "/imagens/control.jpg",
+    "categoria": "destaque",
+    "plataforma": "destaque",
+    "link": "/jogos/destaques/control-resonant.html",
+    "detalhes": {
+      "genero": [
+        "Ação",
+        "Aventura",
+        "Sobrenatural"
+      ],
+      "desenvolvedora": "Remedy Entertainment",
+      "publicadora": "505 Games",
+      "lancamento": "27 de agosto de 2024 (Edição Resonant)",
+      "plataformas": "PC (Steam) / PlayStation 5 / Xbox Series X|S",
+      "idioma": "Inglês (áudio) — Português (BR) (legendas)",
+      "armazenamento": "60 GB (estimado)",
+      "modos": "Um jogador (Single-player)",
+      "classificacao": "16",
+      "resgate": "steam",
+      "sinopse": [
+        "Após uma agência secreta em Nova York ser invadida por uma força de outro mundo conhecida como o Ruído, você se torna Jesse Faden, a nova Diretora do Departamento Federal de Controle (FBC), lutando para recuperar a Antiga Casa.",
+        "Explore um arranha-céu brutalista mutável que desafia a gravidade e as leis da física. Combine poderes telecinéticos devastadores como levitação e arremesso de entulho com a Arma de Serviço que muda de forma para aniquilar as anomalias paranormais."
+      ],
+      "destaques": [
+        "Física de partículas e destruição de ambientes considerada referência técnica na indústria",
+        "Poderes telecinéticos fluidos: levite no ar, crie escudos de concreto e arremeste empilhadeiras",
+        "História misteriosa que se conecta diretamente ao universo compartilhado de Alan Wake",
+        "Edição Resonant inclui as duas expansões completas de história: 'The Foundation' e 'AWE'"
+      ],
+      "generos": [
+        "Ação",
+        "Tiro em Terceira Pessoa",
+        "Sobrenatural",
+        "Metroidvania 3D"
+      ],
+      "idiomaAudio": "Inglês, Francês, Alemão, Espanhol",
+      "idiomaLegendas": "Português (Brasil), Inglês, Espanhol, Francês, Alemão, Italiano, Japonês",
+      "idadeMinima": "16",
+      "motivoIdade": "Violência sobrenatural, Terror psicológico e Sangue",
+      "analises": {
+        "metacritic": "85",
+        "classificacaoCritica": "Geralmente Favorável",
+        "comunidade": "Muito Positivas (Mais de 35.000 avaliações de jogadores no Steam)",
+        "destaqueReview": {
+          "veiculo": "The Enemy",
+          "nota": "9.0/10",
+          "texto": "A física telecinética mais satisfatória e destrutiva já programada, embalada em uma narrativa de ficção conspiratória genial."
+        }
+      },
+      "requisitos": {
+        "tipo": "pc",
+        "minimos": {
+          "so": "Windows 10 de 64 bits",
+          "processador": "Intel Core i5-4690 ou AMD FX-4350",
+          "memoria": "8 GB de RAM",
+          "placaVideo": "Nvidia GeForce GTX 780 ou AMD Radeon R9 280X",
+          "directx": "Versão 11",
+          "armazenamento": "42 GB de espaço disponível"
+        },
+        "recomendados": {
+          "so": "Windows 10 / 11 de 64 bits",
+          "processador": "Intel Core i5-7600K ou AMD Ryzen 5 1600X",
+          "memoria": "16 GB de RAM",
+          "placaVideo": "Nvidia GeForce GTX 1660 / RTX 2060 ou AMD Radeon RX 580",
+          "directx": "Versão 12",
+          "armazenamento": "42 GB de espaço disponível em SSD"
+        }
+      }
+    },
+    "categorias": [
+      "destaque",
+      "steam",
+      "promocao"
+    ]
+  },
+  {
+    "id": "destaque-onimusha",
+    "titulo": "Onimusha: Way of the Sword",
+    "preco": "299,00",
+    "precoAntigo": "",
+    "imagem": "/imagens/ONIMUSHA so.avif",
+    "categoria": "destaque",
+    "plataforma": "destaque",
+    "link": "/jogos/destaques/onimusha-way-of-the-sword.html",
+    "detalhes": {
+      "genero": [
+        "Ação",
+        "Hack and Slash",
+        "Samurai"
+      ],
+      "desenvolvedora": "Capcom",
+      "publicadora": "Capcom",
+      "lancamento": "14 de novembro de 2025",
+      "plataformas": "PC (Steam) / PlayStation 5 / Xbox Series X|S",
+      "idioma": "Japonês (áudio) — Português (BR) (legendas)",
+      "armazenamento": "60 GB (estimado)",
+      "modos": "Um jogador (Single-player)",
+      "classificacao": "18",
+      "resgate": "steam",
+      "sinopse": [
+        "No conturbado período Sengoku do Japão feudal, o poder demoníaco dos Genma ressurge das cinzas sob o comando de senhores da guerra corrompidos que sacrificam almas inocentes em troca da imortalidade.",
+        "Um mestre samurai empunha a Manopla Oni ancestral capaz de absorver as almas dos demônios derrotados. Entre duelos de katana letais com a lendária mecânica de contra-ataque Issen e templos xintoístas corrompidos, restaure o equilíbrio do Japão antes que o reino dos mortos consuma a terra."
+      ],
+      "destaques": [
+        "Sistema de contra-ataque crítico de precisão (Issen) que recompensa o timing milimétrico com nocautes brutais",
+        "Manopla Oni que absorve almas para aprimorar katanas elementais de Fogo, Vento e Trovão",
+        "Cenários do Japão feudal recriados com riqueza histórica de templos, castelos e vilarejos",
+        "Trilha sonora orquestral tradicional com tambores Taiko e flautas Shakuhachi de tirar o fôlego"
+      ],
+      "generos": [
+        "Ação",
+        "Hack and Slash",
+        "Samurai",
+        "Fantasia Sombria"
+      ],
+      "idiomaAudio": "Japonês, Inglês",
+      "idiomaLegendas": "Português (Brasil), Inglês, Espanhol, Francês, Alemão, Italiano",
+      "idadeMinima": "18",
+      "motivoIdade": "Violência extrema de espada, Sangue intenso, Desmembramento e Demônios",
+      "analises": {
+        "metacritic": "86",
+        "classificacaoCritica": "Geralmente Favorável",
+        "comunidade": "Aclamado pelo retorno triunfal do clássico de ação feudal",
+        "destaqueReview": {
+          "veiculo": "IGN Brasil",
+          "nota": "8.5/10",
+          "texto": "O lendário sistema de Issen contra-ataques retorna com visual glorioso na RE Engine e batalhas contra hordas de Genma."
+        }
+      },
+      "requisitos": {
+        "tipo": "pc",
+        "minimos": {
+          "so": "Windows 10 de 64 bits",
+          "processador": "Intel Core i5-7500 ou AMD Ryzen 3 1200",
+          "memoria": "8 GB de RAM",
+          "placaVideo": "Nvidia GeForce GTX 1060 (6 GB) ou AMD Radeon RX 580",
+          "directx": "Versão 12",
+          "armazenamento": "50 GB de espaço disponível"
+        },
+        "recomendados": {
+          "so": "Windows 10 / 11 de 64 bits",
+          "processador": "Intel Core i7-8700K ou AMD Ryzen 5 3600",
+          "memoria": "16 GB de RAM",
+          "placaVideo": "Nvidia GeForce RTX 2060 ou AMD Radeon RX 5700",
+          "directx": "Versão 12",
+          "armazenamento": "50 GB de espaço disponível em SSD"
+        }
+      }
+    },
+    "categorias": [
+      "destaque"
+    ]
+  },
+  {
+    "id": "destaque-eldenring",
+    "titulo": "Elden Ring",
+    "preco": "199,90",
+    "precoAntigo": "299,90",
+    "imagem": "/imagens/EldenRing.png",
+    "categoria": "destaque",
+    "plataforma": "destaque",
+    "link": "/jogos/destaques/elden-ring.html",
+    "detalhes": {
+      "genero": [
+        "RPG",
+        "Ação",
+        "Soulslike",
+        "Mundo Aberto"
+      ],
+      "desenvolvedora": "FromSoftware",
+      "publicadora": "Bandai Namco Entertainment",
+      "lancamento": "25 de fevereiro de 2022",
+      "plataformas": "PC (Steam) / PlayStation 5 / Xbox Series X|S",
+      "idioma": "Inglês (áudio) — Português (BR) (legendas)",
+      "armazenamento": "60 GB",
+      "modos": "Um jogador, Cooperativo online (até 3 jogadores) e Invasões PvP competitivas",
+      "classificacao": "16",
+      "resgate": "steam",
+      "sinopse": [
+        "Levante-se, Maculado, e seja guiado pela graça para portar o poder do Anel Prístino e se tornar o Lorde Prístino nas Terras Intermédias.",
+        "Fruto da colaboração histórica entre o diretor Hidetaka Miyazaki e o escritor George R.R. Martin (autor de As Crônicas de Gelo e Fogo), Elden Ring convida os jogadores a explorarem castelos verticais, pântanos venenosos e masmorras secretas montados no corcel espectral Torrente, enfrentando semideuses colossais em busca das Grandes Runas."
+      ],
+      "destaques": [
+        "Eleito Jogo do Ano (GOTY) no The Game Awards 2022 com aclamação unânime mundial",
+        "Mundo aberto gigantesco que incentiva a curiosidade sem marcadores intrusivos na tela",
+        "Centenas de armas, magias, invocações de espíritos e armaduras para qualquer estilo de jogo",
+        "Cooperativo e PvP online permitindo invadir e ser invadido por jogadores de todo o mundo"
+      ],
+      "generos": [
+        "RPG de Ação",
+        "Soulslike",
+        "Mundo Aberto",
+        "Fantasia Sombria"
+      ],
+      "idiomaAudio": "Inglês",
+      "idiomaLegendas": "Português (Brasil), Inglês, Espanhol, Francês, Alemão, Italiano, Japonês, Coreano, Chinês",
+      "idadeMinima": "16",
+      "motivoIdade": "Violência extrema, Sangue, Conteúdo perturbador e Fantasia sombria",
+      "analises": {
+        "metacritic": "96",
+        "classificacaoCritica": "Aclamação Universal",
+        "comunidade": "Jogo do Ano no The Game Awards 2022 com mais de 25 milhões de cópias vendidas",
+        "destaqueReview": {
+          "veiculo": "IGN Brasil",
+          "nota": "10/10",
+          "texto": "Uma obra-prima incontestável que redefine o design de mundo aberto com liberdade absoluta e combate desafiador sem paralelo."
+        }
+      },
+      "requisitos": {
+        "tipo": "pc",
+        "minimos": {
+          "so": "Windows 10 de 64 bits",
+          "processador": "Intel Core i5-8400 ou AMD Ryzen 3 3300X",
+          "memoria": "12 GB de RAM",
+          "placaVideo": "Nvidia GeForce GTX 1060 (3 GB) ou AMD Radeon RX 580 (4 GB)",
+          "directx": "Versão 12",
+          "armazenamento": "60 GB de espaço disponível"
+        },
+        "recomendados": {
+          "so": "Windows 10 / 11 de 64 bits",
+          "processador": "Intel Core i7-8700K ou AMD Ryzen 5 3600X",
+          "memoria": "16 GB de RAM",
+          "placaVideo": "Nvidia GeForce GTX 1070 (8 GB) ou AMD Radeon RX Vega 56 (8 GB)",
+          "directx": "Versão 12",
+          "armazenamento": "60 GB de espaço disponível em SSD"
+        }
+      }
+    },
+    "categorias": [
+      "destaque",
+      "steam",
+      "promocao"
+    ]
+  },
+  {
+    "id": "destaque-wukong",
+    "titulo": "Black Myth: Wukong",
+    "preco": "229,99",
+    "precoAntigo": "",
+    "imagem": "/imagens/Black MythWukong.png",
+    "categoria": "destaque",
+    "plataforma": "destaque",
+    "link": "/jogos/destaques/black-myth-wukong.html",
+    "detalhes": {
+      "genero": [
+        "Ação",
+        "RPG",
+        "Mitologia Chinesa"
+      ],
+      "desenvolvedora": "Game Science",
+      "publicadora": "Game Science",
+      "lancamento": "20 de agosto de 2024",
+      "plataformas": "PC (Steam) / PlayStation 5",
+      "idioma": "Chinês e Inglês (áudio) — Português (BR) (legendas)",
+      "armazenamento": "130 GB (SSD)",
+      "modos": "Um jogador (Single-player)",
+      "classificacao": "16",
+      "resgate": "steam",
+      "sinopse": [
+        "Black Myth: Wukong é um RPG de ação inspirado na clássica lenda mitológica chinesa 'Jornada ao Oeste'. No papel do Predestinado, aventure-se por florestas milenares, templos esculpidos na rocha e montanhas congeladas para descobrir a verdade oculta por trás do glorioso passado do Rei Macaco.",
+        "Domine artes marciais ancestrais com o bastão de ferro Ruyi Jingu Bang, conjure magias místicas para imobilizar adversários e absorva os espíritos de mais de 80 chefes para se transformar nas próprias criaturas que derrotou."
+      ],
+      "destaques": [
+        "Fidelidade gráfica deslumbrante construída no Unreal Engine 5 com Ray Tracing completo",
+        "Sistema de combate com 3 posturas de bastão dinâmicas e dezenas de feitiços de transformação",
+        "Mais de 80 chefes únicos inspirados no folclore e na riquíssima mitologia oriental",
+        "Quebrou recordes mundiais como o segundo jogo mais jogado de toda a história do Steam"
+      ],
+      "generos": [
+        "RPG de Ação",
+        "Mitologia Chinesa",
+        "Soulslike",
+        "Fantasia"
+      ],
+      "idiomaAudio": "Chinês (Mandarim autêntico), Inglês",
+      "idiomaLegendas": "Português (Brasil), Inglês, Espanhol, Francês, Alemão, Italiano, Japonês, Chinês",
+      "idadeMinima": "16",
+      "motivoIdade": "Violência extrema, Sangue, Transformações grotescas e Temas mitológicos",
+      "analises": {
+        "metacritic": "82",
+        "classificacaoCritica": "Geralmente Favorável",
+        "comunidade": "Extremamente Positivas (Mais de 750.000 análises e recorde histórico de 2.4 milhões simultâneos no Steam)",
+        "destaqueReview": {
+          "veiculo": "IGN Brasil",
+          "nota": "8.5/10",
+          "texto": "Um espetáculo visual de combate frenético com o bastão, transformações impressionantes e batalhas de chefes mitológicas."
+        }
+      },
+      "requisitos": {
+        "tipo": "pc",
+        "minimos": {
+          "so": "Windows 10 / 11 de 64 bits",
+          "processador": "Intel Core i5-8400 ou AMD Ryzen 5 1600",
+          "memoria": "16 GB de RAM",
+          "placaVideo": "Nvidia GeForce GTX 1060 (6 GB) ou AMD Radeon RX 580 (8 GB)",
+          "directx": "Versão 12",
+          "armazenamento": "130 GB de espaço disponível (SSD recomendado)"
+        },
+        "recomendados": {
+          "so": "Windows 10 / 11 de 64 bits",
+          "processador": "Intel Core i7-9700 ou AMD Ryzen 5 5500",
+          "memoria": "16 GB de RAM",
+          "placaVideo": "Nvidia GeForce RTX 2060 ou AMD Radeon RX 5700 XT",
+          "directx": "Versão 12",
+          "armazenamento": "130 GB de espaço disponível em SSD NVMe"
+        }
+      }
+    },
+    "categorias": [
+      "destaque"
+    ]
+  },
+  {
+    "id": "ps-ufc6",
+    "titulo": "EA SPORTS UFC 6",
+    "preco": "349,90",
+    "precoAntigo": "",
+    "imagem": "/imagens/ufc6.avif",
+    "categoria": "ps",
+    "plataforma": "ps",
+    "link": "/jogos/ps/ufc-6.html",
+    "detalhes": {
+      "genero": [
+        "Esporte",
+        "Luta",
+        "MMA"
+      ],
+      "desenvolvedora": "EA Vancouver",
+      "publicadora": "Electronic Arts",
+      "lancamento": "24 de outubro de 2025",
+      "plataformas": "PlayStation 5 / Xbox Series X|S",
+      "idioma": "Inglês (áudio) — Português (BR) (legendas e interface)",
+      "armazenamento": "60 GB (estimado)",
+      "modos": "Um jogador (Modo Carreira cinematográfico), Multijogador local e Multijogador online competitivo",
+      "classificacao": "16",
+      "resgate": "ps",
+      "sinopse": [
+        "EA SPORTS UFC 6 eleva a experiência das artes marciais mistas com o poder da engine Frostbite. Sinta cada soco, chute e finalização com fidelidade gráfica incomparável, replays cinematográficos de nocautes e um novo sistema de dano em tempo real que afeta a mobilidade e resistência dos atletas.",
+        "Suba os degraus do octógono no reformulado Modo Carreira, encare lendas consagradas do UFC e dispute o cinturão mundial em arenas lotadas ao redor do globo."
+      ],
+      "destaques": [
+        "Sistema Real Impact com mais de 64.000 combinações possíveis de cortes, inchaços e contusões",
+        "Transições fluidas de grappling e finalizações integradas sem mini-games intrusivos",
+        "Elenco estelar com os maiores lutadores da atualidade e lendas eternas do Hall da Fama do UFC",
+        "Modo Carreira online com disputas por divisões sazonais e recompensas exclusivas"
+      ],
+      "generos": [
+        "Luta",
+        "Esportes",
+        "Simulação",
+        "MMA"
+      ],
+      "idiomaAudio": "Inglês (comentaristas oficiais do UFC)",
+      "idiomaLegendas": "Português (Brasil), Inglês, Espanhol, Francês",
+      "idadeMinima": "14",
+      "motivoIdade": "Violência realista de artes marciais e Sangue",
+      "analises": {
+        "metacritic": "80",
+        "classificacaoCritica": "Geralmente Favorável",
+        "comunidade": "Muito Positivas (85% de aprovação dos fãs de MMA)",
+        "destaqueReview": {
+          "veiculo": "Combate Games",
+          "nota": "8.5/10",
+          "texto": "A física de impactos e deformação facial mais realista já vista em um jogo de luta, capturando a brutalidade e a técnica do octógono."
+        }
+      },
+      "requisitos": {
+        "tipo": "console",
+        "especificacoesConsole": {
+          "resolucao": "4K a 60 FPS com motor gráfico Frostbite de última geração",
+          "armazenamento": "65 GB de espaço disponível em SSD",
+          "recursos": "Sistema de impacto em tempo real, física de cortes e inchaços fiéis e feedback no DualSense"
+        }
+      }
+    },
+    "categorias": [
+      "ps"
+    ]
+  }
+]

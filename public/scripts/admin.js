@@ -17,16 +17,26 @@ createApp({
                 precoAntigo: '',
                 imagem: '',
                 categoria: 'ps',
+                categorias: ['ps'],
                 link: ''
             }
         };
     },
+    watch: {
+        'novoJogo.precoAntigo'(novoValor) {
+            if (novoValor && String(novoValor).trim() !== '') {
+                if (!this.novoJogo.categorias.includes('promocao')) {
+                    this.novoJogo.categorias.push('promocao');
+                }
+            }
+        }
+    },
     computed: {
         jogosFiltrados() {
             return this.listaJogos.filter(jogo => {
-                const catJogo = (jogo.categoria || jogo.plataforma || '').toLowerCase();
+                const categorias = this.obterCategoriasJogo(jogo).map(c => c.toLowerCase());
                 const filtro = this.filtroCategoria.toLowerCase();
-                const matchCategoria = (filtro === 'todos') || (catJogo === filtro);
+                const matchCategoria = (filtro === 'todos') || categorias.includes(filtro);
                 
                 const matchBusca = !this.buscaAdmin || 
                     (jogo.titulo && jogo.titulo.toLowerCase().includes(this.buscaAdmin.toLowerCase().trim()));
@@ -57,12 +67,28 @@ createApp({
                 if (typeof lucide !== 'undefined') lucide.createIcons();
             });
         },
+        obterCategoriasJogo(jogo) {
+            let cats = Array.isArray(jogo.categorias) && jogo.categorias.length > 0
+                ? [...jogo.categorias]
+                : [(jogo.categoria || jogo.plataforma || 'ps')];
+
+            const temDesconto = Boolean(
+                jogo.precoAntigo && 
+                String(jogo.precoAntigo).trim() !== '' && 
+                String(jogo.precoAntigo).trim() !== '0'
+            );
+
+            if (temDesconto && !cats.includes('promocao')) {
+                cats.push('promocao');
+            }
+            return cats;
+        },
         contarJogos(categoria) {
             const catAlvo = categoria.toLowerCase();
-            return this.listaJogos.filter(j => 
-                (j.categoria && j.categoria.toLowerCase() === catAlvo) ||
-                (j.plataforma && j.plataforma.toLowerCase() === catAlvo)
-            ).length;
+            return this.listaJogos.filter(j => {
+                const cats = this.obterCategoriasJogo(j).map(c => c.toLowerCase());
+                return cats.includes(catAlvo);
+            }).length;
         },
         formatarPreco(valor) {
             if (!valor) return 'R$ 0,00';
@@ -79,30 +105,64 @@ createApp({
             };
             return map[(cat || '').toLowerCase()] || cat || 'Geral';
         },
+        alternarCategoriaNovoJogo(cat) {
+            const idx = this.novoJogo.categorias.indexOf(cat);
+            if (idx === -1) {
+                this.novoJogo.categorias.push(cat);
+            } else {
+                if (this.novoJogo.categorias.length > 1) {
+                    this.novoJogo.categorias.splice(idx, 1);
+                } else {
+                    alert('O jogo deve pertencer a pelo menos uma categoria!');
+                }
+            }
+        },
         async carregarJogos() {
             try {
-                let resposta;
-                try {
-                    resposta = await fetch('/api/jogos');
-                } catch {
-                    resposta = await fetch('/dados/jogos.json');
+                const endpoints = [
+                    '/api/jogos',
+                    '/dados/jogos.json',
+                    '../dados/jogos.json',
+                    '../../dados/jogos.json',
+                    './dados/jogos.json',
+                    '/public/dados/jogos.json'
+                ];
+
+                for (const url of endpoints) {
+                    try {
+                        const resposta = await fetch(url);
+                        if (resposta && resposta.ok) {
+                            const dados = await resposta.json();
+                            if (Array.isArray(dados) && dados.length > 0) {
+                                this.listaJogos = dados;
+                                break;
+                            }
+                        }
+                    } catch (e) {}
                 }
-                if (!resposta.ok) {
-                    resposta = await fetch('/dados/jogos.json');
-                }
-                this.listaJogos = await resposta.json();
             } catch (erro) {
                 console.error('Erro ao carregar jogos:', erro);
             }
         },
         async salvarJogo() {
+            let cats = [...(this.novoJogo.categorias || [])];
+            if (cats.length === 0) cats = ['ps'];
+
+            // Se digitou preço antigo, garante que esteja na categoria de promoção
+            if (this.novoJogo.precoAntigo && String(this.novoJogo.precoAntigo).trim() !== '') {
+                if (!cats.includes('promocao')) cats.push('promocao');
+            }
+
+            const catPrincipal = cats.find(c => c !== 'promocao') || cats[0] || 'ps';
+
             const dadosJogo = {
                 titulo: this.novoJogo.titulo.trim(),
                 preco: this.novoJogo.preco.replace('R$', '').trim(),
                 precoAntigo: this.novoJogo.precoAntigo ? this.novoJogo.precoAntigo.replace('R$', '').trim() : '',
                 imagem: this.novoJogo.imagem.trim(),
-                categoria: this.novoJogo.categoria,
-                plataforma: this.novoJogo.categoria,
+                categoria: catPrincipal,
+                plataforma: catPrincipal,
+                categorias: cats,
                 link: this.novoJogo.link ? this.novoJogo.link.trim() : ''
             };
 
@@ -123,11 +183,22 @@ createApp({
                         alert('Jogo atualizado com sucesso!');
                         this.cancelarEdicao();
                     } else {
-                        alert('Erro ao atualizar jogo no servidor.');
+                        // Fallback local se o servidor Express não estiver rodando
+                        const index = this.listaJogos.findIndex(j => j.id === this.jogoEmEdicaoId);
+                        if (index !== -1) {
+                            this.listaJogos[index] = { ...this.listaJogos[index], ...dadosJogo };
+                        }
+                        alert('Jogo atualizado localmente!');
+                        this.cancelarEdicao();
                     }
                 } catch (erro) {
                     console.error('Erro ao atualizar jogo:', erro);
-                    alert('Falha na comunicação com o servidor.');
+                    const index = this.listaJogos.findIndex(j => j.id === this.jogoEmEdicaoId);
+                    if (index !== -1) {
+                        this.listaJogos[index] = { ...this.listaJogos[index], ...dadosJogo };
+                    }
+                    alert('Jogo atualizado localmente!');
+                    this.cancelarEdicao();
                 }
             } else {
                 // Cadastro novo (POST)
@@ -144,11 +215,17 @@ createApp({
                         this.resetarFormulario();
                         alert('Jogo cadastrado com sucesso!');
                     } else {
-                        alert('Erro ao salvar jogo no servidor.');
+                        const novoObj = { id: 'jogo-' + Date.now(), ...dadosJogo };
+                        this.listaJogos.push(novoObj);
+                        this.resetarFormulario();
+                        alert('Jogo cadastrado localmente!');
                     }
                 } catch (erro) {
                     console.error('Erro ao cadastrar jogo:', erro);
-                    alert('Falha na comunicação com o servidor.');
+                    const novoObj = { id: 'jogo-' + Date.now(), ...dadosJogo };
+                    this.listaJogos.push(novoObj);
+                    this.resetarFormulario();
+                    alert('Jogo cadastrado localmente!');
                 }
             }
 
@@ -158,12 +235,15 @@ createApp({
         },
         editarJogo(jogo) {
             this.jogoEmEdicaoId = jogo.id;
+            const cats = this.obterCategoriasJogo(jogo);
+
             this.novoJogo = {
                 titulo: jogo.titulo || '',
                 preco: jogo.preco || '',
                 precoAntigo: jogo.precoAntigo || '',
                 imagem: jogo.imagem || '',
-                categoria: jogo.categoria || jogo.plataforma || 'ps',
+                categoria: cats[0] || 'ps',
+                categorias: cats,
                 link: jogo.link || ''
             };
             this.abaAtual = 'jogos';
@@ -182,6 +262,7 @@ createApp({
                 precoAntigo: '',
                 imagem: '',
                 categoria: 'ps',
+                categorias: ['ps'],
                 link: ''
             };
         },
@@ -195,11 +276,13 @@ createApp({
                         this.listaJogos = this.listaJogos.filter(j => j.id !== id);
                         if (this.jogoEmEdicaoId === id) this.cancelarEdicao();
                     } else {
-                        alert('Erro ao excluir jogo do servidor.');
+                        this.listaJogos = this.listaJogos.filter(j => j.id !== id);
+                        if (this.jogoEmEdicaoId === id) this.cancelarEdicao();
                     }
                 } catch (erro) {
                     console.error('Erro ao excluir jogo:', erro);
-                    alert('Erro ao excluir jogo.');
+                    this.listaJogos = this.listaJogos.filter(j => j.id !== id);
+                    if (this.jogoEmEdicaoId === id) this.cancelarEdicao();
                 }
             }
         },

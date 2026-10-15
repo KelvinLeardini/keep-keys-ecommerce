@@ -140,6 +140,13 @@
                             <p>{{ contarJogos('xbox') }}</p>
                         </div>
                     </div>
+                    <div class="admin-card-stats" @click="mudarAba('jogos'); mudarFiltro('promocao')" style="cursor: pointer;">
+                        <div class="icone vermelho-promo"><i data-lucide="tag"></i></div>
+                        <div>
+                            <h4>Promoções</h4>
+                            <p>{{ contarJogos('promocao') }}</p>
+                        </div>
+                    </div>
                     <div class="admin-card-stats verde">
                         <div class="icone"><i data-lucide="server"></i></div>
                         <div>
@@ -188,9 +195,11 @@
                                     <td><img :src="jogo.imagem" :alt="jogo.titulo" class="admin-thumb-tabela"></td>
                                     <td><strong>{{ jogo.titulo }}</strong></td>
                                     <td>
-                                        <span :class="['tag-categoria', 'tag-' + (jogo.categoria || jogo.plataforma)]">
-                                            {{ labelCategoria(jogo.categoria || jogo.plataforma) }}
-                                        </span>
+                                        <div class="admin-tags-wrap">
+                                            <span v-for="cat in obterCategoriasJogo(jogo)" :key="cat" :class="['tag-categoria', 'tag-' + cat]">
+                                                {{ labelCategoria(cat) }}
+                                            </span>
+                                        </div>
                                     </td>
                                     <td>
                                         <span v-if="jogo.precoAntigo" class="preco-antigo-tabela">R$ {{ jogo.precoAntigo }}</span>
@@ -251,14 +260,39 @@
                                 <img :src="novoJogo.imagem" alt="Preview da Capa" onerror="this.style.display='none'">
                             </div>
 
-                            <label class="admin-label">Categoria / Página de Destino:</label>
-                            <select v-model="novoJogo.categoria" required>
-                                <option value="ps">PlayStation (ps.html)</option>
-                                <option value="steam">Steam (Steam.html)</option>
-                                <option value="xbox">Xbox (xbox.html)</option>
-                                <option value="destaque">Jogos em Destaque (index.html)</option>
-                                <option value="promocao">Promoções (promocoes.html)</option>
-                            </select>
+                            <label class="admin-label">
+                                Categorias / Páginas de Destino (selecione uma ou mais):
+                                <small style="display: block; color: #888; font-weight: normal; font-size: 0.8rem; margin-top: 2px;">
+                                    Marque as páginas onde o jogo deve aparecer (ex: PlayStation + Promoção):
+                                </small>
+                            </label>
+                            <div class="admin-categorias-checkboxes">
+                                <label class="admin-checkbox-item" :class="{ 'selecionado': novoJogo.categorias.includes('ps') }">
+                                    <input type="checkbox" value="ps" v-model="novoJogo.categorias">
+                                    <span class="custom-chk"></span>
+                                    <span class="tag-categoria tag-ps">PlayStation</span>
+                                </label>
+                                <label class="admin-checkbox-item" :class="{ 'selecionado': novoJogo.categorias.includes('steam') }">
+                                    <input type="checkbox" value="steam" v-model="novoJogo.categorias">
+                                    <span class="custom-chk"></span>
+                                    <span class="tag-categoria tag-steam">Steam</span>
+                                </label>
+                                <label class="admin-checkbox-item" :class="{ 'selecionado': novoJogo.categorias.includes('xbox') }">
+                                    <input type="checkbox" value="xbox" v-model="novoJogo.categorias">
+                                    <span class="custom-chk"></span>
+                                    <span class="tag-categoria tag-xbox">Xbox</span>
+                                </label>
+                                <label class="admin-checkbox-item" :class="{ 'selecionado': novoJogo.categorias.includes('destaque') }">
+                                    <input type="checkbox" value="destaque" v-model="novoJogo.categorias">
+                                    <span class="custom-chk"></span>
+                                    <span class="tag-categoria tag-destaque">Destaque</span>
+                                </label>
+                                <label class="admin-checkbox-item" :class="{ 'selecionado': novoJogo.categorias.includes('promocao') }">
+                                    <input type="checkbox" value="promocao" v-model="novoJogo.categorias">
+                                    <span class="custom-chk"></span>
+                                    <span class="tag-categoria tag-promocao">Promoção</span>
+                                </label>
+                            </div>
 
                             <label class="admin-label">Link da Página Individual (Opcional):</label>
                             <input v-model="novoJogo.link" type="text" placeholder="Ex: /jogos/ps/gta6.html">
@@ -314,9 +348,11 @@
                                 <img :src="jogo.imagem" :alt="jogo.titulo">
                                 <h4>{{ jogo.titulo }}</h4>
                                 
-                                <span :class="['tag-categoria', 'tag-' + (jogo.categoria || jogo.plataforma)]">
-                                    {{ labelCategoria(jogo.categoria || jogo.plataforma) }}
-                                </span>
+                                <div class="admin-tags-wrap">
+                                    <span v-for="cat in obterCategoriasJogo(jogo)" :key="cat" :class="['tag-categoria', 'tag-' + cat]">
+                                        {{ labelCategoria(cat) }}
+                                    </span>
+                                </div>
 
                                 <div class="admin-card-precos">
                                     <p v-if="jogo.precoAntigo" class="preco-antigo-tabela">R$ {{ jogo.precoAntigo }}</p>

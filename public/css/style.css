@@ -1188,6 +1188,7 @@ body > aside .footer-redes .icones-redes a .lucide {
 .admin-card-stats .icone.azul-ps { background-color: #00439c; }
 .admin-card-stats .icone.roxo-steam { background-color: #171a21; border: 1px solid #66c0f4; color: #66c0f4; }
 .admin-card-stats .icone.verde-xbox { background-color: #107c10; }
+.admin-card-stats .icone.vermelho-promo { background-color: #cc0000; color: #fff; }
 
 /* Banner de Atalho */
 .admin-banner-atalho {
@@ -1336,6 +1337,87 @@ body > aside .footer-redes .icones-redes a .lucide {
 .tag-xbox { background: #107c10; color: #fff; }
 .tag-destaque { background: #b8860b; color: #fff; }
 .tag-promocao { background: #cc0000; color: #fff; }
+
+/* Envolve as tags em grade e tabela */
+.admin-tags-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+    align-items: center;
+}
+
+/* Container de Seleção Multi-Categorias no Admin */
+.admin-categorias-checkboxes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 6px;
+    margin-bottom: 12px;
+}
+
+.admin-checkbox-item {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: #1a1a22;
+    border: 1px solid #333340;
+    border-radius: 8px;
+    padding: 6px 12px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    user-select: none;
+}
+
+.admin-checkbox-item:hover {
+    border-color: #555566;
+    background: #22222c;
+}
+
+.admin-checkbox-item.selecionado {
+    border-color: #00f2fe;
+    background: rgba(0, 242, 254, 0.08);
+}
+
+.admin-checkbox-item input[type="checkbox"] {
+    accent-color: #00f2fe;
+    width: 16px !important;
+    height: 16px !important;
+    margin: 0 !important;
+    cursor: pointer;
+}
+
+/* Badge de desconto no card do produto */
+.badge-desconto-card {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    background: #ff0044;
+    color: #ffffff;
+    font-weight: 800;
+    font-size: 0.78rem;
+    padding: 3px 7px;
+    border-radius: 6px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.5);
+    letter-spacing: 0.5px;
+    z-index: 2;
+    pointer-events: none;
+}
+
+.thumb-card-jogo {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+}
+
+.preco-antigo-destaque {
+    text-decoration: line-through;
+    color: #ff5555;
+    font-size: 1.15rem;
+    margin-right: 12px;
+    font-weight: normal;
+}
 
 /* Formulário de Admin Melhorado */
 .admin-label {

@@ -61,7 +61,10 @@
           "recursos": "Compatível com Gatilhos Adaptáveis e Feedback Háptico do DualSense, Áudio 3D Tempest e Ray Tracing avançado"
         }
       }
-    }
+    },
+    "categorias": [
+      "ps"
+    ]
   },
   {
     "id": "ps-naruto",
@@ -125,7 +128,10 @@
           "recursos": "Carregamento instantâneo via SSD do PS5, suporte ao áudio 3D e compatibilidade com DualSense"
         }
       }
-    }
+    },
+    "categorias": [
+      "ps"
+    ]
   },
   {
     "id": "ps-hollow",
@@ -189,7 +195,10 @@
           "recursos": "Inclui todas as 4 expansões gratuitas de conteúdo (Hidden Dreams, The Grimm Troupe, Lifeblood e Godmaster)"
         }
       }
-    }
+    },
+    "categorias": [
+      "ps"
+    ]
   },
   {
     "id": "ps-ghost",
@@ -254,13 +263,16 @@
           "recursos": "Feedback Háptico do DualSense simulando o choque da lâmina e o vento, Áudio 3D e sincronia labial para o áudio japonês no PS5"
         }
       }
-    }
+    },
+    "categorias": [
+      "ps"
+    ]
   },
   {
     "id": "ps-bloodborne",
     "titulo": "Bloodborne",
-    "preco": "114,90",
-    "precoAntigo": "",
+    "preco": "59,90",
+    "precoAntigo": "114,90",
     "imagem": "/imagens/blood.webp",
     "categoria": "ps",
     "plataforma": "ps",
@@ -318,7 +330,11 @@
           "recursos": "Calabouços do Cálice gerados proceduralmente, suporte à PlayStation Network para co-op e PvP"
         }
       }
-    }
+    },
+    "categorias": [
+      "ps",
+      "promocao"
+    ]
   },
   {
     "id": "ps-tlou1",
@@ -383,7 +399,10 @@
           "recursos": "Uso exemplar dos Gatilhos Adaptáveis e Feedback Háptico do DualSense, Áudio 3D Tempest e mais de 60 opções de acessibilidade premiadas"
         }
       }
-    }
+    },
+    "categorias": [
+      "ps"
+    ]
   },
   {
     "id": "ps-tlou2",
@@ -448,13 +467,16 @@
           "recursos": "Integração tátil total com DualSense, carregamentos quase instantâneos e novo Modo Sem Retorno"
         }
       }
-    }
+    },
+    "categorias": [
+      "ps"
+    ]
   },
   {
     "id": "ps-spiderman",
     "titulo": "Marvel's Spider-Man",
-    "preco": "169,00",
-    "precoAntigo": "",
+    "preco": "89,90",
+    "precoAntigo": "169,00",
     "imagem": "/imagens/spiderman.jpg",
     "categoria": "ps",
     "plataforma": "ps",
@@ -512,7 +534,11 @@
           "recursos": "Gatilhos Adaptáveis reproduzindo a tensão das teias, Feedback Háptico e Áudio 3D espacial"
         }
       }
-    }
+    },
+    "categorias": [
+      "ps",
+      "promocao"
+    ]
   },
   {
     "id": "ps-uncharted4",
@@ -576,13 +602,16 @@
           "recursos": "Aproveitamento total dos Gatilhos Adaptáveis, Áudio 3D e carregamento instantâneo no PS5"
         }
       }
-    }
+    },
+    "categorias": [
+      "ps"
+    ]
   },
   {
     "id": "ps-gow3",
     "titulo": "God of War III",
-    "preco": "89,00",
-    "precoAntigo": "",
+    "preco": "49,90",
+    "precoAntigo": "89,00",
     "imagem": "/imagens/gow.avif",
     "categoria": "ps",
     "plataforma": "ps",
@@ -640,7 +669,11 @@
           "recursos": "Modo foto aprimorado, texturas em alta resolução e compatibilidade retroativa total no PS5"
         }
       }
-    }
+    },
+    "categorias": [
+      "ps",
+      "promocao"
+    ]
   },
   {
     "id": "steam-warhammer",
@@ -715,7 +748,10 @@
           "armazenamento": "75 GB de espaço disponível em SSD NVMe"
         }
       }
-    }
+    },
+    "categorias": [
+      "steam"
+    ]
   },
   {
     "id": "steam-eafc27",
@@ -790,13 +826,16 @@
           "armazenamento": "100 GB de espaço disponível em SSD"
         }
       }
-    }
+    },
+    "categorias": [
+      "steam"
+    ]
   },
   {
     "id": "steam-rdr2",
     "titulo": "Red Dead Redemption 2",
-    "preco": "299,99",
-    "precoAntigo": "",
+    "preco": "99,90",
+    "precoAntigo": "299,99",
     "imagem": "/imagens/Red Dead Redemption 2.jpg",
     "categoria": "steam",
     "plataforma": "steam",
@@ -867,7 +906,11 @@
           "armazenamento": "150 GB de espaço disponível em SSD"
         }
       }
-    }
+    },
+    "categorias": [
+      "steam",
+      "promocao"
+    ]
   },
   {
     "id": "steam-rerequiem",
@@ -941,7 +984,10 @@
           "armazenamento": "60 GB de espaço disponível em SSD"
         }
       }
-    }
+    },
+    "categorias": [
+      "steam"
+    ]
   },
   {
     "id": "steam-theisle",
@@ -1016,7 +1062,11 @@
           "armazenamento": "25 GB de espaço disponível em SSD"
         }
       }
-    }
+    },
+    "categorias": [
+      "steam",
+      "promocao"
+    ]
   },
   {
     "id": "steam-halloween",
@@ -1091,7 +1141,10 @@
           "armazenamento": "30 GB de espaço disponível em SSD"
         }
       }
-    }
+    },
+    "categorias": [
+      "steam"
+    ]
   },
   {
     "id": "steam-bf6",
@@ -1166,7 +1219,10 @@
           "armazenamento": "90 GB de espaço disponível em SSD NVMe"
         }
       }
-    }
+    },
+    "categorias": [
+      "steam"
+    ]
   },
   {
     "id": "steam-phoenix",
@@ -1241,7 +1297,10 @@
           "armazenamento": "2 GB de espaço disponível"
         }
       }
-    }
+    },
+    "categorias": [
+      "steam"
+    ]
   },
   {
     "id": "steam-tekken8",
@@ -1316,7 +1375,10 @@
           "armazenamento": "100 GB de espaço disponível em SSD"
         }
       }
-    }
+    },
+    "categorias": [
+      "steam"
+    ]
   },
   {
     "id": "steam-stray",
@@ -1392,7 +1454,10 @@
           "armazenamento": "10 GB de espaço disponível em SSD"
         }
       }
-    }
+    },
+    "categorias": [
+      "steam"
+    ]
   },
   {
     "id": "steam-silksong",
@@ -1468,7 +1533,10 @@
           "armazenamento": "15 GB de espaço disponível em SSD"
         }
       }
-    }
+    },
+    "categorias": [
+      "steam"
+    ]
   },
   {
     "id": "xbox-forza6",
@@ -1531,7 +1599,10 @@
           "recursos": "Traçado de raios em tempo real durante as corridas, áudio espacial Dolby Atmos e suporte ao Xbox Play Anywhere"
         }
       }
-    }
+    },
+    "categorias": [
+      "xbox"
+    ]
   },
   {
     "id": "xbox-halo",
@@ -1594,13 +1665,16 @@
           "recursos": "Quick Resume instantâneo, áudio espacial com Dolby Atmos e suporte total ao Xbox Play Anywhere"
         }
       }
-    }
+    },
+    "categorias": [
+      "xbox"
+    ]
   },
   {
     "id": "xbox-forza5",
     "titulo": "Forza Horizon 5",
-    "preco": "249,00",
-    "precoAntigo": "",
+    "preco": "129,90",
+    "precoAntigo": "249,00",
     "imagem": "/imagens/forza5.jpg",
     "categoria": "xbox",
     "plataforma": "xbox",
@@ -1657,13 +1731,17 @@
           "recursos": "Arquitetura Xbox Velocity, carregamento rápido e iluminação fotorrealista HDR"
         }
       }
-    }
+    },
+    "categorias": [
+      "xbox",
+      "promocao"
+    ]
   },
   {
     "id": "xbox-gears5",
     "titulo": "Gears 5",
-    "preco": "199,00",
-    "precoAntigo": "",
+    "preco": "79,90",
+    "precoAntigo": "199,00",
     "imagem": "/imagens/gears5.jpg",
     "categoria": "xbox",
     "plataforma": "xbox",
@@ -1720,7 +1798,11 @@
           "recursos": "Iluminação global por software, reflexos Screen Space e som Dolby Atmos"
         }
       }
-    }
+    },
+    "categorias": [
+      "xbox",
+      "promocao"
+    ]
   },
   {
     "id": "xbox-seaof",
@@ -1784,7 +1866,10 @@
           "recursos": "Física de água mais avançada dos jogos modernos, Cross-play integral entre PC e consoles"
         }
       }
-    }
+    },
+    "categorias": [
+      "xbox"
+    ]
   },
   {
     "id": "xbox-starfield",
@@ -1848,7 +1933,10 @@
           "recursos": "Construção de naves peça por peça, suporte nativo a Mods (Criações) no console"
         }
       }
-    }
+    },
+    "categorias": [
+      "xbox"
+    ]
   },
   {
     "id": "xbox-senuas",
@@ -1912,7 +2000,10 @@
           "recursos": "Recomendado uso obrigatório de fones de ouvido para vivenciar o Áudio Binaural 3D das vozes internas"
         }
       }
-    }
+    },
+    "categorias": [
+      "xbox"
+    ]
   },
   {
     "id": "xbox-flight",
@@ -1975,7 +2066,10 @@
           "recursos": "Clima em tempo real, tráfego aéreo ao vivo e suporte a periféricos HOTAS para Xbox"
         }
       }
-    }
+    },
+    "categorias": [
+      "xbox"
+    ]
   },
   {
     "id": "xbox-state",
@@ -2040,13 +2134,16 @@
           "recursos": "Otimizado para Series X|S, carregamento ultrarrápido e iluminação volumétrica aprimorada"
         }
       }
-    }
+    },
+    "categorias": [
+      "xbox"
+    ]
   },
   {
     "id": "xbox-ori",
     "titulo": "Ori and the Will of the Wisps",
-    "preco": "129,00",
-    "precoAntigo": "",
+    "preco": "49,90",
+    "precoAntigo": "129,00",
     "imagem": "/imagens/ori.avif",
     "categoria": "xbox",
     "plataforma": "xbox",
@@ -2105,13 +2202,17 @@
           "recursos": "Suporte a HDR de alta fidelidade, áudio Dolby Atmos e taxa de resposta instantânea"
         }
       }
-    }
+    },
+    "categorias": [
+      "xbox",
+      "promocao"
+    ]
   },
   {
     "id": "destaque-control",
     "titulo": "Control: Resonant",
-    "preco": "299,90",
-    "precoAntigo": "",
+    "preco": "149,90",
+    "precoAntigo": "299,90",
     "imagem": "/imagens/control.jpg",
     "categoria": "destaque",
     "plataforma": "destaque",
@@ -2180,7 +2281,12 @@
           "armazenamento": "42 GB de espaço disponível em SSD"
         }
       }
-    }
+    },
+    "categorias": [
+      "destaque",
+      "steam",
+      "promocao"
+    ]
   },
   {
     "id": "destaque-onimusha",
@@ -2255,13 +2361,16 @@
           "armazenamento": "50 GB de espaço disponível em SSD"
         }
       }
-    }
+    },
+    "categorias": [
+      "destaque"
+    ]
   },
   {
     "id": "destaque-eldenring",
     "titulo": "Elden Ring",
-    "preco": "299,90",
-    "precoAntigo": "",
+    "preco": "199,90",
+    "precoAntigo": "299,90",
     "imagem": "/imagens/EldenRing.png",
     "categoria": "destaque",
     "plataforma": "destaque",
@@ -2331,7 +2440,12 @@
           "armazenamento": "60 GB de espaço disponível em SSD"
         }
       }
-    }
+    },
+    "categorias": [
+      "destaque",
+      "steam",
+      "promocao"
+    ]
   },
   {
     "id": "destaque-wukong",
@@ -2406,158 +2520,10 @@
           "armazenamento": "130 GB de espaço disponível em SSD NVMe"
         }
       }
-    }
-  },
-  {
-    "id": "promo-control",
-    "titulo": "Control: Resonant",
-    "preco": "149,90",
-    "precoAntigo": "299,90",
-    "imagem": "/imagens/control.jpg",
-    "categoria": "promocao",
-    "plataforma": "promocao",
-    "link": "/jogos/destaques/control-resonant.html",
-    "detalhes": {
-      "genero": [
-        "Ação",
-        "Aventura",
-        "Sobrenatural"
-      ],
-      "desenvolvedora": "Remedy Entertainment",
-      "publicadora": "505 Games",
-      "lancamento": "27 de agosto de 2024 (Edição Resonant)",
-      "plataformas": "PC (Steam) / PlayStation 5 / Xbox Series X|S",
-      "idioma": "Inglês (áudio) — Português (BR) (legendas)",
-      "armazenamento": "60 GB (estimado)",
-      "modos": "Um jogador (Single-player)",
-      "classificacao": "16",
-      "resgate": "steam",
-      "sinopse": [
-        "Após uma agência secreta em Nova York ser invadida por uma força de outro mundo conhecida como o Ruído, você se torna Jesse Faden, a nova Diretora do Departamento Federal de Controle (FBC), lutando para recuperar a Antiga Casa.",
-        "Explore um arranha-céu brutalista mutável que desafia a gravidade e as leis da física. Combine poderes telecinéticos devastadores como levitação e arremesso de entulho com a Arma de Serviço que muda de forma para aniquilar as anomalias paranormais."
-      ],
-      "destaques": [
-        "Física de partículas e destruição de ambientes considerada referência técnica na indústria",
-        "Poderes telecinéticos fluidos: levite no ar, crie escudos de concreto e arremeste empilhadeiras",
-        "História misteriosa que se conecta diretamente ao universo compartilhado de Alan Wake",
-        "Edição Resonant inclui as duas expansões completas de história: 'The Foundation' e 'AWE'"
-      ],
-      "generos": [
-        "Ação",
-        "Tiro em Terceira Pessoa",
-        "Sobrenatural",
-        "Metroidvania 3D"
-      ],
-      "idiomaAudio": "Inglês, Francês, Alemão, Espanhol",
-      "idiomaLegendas": "Português (Brasil), Inglês, Espanhol, Francês, Alemão, Italiano, Japonês",
-      "idadeMinima": "16",
-      "motivoIdade": "Violência sobrenatural, Terror psicológico e Sangue",
-      "analises": {
-        "metacritic": "85",
-        "classificacaoCritica": "Geralmente Favorável",
-        "comunidade": "Muito Positivas (Mais de 35.000 avaliações de jogadores no Steam)",
-        "destaqueReview": {
-          "veiculo": "The Enemy",
-          "nota": "9.0/10",
-          "texto": "A física telecinética mais satisfatória e destrutiva já programada, embalada em uma narrativa de ficção conspiratória genial."
-        }
-      },
-      "requisitos": {
-        "tipo": "pc",
-        "minimos": {
-          "so": "Windows 10 de 64 bits",
-          "processador": "Intel Core i5-4690 ou AMD FX-4350",
-          "memoria": "8 GB de RAM",
-          "placaVideo": "Nvidia GeForce GTX 780 ou AMD Radeon R9 280X",
-          "directx": "Versão 11",
-          "armazenamento": "42 GB de espaço disponível"
-        },
-        "recomendados": {
-          "so": "Windows 10 / 11 de 64 bits",
-          "processador": "Intel Core i5-7600K ou AMD Ryzen 5 1600X",
-          "memoria": "16 GB de RAM",
-          "placaVideo": "Nvidia GeForce GTX 1660 / RTX 2060 ou AMD Radeon RX 580",
-          "directx": "Versão 12",
-          "armazenamento": "42 GB de espaço disponível em SSD"
-        }
-      }
-    }
-  },
-  {
-    "id": "promo-eldenring",
-    "titulo": "Elden Ring",
-    "preco": "199,90",
-    "precoAntigo": "299,90",
-    "imagem": "/imagens/EldenRing.png",
-    "categoria": "promocao",
-    "plataforma": "promocao",
-    "link": "/jogos/destaques/elden-ring.html",
-    "detalhes": {
-      "genero": [
-        "RPG",
-        "Ação",
-        "Soulslike",
-        "Mundo Aberto"
-      ],
-      "desenvolvedora": "FromSoftware",
-      "publicadora": "Bandai Namco Entertainment",
-      "lancamento": "25 de fevereiro de 2022",
-      "plataformas": "PC (Steam) / PlayStation 5 / Xbox Series X|S",
-      "idioma": "Inglês (áudio) — Português (BR) (legendas)",
-      "armazenamento": "60 GB",
-      "modos": "Um jogador, Cooperativo online (até 3 jogadores) e Invasões PvP competitivas",
-      "classificacao": "16",
-      "resgate": "steam",
-      "sinopse": [
-        "Levante-se, Maculado, e seja guiado pela graça para portar o poder do Anel Prístino e se tornar o Lorde Prístino nas Terras Intermédias.",
-        "Fruto da colaboração histórica entre o diretor Hidetaka Miyazaki e o escritor George R.R. Martin (autor de As Crônicas de Gelo e Fogo), Elden Ring convida os jogadores a explorarem castelos verticais, pântanos venenosos e masmorras secretas montados no corcel espectral Torrente, enfrentando semideuses colossais em busca das Grandes Runas."
-      ],
-      "destaques": [
-        "Eleito Jogo do Ano (GOTY) no The Game Awards 2022 com aclamação unânime mundial",
-        "Mundo aberto gigantesco que incentiva a curiosidade sem marcadores intrusivos na tela",
-        "Centenas de armas, magias, invocações de espíritos e armaduras para qualquer estilo de jogo",
-        "Cooperativo e PvP online permitindo invadir e ser invadido por jogadores de todo o mundo"
-      ],
-      "generos": [
-        "RPG de Ação",
-        "Soulslike",
-        "Mundo Aberto",
-        "Fantasia Sombria"
-      ],
-      "idiomaAudio": "Inglês",
-      "idiomaLegendas": "Português (Brasil), Inglês, Espanhol, Francês, Alemão, Italiano, Japonês, Coreano, Chinês",
-      "idadeMinima": "16",
-      "motivoIdade": "Violência extrema, Sangue, Conteúdo perturbador e Fantasia sombria",
-      "analises": {
-        "metacritic": "96",
-        "classificacaoCritica": "Aclamação Universal",
-        "comunidade": "Jogo do Ano no The Game Awards 2022 com mais de 25 milhões de cópias vendidas",
-        "destaqueReview": {
-          "veiculo": "IGN Brasil",
-          "nota": "10/10",
-          "texto": "Uma obra-prima incontestável que redefine o design de mundo aberto com liberdade absoluta e combate desafiador sem paralelo."
-        }
-      },
-      "requisitos": {
-        "tipo": "pc",
-        "minimos": {
-          "so": "Windows 10 de 64 bits",
-          "processador": "Intel Core i5-8400 ou AMD Ryzen 3 3300X",
-          "memoria": "12 GB de RAM",
-          "placaVideo": "Nvidia GeForce GTX 1060 (3 GB) ou AMD Radeon RX 580 (4 GB)",
-          "directx": "Versão 12",
-          "armazenamento": "60 GB de espaço disponível"
-        },
-        "recomendados": {
-          "so": "Windows 10 / 11 de 64 bits",
-          "processador": "Intel Core i7-8700K ou AMD Ryzen 5 3600X",
-          "memoria": "16 GB de RAM",
-          "placaVideo": "Nvidia GeForce GTX 1070 (8 GB) ou AMD Radeon RX Vega 56 (8 GB)",
-          "directx": "Versão 12",
-          "armazenamento": "60 GB de espaço disponível em SSD"
-        }
-      }
-    }
+    },
+    "categorias": [
+      "destaque"
+    ]
   },
   {
     "id": "ps-ufc6",
@@ -2621,6 +2587,9 @@
           "recursos": "Sistema de impacto em tempo real, física de cortes e inchaços fiéis e feedback no DualSense"
         }
       }
-    }
+    },
+    "categorias": [
+      "ps"
+    ]
   }
 ]

@@ -25,15 +25,30 @@ const PORT = process.env.PORT || 3000;
 // Middleware para ler JSON no corpo das requisições e servir arquivos estáticos
 app.use(express.json());
 app.use(express.static(path.join(__dirname, 'public')));
+// Suporte direto para arquivos JSON servidos estaticamente de dados
+app.use('/dados', express.static(path.join(__dirname, 'dados')));
+app.use('/dados', express.static(path.join(__dirname, 'public', 'dados')));
 // Compatibilidade caso algum cliente ou cache ainda busque por /js/
 app.use('/js', express.static(path.join(__dirname, 'public', 'scripts')));
 
 // Funções auxiliares para ler e salvar JSON
-const lerArquivo = (caminho) => JSON.parse(fs.readFileSync(caminho, 'utf-8'));
-const salvarArquivo = (caminho, dados) => fs.writeFileSync(caminho, JSON.stringify(dados, null, 2));
-
 const caminhoUsuarios = path.join(__dirname, 'dados', 'usuarios.json');
 const caminhoJogos = path.join(__dirname, 'dados', 'jogos.json');
+const caminhoJogosPublic = path.join(__dirname, 'public', 'dados', 'jogos.json');
+
+const lerArquivo = (caminho) => JSON.parse(fs.readFileSync(caminho, 'utf-8'));
+const salvarArquivo = (caminho, dados) => {
+    fs.writeFileSync(caminho, JSON.stringify(dados, null, 2), 'utf-8');
+    if (caminho === caminhoJogos) {
+        try {
+            const dirPub = path.dirname(caminhoJogosPublic);
+            if (!fs.existsSync(dirPub)) fs.mkdirSync(dirPub, { recursive: true });
+            fs.writeFileSync(caminhoJogosPublic, JSON.stringify(dados, null, 2), 'utf-8');
+        } catch (e) {
+            console.warn('Aviso: Não foi possível espelhar jogos.json para public/dados:', e.message);
+        }
+    }
+};
 
 // --- ROTA DE LOGIN COM ROLES ---
 app.post('/api/login', (req, res) => {
@@ -117,6 +132,9 @@ function gerarHtmlPaginaJogo(jogo) {
     }
 
     const precoFormatado = jogo.preco.startsWith('R$') ? jogo.preco : `R$ ${jogo.preco}`;
+    const precoAntigoHtml = (jogo.precoAntigo && String(jogo.precoAntigo).trim() !== '')
+        ? `<span class="preco-antigo-destaque" style="text-decoration: line-through; color: #ff5555; font-size: 1.15rem; margin-right: 12px; font-weight: normal;">R$ ${String(jogo.precoAntigo).replace('R$', '').trim()}</span>`
+        : '';
 
     return `<!DOCTYPE html>
 <html lang="pt-BR">
@@ -264,7 +282,7 @@ function gerarHtmlPaginaJogo(jogo) {
                 <div class="bloco-lateral">
                     <h2>${jogo.titulo}</h2>
                     <span class="tag-plataforma">${tagPlat}</span>
-                    <h3 class="preco-jogo">${precoFormatado}</h3>
+                    <h3 class="preco-jogo">${precoAntigoHtml}<span class="preco-atual">${precoFormatado}</span></h3>
 
                     <div class="btns-jogo">
                         <button type="button" class="comprar-btn"><i data-lucide="shopping-cart"></i>COMPRAR AGORA</button>
@@ -350,13 +368,24 @@ app.get('/api/jogos', (req, res) => {
 app.post('/api/jogos', (req, res) => {
     const jogos = lerArquivo(caminhoJogos);
     const dados = req.body;
-    const categoria = dados.categoria || dados.plataforma || 'ps';
-    const plataforma = dados.plataforma || dados.categoria || 'ps';
+
+    let categorias = Array.isArray(dados.categorias) && dados.categorias.length > 0 
+        ? dados.categorias 
+        : [dados.categoria || dados.plataforma || 'ps'];
+
+    if (dados.precoAntigo && String(dados.precoAntigo).trim() !== '' && !categorias.includes('promocao')) {
+        categorias.push('promocao');
+    }
+
+    const categoria = dados.categoria || categorias.find(c => c !== 'promocao') || categorias[0] || 'ps';
+    const plataforma = dados.plataforma || categoria;
+
     const novoJogo = { 
         id: Date.now().toString(), 
         ...dados,
         categoria,
-        plataforma
+        plataforma,
+        categorias
     };
 
     // Cria automaticamente a página individual do jogo se não tiver link manual
@@ -379,9 +408,26 @@ app.put('/api/jogos/:id', (req, res) => {
     if (index === -1) {
         return res.status(404).json({ sucesso: false, mensagem: 'Jogo não encontrado' });
     }
-    const categoria = req.body.categoria || req.body.plataforma || jogos[index].categoria;
-    const plataforma = req.body.plataforma || req.body.categoria || jogos[index].plataforma;
-    jogos[index] = { ...jogos[index], ...req.body, categoria, plataforma };
+
+    const dados = req.body;
+    let categorias = Array.isArray(dados.categorias) && dados.categorias.length > 0
+        ? dados.categorias
+        : (jogos[index].categorias || [jogos[index].categoria || 'ps']);
+
+    if (dados.precoAntigo && String(dados.precoAntigo).trim() !== '' && !categorias.includes('promocao')) {
+        categorias.push('promocao');
+    }
+
+    const categoria = dados.categoria || categorias.find(c => c !== 'promocao') || categorias[0] || jogos[index].categoria || 'ps';
+    const plataforma = dados.plataforma || categoria;
+
+    jogos[index] = { 
+        ...jogos[index], 
+        ...dados, 
+        categoria, 
+        plataforma,
+        categorias
+    };
 
     try {
         const linkGerado = salvarPaginaJogo(jogos[index]);

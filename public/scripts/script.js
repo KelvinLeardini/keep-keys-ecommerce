@@ -47,25 +47,61 @@ async function carregarJogosDinamicos() {
     if (containers.length === 0) return;
 
     try {
-        let resposta;
-        try {
-            resposta = await fetch('/api/jogos');
-        } catch {
-            resposta = await fetch('/dados/jogos.json');
+        let todosJogos = null;
+        const endpoints = [
+            '/api/jogos',
+            '/dados/jogos.json',
+            '../dados/jogos.json',
+            '../../dados/jogos.json',
+            './dados/jogos.json',
+            '/public/dados/jogos.json'
+        ];
+
+        for (const url of endpoints) {
+            try {
+                const res = await fetch(url);
+                if (res && res.ok) {
+                    const dados = await res.json();
+                    if (Array.isArray(dados) && dados.length > 0) {
+                        todosJogos = dados;
+                        break;
+                    }
+                }
+            } catch (e) {
+                // Tenta próximo endpoint fallback
+            }
         }
 
-        if (!resposta || !resposta.ok) {
-            resposta = await fetch('/dados/jogos.json');
+        if (!todosJogos || !Array.isArray(todosJogos)) {
+            console.warn('Não foi possível obter a lista de jogos do servidor ou dados/jogos.json');
+            return;
         }
-
-        const todosJogos = await resposta.json();
 
         containers.forEach(container => {
             const categoriaAlvo = (container.dataset.categoria || '').toLowerCase().trim();
 
             const jogosFiltrados = todosJogos.filter(jogo => {
-                const catJogo = (jogo.categoria || jogo.plataforma || '').toLowerCase().trim();
-                return catJogo === categoriaAlvo;
+                const cats = Array.isArray(jogo.categorias) && jogo.categorias.length > 0
+                    ? jogo.categorias.map(c => String(c).toLowerCase().trim())
+                    : [(jogo.categoria || jogo.plataforma || '').toLowerCase().trim()];
+
+                // Se possui preço antigo preenchido e válido, é considerado promoção automática
+                const temDesconto = Boolean(
+                    jogo.precoAntigo && 
+                    String(jogo.precoAntigo).trim() !== '' && 
+                    String(jogo.precoAntigo).trim() !== '0' &&
+                    String(jogo.precoAntigo).trim() !== String(jogo.preco).trim()
+                );
+
+                if (temDesconto && !cats.includes('promocao')) {
+                    cats.push('promocao');
+                }
+
+                if (categoriaAlvo === 'promocao') {
+                    return cats.includes('promocao') || temDesconto;
+                }
+
+                return cats.includes(categoriaAlvo);
             });
 
             if (jogosFiltrados.length === 0) {
@@ -75,15 +111,29 @@ async function carregarJogosDinamicos() {
 
             container.innerHTML = jogosFiltrados.map(jogo => {
                 const precoFormatado = jogo.preco.startsWith('R$') ? jogo.preco : `R$ ${jogo.preco}`;
-                const precoAntigoHtml = jogo.precoAntigo 
-                    ? `<p style="color: #ff4444; text-decoration: line-through; font-size: 0.9rem; margin: 0;">R$ ${jogo.precoAntigo.replace('R$', '').trim()}</p>`
-                    : '';
+                const precoAntigoLimpo = jogo.precoAntigo ? String(jogo.precoAntigo).replace('R$', '').trim() : '';
+                
+                let badgeDesconto = '';
+                let precoAntigoHtml = '';
+
+                if (precoAntigoLimpo !== '') {
+                    const vAntigo = parseFloat(precoAntigoLimpo.replace('.', '').replace(',', '.'));
+                    const vAtual = parseFloat(String(jogo.preco).replace('R$', '').replace('.', '').replace(',', '.').trim());
+                    if (vAntigo > vAtual && vAntigo > 0) {
+                        const pct = Math.round(((vAntigo - vAtual) / vAntigo) * 100);
+                        badgeDesconto = `<span class="badge-desconto-card">-${pct}%</span>`;
+                    }
+                    precoAntigoHtml = `<p class="preco-antigo-card" style="color: #ff4444; text-decoration: line-through; font-size: 0.9rem; margin: 0 0 3px 0; font-weight: 600;">R$ ${precoAntigoLimpo}</p>`;
+                }
 
                 const linkDestino = (jogo.link && jogo.link.trim() !== '') ? jogo.link : '#';
 
                 const cardHtml = `
                     <article class="jogo-produtos" onclick="if(event.target.tagName !== 'BUTTON' && !event.target.closest('button')) { window.location.href='${linkDestino}'; }">
-                        <img src="${jogo.imagem}" alt="${jogo.titulo}" width="200px">
+                        <div class="thumb-card-jogo" style="position: relative; overflow: hidden; border-radius: 8px;">
+                            <img src="${jogo.imagem}" alt="${jogo.titulo}" width="200px">
+                            ${badgeDesconto}
+                        </div>
                         <h4>${jogo.titulo}</h4>
                         ${precoAntigoHtml}
                         <p>${precoFormatado}</p>
@@ -893,9 +943,20 @@ function configurarBotoesComprar() {
             const imagemEl = document.querySelector('.bloco-1 .jogo img') || document.querySelector('.jogo img');
 
             if (tituloEl && precoEl && imagemEl) {
+                let precoTexto = precoEl.innerText.trim();
+                const precoAtualEl = precoEl.querySelector('.preco-atual');
+                if (precoAtualEl) {
+                    precoTexto = precoAtualEl.innerText.trim();
+                } else if (precoEl.querySelector('.preco-antigo-destaque, .preco-antigo-jogo')) {
+                    const clone = precoEl.cloneNode(true);
+                    const antigo = clone.querySelector('.preco-antigo-destaque, .preco-antigo-jogo');
+                    if (antigo) antigo.remove();
+                    precoTexto = clone.innerText.trim();
+                }
+
                 const produto = {
                     titulo: tituloEl.innerText.trim(),
-                    preco: precoEl.innerText.trim(),
+                    preco: precoTexto,
                     imagem: imagemEl.getAttribute('src'),
                     link: window.location.pathname
                 };
