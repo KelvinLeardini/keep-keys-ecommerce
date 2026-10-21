@@ -197,29 +197,44 @@ PROJETO AULA FRONT-END/
 
 ---
 
-## 7. Roteiro de Avaliação Prática para o Professor
+## 7. Roteiro Prático para Apresentação Oral ao Professor
 
-Para demonstrar todas as capacidades do sistema durante a avaliação acadêmica:
+Este roteiro foi estruturado para orientar a apresentação de Kelvin e da equipe de 8 a 10 minutos perante o professor e banca:
 
-1. **Inicialização do Ambiente:**
-   ```bash
-   npm install
-   node server.js
-   ```
-   Acesse: `http://localhost:3000` no navegador.
+### Passo 1: Introdução e Proposta de Valor (1 a 2 minutos)
+- **O que falar:**
+  > *"Olá professor! Nosso projeto é o Keep Keys, um e-commerce especializado na distribuição de licenças digitais para PS5, Xbox Series X|S e Steam. Nosso foco principal foi construir uma aplicação de alta fidelidade visual e técnica utilizando os pilares puros da web — HTML5 Semântico, CSS3 Moderno e Vanilla JavaScript — sem recorrer a frameworks pesados na vitrine, garantindo velocidade máxima, código enxuto e total domínio da manipulação do DOM nativo."*
 
-2. **Fluxo do Consumidor (Cliente):**
-   - Navegue pela vitrine inicial, interaja com o carrossel clicável e utilize o campo de busca em tempo real.
-   - Acesse a aba **Promoções** e verifique os 10 jogos com desconto ativo e suas respectivas badges (`-50%`, `-67%`).
-   - Clique em **Elden Ring** ou **Control: Resonant** e comprove que o preço promocional e o valor original tachado aparecem na página de detalhes.
-   - Abra a gaveta do carrinho pelo ícone superior, finalize a compra via **Carteira Digital** e verifique o jogo incorporado na biblioteca do perfil (`perfil.html`).
+### Passo 2: Demonstração da Experiência do Cliente (3 a 4 minutos)
+- **Ação na tela:** Abra `http://localhost:3000` (ou o Live Server).
+- **O que mostrar:**
+  1. **Carrossel Interativo:** Demonstre a rotação e clique em um banner, mostrando que ele já direciona para o jogo promovido.
+  2. **Busca em Tempo Real:** Digite na barra de busca (ex: *"Spider"* ou *"Forza"*) e aponte a filtragem instantânea sem recarregamento.
+  3. **Aba Promoções:** Mostre os descontos reais com badges dinâmicas (ex: Red Dead Redemption 2 com `-67%` e preço antigo tachado em vermelho).
+  4. **Página de Detalhes:** Abra a página de um jogo (ex: Elden Ring ou GTA VI) e mostre a riqueza da ficha técnica: nota do Metacritic, requisitos de sistema de PC ou especificações de console, idiomas com suporte PT-BR e o guia numerado de como resgatar a chave.
 
-3. **Fluxo do Administrador:**
-   - Faça login com as credenciais administrativas (ou selecione a opção admin).
-   - Acesse o **Painel Admin** (`/admin.html`).
-   - Observe as métricas nos cards superiores (Total de Jogos, PS5, Steam, Xbox e Promoções).
-   - Edite um jogo existente, adicione um valor em **Preço Antigo** e observe a categoria **Promoção** sendo marcada automaticamente.
-   - Salve as alterações e confira a atualização imediata no catálogo e nas páginas da loja.
+### Passo 3: Fluxo de Compra e Carteira Digital (2 minutos)
+- **Ação na tela:** Abra o modal de login, autentique-se, adicione um jogo ao carrinho e abra a gaveta lateral.
+- **O que mostrar:**
+  1. Abertura fluida da gaveta lateral, cálculo automático do total com formatação brasileira (`R$`).
+  2. Finalização no checkout utilizando o saldo da Carteira Digital.
+  3. Redirecionamento para `perfil.html`, mostrando a nova chave gerada na biblioteca do cliente.
+- **Destaque especial para falar:**
+  > *"Professor, programamos um temporizador na carteira virtual que recarrega R$ 1.000,00 automaticamente a cada minuto, garantindo que o senhor e qualquer avaliador possam testar o checkout quantas vezes desejarem sem esgotamento de saldo!"*
+
+### Passo 4: Demonstração do Painel Administrativo em Vue.js 3 (2 minutos)
+- **Ação na tela:** Acesse `/admin.html` logado como Administrador.
+- **O que mostrar:**
+  1. Os cards de métricas reativas em tempo real (Total de Jogos, PS5, Steam, Xbox e Promoções).
+  2. O catálogo com filtros por abas e busca por nome.
+  3. A edição de um jogo: adicione um valor em *"Preço Antigo"* e mostre a categoria *"Promoção"* sendo selecionada automaticamente pelo watcher reativo.
+  4. A persistência imediata na loja pública sem necessidade de duplicar o jogo.
+
+### Passo 5: Respostas para Possíveis Perguntas da Banca
+- **Pergunta: "Por que usaram Vanilla JS na loja e Vue.js no admin?"**
+  > *"Optamos conscientemente pelo Vanilla JS na loja para exercitar a fundo a manipulação do DOM nativo, eventos assíncronos e o ciclo de vida do navegador sem abstrações. Reservamos o Vue.js 3 cirurgicamente para o painel administrativo, demonstrando que dominamos tanto o desenvolvimento nativo quanto bibliotecas reativas contemporâneas."*
+- **Pergunta: "Como os dados são persistidos?"**
+  > *"Utilizamos uma arquitetura híbrida: os dados da sessão ativa, carrinho e carteira ficam no LocalStorage do navegador, enquanto o catálogo principal e credenciais são sincronizados via API REST Node.js em arquivos físicos JSON (`jogos.json`), com espelhamento estático para garantir funcionamento mesmo offline."*
 
 ---
 
@@ -228,3 +243,4 @@ Para demonstrar todas as capacidades do sistema durante a avaliação acadêmica
 O desenvolvimento do e-commerce **Keep Keys** permitiu a consolidação prática dos conceitos teóricos lecionados no curso de Análise e Desenvolvimento de Sistemas. A construção de uma interface de ponta a ponta — desde o alinhamento de pixels e estados de transição até a lógica de manipulação assíncrona de dados — comprovou a capacidade da equipe de conceber soluções robustas, escaláveis e focadas na experiência do usuário final.
 
 O projeto atende integralmente aos requisitos de entrega acadêmica propostos para a disciplina.
+

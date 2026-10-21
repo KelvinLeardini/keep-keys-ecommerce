@@ -21,6 +21,7 @@
   "dependencies": {
     "bcryptjs": "^3.0.3",
     "cors": "^2.8.6",
+    "docx": "^9.13.0",
     "express": "^5.2.1",
     "lucide": "^1.48.0"
   }
